@@ -1,2 +1,2 @@
-# VisualBasic
-Problem solutions with Visual Basic
+# Self Educatiion
+Self Education Courses
