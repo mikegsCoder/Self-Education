@@ -1,2 +1,2 @@
-# Self Educatiion
+# Self Education
 Self Education Courses
