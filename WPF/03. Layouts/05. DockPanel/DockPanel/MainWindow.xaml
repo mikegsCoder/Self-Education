@@ -1,0 +1,18 @@
+﻿<Window x:Class="DockPanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DockPanel"
+        mc:Ignorable="d"
+        Title="DockPanel" Height="350" Width="450">
+
+    <DockPanel LastChildFill="True">
+        <Button DockPanel.Dock="Top" Background="AliceBlue" Content="Top button" />
+        <Button DockPanel.Dock="Bottom" Background="BlanchedAlmond" Content="Bottom button" />
+        <Button DockPanel.Dock="Left" Background="Aquamarine" Content="Left button" />
+        <Button DockPanel.Dock="Right" Background="DarkGreen" Content="Right button" />
+        <Button Background="LightGreen" Content="Central button" />
+    </DockPanel>
+
+</Window>
