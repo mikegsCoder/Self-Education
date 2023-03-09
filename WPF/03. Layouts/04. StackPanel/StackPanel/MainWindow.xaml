@@ -1,0 +1,15 @@
+﻿<Window x:Class="StackPanel.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:StackPanel"
+        mc:Ignorable="d"
+        Title="StackPanel" Height="350" Width="450">
+    <!--<StackPanel Orientation="Vertical">-->
+    <StackPanel Orientation="Horizontal">
+        <Button Background="White" Content="1" />
+        <Button Background="Green" Content="2" />
+        <Button Background="Red" Content="3" />
+    </StackPanel>
+</Window>
