@@ -1,0 +1,22 @@
+﻿<Window x:Class="CheckBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CheckBox"
+        mc:Ignorable="d"
+        Title="CheckBox" Height="350" Width="500">
+    <StackPanel x:Name="stackPanel">
+
+        <CheckBox x:Name="checkBox1" IsThreeState="True" IsChecked="False" Height="20" Content="Unchecked" />
+        <CheckBox x:Name="checkBox2" IsThreeState="True" IsChecked="True" Height="20" Content="Checked" />
+        <CheckBox x:Name="checkBox3" IsThreeState="True" IsChecked="{x:Null}" Height="20" Content="Intermediate"/>
+
+        <CheckBox x:Name="checkBox4" IsChecked="False" Height="20" Content="Flag" Margin="0,20,0,20"
+            IsThreeState="True"
+            Unchecked="checkBox_Unchecked"
+            Indeterminate="checkBox_Indeterminate"
+            Checked="checkBox_Checked" />
+
+    </StackPanel>
+</Window>
