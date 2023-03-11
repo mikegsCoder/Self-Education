@@ -1,0 +1,62 @@
+﻿<Window x:Class="ToolTip.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ToolTip"
+        mc:Ignorable="d"
+        Title="ToolTip" Height="450" Width="500">
+    <StackPanel>
+        <Button Content="Button 1 with Tooltip" ToolTip="ToolTip for button 1" Height="30" Width="200" />
+
+        <Button Content="Button 2 with Tooltip" Height="30" Width="200" Margin="0,20,0,20">
+            <Button.ToolTip>
+                <ToolTip>
+                    ToolTip for button 2
+                </ToolTip>
+            </Button.ToolTip>
+        </Button>
+
+        <TextBlock Text="Text with Tooltip 1" ToolTip="Hello Tooltip" />
+
+        <TextBlock Text="Text with TextTooltip 2" Margin="0,20,0,20">
+            <TextBlock.ToolTip>
+                <ToolTip>
+                    Hello WPF
+                </ToolTip>
+            </TextBlock.ToolTip>
+        </TextBlock>
+
+        <TextBlock Text="View photos" Margin="0 0 0 10" />
+        <RadioButton GroupName="Photos" Content="My cats" Height="20">
+            <RadioButton.ToolTip>
+                <ToolTip Width="200" Height="150">
+                    <StackPanel>
+                        <TextBlock Text="My cats" />
+                        <Image Source="cats.jpg" />
+                    </StackPanel>
+                </ToolTip>
+            </RadioButton.ToolTip>
+        </RadioButton>
+        <RadioButton GroupName="Photos" Content="Next photos" Height="20" ToolTip="Next" />
+
+        <RadioButton GroupName="Phones" Content="iPhone 6S" Margin="0,20,0,0">
+            <RadioButton.ToolTip>
+                <ToolTip Background="#60AA4030" Foreground="White" HasDropShadow="False"
+                    Placement="Relative" HorizontalOffset="15" VerticalOffset="10">
+                    <StackPanel>
+                        <TextBlock>Price:</TextBlock>
+                        <TextBlock>155 $</TextBlock>
+                    </StackPanel>
+                </ToolTip>
+            </RadioButton.ToolTip>
+        </RadioButton>
+        <RadioButton GroupName="Phones" ToolTipService.Placement="Mouse"
+            ToolTip="Price: 245 $" Content="Nexus 5X" />
+        <RadioButton GroupName="Phones" ToolTip="Price: 456 $" Content="Lumia 950" />
+
+
+        <Button x:Name="button1" Content="Hello" Margin="0,20,0,0" />
+
+    </StackPanel>
+</Window>
