@@ -1,0 +1,18 @@
+﻿<Window x:Class="Popup.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Popup"
+        mc:Ignorable="d"
+        Title="Popup" Height="300" Width="400">
+    <Grid>
+        <Button Content="Popup" Width="80" Height="30" MouseEnter="Button_MouseEnter_1" HorizontalAlignment="Center" />
+        <Popup x:Name="popup1" StaysOpen="False" Placement="Mouse" MaxWidth="180"
+            AllowsTransparency="True"  >
+            <TextBlock TextWrapping="Wrap" Width="180" Background="LightPink" Opacity="0.8" >
+                Learn WPF to create Desktop applications.
+            </TextBlock>
+        </Popup>
+    </Grid>
+</Window>
