@@ -1,0 +1,41 @@
+﻿<Window x:Class="Expander.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Expander"
+        mc:Ignorable="d"
+        Title="Expander" Height="400" Width="500">
+    <StackPanel Name="stackPanel">
+
+        <!--example 1-->
+        <Expander Header="C#">
+            <TextBlock>We learn C#.</TextBlock>
+        </Expander>
+        <Expander Header="JS">
+            <TextBlock>We learn JavaScript.</TextBlock>
+        </Expander>
+        <Expander Header="Survey" Margin="0,20,0,20">
+            <StackPanel>
+                <TextBlock>What software technology do you learn?</TextBlock>
+                <CheckBox>WinForms</CheckBox>
+                <CheckBox>WPF</CheckBox>
+                <CheckBox>ASP.NET</CheckBox>
+            </StackPanel>
+        </Expander>
+
+        <!--example 2-->
+        <Expander Expanded="Expander_Expanded" Collapsed="Expander_Collapsed" Margin="0,20,0,20">
+            <Expander.Header>
+                <Button Background="Lavender">Survey</Button>
+            </Expander.Header>
+            <StackPanel>
+                <TextBlock>What software technology do you learn?</TextBlock>
+                <CheckBox>WinForms</CheckBox>
+                <CheckBox>WPF</CheckBox>
+                <CheckBox>ASP.NET</CheckBox>
+            </StackPanel>
+        </Expander>
+
+    </StackPanel>
+</Window>
