@@ -1,0 +1,49 @@
+﻿<Window x:Class="TabControl.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TabControl"
+        mc:Ignorable="d"
+        Title="TabControl" Height="400" Width="500">
+    <StackPanel>
+
+        <!--example 1-->
+        <TabControl>
+            <TabItem Header="TabItem 1">First TabItem</TabItem>
+            <TabItem Header="TabItem 2">Second TabItem</TabItem>
+        </TabControl>
+
+        <!--example 2-->
+        <TabControl x:Name="products" Margin="0,20,0,20">
+            <TabItem x:Name="smartphonesTab">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Ellipse Height="10" Width="10" Fill="Black" />
+                        <TextBlock Margin="3">Smartphones</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+                <TabItem.Content>
+                    <StackPanel>
+                        <RadioButton IsChecked="True">iPhone S6</RadioButton>
+                        <RadioButton>LG G 4</RadioButton>
+                        <RadioButton>Lumia 550</RadioButton>
+                    </StackPanel>
+                </TabItem.Content>
+            </TabItem>
+            <TabItem x:Name="tabletsTab">
+                <TabItem.Header>
+                    <StackPanel Orientation="Horizontal">
+                        <Rectangle Height="10" Width="10" Fill="Black" />
+                        <TextBlock Margin="3">Tablets</TextBlock>
+                    </StackPanel>
+                </TabItem.Header>
+            </TabItem>
+        </TabControl>
+
+        <!--example 3-->
+        <TabControl x:Name="products1">
+        </TabControl>
+
+    </StackPanel>
+</Window>
