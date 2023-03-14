@@ -1,0 +1,63 @@
+﻿<Window x:Class="ComboBox.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:local="clr-namespace:ComboBox"
+        mc:Ignorable="d"
+        Title="ComboBox" Height="400" Width="500">
+    <StackPanel>
+        
+        <!--example 1-->
+        <ComboBox>
+            <sys:String>Tom</sys:String>
+            <sys:String>Bob</sys:String>
+            <sys:String>Sam</sys:String>
+            <sys:String>Alice</sys:String>
+        </ComboBox>
+
+        <!--example 2-->
+        <ComboBox Margin="0,20,0,20">
+            <TextBlock>Tom</TextBlock>
+            <TextBlock>Bob</TextBlock>
+            <TextBlock>Sam</TextBlock>
+            <TextBlock>Alice</TextBlock>
+        </ComboBox>
+
+        <!--example 3-->
+        <ComboBox>
+            <ComboBoxItem>
+                <StackPanel>
+                    <TextBlock FontSize="16">Tom</TextBlock>
+                    <TextBlock>Microsoft</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <StackPanel>
+                    <TextBlock FontSize="16">Bob</TextBlock>
+                    <TextBlock>Google</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <StackPanel>
+                    <TextBlock FontSize="16">Sam</TextBlock>
+                    <TextBlock>JetBrains</TextBlock>
+                </StackPanel>
+            </ComboBoxItem>
+        </ComboBox>
+
+        <!--example 4-->
+        <ComboBox x:Name="peopleComboBox" Margin="0,20,0,20" />
+
+        <!--example 5-->
+        <TextBlock x:Name="selectedLabel" FontSize="18" />
+        <ComboBox x:Name="peopleComboBox1" SelectionChanged="peopleComboBox_SelectionChanged" />
+
+        <!--example 6-->
+        <TextBlock x:Name="selectedPerson" FontSize="18" Margin="0,20,0,0"/>
+        <ComboBox x:Name="peopleComboBox2" SelectedValuePath="Name"
+                  SelectionChanged="peopleComboBox2_SelectionChanged" />
+
+    </StackPanel>
+</Window>
