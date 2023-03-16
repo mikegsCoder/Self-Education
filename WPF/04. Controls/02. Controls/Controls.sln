@@ -27,25 +27,33 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Label", "Label\Label.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PasswordBox", "PasswordBox\PasswordBox.csproj", "{4581D4AB-1205-4E6A-9221-595DA01E2F7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListBox", "ListBox\ListBox.csproj", "{0AFEDAAB-5F1F-4832-B394-AE27648212EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListBox", "ListBox\ListBox.csproj", "{0AFEDAAB-5F1F-4832-B394-AE27648212EB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComboBox", "ComboBox\ComboBox.csproj", "{5B3EE959-DD8C-486E-B3EF-13D3C380D134}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ComboBox", "ComboBox\ComboBox.csproj", "{5B3EE959-DD8C-486E-B3EF-13D3C380D134}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListView", "ListView\ListView.csproj", "{AFC903E7-477C-4946-8EFF-94E936AE9D08}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListView", "ListView\ListView.csproj", "{AFC903E7-477C-4946-8EFF-94E936AE9D08}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabControl", "TabControl\TabControl.csproj", "{E48F2639-0455-401F-A472-B5116E30C6C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TabControl", "TabControl\TabControl.csproj", "{E48F2639-0455-401F-A472-B5116E30C6C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Menu", "Menu\Menu.csproj", "{A1DAC1AF-4B68-433A-8FC2-5CF7CDA04C89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Menu", "Menu\Menu.csproj", "{A1DAC1AF-4B68-433A-8FC2-5CF7CDA04C89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ToolBar", "ToolBar\ToolBar.csproj", "{E0BB7ABE-F377-4AD6-89FC-286CA21C523E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ToolBar", "ToolBar\ToolBar.csproj", "{E0BB7ABE-F377-4AD6-89FC-286CA21C523E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreeView", "TreeView\TreeView.csproj", "{AB9D0CCB-09ED-455C-97BF-BBC1BEE0CD2C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TreeView", "TreeView\TreeView.csproj", "{AB9D0CCB-09ED-455C-97BF-BBC1BEE0CD2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataGrid", "DataGrid\DataGrid.csproj", "{5BC62418-4092-43DC-8398-ECD5506888E4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataGrid", "DataGrid\DataGrid.csproj", "{5BC62418-4092-43DC-8398-ECD5506888E4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Slider", "Slider\Slider.csproj", "{34F8D59A-1FB1-43E2-8D8E-8E38DAF8705B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Slider", "Slider\Slider.csproj", "{34F8D59A-1FB1-43E2-8D8E-8E38DAF8705B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProgressBar", "ProgressBar\ProgressBar.csproj", "{CF179A7E-A2B9-44E9-8C69-D9070568303D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProgressBar", "ProgressBar\ProgressBar.csproj", "{CF179A7E-A2B9-44E9-8C69-D9070568303D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calendar", "Calendar\Calendar.csproj", "{47122DF4-187F-419C-8D61-9D5A2ED511E6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DatePicker", "DatePicker\DatePicker.csproj", "{96C25E95-7AAA-41DF-9D99-BE9D74BA4350}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Image", "Image\Image.csproj", "{48266000-C001-4AFB-9AF5-A47D72D9DEDE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InkCanvas", "InkCanvas\InkCanvas.csproj", "{DEA6512C-3B9F-40B5-AA04-439D18132219}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -141,6 +149,22 @@ Global
 		{CF179A7E-A2B9-44E9-8C69-D9070568303D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF179A7E-A2B9-44E9-8C69-D9070568303D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF179A7E-A2B9-44E9-8C69-D9070568303D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47122DF4-187F-419C-8D61-9D5A2ED511E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47122DF4-187F-419C-8D61-9D5A2ED511E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47122DF4-187F-419C-8D61-9D5A2ED511E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47122DF4-187F-419C-8D61-9D5A2ED511E6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96C25E95-7AAA-41DF-9D99-BE9D74BA4350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96C25E95-7AAA-41DF-9D99-BE9D74BA4350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96C25E95-7AAA-41DF-9D99-BE9D74BA4350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96C25E95-7AAA-41DF-9D99-BE9D74BA4350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{48266000-C001-4AFB-9AF5-A47D72D9DEDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{48266000-C001-4AFB-9AF5-A47D72D9DEDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{48266000-C001-4AFB-9AF5-A47D72D9DEDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{48266000-C001-4AFB-9AF5-A47D72D9DEDE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEA6512C-3B9F-40B5-AA04-439D18132219}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEA6512C-3B9F-40B5-AA04-439D18132219}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEA6512C-3B9F-40B5-AA04-439D18132219}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEA6512C-3B9F-40B5-AA04-439D18132219}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
