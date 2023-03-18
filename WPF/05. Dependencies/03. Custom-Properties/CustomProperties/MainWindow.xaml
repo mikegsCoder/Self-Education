@@ -1,0 +1,36 @@
+﻿<Window x:Class="CustomProperties.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CustomProperties"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="250" Width="300" FontSize="20">
+
+    <Window.Resources>
+        <local:Phone Price="600" Title="iPhone 6S" x:Key="iPhone6s" />
+    </Window.Resources>
+
+    <Grid x:Name="grid1" DataContext="{StaticResource iPhone6s}">
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <TextBlock Text="Model" />
+        <TextBlock Text="{Binding Title}" Grid.Column="1"  />
+        <TextBlock Text="Price" Grid.Row="1" />
+        <TextBox Text="{Binding Price, Mode=TwoWay}" Grid.Column="1" Grid.Row="1"  />
+        
+        <Button Content="Check" Grid.Row="2" Grid.Column="2" Click="Button_Click" />
+    
+    </Grid>
+
+</Window>
