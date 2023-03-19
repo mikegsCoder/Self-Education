@@ -1,0 +1,20 @@
+﻿<Window x:Class="AttachedEvents.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AttachedEvents"
+        mc:Ignorable="d"
+        Title="AttachedEvents" Height="400" Width="500">
+
+    <!--<StackPanel x:Name="menuSelector" Grid.Column="0" RadioButton.Checked="RadioButton_Click">-->
+    
+    <StackPanel x:Name="menuSelector" Grid.Column="0">
+        <RadioButton GroupName="menu" Content="Choice 1" />
+        <RadioButton GroupName="menu" Content="Choice 2" />
+        <RadioButton GroupName="menu" Content="Choice 3" />
+        <RadioButton GroupName="menu" Content="Choice 4" />
+
+        <TextBlock Name="textBlock1"></TextBlock>
+    </StackPanel>
+</Window>
