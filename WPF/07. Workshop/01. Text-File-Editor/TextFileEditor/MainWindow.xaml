@@ -1,0 +1,53 @@
+﻿<Window x:Class="TextFileEditor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TextFileEditor"
+        mc:Ignorable="d"
+        Title="Text File Editor" Height="420" Width="530">
+    <StackPanel Background="BlanchedAlmond">
+        <TextBox Name="textBox" Width="450" Height="200" 
+            Margin="25,10,25,10"
+            BorderThickness="2"
+            TextWrapping="Wrap">
+        </TextBox>
+
+        <Grid Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackPanel Grid.Column="0">
+                <Button Name="readBtn" Content="Read Text" 
+                    Height="25" Width="120" Margin="0,10,0,10" 
+                    Background="SkyBlue" 
+                    Click="readBtn_Click"/>
+
+                <Button Name="writeBtn" Content="Write Text" 
+                    Height="25" Width="120" Margin="0,10,0,10" 
+                    Background="OrangeRed" 
+                    Click="writeBtn_Click"/>
+
+                <Button Name="clearBtn" Content="Clear Text" 
+                    Height="25" Width="120" Margin="0,10,0,10" 
+                    Background="ForestGreen" 
+                    Click="clearBtn_Click"/>
+            </StackPanel>
+
+            <StackPanel Grid.Column="1">
+                <Button Name="addToZipBtn" Content="Add to Zip" 
+                    Height="25" Width="120" Margin="0,10,0,10" 
+                    Background="red" 
+                    Click="addToZipBtn_Click"/>
+
+                <Button Name="unzipBtn" Content="Unzip" 
+                    Height="25" Width="120" Margin="0,10,0,10" 
+                    Background="Cyan" 
+                    Click="unzipBtn_Click"/>
+            </StackPanel>
+
+        </Grid>
+    </StackPanel>
+</Window>
