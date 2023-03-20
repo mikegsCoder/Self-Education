@@ -1,0 +1,22 @@
+﻿<Window x:Class="CopyPasteExample.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CopyPasteExample"
+        mc:Ignorable="d"
+        Title="Copy Paste Example" Height="250" Width="300">
+    <DockPanel>
+
+        <Menu DockPanel.Dock="Top" MinHeight="25">
+            <MenuItem Header="File" />
+            <MenuItem Header="Edit">
+                <MenuItem Header="Copy" CommandTarget="{Binding ElementName=txtBox}" Command="Copy"/>
+                <MenuItem Header="Paste" CommandTarget="{Binding ElementName=txtBox}" Command="Paste"/>
+            </MenuItem>
+        </Menu>
+
+        <TextBox x:Name="txtBox" />
+
+    </DockPanel>
+</Window>
