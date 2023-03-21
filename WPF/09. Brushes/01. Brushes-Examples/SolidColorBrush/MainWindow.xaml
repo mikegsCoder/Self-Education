@@ -1,0 +1,25 @@
+﻿<Window x:Class="SolidColorBrush.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SolidColorBrush"
+        mc:Ignorable="d"
+        Title="Solid Color Brush" Height="400" Width="500">
+    <StackPanel>
+
+        <!--example 1-->
+        <TextBlock Height="20" Width="160" VerticalAlignment="Top" TextAlignment="Center" Text="SolidColorBrush">
+            <TextBlock.Background>
+                <SolidColorBrush Color="Blue" Opacity="0.8"  />
+            </TextBlock.Background>
+            <TextBlock.Foreground>
+                <SolidColorBrush Color="White"/>
+            </TextBlock.Foreground>
+        </TextBlock>
+
+        <!--exmaple 2-->
+        <Button Name="button1" Width="100" Margin="0,20,0,20" Content="Button 1"/>
+
+    </StackPanel>
+</Window>

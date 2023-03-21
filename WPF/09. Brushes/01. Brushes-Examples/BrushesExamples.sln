@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SolidColorBrush", "SolidColorBrush\SolidColorBrush.csproj", "{1B726E6A-B3A4-409F-88B5-3BB781539A03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinearGradientBrush", "LinearGradientBrush\LinearGradientBrush.csproj", "{8DC89B0F-FA67-4B89-B922-5D7A1080A118}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RadialGradientBrush", "RadialGradientBrush\RadialGradientBrush.csproj", "{F27D49A1-C1ED-4C14-8866-74430987660E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ImageBrush", "ImageBrush\ImageBrush.csproj", "{2CB2DC51-DC92-4E74-B0D6-8C896623D33E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DrawingBrush", "DrawingBrush\DrawingBrush.csproj", "{122DCBF7-9FF2-4EC9-9C86-B803BA88C6DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VisualBrush", "VisualBrush\VisualBrush.csproj", "{FFD7D241-5C65-4215-B64B-3974BB1ABBB1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1B726E6A-B3A4-409F-88B5-3BB781539A03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B726E6A-B3A4-409F-88B5-3BB781539A03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B726E6A-B3A4-409F-88B5-3BB781539A03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B726E6A-B3A4-409F-88B5-3BB781539A03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8DC89B0F-FA67-4B89-B922-5D7A1080A118}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8DC89B0F-FA67-4B89-B922-5D7A1080A118}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8DC89B0F-FA67-4B89-B922-5D7A1080A118}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8DC89B0F-FA67-4B89-B922-5D7A1080A118}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F27D49A1-C1ED-4C14-8866-74430987660E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F27D49A1-C1ED-4C14-8866-74430987660E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F27D49A1-C1ED-4C14-8866-74430987660E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F27D49A1-C1ED-4C14-8866-74430987660E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2CB2DC51-DC92-4E74-B0D6-8C896623D33E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2CB2DC51-DC92-4E74-B0D6-8C896623D33E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2CB2DC51-DC92-4E74-B0D6-8C896623D33E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2CB2DC51-DC92-4E74-B0D6-8C896623D33E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{122DCBF7-9FF2-4EC9-9C86-B803BA88C6DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{122DCBF7-9FF2-4EC9-9C86-B803BA88C6DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{122DCBF7-9FF2-4EC9-9C86-B803BA88C6DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{122DCBF7-9FF2-4EC9-9C86-B803BA88C6DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FFD7D241-5C65-4215-B64B-3974BB1ABBB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FFD7D241-5C65-4215-B64B-3974BB1ABBB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FFD7D241-5C65-4215-B64B-3974BB1ABBB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FFD7D241-5C65-4215-B64B-3974BB1ABBB1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AD6B5ECC-78E7-48FB-90D3-26419BD167E2}
+	EndGlobalSection
+EndGlobal
