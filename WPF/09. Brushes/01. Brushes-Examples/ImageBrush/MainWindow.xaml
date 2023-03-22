@@ -1,0 +1,27 @@
+﻿<Window x:Class="ImageBrush.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ImageBrush"
+        mc:Ignorable="d"
+        Title="Image Brush" Height="400" Width="500">
+    <Grid x:Name="grid1" Background="Lavender">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Image Source="D:\WPF\09. Brushes\kitty.jpeg" Grid.Row="0"
+            HorizontalAlignment="Center" />
+
+        <Canvas Grid.Row="1" >
+            <Canvas.Background>
+                <ImageBrush ImageSource="D:\WPF\09. Brushes\kitty.jpeg"
+                            Stretch="Uniform" Viewbox="0.5,0.45,0.3,0.2" />
+            </Canvas.Background>
+        </Canvas>
+
+    </Grid>
+</Window>
