@@ -1,0 +1,25 @@
+﻿<Window x:Class="PhonesList.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PhonesList"
+        mc:Ignorable="d"
+
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
+        xmlns:col="clr-namespace:System.Collections;assembly=mscorlib"
+
+        Title="Phones List" Height="400" Width="500">
+    <Window.Resources>
+        <col:ArrayList x:Key="phones">
+            <sys:String>iPhone 6S</sys:String>
+            <sys:String>Nexus 6P</sys:String>
+            <sys:String>Lumia 950</sys:String>
+            <sys:String>Xiaomi MI5</sys:String>
+        </col:ArrayList>
+    </Window.Resources>
+
+    <Grid>
+        <ListBox ItemsSource="{StaticResource phones}" />
+    </Grid>
+</Window>
