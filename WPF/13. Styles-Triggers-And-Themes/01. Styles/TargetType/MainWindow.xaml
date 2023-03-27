@@ -1,0 +1,31 @@
+﻿<Window x:Class="TargetType.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TargetType"
+        mc:Ignorable="d"
+        Title="Target Type" Height="400" Width="500">
+    <Window.Resources>
+
+        <!--set style target type-->
+        <Style TargetType="Button">
+            <Setter Property="FontFamily" Value="Verdana" />
+            <Setter Property="Background" Value="Black" />
+            <Setter Property="Foreground" Value="White" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+
+    </Window.Resources>
+
+    <StackPanel x:Name="buttonsStack" Background="Black" >
+
+        <!--buttons with style-->
+        <Button x:Name="button1" Content="Button 1" />
+        <Button x:Name="button2" Content="Button 2" />
+
+        <!--button without style-->
+        <Button x:Name="button3" Content="Button without style" Style="{x:Null}" />
+
+    </StackPanel>
+</Window>
