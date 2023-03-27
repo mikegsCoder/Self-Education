@@ -1,0 +1,40 @@
+﻿<Window x:Class="BlackAndWhite.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BlackAndWhite"
+        mc:Ignorable="d"
+        Title="Black and White" Height="400" Width="500">
+    <Window.Resources>
+
+        <!--defining style-->
+        <Style x:Key="BlackAndWhite">
+            <Setter Property="Control.Background">
+                <Setter.Value>
+                    <LinearGradientBrush>
+                        <LinearGradientBrush.GradientStops>
+                            <GradientStop Color="White" Offset="0" />
+                            <GradientStop Color="Black" Offset="1" />
+                        </LinearGradientBrush.GradientStops>
+                    </LinearGradientBrush>
+                </Setter.Value>
+            </Setter>
+            <Setter Property="Control.FontFamily" Value="Verdana" />
+            <Setter Property="Control.Foreground" Value="White" />
+            <Setter Property="Control.Margin" Value="10" />
+        </Style>
+
+    </Window.Resources>
+
+    <StackPanel x:Name="buttonsStack" Background="Black" >
+        
+        <!--using style-->
+        <Button x:Name="button1" Content="Button 1"
+                Style="{StaticResource BlackAndWhite}" />
+
+        <Button x:Name="button2" Content="Button 2"
+                Style="{StaticResource BlackAndWhite}"/>
+
+    </StackPanel>
+</Window>
