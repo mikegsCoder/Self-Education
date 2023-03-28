@@ -1,0 +1,28 @@
+﻿<Window x:Class="DataTrigger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataTrigger"
+        mc:Ignorable="d"
+        Title="Data Trigger" Height="400" Width="500">
+    <Window.Resources>
+
+        <Style TargetType="Button">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding ElementName=checkBox1, Path=IsChecked}"
+                        Value="True">
+                    <Setter Property="IsEnabled" Value="False"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
+    </Window.Resources>
+
+    <StackPanel >
+
+        <CheckBox x:Name="checkBox1" Content="Disable" />
+        <Button x:Name="button1" Content="Button 1" />
+
+    </StackPanel>
+</Window>
