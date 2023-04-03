@@ -1,0 +1,73 @@
+﻿<Window x:Class="VisualTransition.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VisualTransition"
+        mc:Ignorable="d"
+        Title="Visual Transition" Height="400" Width="500">
+    <Grid>
+        <Button x:Name="myButton" Content="Hello" Height="40" Width="100">
+            <Button.Template>
+                <ControlTemplate TargetType="Button">
+
+                    <Border CornerRadius="25"
+                        BorderBrush="{TemplateBinding BorderBrush}"
+                        BorderThickness="{TemplateBinding BorderThickness}"
+                        Height="{TemplateBinding Height}"
+                        Width="{TemplateBinding Width}">
+
+                        <Border.Background>
+                            <SolidColorBrush x:Name="BorderColor" Color="LightPink" />
+                        </Border.Background>
+
+                        <ContentControl Margin="{TemplateBinding Padding}"
+                            HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                            VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                            Content="{TemplateBinding Content}" />
+
+                        <VisualStateManager.VisualStateGroups>
+                            <VisualStateGroup Name="CommonStates">
+                                
+                                <!--mouse over state-->
+                                <VisualState Name="MouseOver">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="BorderColor"
+                                            Storyboard.TargetProperty="Color" To="LightBlue" />
+                                    </Storyboard>
+                                </VisualState>
+
+                                <!--normal state-->
+                                <VisualState Name="Normal">
+                                    <Storyboard>
+                                        <ColorAnimation Storyboard.TargetName="BorderColor"
+                                            Storyboard.TargetProperty="Color" To="LightPink" />
+                                    </Storyboard>
+                                </VisualState>
+
+                                <VisualStateGroup.Transitions>
+                                    <VisualTransition From="MouseOver" To="Normal"
+                                        GeneratedDuration="0:0:1.5">
+                                        <Storyboard>
+                                            <ColorAnimationUsingKeyFrames Storyboard.TargetName="BorderColor"
+                                                Storyboard.TargetProperty="Color" FillBehavior="HoldEnd">
+                                                
+                                                <!--color animations-->
+                                                <ColorAnimationUsingKeyFrames.KeyFrames>
+                                                    <LinearColorKeyFrame Value="Yellow" KeyTime="0:0:0.5" />
+                                                    <LinearColorKeyFrame Value="Green" KeyTime="0:0:1.5" />
+                                                    <LinearColorKeyFrame Value="Red" KeyTime="0:0:1" />
+                                                </ColorAnimationUsingKeyFrames.KeyFrames>
+                                            
+                                            </ColorAnimationUsingKeyFrames>
+                                        </Storyboard>
+                                    </VisualTransition>
+                                </VisualStateGroup.Transitions>
+                            </VisualStateGroup>
+                        </VisualStateManager.VisualStateGroups>
+                    </Border>
+                </ControlTemplate>
+            </Button.Template>
+        </Button>
+    </Grid>
+</Window>
