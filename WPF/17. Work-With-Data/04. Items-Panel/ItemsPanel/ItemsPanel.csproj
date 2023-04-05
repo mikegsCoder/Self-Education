@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Images\Galaxys6.jpg" />
+    <None Remove="Images\iPhone6s.jpg" />
+    <None Remove="Images\Lumia950.jpg" />
+    <None Remove="Images\Nexus5x.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\Galaxys6.jpg" />
+    <Resource Include="Images\iPhone6s.jpg" />
+    <Resource Include="Images\Lumia950.jpg" />
+    <Resource Include="Images\Nexus5x.jpg" />
+  </ItemGroup>
+
+</Project>
