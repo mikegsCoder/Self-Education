@@ -1,0 +1,35 @@
+﻿<Window x:Class="DataTriggers.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DataTriggers"
+        mc:Ignorable="d"
+        Title="Data Triggers" Height="800" Width="300">
+    <Window.Resources>
+        <DataTemplate x:Key="listTemplate">
+            
+            <StackPanel Margin="5">
+                <Border x:Name="phoneImageBorder">
+                    <Image Width="100" Name="phoneImage" Height="75" Source="{Binding Path=ImagePath}" />
+                </Border>
+                <TextBlock FontSize="16" Name="phoneTitle" Text="{Binding Path=Title}" HorizontalAlignment="Center" />
+                <TextBlock FontSize="16" Text="{Binding Path=Company}" HorizontalAlignment="Center" />
+            </StackPanel>
+            
+            <DataTemplate.Triggers>
+                <DataTrigger Binding="{Binding Company}" Value="Microsoft">
+                    <Setter TargetName="phoneTitle" Property="FontWeight" Value="Bold" />
+                    <Setter TargetName="phoneImageBorder" Property="BorderBrush" Value="Red" />
+                    <Setter TargetName="phoneImageBorder" Property="BorderThickness" Value="3" />
+                </DataTrigger>
+            </DataTemplate.Triggers>
+        
+        </DataTemplate>
+    </Window.Resources>
+    
+    <Grid>
+        <ListBox x:Name="phonesList" ItemTemplate="{StaticResource listTemplate}"
+             SelectionChanged="phonesList_SelectionChanged"  />
+    </Grid>
+</Window>
