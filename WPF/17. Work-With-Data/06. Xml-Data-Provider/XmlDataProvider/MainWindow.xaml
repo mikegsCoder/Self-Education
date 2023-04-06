@@ -1,0 +1,17 @@
+﻿<Window x:Class="XmlDataProvider.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XmlDataProvider"
+        mc:Ignorable="d"
+        Title="XML Data Provider" Height="400" Width="500">
+    <Window.Resources>
+        <XmlDataProvider x:Key="phonesProvider" Source="../../../phones.xml" XPath="phones" />
+    </Window.Resources>
+
+    <Grid>
+        <ListBox x:Name="phonesList" DisplayMemberPath="title"
+                 ItemsSource="{Binding Source={StaticResource phonesProvider}, XPath=phone}" />
+    </Grid>
+</Window>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<phones>
+    <phone>
+        <id>1</id>
+        <title>Lumia 950</title>
+        <company>Microsoft</company>
+    </phone>
+    <phone>
+        <id>2</id>
+        <title>Elite X3</title>
+        <company>HP</company>
+    </phone>
+    <phone>
+        <id>3</id>
+        <title>Fierce XL</title>
+        <company>Alcatel</company>
+    </phone>
+</phones>
