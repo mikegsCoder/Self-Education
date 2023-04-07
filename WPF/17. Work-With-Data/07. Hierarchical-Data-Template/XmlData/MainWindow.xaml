@@ -1,0 +1,22 @@
+﻿<Window x:Class="XmlData.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:XmlData"
+        mc:Ignorable="d"
+        Title="XML Data" Height="400" Width="400">
+    <Window.Resources>
+        <XmlDataProvider x:Key="nodesProvider" Source="../../../nodes.xml" XPath="nodes/node" />
+    </Window.Resources>
+
+    <Grid>
+        <TreeView ItemsSource="{Binding Source={StaticResource nodesProvider}}">
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding XPath=node}">
+                    <TextBlock Text="{Binding XPath=@title}" />
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
+    </Grid>
+</Window>

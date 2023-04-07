@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<nodes>
+    <node title="Europe">
+        <node title="Germany" />
+        <node title="France" />
+        <node title="Great Britain">
+            <node title="England" />
+            <node title="Scotland" />
+            <node title="Wales" />
+            <node title="Ireland" />
+        </node>
+    </node>
+    <node title="Asia">
+        <node title="China" />
+        <node title="Japan" />
+        <node title="India" />
+    </node>
+</nodes>
