@@ -41,7 +41,19 @@ namespace TicTacToe
 
         private void Restart_Click(object sender, RoutedEventArgs e)
         {
- 
+            //Restarts Game
+            for (int i = 0; i < VisualTreeHelper.GetChildrenCount(MyGrid) - 1; i++) // This loop iterates through all the buttons/tiles in the grid and sets changed properties to default
+            {
+                var child = VisualTreeHelper.GetChild(MyGrid, i) as Button;
+
+                child.Content = null;
+                child.IsHitTestVisible = true;
+                child.Background = (SolidColorBrush)(new BrushConverter().ConvertFrom("#FFDDDDDD"));
+            }
+
+            MyGameBoard = new GameBoard();
+
+            DataContext = MyGameBoard;
         }
     }
 }
