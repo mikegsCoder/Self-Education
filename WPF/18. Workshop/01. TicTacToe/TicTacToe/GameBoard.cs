@@ -98,5 +98,19 @@ namespace TicTacToe
 
             return false;
         }
+
+        // Handles logic of game by updating board and checking win conditions, called on tile click
+        public void UpdateBoard(string buttonName)
+        {
+            board[buttonName] = (int)currentPlayer;
+
+            HasWon = CheckIfWon(buttonName);
+
+            turn++;
+
+            currentPlayer = currentPlayer == CurrentPlayer.X
+                ? CurrentPlayer.O
+                : CurrentPlayer.X;
+        }
     }
 }
