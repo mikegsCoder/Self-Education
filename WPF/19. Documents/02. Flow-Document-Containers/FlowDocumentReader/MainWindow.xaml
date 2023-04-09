@@ -1,0 +1,18 @@
+﻿<Window x:Class="FlowDocumentReader.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlowDocumentReader"
+        mc:Ignorable="d"
+        Title="FlowDocumentReader" Height="400" Width="400">
+    <FlowDocumentReader>
+        <FlowDocument ColumnWidth="150" ColumnGap="10">
+            <Paragraph TextAlignment="Left" FontSize="15">
+                Lorem ipsum dolor sit amet. Est eligendi omnis a consequatur incidunt est consequatur quia sit fugit assumenda cum adipisci enim. Ut ullam nulla ad praesentium sint et eaque omnis aut esse explicabo aut neque dolor est consequatur sunt in reiciendis accusamus. Et deleniti doloribus ea rerum placeat aut voluptatem enim aut vitae asperiores id voluptate accusantium et voluptate fugit et quibusdam reiciendis. Qui atque unde et cupiditate reiciendis aut nobis similique qui impedit tempora rem quia repudiandae aut ducimus fuga.
+                A inventore dolorem vel laboriosam harum rem doloremque provident et omnis corrupti et optio placeat. Ut saepe eveniet et perspiciatis cumque rem quod maxime 33 cumque aspernatur et eius asperiores ea doloribus labore non numquam officiis. Qui impedit quae aut omnis temporibus sed eveniet odit ad suscipit soluta quo corporis similique non magnam officiis. In animi quas in facilis dolorem et facilis neque.
+                Vel consequatur fugiat qui possimus facere et consequatur sequi sit odio modi id quidem libero. Ut Quis internos aut recusandae Quis quo maiores quos est deleniti officia. Ut expedita cupiditate At porro voluptatum sit eveniet veniam hic quisquam rerum aut dolor eaque sed deleniti dolorum aut nisi doloribus!
+            </Paragraph>
+        </FlowDocument>
+    </FlowDocumentReader>
+</Window>
