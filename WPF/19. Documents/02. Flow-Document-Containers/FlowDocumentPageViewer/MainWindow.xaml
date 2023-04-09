@@ -1,0 +1,18 @@
+﻿<Window x:Class="FlowDocumentPageViewer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:FlowDocumentPageViewer"
+        mc:Ignorable="d"
+        Title="FlowDocumentPageViewer" Height="300" Width="600">
+    <FlowDocumentPageViewer>
+        <FlowDocument ColumnWidth="150" ColumnGap="10">
+            <Paragraph TextAlignment="Left" FontSize="15">
+                Lorem ipsum dolor sit amet. Et vitae quod eos facere quam ad provident doloremque. Nam tempora pariatur et enim corrupti et repudiandae internos sit officiis incidunt in explicabo quod ad eveniet libero hic aliquam perferendis.
+                Est aliquid eveniet ut corrupti quam rem quos blanditiis ut itaque earum ea atque vero qui voluptas ducimus. Cum doloribus incidunt et saepe itaque id tempora sapiente. Eos libero nisi et omnis velit eum reprehenderit voluptatem in sunt sint.
+                33 Quis alias qui minima dolor et enim molestias et deserunt corporis. Qui corporis illum et quisquam voluptatem nam voluptas quidem et fuga necessitatibus aut iste quas sit repudiandae praesentium. Ut repellat eius non galisum doloremque a cumque consequatur quo saepe quam ut dolorem alias quo error tempore. Sit pariatur animi in consequatur possimus At laborum laboriosam sed eveniet
+            </Paragraph>
+        </FlowDocument>
+    </FlowDocumentPageViewer>
+</Window>
