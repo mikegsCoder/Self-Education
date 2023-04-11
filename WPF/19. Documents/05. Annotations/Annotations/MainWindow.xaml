@@ -1,0 +1,47 @@
+﻿<Window x:Class="Annotations.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Annotations"
+        xmlns:a="clr-namespace:System.Windows.Annotations;assembly=PresentationFramework"
+        mc:Ignorable="d"
+        Title="Annotations" Height="300" Width="400">
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <ToolBar>
+            <Button Command="a:AnnotationService.CreateTextStickyNoteCommand" FontSize="10">
+                Comment
+            </Button>
+
+            <Button Command="a:AnnotationService.CreateHighlightCommand" FontSize="10"
+                    CommandParameter="{x:Static Brushes.Yellow}">
+                Highlight
+            </Button>
+
+            <Button Command="a:AnnotationService.ClearHighlightsCommand" FontSize="10">
+                Clear Highlights
+            </Button>
+
+            <Button Command="a:AnnotationService.DeleteStickyNotesCommand" FontSize="10">
+                Delete Comment
+            </Button>
+        </ToolBar>
+
+        <FlowDocumentScrollViewer x:Name="docViewer" Grid.Row="1">
+            <FlowDocument FontSize="12">
+                <Paragraph TextIndent="20">
+                    Lorem ipsum dolor sit amet. Non asperiores sapiente qui fuga recusandae aut nostrum quidem et velit sint eum fugit delectus est omnis corporis aut dolorum cumque. Eum aperiam distinctio ut consequatur earum ut similique quam! Et labore temporibus id voluptatem deserunt sit quas architecto sit odio voluptas. Est eaque quia non mollitia Quis est fugiat dignissimos id temporibus quia et sunt mollitia eos consequatur earum id quia rerum.
+                    Ex consequuntur sint ad delectus omnis et voluptas corporis non quaerat reiciendis aut autem sequi est voluptatem iure et rerum necessitatibus. Nam maiores repellat ut dolorem alias qui deserunt maxime sed amet dolor 33 magnam suscipit est cupiditate nihil ad sunt molestiae.
+                    Qui debitis dolor et quaerat facere ut inventore fugit est veritatis sunt eum error provident aut unde quas? Vel assumenda nisi ea molestiae ipsam ut sapiente fugit et itaque eius. Vel autem vitae est temporibus quia sit harum maiores id nisi illo non sunt officiis eos soluta dolores.
+                </Paragraph>
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+
+    </Grid>
+</Window>
