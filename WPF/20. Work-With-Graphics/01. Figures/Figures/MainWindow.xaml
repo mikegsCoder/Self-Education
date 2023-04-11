@@ -1,0 +1,46 @@
+﻿<Window x:Class="Figures.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Figures"
+        mc:Ignorable="d"
+        Title="Figures" Height="500" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <!--Ellipse-->
+        <Ellipse Grid.Row="0" Grid.Column="0" Fill="LightBlue" Width="100" Height="100" />
+    
+        <!--Rectangle-->
+        <StackPanel Background="White" Grid.Row="0" Grid.Column="1" VerticalAlignment="Center">
+            <Rectangle Fill="LightBlue" Width="100" Height="50" Margin="10" />
+            <Rectangle Fill="LightPink" Width="100" Height="50" RadiusX="10" RadiusY="10" Margin="10" />
+        </StackPanel>
+
+        <!--Line-->
+        <Line X1="50" Y1="50" X2="200" Y2="200" Stroke="Red" Grid.Row="0" Grid.Column="2"/>
+        <Line X1="50" Y1="200" X2="200" Y2="50" Stroke="Blue" Grid.Row="0" Grid.Column="2"/>
+
+        <!--Polygon-->
+        <Polygon Fill="LightPink" Points="30, 150, 130, 50, 220, 150" Grid.Row="1" Grid.Column="0"/>
+
+        <!--Polyline-->
+        <Polyline Stroke="Red" Points="30, 150, 130, 50, 220, 150" Grid.Row="1" Grid.Column="1"/>
+    
+        <!--Stroke settings-->
+        <Ellipse Width="100" Height="100" Fill="LightPink"
+            StrokeThickness="5" StrokeDashArray="4 2"
+            Stroke="Gray" StrokeDashCap="Round" 
+            Grid.Row="1" Grid.Column="2"/>
+    </Grid>
+</Window>
