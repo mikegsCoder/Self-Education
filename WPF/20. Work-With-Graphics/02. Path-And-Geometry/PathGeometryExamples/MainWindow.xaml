@@ -1,0 +1,40 @@
+﻿<Window x:Class="PathGeometryExamples.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PathGeometryExamples"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="300">
+    <StackPanel>
+        <!--LineGeometry-->
+        <Path Stroke="Blue">
+            <Path.Data>
+                <LineGeometry StartPoint="100,30" EndPoint="200,130" />
+            </Path.Data>
+        </Path>
+
+        <!--RectangleGeometry-->
+        <Path Fill="LightBlue">
+            <Path.Data>
+                <RectangleGeometry Rect="100,20 100,50" />
+            </Path.Data>
+        </Path>
+        <Path Fill="LightPink">
+            <Path.Data>
+                <RectangleGeometry Rect="100,20 100,50" RadiusX="10" RadiusY="10" />
+            </Path.Data>
+        </Path>
+
+        <!--GeometryGroup-->
+        <Path Fill="LightPink" Stroke="LightBlue">
+            <Path.Data>
+                <GeometryGroup  FillRule="Nonzero">
+                    <LineGeometry StartPoint="10,10" EndPoint="220,10" />
+                    <EllipseGeometry Center="100,100" RadiusX="50" RadiusY="40" />
+                    <RectangleGeometry Rect="120,100 80,20" RadiusX="5" RadiusY="5" />
+                </GeometryGroup>
+            </Path.Data>
+        </Path>
+    </StackPanel>
+</Window>

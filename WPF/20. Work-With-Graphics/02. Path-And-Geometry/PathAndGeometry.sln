@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathGeometryExamples", "PathGeometryExamples\PathGeometryExamples.csproj", "{9BB59E14-FAD6-4C58-A335-D8B2756449E1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CombinedGeometry", "CombinedGeometry\CombinedGeometry.csproj", "{7784B862-8EAA-4AC3-836C-47A7E56B9AC8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9BB59E14-FAD6-4C58-A335-D8B2756449E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9BB59E14-FAD6-4C58-A335-D8B2756449E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9BB59E14-FAD6-4C58-A335-D8B2756449E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9BB59E14-FAD6-4C58-A335-D8B2756449E1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7784B862-8EAA-4AC3-836C-47A7E56B9AC8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7784B862-8EAA-4AC3-836C-47A7E56B9AC8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7784B862-8EAA-4AC3-836C-47A7E56B9AC8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7784B862-8EAA-4AC3-836C-47A7E56B9AC8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {889A534F-3982-414B-B796-819752973FE8}
+	EndGlobalSection
+EndGlobal
