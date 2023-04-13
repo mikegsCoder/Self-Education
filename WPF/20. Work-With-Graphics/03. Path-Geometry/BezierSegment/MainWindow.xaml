@@ -1,0 +1,30 @@
+﻿<Window x:Class="BezierSegment.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BezierSegment"
+        mc:Ignorable="d"
+        Title="BezierSegment" Height="300" Width="300">
+    <Grid>
+        <Path Stroke="Blue">
+            <Path.Data>
+                <PathGeometry>
+                    <PathFigure StartPoint="60,10">
+                        <BezierSegment Point1="180,30" Point2="100,140" Point3="210,150" />
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+
+        <Path Stroke="Red">
+            <Path.Data>
+                <PathGeometry>
+                    <PathFigure IsClosed="False" StartPoint="10,110">
+                        <QuadraticBezierSegment Point1="130,130" Point2="40,240" />
+                    </PathFigure>
+                </PathGeometry>
+            </Path.Data>
+        </Path>
+    </Grid>
+</Window>
