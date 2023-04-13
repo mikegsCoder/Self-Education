@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Lines", "Lines\Lines.csproj", "{79F123BE-62E1-4A90-9DA8-1565B6AAA2ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Arc", "Arc\Arc.csproj", "{DFC5729F-2E26-485D-A9D1-631A8E63AAEE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BezierSegment", "BezierSegment\BezierSegment.csproj", "{729806D6-E349-4EDE-A277-28245BE81E71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathGeometryInCSharp", "PathGeometryInCSharp\PathGeometryInCSharp.csproj", "{7D1C7990-C6FB-46BC-9492-636E3E5122BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{79F123BE-62E1-4A90-9DA8-1565B6AAA2ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79F123BE-62E1-4A90-9DA8-1565B6AAA2ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79F123BE-62E1-4A90-9DA8-1565B6AAA2ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79F123BE-62E1-4A90-9DA8-1565B6AAA2ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DFC5729F-2E26-485D-A9D1-631A8E63AAEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DFC5729F-2E26-485D-A9D1-631A8E63AAEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DFC5729F-2E26-485D-A9D1-631A8E63AAEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DFC5729F-2E26-485D-A9D1-631A8E63AAEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{729806D6-E349-4EDE-A277-28245BE81E71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{729806D6-E349-4EDE-A277-28245BE81E71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{729806D6-E349-4EDE-A277-28245BE81E71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{729806D6-E349-4EDE-A277-28245BE81E71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D1C7990-C6FB-46BC-9492-636E3E5122BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D1C7990-C6FB-46BC-9492-636E3E5122BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D1C7990-C6FB-46BC-9492-636E3E5122BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D1C7990-C6FB-46BC-9492-636E3E5122BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5BCE9249-A5AF-40EA-ADE5-E460D6C3FD23}
+	EndGlobalSection
+EndGlobal
