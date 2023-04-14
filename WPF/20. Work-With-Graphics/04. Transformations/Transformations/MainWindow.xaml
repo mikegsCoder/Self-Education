@@ -1,0 +1,56 @@
+﻿<Window x:Class="Transformations.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Transformations"
+        mc:Ignorable="d"
+        Title="Transform" Height="450" Width="400">
+    <StackPanel>
+        <!--RotateTransform-->
+        <Rectangle Width="100" Height="30" Stroke="Blue" Fill="LightBlue">
+            <Rectangle.RenderTransform>
+                <RotateTransform Angle="45" />
+            </Rectangle.RenderTransform>
+        </Rectangle>
+
+        <!--TranslateTransform-->
+        <Rectangle Width="100" Height="30" Stroke="Blue" Fill="LightBlue">
+            <Rectangle.RenderTransform>
+                <TranslateTransform X="20" Y="70" />
+            </Rectangle.RenderTransform>
+        </Rectangle>
+
+        <!--ScaleTransform-->
+        <Rectangle Width="100" Height="30" Stroke="Blue" Fill="LightBlue" Margin="0,90,0,0">
+            <Rectangle.RenderTransform>
+                <ScaleTransform ScaleX="1.5" ScaleY="1.5" />
+            </Rectangle.RenderTransform>
+        </Rectangle>
+
+        <!--SkewTransform-->
+        <Rectangle Width="100" Height="30" Stroke="Blue" Fill="LightBlue" Margin="0,30,0,0">
+            <Rectangle.RenderTransform>
+                <SkewTransform AngleX="45"  />
+            </Rectangle.RenderTransform>
+        </Rectangle>
+
+        <!--MatrixTransform-->
+        <Rectangle Width="100" Height="30" Stroke="Blue" Fill="LightBlue" Margin="0,20,0,0">
+            <Rectangle.RenderTransform>
+                <MatrixTransform Matrix="1 0 1 2 1 -3" />
+            </Rectangle.RenderTransform>
+        </Rectangle>
+
+        <!--TransformGroup-->
+        <Rectangle Width="100" Height="30" Stroke="Blue" Fill="LightBlue" Margin="0,80,0,0">
+            <Rectangle.RenderTransform>
+                <TransformGroup>
+                    <RotateTransform Angle="45" />
+                    <TranslateTransform Y="-40" X="30" />
+                </TransformGroup>
+            </Rectangle.RenderTransform>
+        </Rectangle>
+
+    </StackPanel>
+</Window>

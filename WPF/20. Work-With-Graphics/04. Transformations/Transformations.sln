@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Transformations", "Transformations\Transformations.csproj", "{05B7A33D-6184-4B4D-9B6E-001529D5E847}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RenderTransform_LayoutTransform", "RenderTransform_LayoutTransform\RenderTransform_LayoutTransform.csproj", "{B22E3FC9-8179-4697-B50F-8B1C5E27F4BC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05B7A33D-6184-4B4D-9B6E-001529D5E847}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05B7A33D-6184-4B4D-9B6E-001529D5E847}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05B7A33D-6184-4B4D-9B6E-001529D5E847}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05B7A33D-6184-4B4D-9B6E-001529D5E847}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B22E3FC9-8179-4697-B50F-8B1C5E27F4BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B22E3FC9-8179-4697-B50F-8B1C5E27F4BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B22E3FC9-8179-4697-B50F-8B1C5E27F4BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B22E3FC9-8179-4697-B50F-8B1C5E27F4BC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B4EBF1E5-BE5D-48CB-86D5-9B8E8FBA53BC}
+	EndGlobalSection
+EndGlobal
