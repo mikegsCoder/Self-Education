@@ -1,0 +1,43 @@
+﻿<Window x:Class="ComplexAnimation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ComplexAnimation"
+        mc:Ignorable="d"
+        Title="Complex Animation" Height="400" Width="400">
+    <Grid>
+        <Button x:Name="helloButton" Foreground="White" Width="70" Height="25" Content="Button">
+            
+            <Button.Background>
+                <SolidColorBrush x:Name="buttonColor" Color="Black" />
+            </Button.Background>
+
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+
+                                <!--Width Animation-->
+                                <DoubleAnimation Storyboard.TargetProperty="Width" Storyboard.TargetName="helloButton"
+                                    From="80" To="150"  AutoReverse="True" RepeatBehavior="0:0:10" Duration="0:0:2"  />
+                                
+                                <!--Height Animation-->
+                                <DoubleAnimation Storyboard.TargetProperty="Height" Storyboard.TargetName="helloButton"
+                                    From="30" To="100" AutoReverse="True" RepeatBehavior="0:0:10" Duration="0:0:2" />
+                                
+                                <!--Color Animation-->
+                                <ColorAnimation Storyboard.TargetName="buttonColor" Storyboard.TargetProperty="Color"
+                                    From="{Binding ElementName=buttonColor, Path=Color}" To="Red"
+                                    AutoReverse="True" RepeatBehavior="0:0:10" Duration="0:0:2" />
+                            
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+
+        </Button>
+    </Grid>
+</Window>
