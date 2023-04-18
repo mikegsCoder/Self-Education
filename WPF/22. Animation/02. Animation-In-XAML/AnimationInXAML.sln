@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimationInXAML", "AnimationInXAML\AnimationInXAML.csproj", "{73F14ECD-FE12-4CCF-B964-A0AF66D5E908}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JumpingBall", "JumpingBall\JumpingBall.csproj", "{E3E57A31-9E90-4169-92F4-7A675D3D21D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NestedObjectsAnimation", "NestedObjectsAnimation\NestedObjectsAnimation.csproj", "{7AC7352C-059E-4D17-9BFC-9C2A2875925E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComplexAnimation", "ComplexAnimation\ComplexAnimation.csproj", "{B4E698CC-3E9A-4A81-A978-BD674FFD5EE0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AnimationInStyle", "AnimationInStyle\AnimationInStyle.csproj", "{0B4EF107-4002-4E1E-B5EB-65A5D9DC0A10}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{73F14ECD-FE12-4CCF-B964-A0AF66D5E908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{73F14ECD-FE12-4CCF-B964-A0AF66D5E908}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{73F14ECD-FE12-4CCF-B964-A0AF66D5E908}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{73F14ECD-FE12-4CCF-B964-A0AF66D5E908}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3E57A31-9E90-4169-92F4-7A675D3D21D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3E57A31-9E90-4169-92F4-7A675D3D21D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3E57A31-9E90-4169-92F4-7A675D3D21D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3E57A31-9E90-4169-92F4-7A675D3D21D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AC7352C-059E-4D17-9BFC-9C2A2875925E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AC7352C-059E-4D17-9BFC-9C2A2875925E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AC7352C-059E-4D17-9BFC-9C2A2875925E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AC7352C-059E-4D17-9BFC-9C2A2875925E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B4E698CC-3E9A-4A81-A978-BD674FFD5EE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B4E698CC-3E9A-4A81-A978-BD674FFD5EE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B4E698CC-3E9A-4A81-A978-BD674FFD5EE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B4E698CC-3E9A-4A81-A978-BD674FFD5EE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B4EF107-4002-4E1E-B5EB-65A5D9DC0A10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B4EF107-4002-4E1E-B5EB-65A5D9DC0A10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B4EF107-4002-4E1E-B5EB-65A5D9DC0A10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B4EF107-4002-4E1E-B5EB-65A5D9DC0A10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2AEB1D01-2F65-4673-8A70-E3336258DA02}
+	EndGlobalSection
+EndGlobal
