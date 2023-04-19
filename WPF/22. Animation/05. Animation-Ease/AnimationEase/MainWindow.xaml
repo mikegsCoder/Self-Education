@@ -1,0 +1,45 @@
+﻿<Window x:Class="AnimationEase.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AnimationEase"
+        mc:Ignorable="d"
+        Title="Animation Ease" Height="400" Width="400">
+    <Grid>
+        <Button Width="70" Height="25" Content="Button">
+            <Button.Triggers>
+                <EventTrigger RoutedEvent="Loaded">
+                    <EventTrigger.Actions>
+                        <BeginStoryboard>
+                            <Storyboard>
+                                <DoubleAnimation Storyboard.TargetProperty="Width"
+                                    To="150"
+                                    Duration="0:0:5">
+
+                                    <!--EasingFunction-->
+                                    <DoubleAnimation.EasingFunction>
+
+                                        <!--ElasticEase - EaseOut-->
+                                        <!--<ElasticEase EasingMode="EaseOut" Oscillations="5" Springiness="4" />-->
+
+                                        <!--ElasticEase - EaseIn-->
+                                        <!--<ElasticEase EasingMode="EaseIn" Oscillations="5" Springiness="4" />-->
+
+                                        <!--PowerEase-->
+                                        <!--<PowerEase Power="6" />-->
+
+                                        <!--BounceEase-->
+                                        <BounceEase EasingMode="EaseOut" Bounces="3" />
+
+                                    </DoubleAnimation.EasingFunction>
+
+                                </DoubleAnimation>
+                            </Storyboard>
+                        </BeginStoryboard>
+                    </EventTrigger.Actions>
+                </EventTrigger>
+            </Button.Triggers>
+        </Button>
+    </Grid>
+</Window>
