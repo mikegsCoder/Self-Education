@@ -1,4 +1,4 @@
-## C# Object Oriented Programming
+## Windows Presentation Foundation
 
 ### Course cirriculum :
 
