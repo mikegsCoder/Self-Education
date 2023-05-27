@@ -1,7 +1,4 @@
-﻿using MongoDB.Driver;
-using MongoDB.Driver.Core;
-
-namespace MongoDbApp
+﻿namespace MongoDbApp
 {
     public class Program
     {
