@@ -32,7 +32,14 @@ namespace Collections
                         }
                         break;
                     case 2:
-                        
+                        try
+                        {
+                            db.GetCollectionNames();
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
                         break;
                     case 3:
                        

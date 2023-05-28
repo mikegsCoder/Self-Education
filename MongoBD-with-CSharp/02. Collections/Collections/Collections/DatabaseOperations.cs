@@ -36,5 +36,22 @@ namespace Collections
                 }
             }
         }
+
+        public async void GetCollectionNames()
+        {
+            var collectionNames = await db.ListCollectionNames().ToListAsync();
+
+            if (collectionNames.Count == 0)
+            {
+                await Console.Out.WriteLineAsync("No collections in database!");
+            }
+            else
+            {
+                foreach (var name in collectionNames)
+                {
+                    Console.WriteLine(name);
+                }
+            }
+        }
     }
 }
