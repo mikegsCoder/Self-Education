@@ -19,6 +19,22 @@ namespace Collections
 
             db = client.GetDatabase(_databaseName);
         }
-         
+
+        public async void GetCollections()
+        {
+            var collections = await db.ListCollections().ToListAsync();
+
+            if (collections.Count == 0)
+            {
+                await Console.Out.WriteLineAsync("No collections in database!");
+            }
+            else
+            {
+                foreach (var collection in collections)
+                {
+                    Console.WriteLine(collection);
+                }
+            }
+        }
     }
 }

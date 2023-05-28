@@ -22,7 +22,14 @@ namespace Collections
                 switch (input)
                 {
                     case 1:
-                      
+                        try
+                        {
+                            db.GetCollections();
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
                         break;
                     case 2:
                         
