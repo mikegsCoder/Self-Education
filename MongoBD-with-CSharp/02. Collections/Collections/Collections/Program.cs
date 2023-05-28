@@ -42,7 +42,17 @@ namespace Collections
                         }
                         break;
                     case 3:
-                       
+                        try
+                        {
+                            Console.WriteLine("Enter new collection name: ");
+                            string name = Console.ReadLine().Trim();
+
+                            db.CreateCollection(name);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
                         break;
                     case 4:
                        

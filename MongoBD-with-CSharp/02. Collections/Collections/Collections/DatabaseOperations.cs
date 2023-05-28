@@ -53,5 +53,10 @@ namespace Collections
                 }
             }
         }
+
+        public async void CreateCollection(string name)
+        {
+            await db.CreateCollectionAsync(name);
+        }
     }
 }
