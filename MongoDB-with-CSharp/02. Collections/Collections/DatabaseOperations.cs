@@ -58,5 +58,10 @@ namespace Collections
         {
             await db.CreateCollectionAsync(name);
         }
+
+        public async void RenameCollection(string oldName, string newName)
+        {
+            await db.RenameCollectionAsync(oldName, newName);
+        }
     }
 }

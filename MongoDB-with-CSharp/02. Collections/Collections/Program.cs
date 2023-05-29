@@ -55,7 +55,20 @@ namespace Collections
                         }
                         break;
                     case 4:
-                       
+                        try
+                        {
+                            Console.WriteLine("Enter old collection name: ");
+                            string oldName = Console.ReadLine().Trim();
+
+                            Console.WriteLine("Enter new collection name: ");
+                            string newName = Console.ReadLine().Trim();
+
+                            db.RenameCollection(oldName, newName);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
                         break;
                     case 5:
                        
