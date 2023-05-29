@@ -63,5 +63,10 @@ namespace Collections
         {
             await db.RenameCollectionAsync(oldName, newName);
         }
+
+        public async void DropCollection(string name)
+        {
+            await db.DropCollectionAsync(name);
+        }
     }
 }

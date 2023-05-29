@@ -71,7 +71,17 @@ namespace Collections
                         }
                         break;
                     case 5:
-                       
+                        try
+                        {
+                            Console.WriteLine("Enter collection name to drop: ");
+                            string name = Console.ReadLine().Trim();
+
+                            db.DropCollection(name);
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
                         break;
                     case 6:
                        
