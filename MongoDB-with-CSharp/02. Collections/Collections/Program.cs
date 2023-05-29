@@ -1,8 +1,4 @@
-﻿using MongoDB.Driver.Core.Operations;
-using System.ComponentModel;
-using System.ComponentModel.Design;
-
-namespace Collections
+﻿namespace Collections
 {
     internal class Program
     {
