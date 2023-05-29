@@ -68,5 +68,10 @@ namespace Collections
         {
             await db.DropCollectionAsync(name);
         }
+
+        public IMongoCollection<BsonDocument> GetCollection(string name)
+        {
+            return db.GetCollection<BsonDocument>(name);
+        }
     }
 }

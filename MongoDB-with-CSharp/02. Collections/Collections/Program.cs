@@ -84,7 +84,19 @@ namespace Collections
                         }
                         break;
                     case 6:
-                       
+                        try
+                        {
+                            Console.WriteLine("Enter collection name to get: ");
+                            string name = Console.ReadLine().Trim();
+
+                            var myCollection = db.GetCollection(name);
+
+                            Console.WriteLine(myCollection.ToString());
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.Message);
+                        }
                         break;
                     default:
                         break;
