@@ -4,7 +4,6 @@ namespace Documents
 {
     internal class Program
     {
-
         static void Main(string[] args)
         {
             string separator = new String('-', 50);
