@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Attributes", "Attributes\At
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BsonClassMap", "BsonClassMap\BsonClassMap.csproj", "{8567D3BF-AF5B-4768-B17F-2B7E928D7ED6}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Conventions", "Conventions\Conventions.csproj", "{0275DFE3-A715-4397-AE7F-B2E003E1396A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{8567D3BF-AF5B-4768-B17F-2B7E928D7ED6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8567D3BF-AF5B-4768-B17F-2B7E928D7ED6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8567D3BF-AF5B-4768-B17F-2B7E928D7ED6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0275DFE3-A715-4397-AE7F-B2E003E1396A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0275DFE3-A715-4397-AE7F-B2E003E1396A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0275DFE3-A715-4397-AE7F-B2E003E1396A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0275DFE3-A715-4397-AE7F-B2E003E1396A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
