@@ -37,6 +37,30 @@ namespace GetSingleDocument
             var users2 = collection.Find("{}").Limit(2).ToList();
             foreach (var user in users2) Console.WriteLine(user);
             Console.WriteLine(separator);
+
+            // get last 2 documents
+            //  var users = await collection.Find("{}")
+            //    .Sort("{_id:-1}")    // sort _id descending
+            //    .Limit(2)            // get last 2 documents
+            //    .ToListAsync();
+            var users3 = collection.Find("{}")
+               .Sort("{_id:-1}")    // sort _id descending
+               .Limit(2)            // get last 3 documents
+               .ToList();
+            foreach (var user in users2) Console.WriteLine(user);
+            Console.WriteLine(separator);
+
+            // pagination:
+            //  var users = await collection.Find("{}")
+            //    .Skip(6)        // skip 6 documents
+            //    .Limit(3)       // get next 3 documents
+            //    .ToListAsync();
+            var users4 = collection.Find("{}")
+                .Skip(6)        // skip 6 documents
+                .Limit(3)       // get next 3 documents
+                .ToList();
+            foreach (var user in users4) Console.WriteLine(user);
+            Console.WriteLine(separator);
         }
     }
 }
