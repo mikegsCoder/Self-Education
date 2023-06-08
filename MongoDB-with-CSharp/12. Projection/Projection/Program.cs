@@ -24,6 +24,23 @@ namespace Projection
             foreach (var user in users1) Console.WriteLine(user);
             Console.WriteLine(separator);
 
+            // another way to create the same projection:
+            // var users2 = await collection.Find("{}").Project("{Name:1, Age:1, _id:0}").ToListAsync();
+            var users2 = collection.Find("{}").Project("{Name:1, Age:1, _id:0}").ToList();
+
+            foreach (var user in users2) Console.WriteLine(user);
+            Console.WriteLine(separator);
+
+            // project documents to POCO:
+            // var users3 = await collection.Find("{}")
+            //    .Project(doc => new Person(doc["Name"].ToString()))
+            //    .ToListAsync();
+            var users3 = collection.Find("{}")
+                .Project(doc => new Person(doc["Name"].ToString()))
+                .ToList();
+
+            foreach (var user in users3) Console.WriteLine(user.Name);
+            Console.WriteLine(separator);
         }
     }
 }
