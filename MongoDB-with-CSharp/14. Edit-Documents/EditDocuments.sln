@@ -13,6 +13,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindOneAndReplaceAsync", "F
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindOneAndUpdateAsync", "FindOneAndUpdateAsync\FindOneAndUpdateAsync.csproj", "{6D962604-42D8-46C1-8AA1-2DCA890BA12B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UpdateAndPOCO", "UpdateAndPOCO\UpdateAndPOCO.csproj", "{F3E42A0C-6908-4CE2-BA07-633CB3BC9FE9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{6D962604-42D8-46C1-8AA1-2DCA890BA12B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D962604-42D8-46C1-8AA1-2DCA890BA12B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D962604-42D8-46C1-8AA1-2DCA890BA12B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3E42A0C-6908-4CE2-BA07-633CB3BC9FE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3E42A0C-6908-4CE2-BA07-633CB3BC9FE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3E42A0C-6908-4CE2-BA07-633CB3BC9FE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3E42A0C-6908-4CE2-BA07-633CB3BC9FE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
