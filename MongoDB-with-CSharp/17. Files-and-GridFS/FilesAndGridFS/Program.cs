@@ -33,6 +33,21 @@ namespace FilesAndGridFS
             // download from DB:
             //await gridFS.DownloadToStreamAsync("cats.jpg", fs3);
             gridFS.DownloadToStream(id, fs3);
+
+            // Find file in DB:
+            // set filter
+            var filter1 = Builders<GridFSFileInfo>.Filter.Eq(info => info.Filename, "kitty.jpeg");
+            // find all files
+            //var fileInfos = await gridFS.FindAsync(filter);
+            var fileInfos = gridFS.Find(filter1);
+            // take first file
+            var fileInfo1 = fileInfos.FirstOrDefault();
+            // write information
+            Console.WriteLine($"id = {fileInfo1?.Id}\nName: {fileInfo1?.Filename}\n" +
+                $"UploadDateTime: {fileInfo1?.UploadDateTime}\nSize: {fileInfo1?.Length}");
+            Console.WriteLine(fileInfo1?.BackingDocument);
+            Console.WriteLine(new string('-', 50));
+
         }
     }
 }
