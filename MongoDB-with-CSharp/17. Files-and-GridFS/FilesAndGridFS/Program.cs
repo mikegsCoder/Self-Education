@@ -48,6 +48,33 @@ namespace FilesAndGridFS
             Console.WriteLine(fileInfo1?.BackingDocument);
             Console.WriteLine(new string('-', 50));
 
+            // Replace:
+            using FileStream fs4 = File.OpenRead("../../../dog.jpg");
+            //var id = await gridFS.UploadFromStreamAsync(
+            //        "kitty.jpeg",
+            //        fs,
+            //        new GridFSUploadOptions { Metadata = new BsonDocument("filename", "kitty.jpeg") });
+            var id1 = gridFS.UploadFromStream(
+                    "kitty.jpeg",
+                    fs4,
+                    new GridFSUploadOptions { Metadata = new BsonDocument("filename", "kitty.jpeg") });
+
+            Console.WriteLine($"File replaced. File Id: {id1}");
+            Console.WriteLine(new string('-', 50));
+
+            // Delete from DB:
+            // set filter
+            var filter2 = Builders<GridFSFileInfo>.Filter.Eq(info => info.Filename, "kitty.jpeg");
+            // find all files "kitty.jpeg"
+            //var fileInfos = await gridFS.FindAsync(filter);
+            var fileInfos2 = gridFS.Find(filter2);
+            // take first file
+            var fileInfo2 = fileInfos2.FirstOrDefault();
+
+            // delete
+            if (fileInfo2 != null)
+                //await gridFS.DeleteAsync(fileInfo.Id);
+                gridFS.Delete(fileInfo2.Id);
         }
     }
 }
