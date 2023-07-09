@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Singleton", "Singleton\Sing
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingletonExample", "SingletonExample\SingletonExample.csproj", "{64E20D3E-135A-48F9-8D04-8B0686174D29}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SingletonLazyInitialization", "SingletonLazyInitialization\SingletonLazyInitialization.csproj", "{3CEAE828-97F8-4B26-82B6-B0D851FA9D13}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{64E20D3E-135A-48F9-8D04-8B0686174D29}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64E20D3E-135A-48F9-8D04-8B0686174D29}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64E20D3E-135A-48F9-8D04-8B0686174D29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3CEAE828-97F8-4B26-82B6-B0D851FA9D13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3CEAE828-97F8-4B26-82B6-B0D851FA9D13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3CEAE828-97F8-4B26-82B6-B0D851FA9D13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3CEAE828-97F8-4B26-82B6-B0D851FA9D13}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
