@@ -1,7 +1,5 @@
-﻿using System;
-using SimpleFactory.Enum;
+﻿using SimpleFactory.Enum;
 using SimpleFactory.Products;
-
 
 namespace SimpleFactory.ProductFactory
 {
