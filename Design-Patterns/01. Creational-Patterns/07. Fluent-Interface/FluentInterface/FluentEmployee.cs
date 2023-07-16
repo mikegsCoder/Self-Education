@@ -1,8 +1,6 @@
-﻿using System;
-
-namespace FluentInterface
+﻿namespace FluentInterface
 {
-   public class FluentEmployee
+    public class FluentEmployee
     {
         private Employee employee = new Employee();
 
