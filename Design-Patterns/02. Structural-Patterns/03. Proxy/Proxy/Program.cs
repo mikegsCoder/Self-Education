@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-           
+            Subject subject = new Proxy();
+
+            subject.Request();
         }
     }
 }
