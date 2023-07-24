@@ -2,7 +2,7 @@
 
 ### Course cirriculum :
 
-- Creational Patterns
+- Creational Design Patterns - deal with object creation mechanisms, trying to create objects in a manner suitable to the situation. The basic form of object creation could result in design problems or in added complexity to the design. Creational design patterns solve this problem by somehow controlling this object creation.
   - <div>
         <p style="margin: 0;">Singleton</p>
         <p style="margin: 0;">
@@ -45,7 +45,7 @@
         <img src="https://github.com/mikegsCoder/Self-Education/blob/main/Design-Patterns/01.%20Creational-Patterns/00.%20UML-Diagrams/FluentInterface.png?raw=true" alt="Fluent-Interface" title="Fluent-Interface UML diagram" width="300" height="150" />
         </p>
     </div>
-- Structural Patterns
+- Structural Design Patterns - ease the design by identifying a simple way to realize relationships among entities.
   - <div>
         <p style="margin: 0;">Facade</p>
         <p style="margin: 0;">
@@ -76,4 +76,4 @@
         <img src="https://github.com/mikegsCoder/Self-Education/blob/main/Design-Patterns/02.%20Structural-Patterns/00.%20UML-Diagrams/Adapter.png?raw=true" alt="Adapter" title="Adapter UML diagram" width="300" height="180" />
         </p>
     </div>
-<!-- - Behavioral Patterns -->
+<!-- - Behavioral Design Patterns -->
