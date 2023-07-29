@@ -88,4 +88,10 @@
         <img src="https://github.com/mikegsCoder/Self-Education/blob/main/Design-Patterns/02.%20Structural-Patterns/00.%20UML-Diagrams/Flyweight.png?raw=true" alt="Flyweight" title="Flyweight UML diagram" width="300" height="180" />
         </p>
     </div>
-<!-- - Behavioral Design Patterns -->
+- Behavioral Design Patterns - identify common communication patterns between objects.
+  - <div>
+        <p style="margin: 0;">Chain of responsibility</p>
+        <p style="margin: 0;">
+        <img src="https://github.com/mikegsCoder/Self-Education/blob/main/Design-Patterns/03.%20Behavioral-Patterns/00.%20UML-Diagrams/ChainOfResponsibility.png?raw=true" alt="Chain of responsibility" title="Chain of responsibility UML diagram" width="300" height="140" />
+        </p>
+    </div>
