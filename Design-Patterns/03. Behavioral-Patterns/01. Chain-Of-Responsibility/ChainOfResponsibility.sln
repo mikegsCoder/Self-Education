@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChainOfResponsibility", "ChainOfResponsibility\ChainOfResponsibility.csproj", "{97D41894-33B5-4BB1-AF48-9449EC32BDAF}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MoneyTransfer", "MoneyTransfer\MoneyTransfer.csproj", "{2A13B2E8-EFC4-4BE1-BA34-CB67DD9DA70F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{97D41894-33B5-4BB1-AF48-9449EC32BDAF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{97D41894-33B5-4BB1-AF48-9449EC32BDAF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{97D41894-33B5-4BB1-AF48-9449EC32BDAF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2A13B2E8-EFC4-4BE1-BA34-CB67DD9DA70F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A13B2E8-EFC4-4BE1-BA34-CB67DD9DA70F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A13B2E8-EFC4-4BE1-BA34-CB67DD9DA70F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A13B2E8-EFC4-4BE1-BA34-CB67DD9DA70F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
