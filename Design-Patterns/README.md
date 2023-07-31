@@ -92,6 +92,12 @@
   - <div>
         <p style="margin: 0;">Chain of responsibility</p>
         <p style="margin: 0;">
-        <img src="https://github.com/mikegsCoder/Self-Education/blob/main/Design-Patterns/03.%20Behavioral-Patterns/00.%20UML-Diagrams/ChainOfResponsibility.png?raw=true" alt="Chain of responsibility" title="Chain of responsibility UML diagram" width="300" height="140" />
+        <img src="https://github.com/mikegsCoder/Self-Education/blob/main/Design-Patterns/03.%20Behavioral-Patterns/00.%20UML-Diagrams/ChainOfResponsibility.png?raw=true" alt="Chain of responsibility" title="Chain of responsibility UML diagram" width="300" height="120" />
+        </p>
+    </div>
+  - <div>
+        <p style="margin: 0;">Iterator</p>
+        <p style="margin: 0;">
+        <img src="https://github.com/mikegsCoder/Self-Education/blob/main/Design-Patterns/03.%20Behavioral-Patterns/00.%20UML-Diagrams/Iterator.png?raw=true" alt="Iterator" title="Iterator UML diagram" width="300" height="180" />
         </p>
     </div>
