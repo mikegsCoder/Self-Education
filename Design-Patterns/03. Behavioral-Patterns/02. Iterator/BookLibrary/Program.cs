@@ -1,6 +1,4 @@
-﻿using System.Reflection.PortableExecutable;
-
-namespace BookLibrary
+﻿namespace BookLibrary
 {
     internal class Program
     {
