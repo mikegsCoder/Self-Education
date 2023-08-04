@@ -1,6 +1,4 @@
-﻿using System.Diagnostics.Metrics;
-
-namespace MacroCommands
+﻿namespace MacroCommands
 {
     internal class Program
     {
