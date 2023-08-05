@@ -107,3 +107,9 @@
         <img src="https://github.com/mikegsCoder/Self-Education/blob/main/Design-Patterns/03.%20Behavioral-Patterns/00.%20UML-Diagrams/Command.png?raw=true" alt="Command" title="Command UML diagram" width="300" height="180" />
         </p>
     </div>
+  - <div>
+        <p style="margin: 0;">Template Method</p>
+        <p style="margin: 0;">
+        <img src="https://github.com/mikegsCoder/Self-Education/blob/main/Design-Patterns/03.%20Behavioral-Patterns/00.%20UML-Diagrams/TemplateMethod.png?raw=true" alt="Template Method" title="Template Method UML diagram" width="300" height="150" />
+        </p>
+    </div>
