@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-           
+            ConcreteClass concreteClass = new ConcreteClass();
+
+            concreteClass.TemplateMethod();
         }
     }
 }
