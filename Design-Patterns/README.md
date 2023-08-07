@@ -113,3 +113,9 @@
         <img src="https://github.com/mikegsCoder/Self-Education/blob/main/Design-Patterns/03.%20Behavioral-Patterns/00.%20UML-Diagrams/TemplateMethod.png?raw=true" alt="Template Method" title="Template Method UML diagram" width="300" height="150" />
         </p>
     </div>
+  - <div>
+        <p style="margin: 0;">Strategy</p>
+        <p style="margin: 0;">
+        <img src="https://github.com/mikegsCoder/Self-Education/blob/main/Design-Patterns/03.%20Behavioral-Patterns/00.%20UML-Diagrams/Strategy.png?raw=true" alt="Strategy" title="Strategy UML diagram" width="300" height="110" />
+        </p>
+    </div>
