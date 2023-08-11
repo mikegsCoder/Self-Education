@@ -125,3 +125,9 @@
         <img src="https://github.com/mikegsCoder/Self-Education/blob/main/Design-Patterns/03.%20Behavioral-Patterns/00.%20UML-Diagrams/Observer.png?raw=true" alt="Observer" title="Observer UML diagram" width="300" height="200" />
         </p>
     </div>
+  - <div>
+        <p style="margin: 0;">Mediator</p>
+        <p style="margin: 0;">
+        <img src="https://github.com/mikegsCoder/Self-Education/blob/main/Design-Patterns/03.%20Behavioral-Patterns/00.%20UML-Diagrams/Mediator.png?raw=true" alt="Mediator" title="Mediator UML diagram" width="300" height="140" />
+        </p>
+    </div>
