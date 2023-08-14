@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Memento", "Memento\Memento.csproj", "{2E2C2216-3574-4036-BD41-579F581EB18E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GameHistory", "GameHistory\GameHistory.csproj", "{FD812EA7-27E0-49A6-AFB9-09DDA001E7F5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{2E2C2216-3574-4036-BD41-579F581EB18E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E2C2216-3574-4036-BD41-579F581EB18E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E2C2216-3574-4036-BD41-579F581EB18E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD812EA7-27E0-49A6-AFB9-09DDA001E7F5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD812EA7-27E0-49A6-AFB9-09DDA001E7F5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD812EA7-27E0-49A6-AFB9-09DDA001E7F5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD812EA7-27E0-49A6-AFB9-09DDA001E7F5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
