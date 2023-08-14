@@ -1,15 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace GameHistory
+﻿namespace GameHistory
 {
     // Originator
     public class Hero
     {
         private int bullets = 10; 
+
         private int lives = 5; 
 
         public void Shoot()
