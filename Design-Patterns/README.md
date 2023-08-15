@@ -137,3 +137,9 @@
         <img src="https://github.com/mikegsCoder/Self-Education/blob/main/Design-Patterns/03.%20Behavioral-Patterns/00.%20UML-Diagrams/Memento.png?raw=true" alt="Memento" title="Memento UML diagram" width="300" height="120" />
         </p>
     </div>
+  - <div>
+        <p style="margin: 0;">State</p>
+        <p style="margin: 0;">
+        <img src="https://github.com/mikegsCoder/Self-Education/blob/main/Design-Patterns/03.%20Behavioral-Patterns/00.%20UML-Diagrams/State.png?raw=true" alt="State" title="State UML diagram" width="300" height="120" />
+        </p>
+    </div>
