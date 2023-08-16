@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Water
+﻿namespace Water
 {
     public class Water
     {
@@ -32,6 +26,7 @@ namespace Water
                 Console.WriteLine("Increasing temperature of the steam.");
             }
         }
+
         public void Frost()
         {
             if (State == WaterState.LIQUID)
