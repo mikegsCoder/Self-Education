@@ -143,3 +143,9 @@
         <img src="https://github.com/mikegsCoder/Self-Education/blob/main/Design-Patterns/03.%20Behavioral-Patterns/00.%20UML-Diagrams/State.png?raw=true" alt="State" title="State UML diagram" width="300" height="120" />
         </p>
     </div>
+  - <div>
+        <p style="margin: 0;">Interpreter</p>
+        <p style="margin: 0;">
+        <img src="https://github.com/mikegsCoder/Self-Education/blob/main/Design-Patterns/03.%20Behavioral-Patterns/00.%20UML-Diagrams/Interpreter.png?raw=true" alt="Interpreter" title="Interpreter UML diagram" width="300" height="180" />
+        </p>
+    </div>
