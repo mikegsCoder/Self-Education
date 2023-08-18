@@ -5,6 +5,8 @@ VisualStudioVersion = 17.5.33530.505
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Interpreter", "Interpreter\Interpreter.csproj", "{EB017255-31EC-44DE-BD65-77A64F576C0E}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MathExpressions", "MathExpressions\MathExpressions.csproj", "{93622E21-7B5F-4F5B-A3E3-1522810A3263}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{EB017255-31EC-44DE-BD65-77A64F576C0E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EB017255-31EC-44DE-BD65-77A64F576C0E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EB017255-31EC-44DE-BD65-77A64F576C0E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93622E21-7B5F-4F5B-A3E3-1522810A3263}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93622E21-7B5F-4F5B-A3E3-1522810A3263}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93622E21-7B5F-4F5B-A3E3-1522810A3263}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93622E21-7B5F-4F5B-A3E3-1522810A3263}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
