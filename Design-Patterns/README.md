@@ -149,3 +149,9 @@
         <img src="https://github.com/mikegsCoder/Self-Education/blob/main/Design-Patterns/03.%20Behavioral-Patterns/00.%20UML-Diagrams/Interpreter.png?raw=true" alt="Interpreter" title="Interpreter UML diagram" width="300" height="180" />
         </p>
     </div>
+  - <div>
+        <p style="margin: 0;">Visitor</p>
+        <p style="margin: 0;">
+        <img src="https://github.com/mikegsCoder/Self-Education/blob/main/Design-Patterns/03.%20Behavioral-Patterns/00.%20UML-Diagrams/Visitor.png?raw=true" alt="Visitor" title="Visitor UML diagram" width="300" height="320" />
+        </p>
+    </div>
