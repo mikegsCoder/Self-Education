@@ -22,3 +22,16 @@ function registerHandler (method, url, handler) {
 
     handlers[url][method] = handler;
 }
+
+function defaultHandler(req, res) {
+    res.statusCode = 404;
+    res.write('Not Found');
+    res.end();
+}
+
+module.exports = {
+    get : (...params) => registerHandler('GET', ...params),
+    post : (...params) => registerHandler('POST', ...params),
+    delete : (...params) => registerHandler('DELETE', ...params),
+    match
+}
