@@ -12,3 +12,13 @@ function match(method, url) {
     }
 }
 
+function registerHandler (method, url, handler) {
+    let methods = handlers[url];
+
+    if(methods == undefined) {
+        methods = {};
+        handlers[url] = methods;
+    }
+
+    handlers[url][method] = handler;
+}
