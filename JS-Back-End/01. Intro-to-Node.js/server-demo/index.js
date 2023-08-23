@@ -2,7 +2,7 @@ const http = require('http');
 const homeController = require('./controllers/homeController');
 const aboutController = require('./controllers/aboutController');
 const catalogController = require('./controllers/catalogController');
-
+const createController = require('./controllers/createController');
 const router = require('./router');
 
 const server = http.createServer(requestHandler);
@@ -11,6 +11,7 @@ const port = 3000;
 router.get('/', homeController);
 router.get('/about', aboutController);
 router.get('/catalog', catalogController);
+router.post('/create', createController);
 
 function requestHandler(req, res) {
     console.log('>>>', req.method, req.url);
