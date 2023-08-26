@@ -1,0 +1,6 @@
+{
+    "editor.formatOnPaste": true,
+    "editor.detectIndentation": false,
+    "editor.tabCompletion": "on",
+    "editor.indentSize": "tabSize"
+}
