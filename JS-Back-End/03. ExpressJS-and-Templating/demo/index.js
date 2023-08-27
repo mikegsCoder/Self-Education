@@ -15,4 +15,9 @@ app.use(logger);
 //     res.download('./demo.pdf');
 // });
 
+// using middleware:
+app.get("/", logger, (req, res) => {
+    res.sendFile(__dirname + "/static/index.html");
+});
+
 app.listen(3000, () => console.log('Server listening on port 3000'));
