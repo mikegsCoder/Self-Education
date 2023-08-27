@@ -10,4 +10,8 @@ app.get('/', (req, res) => {
     res.send('Hello, Express!');
 });
 
+app.get('/doc', (req, res) => {
+    res.download('./demo.pdf');
+});
+
 app.listen(3000, () => console.log("Server listening on port 3000"));
