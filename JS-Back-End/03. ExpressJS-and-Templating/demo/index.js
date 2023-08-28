@@ -50,8 +50,22 @@ app.post("/catalog", (req, res) => {
 //         res.send('Article created');
 //     });
 
+app.get("/catalog/:productId", (req, res) => {
+    console.log(req.params);
+    res.send("Product page");
+});
+
+// app.all("/about", (req, res) => {
+//     res.send("Matching all HTTP methods >>> " + req.method);
+// });
+
 app.get("/admin", isAdmin, (req, res) => {
     res.send("Admin page");
+});
+
+app.all("*", (req, res) => {
+    res.status(404);
+    res.send("404 Not Found");
 });
 
 app.listen(3000, () => console.log('Server listening on port 3000'));
