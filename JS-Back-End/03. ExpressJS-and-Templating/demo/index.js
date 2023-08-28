@@ -1,6 +1,7 @@
 const express = require('express');
 const catalogRouter = require("./catalog");
 const logger = require('./logger');
+const isAdmin = require("./guard");
 
 const app = express();
 
@@ -48,5 +49,9 @@ app.post("/catalog", (req, res) => {
 //         res.status(201);
 //         res.send('Article created');
 //     });
+
+app.get("/admin", isAdmin, (req, res) => {
+    res.send("Admin page");
+});
 
 app.listen(3000, () => console.log('Server listening on port 3000'));
