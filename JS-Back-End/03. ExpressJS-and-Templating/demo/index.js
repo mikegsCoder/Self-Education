@@ -2,6 +2,7 @@ const express = require('express');
 const catalogRouter = require("./catalog");
 const logger = require('./logger');
 const isAdmin = require("./guard");
+const fallback = require("./fallback");
 
 const app = express();
 
@@ -62,6 +63,8 @@ app.get("/catalog/:productId", (req, res) => {
 app.get("/admin", isAdmin, (req, res) => {
     res.send("Admin page");
 });
+
+app.use(fallback);
 
 app.all("*", (req, res) => {
     res.status(404);
