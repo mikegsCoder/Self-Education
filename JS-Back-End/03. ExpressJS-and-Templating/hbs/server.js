@@ -5,6 +5,7 @@ const { engine } = require('express-handlebars');
 // });
 
 const storage = require('./util/storage');
+const home = require('./controllers/home');
 
 async function start() {
     const port = 3000;
@@ -23,6 +24,8 @@ async function start() {
     app.set("view engine", ".hbs");
 
     app.use(await storage());
+
+    app.get('/', home);
 
     app.listen(port, () => console.log(`Server listening on port ${port}.`));
 }
