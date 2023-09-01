@@ -13,7 +13,8 @@ async function init() {
     return (req, res, next) => {
         req.storage = {
             getAll,
-            getById
+            getById,
+            create
         };
 
         next();
@@ -50,8 +51,25 @@ async function getById(id) {
     }
 }
 
+async function create(cube) {
+    const id = uniqid();
+    data[id] = cube;
+
+    await persist();
+}
+
+async function persist(){
+    try {
+        await fs.writeFile('./models/data.json', JSON.stringify(data, null, 4));
+        console.log('>>> Created new record');
+    } catch (err) {
+        console.error('Error writing out database');
+    }
+}
+
 module.exports = {
     init,
     getAll,
-    getById
+    getById,
+    create
 };
