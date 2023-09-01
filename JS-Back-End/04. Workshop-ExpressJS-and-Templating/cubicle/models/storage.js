@@ -12,7 +12,8 @@ async function init() {
 
     return (req, res, next) => {
         req.storage = {
-            getAll
+            getAll,
+            getById
         };
 
         next();
@@ -39,7 +40,18 @@ async function getAll(query) {
     return cubes;
 }
 
+async function getById(id) {
+    const cube = data[id];
+
+    if (cube) {
+        return Object.assign({}, {id}, cube);
+    } else {
+        return undefined;
+    }
+}
+
 module.exports = {
     init,
-    getAll
+    getAll,
+    getById
 };
