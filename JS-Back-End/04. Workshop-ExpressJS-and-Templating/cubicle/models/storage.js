@@ -14,7 +14,8 @@ async function init() {
         req.storage = {
             getAll,
             getById,
-            create
+            create,
+            edit
         };
 
         next();
@@ -58,6 +59,16 @@ async function create(cube) {
     await persist();
 }
 
+async function edit(id, cube) {
+    if (!data[id]) {
+        throw new ReferenceError('No such Id in database!');
+    }
+
+    data[id] = cube;
+
+    await persist();
+}
+
 async function persist(){
     try {
         await fs.writeFile('./models/data.json', JSON.stringify(data, null, 4));
@@ -71,5 +82,6 @@ module.exports = {
     init,
     getAll,
     getById,
-    create
+    create,
+    edit
 };
