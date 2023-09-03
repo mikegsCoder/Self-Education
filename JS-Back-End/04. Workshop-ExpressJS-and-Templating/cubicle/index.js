@@ -3,6 +3,8 @@ const hbs = require('express-handlebars');
 
 const { init: storage } = require('./models/storage');
 
+const { catalog } = require('./controllers/catalog');
+
 start();
 
 async function start() {
@@ -17,6 +19,8 @@ async function start() {
     app.use('/js', express.static('js'));
     app.use(express.urlencoded({ extended: false }));
     app.use(await storage());
+
+    app.get('/', catalog);
     
     app.listen(port, () => console.log(`Server listening on port ${port}.`))
 }
