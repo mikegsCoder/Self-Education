@@ -4,6 +4,7 @@ const hbs = require('express-handlebars');
 const { init: storage } = require('./models/storage');
 
 const { catalog } = require('./controllers/catalog');
+const { notFound } = require('./controllers/notFound');
 
 start();
 
@@ -21,6 +22,8 @@ async function start() {
     app.use(await storage());
 
     app.get('/', catalog);
+
+    app.all('*', notFound);
     
     app.listen(port, () => console.log(`Server listening on port ${port}.`))
 }
