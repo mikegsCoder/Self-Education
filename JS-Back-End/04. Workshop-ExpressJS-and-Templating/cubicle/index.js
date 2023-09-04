@@ -4,6 +4,7 @@ const hbs = require('express-handlebars');
 const { init: storage } = require('./models/storage');
 
 const { catalog } = require('./controllers/catalog');
+const { about } = require('./controllers/about');
 const { details } = require('./controllers/details');
 const { notFound } = require('./controllers/notFound');
 
@@ -23,6 +24,7 @@ async function start() {
     app.use(await storage());
 
     app.get('/', catalog);
+    app.get('/about', about);
     app.get('/details/:id', details);
 
     app.all('*', notFound);
