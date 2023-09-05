@@ -6,6 +6,7 @@ const { init: storage } = require('./models/storage');
 const { catalog } = require('./controllers/catalog');
 const { about } = require('./controllers/about');
 const { details } = require('./controllers/details');
+const { create, post: createPost } = require('./controllers/create');
 const { notFound } = require('./controllers/notFound');
 
 start();
@@ -26,7 +27,9 @@ async function start() {
     app.get('/', catalog);
     app.get('/about', about);
     app.get('/details/:id', details);
-
+    app.get('/create', create);
+    app.post('/create', createPost);
+    
     app.all('*', notFound);
     
     app.listen(port, () => console.log(`Server listening on port ${port}.`))
