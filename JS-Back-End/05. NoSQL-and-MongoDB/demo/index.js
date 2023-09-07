@@ -48,9 +48,16 @@ async function start() {
     // console.log(data);
 
     // update:
-    await Person.findByIdAndUpdate('63deaa5c5cb8e74b3d9eda9f', { $set: { lastName: 'Ryan', age: 31 } });
-    await Person.updateOne({ firstName: 'John' }, { $set: { lastName: 'Stavros', age: 44 } });
+    // await Person.findByIdAndUpdate('63deaa5c5cb8e74b3d9eda9f', { $set: { lastName: 'Ryan', age: 31 } });
+    // await Person.updateOne({ firstName: 'John' }, { $set: { lastName: 'Stavros', age: 44 } });
+    // console.log(await Person.find({}));
+
+    const person = await Person.findOne({ firstName: 'John', age: { $gt: 30 } });
+    person.age++;
+    await person.save();
     console.log(await Person.find({}));
+    console.log(await Person.countDocuments({ firstName: 'John' }));
+
 }
 
 start();
