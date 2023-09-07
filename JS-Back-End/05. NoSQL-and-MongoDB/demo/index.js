@@ -44,8 +44,13 @@ async function start() {
     // const data = await Person.find({ age: { $gt: 30 } }); // age > 30
     // const data = await Person.find({ age: { $gte: 30 } }); // age >= 30
     // const data = await Person.find({ age: { $lt: 30 } }); // age < 30
-    const data = await Person.find({ age: { $lte: 30 } }); // age <= 30
-    console.log(data);
+    // const data = await Person.find({ age: { $lte: 30 } }); // age <= 30
+    // console.log(data);
+
+    // update:
+    await Person.findByIdAndUpdate('63deaa5c5cb8e74b3d9eda9f', { $set: { lastName: 'Ryan', age: 31 } });
+    await Person.updateOne({ firstName: 'John' }, { $set: { lastName: 'Stavros', age: 44 } });
+    console.log(await Person.find({}));
 }
 
 start();
