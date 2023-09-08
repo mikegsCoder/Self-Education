@@ -63,13 +63,17 @@ async function start() {
     // const people = await Person.find({}).sort({ age: 1 });
     // console.log(people);
 
-    const person = await Person.findOne({});
-    const post = new Post({
-        author: person,
-        title: 'New Post',
-        content: 'This is a post content'
-    });
-    await post.save();
+    // const person = await Person.findOne({});
+    // const post = new Post({
+    //     author: person,
+    //     title: 'New Post',
+    //     content: 'This is a post content'
+    // });
+    // await post.save();
+
+    // const post = await Post.findOne({});
+    const post = await Post.findOne({}).populate('author');
+
 }
 
 start();
