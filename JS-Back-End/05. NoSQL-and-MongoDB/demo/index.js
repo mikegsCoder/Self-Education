@@ -60,9 +60,16 @@ async function start() {
 
     // sort:
     // const people = await Person.find({}).sort({ age: -1 });
-    const people = await Person.find({}).sort({ age: 1 });
-    console.log(people);
+    // const people = await Person.find({}).sort({ age: 1 });
+    // console.log(people);
 
+    const person = await Person.findOne({});
+    const post = new Post({
+        author: person,
+        title: 'New Post',
+        content: 'This is a post content'
+    });
+    await post.save();
 }
 
 start();
