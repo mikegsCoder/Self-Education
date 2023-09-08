@@ -52,12 +52,16 @@ async function start() {
     // await Person.updateOne({ firstName: 'John' }, { $set: { lastName: 'Stavros', age: 44 } });
     // console.log(await Person.find({}));
 
-    const person = await Person.findOne({ firstName: 'John', age: { $gt: 30 } });
-    person.age++;
-    await person.save();
-    console.log(await Person.find({}));
-    console.log(await Person.countDocuments({ firstName: 'John' }));
+    // const person = await Person.findOne({ firstName: 'John', age: { $gt: 30 } });
+    // person.age++;
+    // await person.save();
+    // console.log(await Person.find({}));
+    // console.log(await Person.countDocuments({ firstName: 'John' }));
 
+    // sort:
+    // const people = await Person.find({}).sort({ age: -1 });
+    const people = await Person.find({}).sort({ age: 1 });
+    console.log(people);
 }
 
 start();
