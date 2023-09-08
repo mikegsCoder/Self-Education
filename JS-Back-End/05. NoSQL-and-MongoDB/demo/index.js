@@ -62,6 +62,7 @@ async function start() {
     // const people = await Person.find({}).sort({ age: -1 });
     const people = await Person.find({}).sort({ age: 1 });
     console.log(people);
+
 }
 
 start();
