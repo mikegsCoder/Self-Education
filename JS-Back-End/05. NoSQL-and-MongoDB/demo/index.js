@@ -2,6 +2,8 @@ const mongoose = require('mongoose');
 
 const Cat = require('./models/Cat');
 const Person = require("./models/Person");
+const Post = require("./models/Post");
+const Comment = require("./models/Comment");
 
 async function start() {
     const connectionStr = 'mongodb://localhost:27017/testdb';
@@ -74,6 +76,12 @@ async function start() {
     // const post = await Post.findOne({});
     const post = await Post.findOne({}).populate('author');
 
+    const comment = new Comment({
+        author: post.author,
+        content: 'First comment'
+    });
+
+    await comment.save();
 }
 
 start();
