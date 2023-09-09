@@ -7,4 +7,5 @@
 - ExpressJS and Templating
 - Workshop ExpressJS and Templating
 - NoSQL and MongoDB
+- Workshop MongoDB and Mongoose
 - ...
