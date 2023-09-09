@@ -74,18 +74,24 @@ async function start() {
     // await post.save();
 
     // const post = await Post.findOne({});
-    const post = await Post.findOne({}).populate('author');
+    // const post = await Post.findOne({}).populate('author');
 
-    const comment = new Comment({
-        author: post.author,
-        content: 'First comment'
+    // const comment = new Comment({
+    //     author: post.author,
+    //     content: 'First comment'
+    // });
+    // await comment.save();
+
+    // post.comments.push(comment);
+    // await post.save();
+
+    // const post = await Post.findOne({}).populate('author').populate('comments');
+    const post = await Post.findOne({}).populate('author').populate({
+        path: 'comments',
+        populate: 'author'
     });
-
-    await comment.save();
-
-    post.comments.push(comment);
-
-    await post.save();
+    
+    console.log(post);
 }
 
 start();
