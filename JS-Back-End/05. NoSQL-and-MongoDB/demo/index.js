@@ -82,6 +82,10 @@ async function start() {
     });
 
     await comment.save();
+
+    post.comments.push(comment);
+
+    await post.save();
 }
 
 start();
