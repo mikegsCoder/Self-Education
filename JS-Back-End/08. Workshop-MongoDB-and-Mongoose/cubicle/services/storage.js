@@ -49,7 +49,8 @@ async function getById(id) {
 }
 
 async function create(cube) {
-    // some implementation
+    const record = new Cube(cube);
+    return record.save();
 }
 
 async function edit(id, cube) {
