@@ -40,7 +40,12 @@ async function getAll(query) {
 }
 
 async function getById(id) {
-    // some implementation
+    const cube = await Cube.findById(id).populate('comments').populate('accessories').lean();
+    if (cube) {
+        return cube;
+    } else {
+        return undefined;
+    }
 }
 
 async function create(cube) {
