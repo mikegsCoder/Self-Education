@@ -54,7 +54,14 @@ async function create(cube) {
 }
 
 async function edit(id, cube) {
-    // some implementation
+    const existing = await Cube.findById(id);
+
+    if (!existing) {
+        throw new ReferenceError('No such Id in database.');
+    }
+
+    Object.assign(existing, cube);
+    return existing.save();
 }
 
 async function createComment(cubeId, comment) {
