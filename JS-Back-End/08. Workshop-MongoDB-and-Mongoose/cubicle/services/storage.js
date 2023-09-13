@@ -79,7 +79,7 @@ async function createComment(cubeId, comment) {
 }
 
 async function getAllAccessories(existing) {
-    // some implementation
+    return Accessory.find({ _id: { $nin: existing }}).lean();
 }
 
 async function createAccessory(accessory) {
