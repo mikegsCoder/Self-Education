@@ -83,7 +83,8 @@ async function getAllAccessories(existing) {
 }
 
 async function createAccessory(accessory) {
-    // some implementation
+    const record = new Accessory(accessory);
+    return record.save();
 }
 
 async function attachSticker(cubeId, stickerId) {
