@@ -1,6 +1,6 @@
 module.exports = {
     create: (req, res) => {
-        res.render('create', {title: 'Create Cube Page'});
+        res.render('create', {title: 'Create Cube'});
     },
     post: async (req, res) => {
         const cube = {
@@ -10,7 +10,13 @@ module.exports = {
             difficulty: Number(req.body.difficulty)
         };
 
-        await req.storage.create(cube);
+        try {
+            await req.storage.create(cube);
+        } catch (err) {
+            if (err.name == 'ValidationError') {
+                return res.render('create', { title: 'Create Cube', error: 'Invalid data provided.' });
+            }
+        }
 
         res.redirect('/');
     }
