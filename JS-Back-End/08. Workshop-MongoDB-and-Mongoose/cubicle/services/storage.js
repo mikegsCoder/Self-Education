@@ -88,7 +88,14 @@ async function createAccessory(accessory) {
 }
 
 async function attachSticker(cubeId, stickerId) {
-    // some implementation
+    const cube = await Cube.findById(cubeId);
+    const sticker = await Accessory.findById(stickerId);
+    if (!cube || !sticker) {
+        throw new ReferenceError('No such Id in database.');
+    }
+
+    cube.accessories.push(sticker);
+    return cube.save();
 }
 
 module.exports = {
