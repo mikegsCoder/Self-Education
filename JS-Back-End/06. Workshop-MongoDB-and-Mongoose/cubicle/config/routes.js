@@ -1,8 +1,9 @@
 const { catalog } = require('../controllers/catalog');
 const { about } = require('../controllers/about');
-const { details } = require('../controllers/details');
+const { details, attach, attachPost } = require('../controllers/details');
 const { create, post: createPost } = require('../controllers/create');
 const { edit, post: editPost } = require('../controllers/edit');
+const { createAccessory, accessoryPost } = require('../controllers/accessory');
 const { notFound } = require('../controllers/notFound');
 
 module.exports = (app) => {
