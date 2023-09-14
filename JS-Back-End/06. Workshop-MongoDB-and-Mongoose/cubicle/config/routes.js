@@ -15,5 +15,8 @@ module.exports = (app) => {
     app.get('/edit/:id', edit);
     app.post('/edit/:id', editPost);
 
+    app.get('/accessory/create', createAccessory);
+    app.post('/accessory/create', accessoryPost);
+
     app.all('*', notFound);
 }
