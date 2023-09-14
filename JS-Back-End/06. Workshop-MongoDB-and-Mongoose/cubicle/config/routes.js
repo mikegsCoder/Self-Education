@@ -18,6 +18,8 @@ module.exports = (app) => {
 
     app.get('/accessory/create', createAccessory);
     app.post('/accessory/create', accessoryPost);
+    app.get('/details/:id/attach', attach);
+    app.post('/details/:cubeId/attach', attachPost);
 
     app.all('*', notFound);
 }
