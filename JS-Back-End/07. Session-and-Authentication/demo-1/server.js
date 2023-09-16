@@ -33,4 +33,11 @@ function mySessionStorage(req, res, next) {
     }
 }
 
+app.use(mySessionStorage);
+
+app.get('/', (req, res) => {
+    req.session.visited++;
+    res.send(`<h1>Hello</h1><p>Your session has data ${JSON.stringify(req.session)} </p>`);
+});
+
 app.listen(3000);
