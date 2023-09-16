@@ -24,7 +24,12 @@ function mySessionStorage(req, res, next) {
     next();
 
     function createSession() {
-        // some implementation here
+        const id = ('00000000' + (Math.random() * 99999999 | 0).toString(16)).slice(-8);
+        sessions[id] = session;
+        res.setHeader('Set-Cookie', `sessionId=${id}`);
+        console.log('New user generated session with Id: ', id);
+
+        session.visited = 0;
     }
 }
 
