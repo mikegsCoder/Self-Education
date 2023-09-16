@@ -8,4 +8,5 @@
 - Workshop ExpressJS and Templating
 - NoSQL and MongoDB
 - Workshop MongoDB and Mongoose
+- Session and Authentication
 - ...
