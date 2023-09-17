@@ -7,5 +7,11 @@ const users = {};
 
 const app = express();
 app.use(bodyParser({ extended: false }));
+app.use(expressSession({
+    secret: 'my random secret',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false }
+}));
 
 app.listen(3000);
