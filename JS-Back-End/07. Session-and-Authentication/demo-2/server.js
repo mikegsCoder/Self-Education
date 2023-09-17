@@ -36,9 +36,17 @@ app.use(mySessionStorage);
 
 const app = express();
 
+app.use(expressSession({
+    secret: 'my random secret',
+    resave: false,
+    saveUninitialized: true,
+    cookie: { secure: false }
+}));
+
 app.get('/', (req, res) => {
-    req.session.visited++;
-    res.send(`<h1>Hello</h1><p>Your session has data ${JSON.stringify(req.session)} </p>`);
+    // req.session.visited++;
+    // res.send(`<h1>Hello</h1><p>Your session has data ${JSON.stringify(req.session)} </p>`);
+    res.send('Hello');
 });
 
 app.listen(3000);
