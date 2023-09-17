@@ -6,5 +6,6 @@ const expressSession = require('express-session');
 const users = {};
 
 const app = express();
+app.use(bodyParser({ extended: false }));
 
 app.listen(3000);
