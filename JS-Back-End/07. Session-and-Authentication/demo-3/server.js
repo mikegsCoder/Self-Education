@@ -14,4 +14,10 @@ app.use(expressSession({
     cookie: { secure: false }
 }));
 
+app.all('*', (req, res, next) => {
+    console.log('>>> ', req.method, req.url, req.body);
+    console.log('>>> Session data: ', req.session);
+    next();
+});
+
 app.listen(3000);
