@@ -67,4 +67,14 @@ app.post('/register', (req, res) => {
     res.redirect('/login');
 });
 
+app.post('/login', (req, res) => {
+    const user = users[req.body.username];
+    if (user && user.password == req.body.password) {
+        req.session.user = user;
+        res.redirect('/');
+    } else {
+        res.send('Wrong password!');
+    }
+});
+
 app.listen(3000);
