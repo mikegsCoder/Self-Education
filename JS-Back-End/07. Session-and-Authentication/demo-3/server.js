@@ -43,4 +43,18 @@ app.get('/register', (req, res) => {
     `);
 });
 
+app.get('/login', (req, res) => {
+    res.send(`
+    <h1>Login</h1>
+    <a href="/">Home</a>
+    <a href="/register">Register</a>
+    <a href="/login">Login</a>
+    <form action="/login" method="POST">
+        <label>Username: <input type="text" name="username"></label>
+        <label>Password: <input type="password" name="password"></label>
+        <input type="submit" value="Login">
+    </form>
+    `);
+});
+
 app.listen(3000);
