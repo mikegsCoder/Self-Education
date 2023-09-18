@@ -28,4 +28,19 @@ app.get('/', (req, res) => {
     <a href="/login">Login</a>`);
 });
 
+app.get('/register', (req, res) => {
+    res.send(`
+    <h1>Register</h1>
+    <a href="/">Home</a>
+    <a href="/register">Register</a>
+    <a href="/login">Login</a>
+    <form action="/register" method="POST">
+        <label>Username: <input type="text" name="username"></label>
+        <label>Password: <input type="password" name="password"></label>
+        <label>Repeat: <input type="password" name="repass"></label>
+        <input type="submit" value="Register">
+    </form>
+    `);
+});
+
 app.listen(3000);
