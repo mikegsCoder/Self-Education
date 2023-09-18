@@ -20,4 +20,12 @@ app.all('*', (req, res, next) => {
     next();
 });
 
+app.get('/', (req, res) => {
+    res.send(`
+    <h1>Welcome</h1>
+    <a href="/">Home</a>
+    <a href="/register">Register</a>
+    <a href="/login">Login</a>`);
+});
+
 app.listen(3000);
