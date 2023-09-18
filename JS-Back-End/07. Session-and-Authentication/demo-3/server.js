@@ -57,4 +57,14 @@ app.get('/login', (req, res) => {
     `);
 });
 
+app.post('/register', (req, res) => {
+    const username = req.body.username;
+    users[username] = {
+        id: ('00000000' + (Math.random() * 99999999 | 0).toString(16)).slice(-8),
+        password: req.body.password
+    };
+
+    res.redirect('/login');
+});
+
 app.listen(3000);
