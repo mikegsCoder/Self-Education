@@ -16,5 +16,24 @@ module.exports = (req, res, next) => {
         console.log('New user', users);
     };
 
+    req.login = async (username, password) => {
+        const user = Object.entries(users).find(([id, u]) => u.username == username);
+        
+        console.log('Checking password', password, 'for user', user);
+    
+        // const passwordsMatch = await bcrypt.compare(password, user[1].hashedPassword);
+    
+        if (user && await bcrypt.compare(password, user[1].hashedPassword)) {
+            req.session.user = {
+                _id: user[1].id,
+                username
+            };
+
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
     next();
 };
