@@ -4,6 +4,8 @@ const bodyParser = require('express').urlencoded;
 const expressSession = require('express-session');
 // const bcrypt = require('bcrypt');
 
+const auth = require('./auth');
+
 const app = express();
 
 app.use(bodyParser({ extended: false }));
@@ -13,5 +15,6 @@ app.use(expressSession({
     saveUninitialized: true,
     cookie: { secure: false }
 }));
+app.use(auth);
 
 app.listen(3000);
