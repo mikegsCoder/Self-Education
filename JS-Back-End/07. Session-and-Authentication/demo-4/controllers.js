@@ -7,3 +7,13 @@ module.exports = (app) => {
         next();
     });
 }
+
+function layout(html, title) {
+    return`
+        <h1>${title}</h1>
+        <a href="/">Home</a>
+        <a href="/register">Register</a>
+        <a href="/login">Login</a>
+        ${html}
+    `;
+}
