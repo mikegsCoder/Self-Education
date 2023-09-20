@@ -5,6 +5,7 @@ const expressSession = require('express-session');
 // const bcrypt = require('bcrypt');
 
 const auth = require('./auth');
+const routes = require('./controllers');
 
 const app = express();
 
@@ -16,5 +17,7 @@ app.use(expressSession({
     cookie: { secure: false }
 }));
 app.use(auth);
+
+routes(app);
 
 app.listen(3000);
