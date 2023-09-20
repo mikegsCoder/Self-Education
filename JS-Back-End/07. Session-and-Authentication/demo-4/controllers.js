@@ -14,6 +14,21 @@ module.exports = (app) => {
         }
         res.send(layout('<p>Home Page</p>', title));
     });
+
+    app.get('/register', (req, res) => {
+        let title = 'Welcome';
+        if (req.session.user) {
+            title = 'Welcome, ' + req.session.user.username;
+        }
+        res.send(layout(`
+            <form action="/register" method="POST">
+                <label>Username: <input type="text" name="username"></label>
+                <label>Password: <input type="password" name="password"></label>
+                <label>Repeat: <input type="password" name="repass"></label>
+                <input type="submit" value="Register">
+            </form>
+        ` , title));
+    });
 }
 
 function layout(html, title) {
