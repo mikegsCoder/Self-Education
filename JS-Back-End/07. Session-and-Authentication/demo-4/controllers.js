@@ -6,6 +6,14 @@ module.exports = (app) => {
         }
         next();
     });
+
+    app.get('/', (req, res) => {
+        let title = 'Welcome';
+        if (req.session.user) {
+            title = 'Welcome, ' + req.session.user.username;
+        }
+        res.send(layout('<p>Home Page</p>', title));
+    });
 }
 
 function layout(html, title) {
