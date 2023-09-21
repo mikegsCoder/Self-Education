@@ -21,8 +21,6 @@ module.exports = (req, res, next) => {
         
         console.log('Checking password', password, 'for user', user);
     
-        // const passwordsMatch = await bcrypt.compare(password, user[1].hashedPassword);
-    
         if (user && await bcrypt.compare(password, user[1].hashedPassword)) {
             req.session.user = {
                 _id: user[1].id,
