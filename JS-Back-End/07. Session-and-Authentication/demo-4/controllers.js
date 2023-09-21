@@ -29,6 +29,20 @@ module.exports = (app) => {
             </form>
         ` , title));
     });
+
+    app.get('/login', (req, res) => {
+        let title = 'Welcome';
+        if (req.session.user) {
+            title = 'Welcome, ' + req.session.user.username;
+        }
+        res.send(layout(`
+            <form action="/login" method="POST">
+                <label>Username: <input type="text" name="username"></label>
+                <label>Password: <input type="password" name="password"></label>
+                <input type="submit" value="Login">
+            </form>
+        ` , title));
+    });
 }
 
 function layout(html, title) {
