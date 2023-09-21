@@ -20,4 +20,9 @@ app.use(auth);
 
 routes(app);
 
+app.post('/register', async (req, res) => {
+    await req.register(req.body.username, req.body.password);
+    res.redirect('/login');
+});
+
 app.listen(3000);
