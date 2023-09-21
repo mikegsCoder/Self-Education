@@ -25,4 +25,17 @@ app.post('/register', async (req, res) => {
     res.redirect('/login');
 });
 
+app.post('/login', async (req, res) => {
+    const username = req.body.username;
+    const password = req.body.password;
+
+    const passwordsMatch = await req.login(username, password);
+
+    if (passwordsMatch) {
+        res.redirect('/');
+    } else {
+        res.send(403, 'Wrong password!');
+    }
+});
+
 app.listen(3000);
