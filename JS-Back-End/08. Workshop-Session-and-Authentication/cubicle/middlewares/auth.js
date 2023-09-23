@@ -15,6 +15,20 @@ module.exports = () => (req, res, next) => {
         next();
     }
 
+    async function register({ username, password, repeatPassword }) {
+        if (username == '' || password == '' || repeatPassword == '') {
+            throw new Error('All fields are required!');
+        } else if (password != repeatPassword) {
+            throw new Error('Passwords don\'t match!');
+        }
+
+        // const hashedPassword = await bcrypt.hash(password, 10, 'my very secure secret');
+        const hashedPassword = await bcrypt.hash(password, 10);
+
+        const user = await userService.createUser(username, hashedPassword);
+        req.user = createToken(user);
+    }
+    
     function readToken(req) {
         const token = req.cookies[COOKIE_NAME];
         if (token) {
