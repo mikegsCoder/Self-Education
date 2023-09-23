@@ -28,7 +28,22 @@ module.exports = () => (req, res, next) => {
         const user = await userService.createUser(username, hashedPassword);
         req.user = createToken(user);
     }
-    
+
+    async function login({ username, password }) {
+        const user = await userService.getUserByUsername(username);
+
+        if (!user) {
+            throw new Error('Wrong username or password!');
+        } else {
+            const isMatch = await bcrypt.compare(password, user.hashedPassword);
+            if (!isMatch) {
+                throw new Error('Wrong username or password!');
+            } else {
+                req.user = createToken(user);
+            }
+        }
+    }
+
     function readToken(req) {
         const token = req.cookies[COOKIE_NAME];
         if (token) {
