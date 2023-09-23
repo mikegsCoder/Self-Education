@@ -44,6 +44,12 @@ module.exports = () => (req, res, next) => {
         }
     }
 
+    async function logout() {
+        res.clearCookie(COOKIE_NAME);
+    }
+
+    
+
     function readToken(req) {
         const token = req.cookies[COOKIE_NAME];
         if (token) {
