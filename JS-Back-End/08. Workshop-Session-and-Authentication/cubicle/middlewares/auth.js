@@ -48,7 +48,13 @@ module.exports = () => (req, res, next) => {
         res.clearCookie(COOKIE_NAME);
     }
 
-    
+    function createToken(user) {
+        const userViewModel = { _id: user._id, username: user.username }
+        const token = jwt.sign(userViewModel, TOKEN_SECRET);
+        res.cookie(COOKIE_NAME, token, { httpOnly: true });
+
+        return userViewModel;
+    }
 
     function readToken(req) {
         const token = req.cookies[COOKIE_NAME];
