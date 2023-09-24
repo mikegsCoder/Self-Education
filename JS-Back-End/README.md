@@ -9,4 +9,5 @@
 - NoSQL and MongoDB
 - Workshop MongoDB and Mongoose
 - Session and Authentication
+- Workshop Session and Authentication
 - ...
