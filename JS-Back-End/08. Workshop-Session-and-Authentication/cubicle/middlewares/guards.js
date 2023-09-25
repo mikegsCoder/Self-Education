@@ -18,7 +18,18 @@ function isGuest() {
     };
 }
 
+function isOwner() {
+    return (req, res, next) => {
+        if (req.data.cube && req.user && (req.data.cube.authorId == req.user._id)) {
+            next();
+        } else {
+            res.redirect('/auth/login');
+        }
+    };
+}
+
 module.exports = {
     isAuth,
-    isGuest
+    isGuest,
+    isOwner
 };
