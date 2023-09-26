@@ -67,9 +67,24 @@ async function edit(id, cube) {
     return existing.save();
 }
 
+async function createComment(cubeId, comment) {
+    const cube = await Cube.findById(cubeId);
+
+    if (!cube) {
+        throw new ReferenceError('No such Id in database!');
+    }
+
+    const newComment = new Comment(comment);
+    await newComment.save();
+
+    cube.comments.push(newComment);
+    await cube.save();
+}
+
 module.exports = {
     getAll,
     getById,
     create,
-    edit
+    edit,
+    createComment
 };
