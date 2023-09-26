@@ -51,7 +51,13 @@ async function getById(id) {
     }
 }
 
+async function create(cube) {
+    const record = new Cube(cube);
+    return record.save();
+}
+
 module.exports = {
     getAll,
-    getById
+    getById,
+    create
 };
