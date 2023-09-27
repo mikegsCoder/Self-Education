@@ -4,7 +4,7 @@ const databaseConfig = require('./config/database');
 const routesConfig = require('./config/routes');
 
 const logger = require('./middlewares/logger');
-const { init: storage } = require('./services/storage');
+const storage = require('./middlewares/storage');
 
 start();
 
