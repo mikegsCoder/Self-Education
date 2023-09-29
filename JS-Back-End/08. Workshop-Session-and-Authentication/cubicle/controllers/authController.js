@@ -25,4 +25,18 @@ router.get('/login', isGuest(), (req, res) => {
     res.render('login', { title: 'Login' });
 });
 
+router.post('/login', isGuest(), async (req, res) => {
+    try {
+        await req.auth.login(req.body);
+        res.redirect('/products');
+    } catch (err) {
+        const ctx = { 
+            title: 'Login', 
+            error: err.message, 
+            data: { username: req.body.username } 
+        };
+        res.render('login', ctx);
+    }
+});
+
 module.exports = router;
