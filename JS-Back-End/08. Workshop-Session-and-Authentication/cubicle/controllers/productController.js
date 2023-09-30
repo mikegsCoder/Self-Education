@@ -19,4 +19,8 @@ router.get('/', async (req, res) => {
     res.render('index', ctx);
 });
 
+router.get('/create', isAuth(), (req, res) => {
+    res.render('create', {title: 'Create Cube'});
+});
+
 module.exports = router;
