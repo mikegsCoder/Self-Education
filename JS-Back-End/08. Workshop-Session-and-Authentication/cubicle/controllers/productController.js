@@ -60,4 +60,20 @@ router.get('/details/:id', preloadCube(), async (req, res) => {
     }
 });
 
+router.get('/edit/:id', preloadCube(), isOwner(), async (req, res) => {
+    const cube = req.data.cube;
+    
+    if (!cube) {
+        res.redirect('/404');
+    } else {
+        cube[`select${cube.difficulty}`] = true;
+        
+        const ctx = {
+            title: 'Edit Cube',
+            cube
+        }
+        res.render('edit', ctx);
+    }
+});
+
 module.exports = router;
