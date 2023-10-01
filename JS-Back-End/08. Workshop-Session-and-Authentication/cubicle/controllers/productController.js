@@ -92,4 +92,15 @@ router.post('/edit/:id', preloadCube(), isOwner(), async (req, res) => {
     }
 });
 
+router.get('/attach/:cubeId', async (req,res) => {
+    const cube = await req.storage.getById(req.params.cubeId);
+    const accessories = await req.storage.getAllAccessories((cube.accessories || []).map(a => a._id));
+
+    res.render('attach', {
+        title: 'Attach Stickers',
+        cube,
+        accessories
+    });
+});
+
 module.exports = router;
