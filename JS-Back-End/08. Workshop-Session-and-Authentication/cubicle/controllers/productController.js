@@ -76,4 +76,20 @@ router.get('/edit/:id', preloadCube(), isOwner(), async (req, res) => {
     }
 });
 
+router.post('/edit/:id', preloadCube(), isOwner(), async (req, res) => {
+    const cube = {
+        name: req.body.name,
+        description: req.body.description,
+        imageUrl: req.body.imageUrl,
+        difficulty: Number(req.body.difficulty)
+    };
+
+    try {
+        await req.storage.edit(req.params.id, cube);
+        res.redirect('/');
+    } catch(err) {
+        res.redirect('/404');
+    }
+});
+
 module.exports = router;
