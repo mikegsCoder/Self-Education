@@ -103,4 +103,13 @@ router.get('/attach/:cubeId', async (req,res) => {
     });
 });
 
+router.post('/attach/:cubeId', async (req, res) => {
+    const cubeId = req.params.cubeId;
+    const stickerId = req.body.accessory;
+
+    await req.storage.attachSticker(cubeId, stickerId);
+
+    res.redirect(`/details/${cubeId}`);
+});
+
 module.exports = router;
