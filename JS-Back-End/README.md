@@ -10,4 +10,5 @@
 - Workshop MongoDB and Mongoose
 - Session and Authentication
 - Workshop Session and Authentication
+- Validation and Error Handling
 - ...
