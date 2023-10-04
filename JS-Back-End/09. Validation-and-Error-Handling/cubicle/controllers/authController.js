@@ -1,4 +1,6 @@
 const { Router } = require('express');
+const { body, validationResult } = require('express-validator');
+
 const { isGuest, isAuth } = require('../middlewares/guards');
 
 const router = Router();
