@@ -119,7 +119,7 @@ router.post('/attach/:cubeId', async (req, res) => {
 
     await req.storage.attachSticker(cubeId, stickerId);
 
-    res.redirect(`/details/${cubeId}`);
+    res.redirect(`/products/details/${cubeId}`);
 });
 
 module.exports = router;
