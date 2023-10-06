@@ -1,5 +1,7 @@
 const express = require('express');
 
+const dataController = require('./dataController');
+
 const app = express();
 
 app.use((req, res, next) => {
@@ -11,5 +13,7 @@ app.use((req, res, next) => {
 });
 
 app.use(express.json());
+
+app.use('/api', dataController);
 
 app.listen(5000, () => console.log('Server listening on port 5000.'));
