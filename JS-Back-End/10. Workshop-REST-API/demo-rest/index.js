@@ -16,4 +16,8 @@ app.use(express.json());
 
 app.use('/api', dataController);
 
+app.get('/', (req, res) => {
+    res.send('REST service operational. Send requests on /api');
+});
+
 app.listen(5000, () => console.log('Server listening on port 5000.'));
