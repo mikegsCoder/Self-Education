@@ -31,4 +31,11 @@ router.put('/:id', (req, res) => {
     res.status(202).json(data[req.params.id]);
 });
 
+router.patch('/:id', (req, res) => {
+    const item = data[req.params.id];
+    Object.assign(item, req.body);
+    data[req.params.id] = item;
+    res.status(202).json(item);
+});
+
 module.exports = router;
