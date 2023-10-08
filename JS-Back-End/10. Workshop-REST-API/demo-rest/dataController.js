@@ -38,4 +38,9 @@ router.patch('/:id', (req, res) => {
     res.status(202).json(item);
 });
 
+router.delete('/:id', (req, res) => {
+    delete data[req.params.id];
+    res.status(204).end();
+});
+
 module.exports = router;
