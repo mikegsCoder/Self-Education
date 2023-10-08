@@ -26,4 +26,9 @@ router.get('/:id', (req, res) => {
     res.json(data[req.params.id]);
 });
 
+router.put('/:id', (req, res) => {
+    data[req.params.id] = req.body;
+    res.status(202).json(data[req.params.id]);
+});
+
 module.exports = router;
