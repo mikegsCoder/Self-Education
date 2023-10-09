@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 
 const cors = require('./middlewares/cors');
+const auth = require('./middlewares/auth');
 
 start();
 
@@ -25,6 +26,8 @@ async function start() {
     const app = express();
 
     app.use(cors());
+    app.use(auth());
+    app.use(express.json());
 
     app.get('/', (req, res) => res.send('It works!'));
     
