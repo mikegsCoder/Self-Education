@@ -1,6 +1,8 @@
 const express = require('express');
 const mongoose = require('mongoose');
 
+const cors = require('./middlewares/cors');
+
 start();
 
 async function start() {
@@ -21,6 +23,8 @@ async function start() {
     });
 
     const app = express();
+
+    app.use(cors());
 
     app.get('/', (req, res) => res.send('It works!'));
     
