@@ -64,3 +64,8 @@ function createToken(user) {
 
     return token;
 }
+
+module.exports = {
+    register,
+    login
+};
