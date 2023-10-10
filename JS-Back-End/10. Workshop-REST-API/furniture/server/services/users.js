@@ -31,3 +31,12 @@ async function register(email, password) {
         accessToken: createToken(user)
     };
 }
+
+function createToken(user) {
+    const token = jwt.sign({
+        _id: user._id,
+        email: user.email
+    }, SECRET);
+
+    return token;
+}
