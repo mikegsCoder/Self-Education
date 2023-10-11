@@ -11,7 +11,12 @@ async function create(data) {
     return result;
 }
 
+async function getById(id) {
+    return Furniture.findById(id);
+}
+
 module.exports = {
     getAll,
+    getById,
     create
 };
