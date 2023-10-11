@@ -22,9 +22,14 @@ async function update(original, updated) {
     return original;
 }
 
+async function remove(id) {
+    return Furniture.findByIdAndDelete(id);
+}
+
 module.exports = {
     getAll,
     getById,
     create,
-    update
+    update,
+    remove
 };
