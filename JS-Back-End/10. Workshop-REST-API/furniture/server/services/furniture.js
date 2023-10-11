@@ -15,8 +15,16 @@ async function getById(id) {
     return Furniture.findById(id);
 }
 
+async function update(original, updated) {
+    Object.assign(original, updated);
+    await original.save();
+
+    return original;
+}
+
 module.exports = {
     getAll,
     getById,
-    create
+    create,
+    update
 };
