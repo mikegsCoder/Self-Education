@@ -16,5 +16,16 @@ module.exports = {
                 next();
             }
         };
+    },
+    isOwner() {
+        return (req, res, next) => {
+            const item = req.data;
+
+            if (req.user._id != item.owner) {
+                res.status(403).json({ message: 'You can\'t modify this record.' });
+            } else {
+                next();
+            }
+        };
     } 
 };
