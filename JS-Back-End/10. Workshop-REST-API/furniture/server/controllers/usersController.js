@@ -22,4 +22,16 @@ router.post("/register", async (req, res) => {
     }
 });
 
+router.post("/login", async (req, res) => {
+    const { email, password } = req.body;
+
+    try {
+        const userData = await login(email, password);
+
+        res.json(userData);
+    } catch (err) {
+        res.status(err.status || 400).json({ message: err.message });
+    }
+});
+
 module.exports = router;
