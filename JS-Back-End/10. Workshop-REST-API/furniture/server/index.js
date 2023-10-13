@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 
 const cors = require('./middlewares/cors');
 const auth = require('./middlewares/auth');
+const usersController = require('./controllers/usersController');
 
 start();
 
@@ -29,6 +30,8 @@ async function start() {
     app.use(auth());
     app.use(express.json());
 
+    app.use('/users', usersController);
+    
     app.get('/', (req, res) => res.send('It works!'));
     
     app.listen(5000, () => console.log('REST Service is running on port 5000'));
