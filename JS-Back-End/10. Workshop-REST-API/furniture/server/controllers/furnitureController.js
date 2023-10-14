@@ -60,4 +60,13 @@ router.put('/:id', isAuth(), preload(), isOwner(), async (req, res) => {
     }
 });
 
+router.delete('/:id', isAuth(), preload(), isOwner(), async (req, res) => {
+    try {
+        await remove(req.params.id);
+        res.status(204).end();
+    } catch (err) {
+        res.status(err.status || 400).json({ message: err.message });
+    }
+});
+
 module.exports = router;
