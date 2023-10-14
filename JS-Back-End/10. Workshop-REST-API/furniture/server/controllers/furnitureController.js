@@ -32,4 +32,11 @@ router.post("/", isAuth(), async (req, res) => {
     }
 });
 
+router.get('/:id', preload(), async (req, res) => {
+    const item = req.data.toObject();
+    item._ownerId = item.owner;
+
+    res.json(item);
+});
+
 module.exports = router;
