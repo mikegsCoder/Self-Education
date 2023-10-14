@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const cors = require('./middlewares/cors');
 const auth = require('./middlewares/auth');
 const usersController = require('./controllers/usersController');
+const furnitureController = require('./controllers/furnitureController');
 
 start();
 
@@ -31,6 +32,7 @@ async function start() {
     app.use(express.json());
 
     app.use('/users', usersController);
+    app.use('/data/catalog', furnitureController);
     
     app.get('/', (req, res) => res.send('It works!'));
     
