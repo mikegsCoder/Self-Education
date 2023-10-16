@@ -8,6 +8,13 @@ async function createHotel(hotelData) {
     return hotel;
 }
 
+async function getAllHotels() {
+    const hotels = await Hotel.find({}).lean();
+
+    return hotels;
+}
+
 module.exports = {
-    createHotel
+    createHotel,
+    getAllHotels
 };
