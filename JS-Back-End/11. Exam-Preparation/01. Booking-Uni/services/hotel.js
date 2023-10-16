@@ -14,7 +14,14 @@ async function getAllHotels() {
     return hotels;
 }
 
+async function getHotelById(id) {
+    const hotel = await Hotel.findById(id).lean();
+
+    return hotel;
+}
+
 module.exports = {
     createHotel,
-    getAllHotels
+    getAllHotels,
+    getHotelById
 };
