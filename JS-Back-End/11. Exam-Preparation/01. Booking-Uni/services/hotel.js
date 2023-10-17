@@ -46,10 +46,15 @@ async function bookHotel(hotelId, userId) {
     return Promise.all([user.save(), hotel.save()]);
 }
 
+async function deleteHotel(id) {
+    return Hotel.findByIdAndDelete(id);
+}
+
 module.exports = {
     createHotel,
     getAllHotels,
     getHotelById,
     editHotel,
-    bookHotel
+    bookHotel,
+    deleteHotel
 };
