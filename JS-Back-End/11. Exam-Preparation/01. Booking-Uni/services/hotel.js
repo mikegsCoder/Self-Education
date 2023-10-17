@@ -50,11 +50,21 @@ async function deleteHotel(id) {
     return Hotel.findByIdAndDelete(id);
 }
 
+async function getBookedHotels(userId) {
+    const user = await User.findById(userId).populate('bookedHotels');
+
+    let hotels = [];
+    user.bookedHotels.map(x => hotels.push({'name': x.name}));
+    
+    return hotels;
+}
+
 module.exports = {
     createHotel,
     getAllHotels,
     getHotelById,
     editHotel,
     bookHotel,
-    deleteHotel
+    deleteHotel,
+    getBookedHotels
 };
