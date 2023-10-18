@@ -41,7 +41,19 @@ async function register(username, email, password) {
 }
 
 async function login(username, password) {
-    // to add implementation
+    const user = await userService.getUserByUsername(username);
+
+    if (!user) {
+        throw new Error("No such user.");
+    }
+
+    const hasMatch = await bcrypt.compare(password, user.hashedPassword);
+
+    if (!hasMatch) {
+        throw new Error("Incorrect password.");
+    }
+
+    return generateToken(user);
 }
 
 function generateToken(userData) {
