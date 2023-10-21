@@ -49,4 +49,21 @@ router.get('/login', isGuest(), (req, res) => {
     res.render('user/login');
 });
 
+router.post('/login', isGuest(), async (req, res) => {
+    try {
+        await req.auth.login(req.body.username, req.body.password);
+
+        res.redirect('/')
+    } catch (err) {
+        console.log(err.message);
+        const ctx = {
+            errors: [err.message],
+            userData: {
+                username: req.body.username
+            }
+        }
+        res.render('user/login', ctx);
+    }
+});
+
 module.exports = router;
