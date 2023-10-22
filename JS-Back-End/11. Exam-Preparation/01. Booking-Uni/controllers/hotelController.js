@@ -44,4 +44,18 @@ router.post('/create', isUser(), async (req, res) => {
     }
 });
 
+router.get('/details/:id', async (req, res) => {
+    try {
+        const hotel = await req.storage.getHotelById(req.params.id);
+        hotel.hasUser = Boolean(req.user);
+        hotel.isAuthor = req.user && req.user._id == hotel.owner;
+        hotel.isBooked = req.user && hotel.bookedBy.find(x => x == req.user._id);
+
+        res.render('hotel/details', { hotel });
+    } catch (err) {
+        console.log(err.message);
+        res.redirect('/404');
+    }
+});
+
 module.exports = router;
