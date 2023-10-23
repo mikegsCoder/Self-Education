@@ -58,4 +58,19 @@ router.get('/details/:id', async (req, res) => {
     }
 });
 
+router.get('/edit/:id', isUser(), async (req, res) => {
+    try {
+        const hotel = await req.storage.getHotelById(req.params.id);
+
+        if (req.user._id != hotel.owner) {
+            throw new Error('Cannot edit hotel you haven\'t created.');
+        }
+
+        res.render('hotel/edit', { hotel });
+    } catch (err) {
+        console.log(err.message);
+        res.redirect('/');
+    }
+});
+
 module.exports = router;
