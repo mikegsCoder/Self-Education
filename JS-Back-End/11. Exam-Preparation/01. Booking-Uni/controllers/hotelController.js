@@ -120,4 +120,21 @@ router.get('/book/:id', isUser(), async (req, res) => {
     }
 });
 
+router.get('/delete/:id', isUser(), async (req, res) => {
+    try {
+        const hotel = await req.storage.getHotelById(req.params.id);
+
+        if (req.user._id != hotel.owner) {
+            throw new Error('Cannot delete hotel you haven\'t created.');
+        }
+
+        await req.storage.deleteHotel(req.params.id);
+
+        res.redirect('/');
+    } catch (err) {
+        console.log(err.message);
+        res.redirect('/hotels/details/' + req.params.id);
+    }
+});
+
 module.exports = router;
