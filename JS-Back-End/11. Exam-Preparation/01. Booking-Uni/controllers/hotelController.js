@@ -73,4 +73,40 @@ router.get('/edit/:id', isUser(), async (req, res) => {
     }
 });
 
+router.post('/edit/:id', isUser(), async (req, res) => {
+    try {
+        const hotel = await req.storage.getHotelById(req.params.id);
+
+        if (req.user._id != hotel.owner) {
+            throw new Error('Cannot edit hotel you haven\'t created.');
+        }
+
+        await req.storage.editHotel(req.params.id, req.body);
+
+        res.redirect('/');
+    } catch (err) {
+        console.log(err.message);
+
+        let errors;
+        if (err.errors) {
+            errors = Object.values(err.errors).map(e => e.properties.message);
+        } else {
+            errors = [err.message];
+        }
+        
+        const ctx = {
+            errors: errors,
+            hotel: {
+                _id: req.params.id,
+                name: req.body.name,
+                city: req.body.city,
+                imageUrl: req.body.imageUrl,
+                rooms: req.body.rooms
+            }
+        };
+
+        res.render('hotel/edit', ctx);
+    }
+});
+
 module.exports = router;
