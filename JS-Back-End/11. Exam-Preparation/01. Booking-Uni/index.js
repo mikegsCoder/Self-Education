@@ -17,5 +17,3 @@ async function start(){
     app.listen(PORT, () => 
         console.log(`Application startted at http://localhost:${PORT}`));
 }
-
-
