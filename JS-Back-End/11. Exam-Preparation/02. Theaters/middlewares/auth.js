@@ -12,7 +12,8 @@ module.exports = () => (req, res, next) => {
                 res.cookie(COOKIE_NAME, token);
             },
             async login(username, password) {
-                
+                const token = await login(username, password);
+                res.cookie(COOKIE_NAME, token);
             },
             logout() {
                 res.clearCookie(COOKIE_NAME);
@@ -32,6 +33,26 @@ async function register(username, password) {
 
     const hashedPassword = await bcrypt.hash(password, 10);
     const user = await userService.createUser(username, hashedPassword);
+
+    return generateToken(user);
+}
+
+async function login(username, password) {
+    const user = await userService.getUserByUsername(username);
+
+    if (!user) {
+        const err = new Error('No such user.');
+        err.type = 'credential';
+        throw err;
+    }
+
+    const hasMatch = await bcrypt.compare(password, user.hashedPassword);
+
+    if (!hasMatch) {
+        const err = new Error('Incorrect password.');
+        err.type = 'credential';
+        throw err;
+    }
 
     return generateToken(user);
 }
