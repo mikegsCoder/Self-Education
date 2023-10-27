@@ -21,3 +21,13 @@ module.exports = () => (req, res, next) => {
         next();
     }
 };
+
+function generateToken(userData) {
+    return jwt.sign(
+        {
+            _id: userData._id,
+            username: userData.username,
+        },
+        TOKEN_SECRET
+    );
+}
