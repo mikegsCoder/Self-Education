@@ -9,6 +9,11 @@ async function getAllPlays(orderBy) {
     return Play.find({ public: true }).sort(sort).lean();
 }
 
+async function getPlayById(id) {
+    return Play.findById(id).populate('usersLiked').lean();
+}
+
 module.exports = {
-    getAllPlays
+    getAllPlays,
+    getPlayById
 };
