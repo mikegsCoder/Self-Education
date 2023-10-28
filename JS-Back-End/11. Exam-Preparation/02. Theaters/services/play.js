@@ -13,7 +13,22 @@ async function getPlayById(id) {
     return Play.findById(id).populate('usersLiked').lean();
 }
 
+async function createPlay(playData) {
+    const pattern = new RegExp(`^${playData.title}$`, 'i');
+    const existing = await Play.findOne({ title: {$regex: pattern }});
+
+    if (existing) {
+        throw new Error('A play with this name already exists.');
+    }
+
+    const play = new Play(playData);
+    await play.save();
+
+    return play;
+}
+
 module.exports = {
     getAllPlays,
-    getPlayById
+    getPlayById,
+    createPlay
 };
