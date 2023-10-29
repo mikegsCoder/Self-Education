@@ -38,9 +38,14 @@ async function editPlay(id, playData) {
     return play.save();
 }
 
+async function deletePlay(id) {
+    return Play.findByIdAndDelete(id);
+}
+
 module.exports = {
     getAllPlays,
     getPlayById,
     createPlay,
-    editPlay
+    editPlay,
+    deletePlay
 };
