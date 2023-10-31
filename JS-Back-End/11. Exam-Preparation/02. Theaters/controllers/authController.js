@@ -44,4 +44,8 @@ router.post('/register',
     }
 );
 
+router.get('/login', isGuest(), (req, res) => {
+    res.render('login');
+});
+
 module.exports = router;
