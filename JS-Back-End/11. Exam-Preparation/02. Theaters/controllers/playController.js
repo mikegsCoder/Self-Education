@@ -106,4 +106,20 @@ router.get('/delete/:id', isUser(), async (req, res) => {
     }
 });
 
+router.get('/like/:id', isUser(), async (req, res) => {
+    try {
+        const play = await req.storage.getPlayById(req.params.id);
+
+        if (play.author == req.user._id) {
+            throw new Error('Cannot like your own play.');
+        }
+
+        await req.storage.likePlay(req.params.id, req.user._id);
+        res.redirect('/play/details/' + req.params.id);
+    } catch (err) {
+        console.log(err.message);
+        res.redirect('/play/details' + req.params.id);
+    }
+});
+
 module.exports = router;
