@@ -11,6 +11,11 @@ async function getAllCourses(hasUser) {
     }
 }
 
+async function getCourseById(id) {
+    return Course.findById(id).populate('usersEnrolled').lean();
+}
+
 module.exports = {
-    getAllCourses
+    getAllCourses,
+    getCourseById
 };
