@@ -29,8 +29,20 @@ async function createCourse(courseData) {
     return course;
 }
 
+async function editCourse(id, courseData) {
+    const course = await Course.findById(id);
+
+    course.title = courseData.title.trim();
+    course.description = courseData.description.trim();
+    course.imageUrl = courseData.imageUrl.trim();
+    course.duration = courseData.duration.trim();
+
+    return course.save();
+}
+
 module.exports = {
     getAllCourses,
     getCourseById,
-    createCourse
+    createCourse,
+    editCourse
 };
