@@ -15,7 +15,22 @@ async function getCourseById(id) {
     return Course.findById(id).populate('usersEnrolled').lean();
 }
 
+async function createCourse(courseData) {
+    const pattern = new RegExp(`^${courseData.title}$`, 'i');
+    const existing = await Course.findOne({ title: {$regex: pattern }});
+
+    if (existing) {
+        throw new Error('A course with this name already exists.');
+    }
+
+    const course = new Course(courseData);
+    await course.save();
+
+    return course;
+}
+
 module.exports = {
     getAllCourses,
-    getCourseById
+    getCourseById,
+    createCourse
 };
