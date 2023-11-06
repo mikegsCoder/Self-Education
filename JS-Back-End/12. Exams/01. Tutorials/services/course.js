@@ -44,10 +44,21 @@ async function deleteCourse(id) {
     return Course.findByIdAndDelete(id);
 }
 
+async function enrollCourse(courseId, userId) {
+    const course = await Course.findById(courseId);
+    const user = await User.findById(userId)
+
+    course.usersEnrolled.push(userId);
+    user.enrolledCourses.push(courseId);
+
+    return Promise.all([user.save(), course.save()]);
+}
+
 module.exports = {
     getAllCourses,
     getCourseById,
     createCourse,
     editCourse,
-    deleteCourse
+    deleteCourse,
+    enrollCourse
 };
