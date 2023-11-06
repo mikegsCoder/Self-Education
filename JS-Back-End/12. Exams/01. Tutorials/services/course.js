@@ -40,9 +40,14 @@ async function editCourse(id, courseData) {
     return course.save();
 }
 
+async function deleteCourse(id) {
+    return Course.findByIdAndDelete(id);
+}
+
 module.exports = {
     getAllCourses,
     getCourseById,
     createCourse,
-    editCourse
+    editCourse,
+    deleteCourse
 };
