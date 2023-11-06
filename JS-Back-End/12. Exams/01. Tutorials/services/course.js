@@ -54,11 +54,19 @@ async function enrollCourse(courseId, userId) {
     return Promise.all([user.save(), course.save()]);
 }
 
+async function searchCourses(search) {
+    const pattern = new RegExp(`${search}`, 'i');
+    const courses = await Course.find({ title: { $regex: pattern } }).lean();
+
+    return courses;
+}
+
 module.exports = {
     getAllCourses,
     getCourseById,
     createCourse,
     editCourse,
     deleteCourse,
-    enrollCourse
+    enrollCourse,
+    searchCourses
 };
