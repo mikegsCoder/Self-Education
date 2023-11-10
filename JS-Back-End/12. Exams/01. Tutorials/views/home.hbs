@@ -1,0 +1,88 @@
+{{#if user}}
+    <h1 class="text-center">Courses</h1>
+    <section>
+        <a href="/course/create" class="btn btn-warning ">Create Course</a>
+        <form class="search float-right" action="/search" method="POST">
+            <label>Search: </label>
+            <input type="text" name="search">
+            <input type="submit" class="btn btn-primary" value="Search">
+        </form>
+    </section>
+
+    <div class="container mt-3">
+        <div class="row ">
+            <div class="card-deck d-flex justify-content-center">
+                {{#each courses}}
+                    {{> course-user}}
+                {{/each}}
+            </div>
+        </div>
+        {{!-- <div class="row d-flex justify-content-center">
+                {{#each courses}}
+                    <div class="card-deck">
+                        {{> course-user}}
+                    </div>
+                {{else}}
+                    <h3 class="text-center">No courses...</h3>
+                {{/each}}
+        </div> --}}
+    </div>
+    {{#each courses}}
+    {{else}}
+        <h3 class="text-center">No courses...</h3>
+    {{/each}}
+    {{else}}
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="display-4">Tutorials</h1>
+            <p class="lead">Start Self-Learning Today: Be the best Developer in the company</p>
+        </div>
+    </div>
+
+    <div>
+        <h1 class="text-center">Top Courses</h1>
+        <div class="container mt-3">
+            <div class="row d-flex justify-content-center">
+                {{#each courses}}
+                    <div class="card-deck">
+                        {{> course-guest}}
+                    </div>
+                {{else}}
+                    <h3 class="text-center">No courses...</h3>
+                {{/each}}
+
+                    {{!-- <div class="card mb-4">
+                        <img class="card-img-top"
+                            src="https://www.freecodecamp.org/news/content/images/size/w2000/2020/03/gpython.jpg"
+                            alt="Card image cap" width="400">
+                        <div class="card-body">
+                            <h4 class="card-title">Python</h4>
+                            <small class="float-right">Enrolled: 8</small>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <img class="card-img-top"
+                            src="https://1.bp.blogspot.com/-pdqcVeIQp64/XDX7TzdRdcI/AAAAAAAAM8E/ZmGuB6caZqIGmEflGHcj3zgXJJrmqRLdgCLcBGAs/w1200-h630-p-k-no-nu/Free%2BCourses%2Bto%2Blearn%2BJavaScript.jpg"
+                            alt="Card image cap" width="400">
+                        <div class="card-body">
+                            <h4 class="card-title">JavaScript</h4>
+                            <small class="float-right">Enrolled: 4</small>
+                        </div>
+                    </div>
+
+                    <div class="card mb-4">
+                        <img class="card-img-top" src="https://colorlib.com/wp/wp-content/uploads/sites/2/angular-logo.png"
+                            alt="Card image cap" width="400">
+                        <div class="card-body">
+                            <h4 class="card-title">Angular</h4>
+                            <small class="float-right">Enrolled: 2</small>
+                        </div>
+                    </div>
+
+                </div> --}}
+
+            </div>
+        </div>
+    </div>
+{{/if}}
