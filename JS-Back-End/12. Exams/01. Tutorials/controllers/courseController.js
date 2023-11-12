@@ -34,4 +34,18 @@ router.post('/create', isUser(), async (req, res) => {
     }
 });
 
+router.get('/details/:id', async (req, res) => {
+    try {
+        const course = await req.storage.getCourseById(req.params.id);
+        course.hasUser = Boolean(req.user);
+        course.isAuthor = req.user && req.user._id == course.author;
+        course.isEnrolled = req.user && course.usersEnrolled.find(u => u._id == req.user._id);
+
+        res.render('course/details', { course });
+    } catch (err) {
+        console.log(err.message);
+        res.redirect('/404');
+    }
+});
+
 module.exports = router;
