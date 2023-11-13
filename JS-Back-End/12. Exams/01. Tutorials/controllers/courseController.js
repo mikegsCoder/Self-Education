@@ -63,4 +63,30 @@ router.get('/edit/:id', isUser(), async (req, res) => {
     }
 });
 
+router.post('/edit/:id', isUser(), async (req, res) => {
+    try {
+        const course = await req.storage.getCourseById(req.params.id);
+        
+        if (course.author != req.user._id) {
+            throw new Error('Cannot edit course you haven\'t created.');
+        }
+
+        await req.storage.editCourse(req.params.id, req.body);
+        res.redirect('/course/details/' + req.params.id);
+    } catch (err) {
+        const ctx = {
+            errors: parseError(err),
+            course: {
+                _id: req.params.id,
+                title: req.body.title,
+                description: req.body.description,
+                imageUrl: req.body.imageUrl,
+                duration: req.body.duration
+            }
+        };
+
+        res.render('course/edit', ctx);
+    }
+});
+
 module.exports = router;
