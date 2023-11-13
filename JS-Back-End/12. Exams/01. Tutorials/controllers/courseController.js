@@ -89,4 +89,20 @@ router.post('/edit/:id', isUser(), async (req, res) => {
     }
 });
 
+router.get('/delete/:id', isUser(), async (req, res) => {
+    try {
+        const course = await req.storage.getCourseById(req.params.id);
+
+        if (course.author != req.user._id) {
+            throw new Error('Cannot delete course you haven\'t created.');
+        }
+
+        await req.storage.deleteCourse(req.params.id);
+        res.redirect('/');
+    } catch (err) {
+        console.log(err.message);
+        res.redirect('/course/details/' + req.params.id);
+    }
+});
+
 module.exports = router;
