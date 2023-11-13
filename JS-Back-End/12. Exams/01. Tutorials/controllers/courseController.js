@@ -48,4 +48,19 @@ router.get('/details/:id', async (req, res) => {
     }
 });
 
+router.get('/edit/:id', isUser(), async (req, res) => {
+    try {
+        const course = await req.storage.getCourseById(req.params.id);
+        
+        if (course.author != req.user._id) {
+            throw new Error('Cannot edit course you haven\'t created.');
+        }
+
+        res.render('course/edit', { course });
+    } catch (err) {
+        console.log(err.message);
+        res.redirect('/');
+    }
+});
+
 module.exports = router;
