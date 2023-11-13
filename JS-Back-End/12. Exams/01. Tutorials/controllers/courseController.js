@@ -105,4 +105,20 @@ router.get('/delete/:id', isUser(), async (req, res) => {
     }
 });
 
+router.get('/enroll/:id', isUser(), async (req, res) => {
+    try {
+        const course = await req.storage.getCourseById(req.params.id);
+
+        if (course.author == req.user._id) {
+            throw new Error('Cannot enroll your own course.');
+        }
+
+        await req.storage.enrollCourse(req.params.id, req.user._id);
+        res.redirect('/course/details/' + req.params.id);
+    } catch (err) {
+        console.log(err.message);
+        res.redirect('/course/details/' + req.params.id);
+    }
+});
+
 module.exports = router;
