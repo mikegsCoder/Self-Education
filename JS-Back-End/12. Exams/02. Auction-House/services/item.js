@@ -8,6 +8,11 @@ async function getAllItems() {
     return Item.find(search).lean();
 }
 
+async function getItemById(id) {
+    return Item.findById(id).populate('author').populate('bidder').lean();
+}
+
 module.exports = {
-    getAllItems
+    getAllItems,
+    getItemById
 };
