@@ -38,9 +38,17 @@ async function editItem(id, itemData) {
     return item.save();
 }
 
+async function deleteItem(id) {
+    const item = await Item.findById(id);
+    item.isClosed = true;
+
+    return item.save();
+}
+
 module.exports = {
     getAllItems,
     getItemById,
     createItem,
-    editItem
+    editItem,
+    deleteItem
 };
