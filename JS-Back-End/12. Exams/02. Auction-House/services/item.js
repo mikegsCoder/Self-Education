@@ -63,6 +63,11 @@ async function searchItems(search) {
     return items;
 }
 
+async function getClosedItems(userId) {
+    const search = { isClosed: true, author: userId };
+    return Item.find(search).populate('bidder').lean();
+}
+
 module.exports = {
     getAllItems,
     getItemById,
@@ -70,5 +75,6 @@ module.exports = {
     editItem,
     deleteItem,
     bidItem,
-    searchItems
+    searchItems,
+    getClosedItems
 };
