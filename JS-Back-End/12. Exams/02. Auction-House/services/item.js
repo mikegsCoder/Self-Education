@@ -45,10 +45,22 @@ async function deleteItem(id) {
     return item.save();
 }
 
+async function bidItem(itemId, userId, price) {
+    const item = await Item.findById(itemId);
+    const user = await User.findById(userId)
+
+    item.bidder = userId;
+    item.price = price;
+    user.auctionsPlaced.push(itemId);
+
+    return Promise.all([user.save(), item.save()]);
+}
+
 module.exports = {
     getAllItems,
     getItemById,
     createItem,
     editItem,
-    deleteItem
+    deleteItem,
+    bidItem
 };
