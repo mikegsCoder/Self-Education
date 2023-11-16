@@ -56,11 +56,19 @@ async function bidItem(itemId, userId, price) {
     return Promise.all([user.save(), item.save()]);
 }
 
+async function searchItems(search) {
+    const pattern = new RegExp(`${search}`, 'i');
+    const items = await Item.find({ title: { $regex: pattern } }).lean();
+
+    return items;
+}
+
 module.exports = {
     getAllItems,
     getItemById,
     createItem,
     editItem,
     deleteItem,
-    bidItem
+    bidItem,
+    searchItems
 };
