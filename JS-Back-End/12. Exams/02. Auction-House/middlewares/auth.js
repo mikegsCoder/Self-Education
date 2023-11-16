@@ -31,6 +31,15 @@ async function login(email, password) {
 }
 
 function generateToken(userData) {
+    return jwt.sign(
+        {
+            _id: userData._id,
+            email: userData.email,
+            firstName: userData.firstName,
+            lastName: userData.lastName
+        },
+        TOKEN_SECRET
+    );
 }
 
 function parseToken(req, res) {
