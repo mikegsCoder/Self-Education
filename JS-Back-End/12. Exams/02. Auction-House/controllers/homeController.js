@@ -16,4 +16,23 @@ router.get('/browse', async (req, res) => {
     res.render('browse', ctx);
 });
 
+router.get('/closed', async (req, res) => {
+    const items = await req.storage.getClosedItems(req.user._id);
+    items.map(x => {
+        if (x.bidder) {
+            x.bidderName = x.bidder.firstName + ' ' + x.bidder.lastName;
+        } else {
+            x.bidderName = '';
+        }
+    })
+
+    const ctx = {
+        items,
+        title: 'Closed Auctions',
+        closed: true
+    };
+
+    res.render('browse', ctx);
+});
+
 module.exports = router;
