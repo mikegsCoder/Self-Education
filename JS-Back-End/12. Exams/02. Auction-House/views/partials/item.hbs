@@ -1,0 +1,18 @@
+<li class="item">
+    <header class="pad-med">
+        <h2>{{title}}</h2>
+    </header>
+
+    <div class="align-center">
+        <img class="img-thumb" src="{{imageUrl}}">
+    </div>
+
+    <footer class="align-center pad-med">
+        <p>Current price: <strong>${{price}}</strong></p>
+        {{#if isClosed}}
+            <p>from <strong>{{bidderName}}</strong></p>
+        {{else}}
+            <a class="action" href="/item/details/{{_id}}">See details</a>
+        {{/if}}
+    </footer>
+</li>
