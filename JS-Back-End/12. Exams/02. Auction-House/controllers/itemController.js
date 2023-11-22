@@ -37,4 +37,20 @@ router.post('/create', isUser(), async (req, res) => {
     }
 });
 
+router.get('/details/:id', async (req, res) => {
+    try {
+        const item = await req.storage.getItemById(req.params.id);
+        item.hasUser = Boolean(req.user);
+        item.isAuthor = req.user && req.user._id == item.author._id;
+        item.isBidder = req.user && item.bidder == req.user._id;
+
+        item.creator = item.author.firstName + ' ' + item.author.lastName;
+
+        res.render('item/details', { item });
+    } catch (err) {
+        console.log(err.message);
+        res.redirect('/404');
+    }
+});
+
 module.exports = router;
