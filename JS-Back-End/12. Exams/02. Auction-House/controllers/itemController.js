@@ -114,4 +114,35 @@ router.get('/delete/:id', isUser(), async (req, res) => {
     }
 });
 
+router.post('/bid/:id', isUser(), async (req, res) => {
+    try {
+        const item = await req.storage.getItemById(req.params.id);
+
+        if (item.author._id == req.user._id) {
+            throw new Error(`Cannot bid your own ${ITEM.toLowerCase()}.`);
+        }
+        
+        if (req.body.bid <= item.price) {
+            throw new Error('Price must be greater than current auction price.');
+        }
+
+        await req.storage.bidItem(req.params.id, req.user._id, req.body.bid);
+        res.redirect('/item/details/' + req.params.id);
+    } catch (err) {
+        const item = await req.storage.getItemById(req.params.id);
+        item.hasUser = Boolean(req.user);
+        item.isAuthor = req.user && req.user._id == item.author._id;
+        item.isBidder = req.user && item.bidder == req.user._id;
+
+        item.creator = item.author.firstName + ' ' + item.author.lastName;
+
+        const ctx = {
+            errors: parseError(err),
+            item
+        }
+
+         res.render('item/details', ctx);
+    }
+});
+
 module.exports = router;
