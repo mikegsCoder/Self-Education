@@ -1,12 +1,8 @@
 <!-- Create Page -->
 <section id="create-section" class="">
-
     <h1 class="item">New Auction</h1>
-
     <div class="item padded align-center">
-
         <form class="layout left large" method="POST" action="/item/create">
-
             <div class="col aligned">
                 <label>
                     <span>Title</span>
@@ -31,20 +27,15 @@
                     <input type="number" name="price" value="{{itemData.price}}">
                 </label>
             </div>
-
             <div class="content pad-med align-center vertical">
                 <label>
                     <span>Description</span>
                     <textarea name="description">{{itemData.description}}</textarea>
                 </label>
-
                 <div class="align-center">
                     <input class="action" type="submit" value="Publish Item">
                 </div>
             </div>
-
         </form>
-
     </div>
-
 </section>
