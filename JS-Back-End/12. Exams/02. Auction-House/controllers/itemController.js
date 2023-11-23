@@ -98,4 +98,20 @@ router.post('/edit/:id', isUser(), async (req, res) => {
     }
 });
 
+router.get('/delete/:id', isUser(), async (req, res) => {
+    try {
+        const item = await req.storage.getItemById(req.params.id);
+
+        if (item.author._id != req.user._id) {
+            throw new Error(`Cannot delete ${ITEM.toLowerCase()} you haven\'t created.`);
+        }
+
+        await req.storage.deleteItem(req.params.id);
+        res.redirect('/browse');
+    } catch (err) {
+        console.log(err.message);
+        res.redirect('/item/details/' + req.params.id);
+    }
+});
+
 module.exports = router;
