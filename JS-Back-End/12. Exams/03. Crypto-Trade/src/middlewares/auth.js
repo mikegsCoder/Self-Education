@@ -25,6 +25,16 @@ module.exports = () => (req, res, next) => {
 };
 
 async function register(email, password, username) {
+    const existing = await userService.getUserByEmail(email);
+
+    if (existing) {
+        throw new Error('Email is taken.');
+    }
+
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const user = await userService.createUser(email, hashedPassword, username);
+
+    return generateToken(user);
 }
 
 async function login(email, password) {
