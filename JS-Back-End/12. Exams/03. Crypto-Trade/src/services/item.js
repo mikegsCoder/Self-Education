@@ -43,11 +43,26 @@ async function buyItem(itemId, userId) {
     return item.save();
 }
 
+async function searchItems(title, payment) {
+    let items = await this.getAllItems();
+
+    if (title) {
+        items = items.filter(x => x.title.toLowerCase() == title.toLowerCase());
+    }
+
+    if (payment) {
+        items =  items.filter(x => x.paymentMethod == payment);
+    }
+
+    return items;
+}
+
 module.exports = {
     getAllItems,
     getItemById,
     createItem,
     editItem,
     deleteItem,
-    buyItem
+    buyItem,
+    searchItems
 };
