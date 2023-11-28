@@ -34,10 +34,20 @@ async function deleteItem(id) {
     return Item.findByIdAndDelete(id);
 }
 
+async function buyItem(itemId, userId) {
+    const item = await Item.findById(itemId);
+    const user = await User.findById(userId)
+
+    item.buyCrypto.push(userId);
+
+    return item.save();
+}
+
 module.exports = {
     getAllItems,
     getItemById,
     createItem,
     editItem,
-    deleteItem
+    deleteItem,
+    buyItem
 };
