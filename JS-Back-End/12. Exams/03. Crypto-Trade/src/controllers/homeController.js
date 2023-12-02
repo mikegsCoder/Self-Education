@@ -10,4 +10,10 @@ router.get('/catalog', async (req, res) => {
     res.render('catalog', { items });
 });
 
+router.get('/search', async (req, res) => {
+    const items = await req.storage.getAllItems();
+
+    res.render('search', { items });
+});
+
 module.exports = router;
