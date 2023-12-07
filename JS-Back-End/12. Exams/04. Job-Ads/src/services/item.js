@@ -13,7 +13,15 @@ async function getItemById(id) {
     return item;
 }
 
+async function createItem(itemData) {
+    const item = new Item(itemData);
+    await item.save();
+
+    return item;
+}
+
 module.exports = {
     getAllItems,
-    getItemById
+    getItemById,
+    createItem
 };
