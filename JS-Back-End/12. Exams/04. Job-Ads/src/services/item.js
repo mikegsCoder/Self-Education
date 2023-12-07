@@ -20,8 +20,20 @@ async function createItem(itemData) {
     return item;
 }
 
+async function editItem(id, itemData) {
+    const item = await Item.findById(id);
+
+    item.title = itemData.title.trim();
+    item.location = itemData.location.trim();
+    item.companyName = itemData.companyName.trim();
+    item.companyDescription = itemData.companyDescription.trim();
+
+    return item.save();
+}
+
 module.exports = {
     getAllItems,
     getItemById,
-    createItem
+    createItem,
+    editItem
 };
