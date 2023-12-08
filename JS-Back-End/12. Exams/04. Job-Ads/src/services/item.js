@@ -43,11 +43,20 @@ async function applyItem(itemId, userId) {
     return item.save();
 }
 
+async function searchItems(searchEmail) {
+    let items = await Item.find({}).populate('author').lean();
+
+    items = items.filter(x => x.author.email == searchEmail);
+
+    return items;
+}
+
 module.exports = {
     getAllItems,
     getItemById,
     createItem,
     editItem,
     deleteItem,
-    applyItem
+    applyItem,
+    searchItems
 };
