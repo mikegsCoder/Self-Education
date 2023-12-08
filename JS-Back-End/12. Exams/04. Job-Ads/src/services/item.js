@@ -31,9 +31,14 @@ async function editItem(id, itemData) {
     return item.save();
 }
 
+async function deleteItem(id) {
+    return Item.findByIdAndDelete(id);
+}
+
 module.exports = {
     getAllItems,
     getItemById,
     createItem,
-    editItem
+    editItem,
+    deleteItem
 };
