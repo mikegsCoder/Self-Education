@@ -38,6 +38,23 @@ async function register(email, password, skills) {
 }
 
 async function login(email, password) {
+    const user = await userService.getUserByEmail(email);
+
+    if (!user) {
+        const err = new Error('No such user.');
+        err.type = 'credential';
+        throw err;
+    }
+
+    const hasMatch = await bcrypt.compare(password, user.hashedPassword);
+
+    if (!hasMatch) {
+        const err = new Error('Incorrect password.');
+        err.type = 'credential';
+        throw err;
+    }
+
+    return generateToken(user);
 }
 
 function generateToken(userData) {
