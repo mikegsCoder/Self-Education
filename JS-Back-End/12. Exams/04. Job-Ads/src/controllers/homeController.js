@@ -16,4 +16,15 @@ router.get('/search', async (req, res) => {
     res.render('search', { first });
 });
 
+router.post('/search', async (req, res) => {
+    const items = await req.storage.searchItems(req.body.searchEmail);
+
+    const ctx = {
+        searchEmail: req.body.searchEmail,
+        items
+    }
+
+    res.render('search', ctx);
+});
+
 module.exports = router;
