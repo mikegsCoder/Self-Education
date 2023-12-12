@@ -10,4 +10,10 @@ router.get('/catalog', async (req, res) => {
     res.render('catalog', { items });
 });
 
+router.get('/search', async (req, res) => {
+    const first = true;
+
+    res.render('search', { first });
+});
+
 module.exports = router;
