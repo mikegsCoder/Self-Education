@@ -35,4 +35,20 @@ router.post('/create', isUser(), async (req, res) => {
     }
 });
 
+router.get('/details/:id', async (req, res) => {
+    try {
+        const item = await req.storage.getItemById(req.params.id);
+        item.hasUser = Boolean(req.user);
+        item.isAuthor = req.user && req.user._id == item.author._id;
+        item.applyed = item.usersApplyed.find(u => u._id == req.user._id);
+
+        console.log(item);
+
+        res.render('item/details', { item });
+    } catch (err) {
+        console.log(err.message);
+        res.render('404');
+    }
+});
+
 module.exports = router;
