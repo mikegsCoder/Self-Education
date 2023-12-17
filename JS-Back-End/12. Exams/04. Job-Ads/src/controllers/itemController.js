@@ -66,4 +66,30 @@ router.get('/edit/:id', isUser(), async (req, res) => {
     }
 });
 
+router.post('/edit/:id', isUser(), async (req, res) => {
+    try {
+        const item = await req.storage.getItemById(req.params.id);
+        
+        if (item.author._id != req.user._id) {
+            throw new Error(`Cannot edit ${ITEM.toLowerCase()} you haven\'t created.`);
+        }
+
+        await req.storage.editItem(req.params.id, req.body);
+        res.redirect('/item/details/' + req.params.id); 
+    } catch (err) {
+        const ctx = {
+            errors: parseError(err),
+            item: {
+                _id: req.params.id,
+                title: req.body.title,
+                location: req.body.location,
+                companyName: req.body.companyName,
+                companyDescription: req.body.companyDescription,
+            }
+        };
+
+        res.render('item/edit', ctx);
+    }
+});
+
 module.exports = router;
