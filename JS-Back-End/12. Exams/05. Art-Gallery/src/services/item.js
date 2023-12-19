@@ -7,6 +7,11 @@ async function getAllItems() {
     return Item.find({}).populate('author').populate('sharedBy').lean();
 }
 
+async function getItemById(id) {
+    return Item.findById(id).populate('author').lean();
+}
+
 module.exports = {
-    getAllItems
+    getAllItems,
+    getItemById
 };
