@@ -11,7 +11,23 @@ async function getItemById(id) {
     return Item.findById(id).populate('author').lean();
 }
 
+async function createItem(itemData, userId) {
+    if (itemData.certificate != 'Yes' && itemData.certificate != 'No') {
+        throw new Error('Enter a valid certificate info.');
+    }
+
+    const item = new Item(itemData);
+    const user = await User.findById(userId);
+    user.publications.push(item);
+
+    await item.save();
+    await user.save();
+
+    return item;
+}
+
 module.exports = {
     getAllItems,
-    getItemById
+    getItemById,
+    createItem
 };
