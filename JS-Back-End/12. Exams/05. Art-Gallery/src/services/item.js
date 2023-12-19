@@ -26,8 +26,20 @@ async function createItem(itemData, userId) {
     return item;
 }
 
+async function editItem(id, itemData) {
+    const item = await Item.findById(id);
+
+    item.title = itemData.title.trim();
+    item.technique = itemData.technique.trim();
+    item.imageUrl = itemData.imageUrl.trim();
+    item.certificate = itemData.certificate.trim();
+
+    return item.save();
+}
+
 module.exports = {
     getAllItems,
     getItemById,
-    createItem
+    createItem,
+    editItem
 };
