@@ -48,11 +48,23 @@ async function shareItem(itemId, userId) {
     return item.save();
 }
 
+async function getProfile(userId) {
+    const user = await User.findById(userId).lean();
+    const shared = await Item.find({ sharedBy: { "$in" : [userId]} }).lean();
+    const created = await Item.find({ author: userId }).lean();
+
+    user.shared = shared.map(i => i.title).join(', ');
+    user.created = created.map(i => i.title).join(', ');
+
+    return user;
+}
+
 module.exports = {
     getAllItems,
     getItemById,
     createItem,
     editItem,
     deleteItem,
-    shareItem
+    shareItem,
+    getProfile
 };
