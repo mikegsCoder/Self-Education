@@ -41,10 +41,18 @@ async function deleteItem(id) {
     return Item.findByIdAndDelete(id);
 }
 
+async function shareItem(itemId, userId) {
+    const item = await Item.findById(itemId);
+    item.sharedBy.push(userId);
+
+    return item.save();
+}
+
 module.exports = {
     getAllItems,
     getItemById,
     createItem,
     editItem,
-    deleteItem
+    deleteItem,
+    shareItem
 };
