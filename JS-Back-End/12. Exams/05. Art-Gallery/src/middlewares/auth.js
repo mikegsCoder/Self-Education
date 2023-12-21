@@ -38,6 +38,23 @@ async function register(address, password, username) {
 }
 
 async function login(username, password) {
+    const user = await userService.getUserByUsername(username);
+
+    if (!user) {
+        const err = new Error('No such user.');
+        err.type = 'credential';
+        throw err;
+    }
+
+    const hasMatch = await bcrypt.compare(password, user.hashedPassword);
+
+    if (!hasMatch) {
+        const err = new Error('Incorrect password.');
+        err.type = 'credential';
+        throw err;
+    }
+
+    return generateToken(user);
 }
 
 function generateToken(userData) {
