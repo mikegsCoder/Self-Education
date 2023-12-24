@@ -12,4 +12,10 @@ router.get('/catalog', async (req, res) => {
     res.render('catalog', { items });
 });
 
+router.get('/profile', async (req, res) => {
+    const userData = await req.storage.getProfile(req.user._id);
+
+    res.render('profile', { userData });
+});
+
 module.exports = router;
