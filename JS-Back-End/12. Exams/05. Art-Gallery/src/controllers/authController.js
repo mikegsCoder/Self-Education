@@ -6,4 +6,46 @@ router.get('/register', isGuest(), (req, res) => {
     res.render('register');
 });
 
+router.post('/register', isGuest(),
+    body('username')
+        .isLength({ min: 4 }).withMessage('Username must be at least 4 characters long.'),
+    body('address')
+        .isLength({ min: 1 }).withMessage('Address is required.').bail()
+        .isLength({ max: 20 }).withMessage('Address must be at most 20 characters long.'),
+    body('password')
+        .isLength({ min: 3 }).withMessage('Password must be at least 3 characters long.'),
+    body('rePass').custom((value, { req }) => {
+        if (value != req.body.password) {
+            throw new Error ('Passwords don\'t match.');
+        }
+        return true;
+    }),
+    async (req, res) => {
+        const { errors } = validationResult(req);
+        
+        try {
+            if (errors.length > 0) {
+                throw new Error(Object.values(errors).map(e => e.msg).join('\n'));
+            }
+
+            await req.auth.register(
+                req.body.address, 
+                req.body.password, 
+                req.body.username);
+
+            res.redirect('/');
+        } catch (err) {
+            console.log(err.message)
+            const ctx = {
+                errors: err.message.split('\n'),
+                userData: {
+                    username: req.body.username,
+                    address: req.body.address
+                }
+            }
+            res.render('register', ctx);
+        }
+    }
+);
+
 module.exports = router;
