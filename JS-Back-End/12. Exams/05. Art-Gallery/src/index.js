@@ -7,7 +7,7 @@ const routesConfig = require('./config/routes');
 
 start();
 
-async function start(){
+async function start() {
     const app = express();
     
     await databaseConfig(app);
