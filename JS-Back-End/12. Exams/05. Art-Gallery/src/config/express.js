@@ -19,7 +19,6 @@ module.exports = (app) => {
             console.log(">>>", req.method, req.url);
 
             if (req.user) {
-                // change to project req. (email or username ...):
                 console.log("Known user:", req.user.username);
             }
         }
