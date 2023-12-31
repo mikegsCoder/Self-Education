@@ -2,6 +2,8 @@ const hbs = require("express-handlebars");
 const express = require("express");
 const cookieParser = require("cookie-parser");
 
+const storageMiddleware = require("../middlewares/storage");
+
 module.exports = (app) => {
     app.engine("hbs", hbs.engine({ extname: ".hbs" }));
     app.set("view engine", "hbs");
@@ -21,4 +23,6 @@ module.exports = (app) => {
 
         next();
     });
+
+    app.use(storageMiddleware());
 };
