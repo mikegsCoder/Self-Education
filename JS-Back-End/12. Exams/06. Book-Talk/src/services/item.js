@@ -39,11 +39,18 @@ async function wishItem(itemId, userId) {
     return item.save();
 }
 
+async function getWishedItems(userId) {
+    const items = await Item.find({ wishingList: userId }).lean();
+
+    return items;
+}
+
 module.exports = {
     getAllItems,
     getItemById,
     createItem,
     editItem,
     deleteItem,
-    wishItem
+    wishItem,
+    getWishedItems
 };
