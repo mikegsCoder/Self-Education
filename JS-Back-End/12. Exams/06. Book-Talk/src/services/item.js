@@ -32,10 +32,18 @@ async function deleteItem(id) {
     return Item.findByIdAndDelete(id);
 }
 
+async function wishItem(itemId, userId) {
+    const item = await Item.findById(itemId);
+    item.wishingList.push(userId);
+
+    return item.save();
+}
+
 module.exports = {
     getAllItems,
     getItemById,
     createItem,
     editItem,
-    deleteItem
+    deleteItem,
+    wishItem
 };
