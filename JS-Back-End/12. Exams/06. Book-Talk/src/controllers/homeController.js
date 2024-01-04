@@ -12,4 +12,10 @@ router.get('/catalog', async (req, res) => {
     res.render('catalog', { items });
 });
 
+router.get('/profile', async (req, res) => {
+    const items = await req.storage.getWishedItems(req.user._id);
+
+    res.render('profile', { items });
+});
+
 module.exports = router;
