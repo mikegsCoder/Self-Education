@@ -39,4 +39,18 @@ router.post('/create', isUser(), async (req, res) => {
     }
 });
 
+router.get('/details/:id', async (req, res) => {
+    try {
+        const item = await req.storage.getItemById(req.params.id);
+        item.hasUser = Boolean(req.user);
+        item.isOwner = req.user && req.user._id == item.owner._id;
+        item.isWished = req.user && item.wishingList.find(u => u == req.user._id);
+
+        res.render('item/details', { item });
+    } catch (err) {
+        console.log(err.message);
+        res.render('404');
+    }
+});
+
 module.exports = router;
