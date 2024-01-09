@@ -112,4 +112,20 @@ router.get('/delete/:id', isUser(), async (req, res) => {
     }
 });
 
+router.get('/wish/:id', isUser(), async (req, res) => {
+    try {
+        const item = await req.storage.getItemById(req.params.id);
+
+        if (item.owner._id == req.user._id) {
+            throw new Error(`Cannot wish your own ${ITEM.toLowerCase()}.`);
+        }
+        
+        await req.storage.wishItem(req.params.id, req.user._id);
+        res.redirect('/item/details/' + req.params.id);
+    } catch (err) {
+        console.log(err.message);
+        res.render('404');
+    }
+});
+
 module.exports = router;
