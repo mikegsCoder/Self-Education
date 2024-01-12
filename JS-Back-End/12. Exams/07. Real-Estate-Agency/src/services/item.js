@@ -22,9 +22,24 @@ async function createItem(itemData) {
     return item;
 }
 
+async function editItem(id, itemData) {
+    const item = await Item.findById(id);
+
+    item.title = itemData.title.trim();
+    item.type = itemData.type.trim();
+    item.year = itemData.year;
+    item.city = itemData.city.trim();
+    item.imageUrl = itemData.imageUrl.trim();
+    item.description = itemData.description.trim();
+    item.pieces = itemData.pieces;
+
+    return item.save();
+}
+
 module.exports = {
     getAllItems,
     getTopItems,
     getItemById,
-    createItem
+    createItem,
+    editItem
 };
