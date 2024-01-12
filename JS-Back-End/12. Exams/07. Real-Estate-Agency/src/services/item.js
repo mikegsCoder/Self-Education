@@ -40,11 +40,21 @@ async function deleteItem(id) {
     return Item.findByIdAndDelete(id);
 }
 
+async function rentItem(itemId, userId) {
+    const item = await Item.findById(itemId);
+
+    item.rentedBy.push(userId);
+    item.pieces--;
+
+    return item.save();
+}
+
 module.exports = {
     getAllItems,
     getTopItems,
     getItemById,
     createItem,
     editItem,
-    deleteItem
+    deleteItem,
+    rentItem
 };
