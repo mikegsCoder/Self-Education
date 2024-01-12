@@ -49,6 +49,13 @@ async function rentItem(itemId, userId) {
     return item.save();
 }
 
+async function searchItems(search) {
+    const pattern = new RegExp(`${search}`, 'i');
+    const items = await Item.find({ type: { $regex: pattern } }).lean();
+   
+    return items;
+}
+
 module.exports = {
     getAllItems,
     getTopItems,
@@ -56,5 +63,6 @@ module.exports = {
     createItem,
     editItem,
     deleteItem,
-    rentItem
+    rentItem,
+    searchItems
 };
