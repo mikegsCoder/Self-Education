@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <link href="/static/css/style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div id="box">
+
+        <!-- In case of error, you should display div with class "errorContainer" -->
+        <!-- You can choose to display the first error or all of them (error message/s in your opinion) -->
+        {{#if errors}}
+            <div class="errorContainer">
+                {{#each errors}}
+                    <p>{{this}}</p>
+                {{/each}}
+            </div>
+        {{/if}}
+        <!--<div>
+            <div class="errorContainer">
+                <p>Error</p>
+            </div>
+        </div>-->
+
+        <nav>
+            <a href="/">Home</a>
+            <ul>
+                <!-- Guest users and Logged users -->
+                <li><a href="/catalog">Housing for rent</a></li>
+                {{#if user}}
+                    <!-- Logged users -->
+                    <li><a href="/item/create">Create offer</a></li>
+                    <li><a href="/search">Search</a></li>
+                    <li><a href="/auth/logout">Logout</a></li>
+                {{else}}
+                    <!-- Guest users -->
+                    <li><a href="/auth/login">Login</a></li>
+                    <li><a href="/auth/register">Register</a></li>
+                {{/if}}
+            </ul>
+        </nav>
+
+        <main>
+            {{{body}}}
+        </main>
+
+        <footer>
+            JS-Backend © 2021
+        </footer>
+    </div>
+
+</body>
+
+</html>
