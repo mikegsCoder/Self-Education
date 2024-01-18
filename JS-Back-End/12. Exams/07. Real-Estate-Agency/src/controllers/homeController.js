@@ -16,4 +16,10 @@ router.get('/search', async (req, res) => {
     res.render('search');
 });
 
+router.post('/search', async (req, res) => {
+    const items = await req.storage.searchItems(req.body.search);
+
+    res.render('search', { items });
+});
+
 module.exports = router;
