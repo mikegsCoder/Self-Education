@@ -12,4 +12,8 @@ router.get('/catalog', async (req, res) => {
     res.render('catalog', { items });
 });
 
+router.get('/search', async (req, res) => {
+    res.render('search');
+});
+
 module.exports = router;
