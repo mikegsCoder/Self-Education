@@ -41,4 +41,25 @@ router.post('/create', isUser(), async (req, res) => {
     }
 });
 
+router.get('/details/:id', async (req, res) => {
+    try {
+        const item = await req.storage.getItemById(req.params.id);
+
+        item.hasUser = Boolean(req.user);
+        item.isAuthor = req.user && req.user._id == item.owner._id;
+        item.hasTenants = Boolean(item.rentedBy.length > 0);
+        item.isAvailable = Boolean(item.pieces > 0);
+        
+        if (item.hasTenants) {
+            item.isRented = req.user && item.rentedBy.find(u => u._id == req.user._id);
+            item.tenants = item.rentedBy.map(x => x.name).join(', ');
+        }
+
+        res.render('item/details', { item });
+    } catch (err) {
+        console.log(err.message);
+        res.render('404');
+    }
+});
+
 module.exports = router;
