@@ -126,4 +126,20 @@ router.get('/delete/:id', isUser(), async (req, res) => {
     }
 });
 
+router.get('/rent/:id', isUser(), async (req, res) => {
+    try {
+        const item = await req.storage.getItemById(req.params.id);
+
+        if (item.author == req.user._id) {
+            throw new Error(`Cannot rent your own ${ITEM.toLowerCase()}.`);
+        }
+        
+        await req.storage.rentItem(req.params.id, req.user._id);
+        res.redirect('/item/details/' + req.params.id);
+    } catch (err) {
+        console.log(err.message);
+        res.render('404');
+    }
+});
+
 module.exports = router;
