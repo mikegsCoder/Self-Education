@@ -38,10 +38,18 @@ async function deleteItem(id) {
     return Item.findByIdAndDelete(id);
 }
 
+async function joinItem(itemId, userId) {
+    const item = await Item.findById(itemId);
+    item.buddies.push(userId);
+
+    return item.save();
+}
+
 module.exports = {
     getAllItems,
     getItemById,
     createItem, 
     editItem,
-    deleteItem
+    deleteItem,
+    joinItem
 };
