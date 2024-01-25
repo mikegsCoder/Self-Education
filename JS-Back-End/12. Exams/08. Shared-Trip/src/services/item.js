@@ -45,11 +45,21 @@ async function joinItem(itemId, userId) {
     return item.save();
 }
 
+async function getUserProfile(userId) {
+    const user = await User.findById(userId).lean();
+    const items = await Item.find({ author: userId }).lean();
+
+    user.trips = items;
+
+    return user;
+}
+
 module.exports = {
     getAllItems,
     getItemById,
     createItem, 
     editItem,
     deleteItem,
-    joinItem
+    joinItem,
+    getUserProfile
 };
