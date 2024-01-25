@@ -18,8 +18,25 @@ async function createItem(itemData) {
     return item;
 }
 
+async function editItem(id, itemData) {
+    const item = await Item.findById(id);
+
+    item.startPoint = itemData.startPoint.trim();
+    item.endPoint = itemData.endPoint.trim();
+    item.date = itemData.date;
+    item.time = itemData.time;
+    item.carImage = itemData.carImage.trim();
+    item.carBrand = itemData.carBrand.trim();
+    item.seats = Number(itemData.seats);
+    item.price = Number(itemData.price);
+    item.description = itemData.description.trim();
+
+    return item.save();
+}
+
 module.exports = {
     getAllItems,
     getItemById,
-    createItem
+    createItem, 
+    editItem
 };
