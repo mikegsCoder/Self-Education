@@ -50,4 +50,25 @@ router.get('/login', isGuest(), (req, res) => {
     res.render('login');
 });
 
+router.post('/login', isGuest(), async (req, res) => {
+    try {
+        await req.auth.login(req.body.email, req.body.password);
+
+        res.redirect('/')
+    } catch (err) {
+        console.log(err.message);
+        let errors = [err.message];
+        if (err.type == 'credential') {
+            errors = ['Incorrect Username or Password.'];
+        }
+        const ctx = {
+            errors,
+            userData: {
+                email: req.body.email
+            }
+        }
+        res.render('login', ctx);
+    }
+});
+
 module.exports = router;
