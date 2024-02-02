@@ -45,4 +45,25 @@ router.post('/create', isUser(), async (req, res) => {
     }
 });
 
+router.get('/details/:id', async (req, res) => {
+    try {
+        const item = await req.storage.getItemById(req.params.id);
+        item.hasUser = Boolean(req.user);
+        item.isAuthor = req.user && req.user._id == item.author._id;
+        item.isBuddy = req.user && item.buddies.find(b => b._id == req.user._id);
+        item.freeSeats = item.seats - item.buddies.length;
+        item.hasSeats = Boolean(item.freeSeats > 0);
+        item.isJoined = Boolean(item.buddies.length > 0);
+
+        if (item.isJoined) {
+            item.joinedBy = item.buddies.map(b => b.email).join(', ');
+        }
+
+        res.render('item/details', { item });
+    } catch (err) {
+        console.log(err.message);
+        res.render('404');
+    }
+});
+
 module.exports = router;
