@@ -66,4 +66,19 @@ router.get('/details/:id', async (req, res) => {
     }
 });
 
+router.get('/edit/:id', isUser(), async (req, res) => {
+    try {
+        const item = await req.storage.getItemById(req.params.id);
+        
+        if (item.author._id != req.user._id) {
+            throw new Error(`Cannot edit ${ITEM.toLowerCase()} you haven\'t created.`);
+        }
+
+        res.render('item/edit', { item });
+    } catch (err) {
+        console.log(err.message);
+        res.render('404');
+    }
+});
+
 module.exports = router;
