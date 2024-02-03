@@ -497,9 +497,35 @@ section>div.container {
 }
 
 footer {
-  padding: 20px;
+  padding: 10px;
   position: absolute;
   width: 100%;
+}
+
+#sticky-footer {
+    height: 4rem;
+}
+
+.site-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #AAAAAA;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    font-size: 1.1rem;
+}
+
+.site-footer a{
+    color: #AAAAAA;
+    text-decoration: underline;
+}
+
+.site-footer a:hover {
+    color: white;
 }
 
 @keyframes showNav {
