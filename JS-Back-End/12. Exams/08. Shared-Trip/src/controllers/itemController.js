@@ -81,4 +81,35 @@ router.get('/edit/:id', isUser(), async (req, res) => {
     }
 });
 
+router.post('/edit/:id', isUser(), async (req, res) => {
+    try {
+        const item = await req.storage.getItemById(req.params.id);
+        
+        if (item.author._id != req.user._id) {
+            throw new Error(`Cannot edit ${ITEM.toLowerCase()} you haven\'t created.`);
+        }
+
+        await req.storage.editItem(req.params.id, req.body);
+        res.redirect('/item/details/' + req.params.id); 
+    } catch (err) {
+        const ctx = {
+            errors: parseError(err),
+            item: {
+                _id: req.params.id,
+                startPoint: req.body.startPoint,
+                endPoint: req.body.endPoint,
+                date: req.body.date,
+                time: req.body.time,
+                carImage: req.body.carImage,
+                carBrand: req.body.carBrand,
+                seats: req.body.seats,
+                price: req.body.price,
+                description: req.body.description
+            }
+        };
+
+        res.render('item/edit', ctx);
+    }
+});
+
 module.exports = router;
