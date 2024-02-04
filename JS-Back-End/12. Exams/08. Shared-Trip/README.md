@@ -29,7 +29,7 @@ This application is deployed on Render 👉 **[Shared Trip](https://sharedtrip.o
 ## :hammer_and_wrench: Technologies and Tools used:
 
 - JavaScript
-- Express.js
+- ExpressJS
 - Mongoose
 - MongoDB
 - Jsonwebtoken

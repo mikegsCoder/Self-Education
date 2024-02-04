@@ -12,4 +12,5 @@
 - Workshop Session and Authentication
 - Validation and Error Handling
 - Workshop REST API
-- ...
+- Exam Preparation
+- Exams
