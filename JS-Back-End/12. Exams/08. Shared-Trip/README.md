@@ -20,7 +20,7 @@ This application is deployed on Render 👉 **[Shared Trip](https://sharedtrip.o
   - browse his own profile page with information about the trips he has offered in the application.
 - Some more features:
   - implemented data validation for Login, Register, Offer Trip and Edit pages;
-  - implemented guards middleware for visitor and guest users.
+  - implemented guards middleware for guest and loggrd in users.
 
 ## 🧪 Test Accounts
 &nbsp;&nbsp;&nbsp;&nbsp;Email: **peter@abv.bg**  
