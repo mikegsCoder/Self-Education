@@ -38,10 +38,6 @@ This application is deployed on Render 👉 **[Shared Trip](https://sharedtrip.o
 - HTML5
 - CSS
 
-## :gear: Application Backend:
-
- - This application uses MongoDB database which can be located on your local machine or on Atlass servers. The deployed application uses database located on Atlass servers.
-
 ## :framed_picture: Screenshot - Home Page:
 
 ![Home-Page](https://mikegsCoder.github.io/img/SharedTrip/HomePage.jpg)
