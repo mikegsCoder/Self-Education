@@ -41,3 +41,12 @@ var name1 = getName1('John', 'Smith');
 console.log(name1); // John Smith
 var name2 = getName1('Peter');
 console.log(name2); // Peter
+// ---------- default values ----------
+function getName2(firstName, lastName) {
+    if (lastName === void 0) { lastName = 'Petrov'; }
+    return firstName + ' ' + lastName;
+}
+name1 = getName2('John', 'Smith');
+console.log(name1); // John Smith
+name2 = getName2('Peter');
+console.log(name2); // Peter Petrov

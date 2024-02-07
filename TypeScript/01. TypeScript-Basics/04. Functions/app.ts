@@ -54,4 +54,15 @@ console.log(name1);  // John Smith
 
 let name2 = getName1('Peter');
 console.log(name2);  // Peter
+
+// ---------- default values ----------
+function getName2(firstName: string, lastName: string = 'Petrov') {
+  return firstName + ' ' + lastName;
+}
+
+name1 = getName2('John', 'Smith');
+console.log(name1);  // John Smith
+
+name2 = getName2('Peter');
+console.log(name2);  // Peter Petrov
   
