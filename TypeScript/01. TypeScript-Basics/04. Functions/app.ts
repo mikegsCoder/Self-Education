@@ -33,3 +33,25 @@ function addExample3(a: number, b: number): number {
 
 let result = addExample3(1, 2);
 console.log(result);  // 3
+
+// ---------- void ----------
+function addExample4(a: number, b: number): void {
+  console.log(a + b);
+}
+
+addExample4(10, 20);  // 30
+
+// ---------- optional parameters ----------
+function getName1(firstName: string, lastName?: string) {
+  if (lastName)
+    return firstName + ' ' + lastName;
+  else
+    return firstName;
+}
+
+let name1 = getName1('John', 'Smith');
+console.log(name1);  // John Smith
+
+let name2 = getName1('Peter');
+console.log(name2);  // Peter
+  

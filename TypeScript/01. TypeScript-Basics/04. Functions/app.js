@@ -25,3 +25,19 @@ function addExample3(a, b) {
 }
 var result = addExample3(1, 2);
 console.log(result); // 3
+// ---------- void ----------
+function addExample4(a, b) {
+    console.log(a + b);
+}
+addExample4(10, 20); // 30
+// ---------- optional parameters ----------
+function getName1(firstName, lastName) {
+    if (lastName)
+        return firstName + ' ' + lastName;
+    else
+        return firstName;
+}
+var name1 = getName1('John', 'Smith');
+console.log(name1); // John Smith
+var name2 = getName1('Peter');
+console.log(name2); // Peter
