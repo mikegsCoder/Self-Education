@@ -3,7 +3,7 @@
 🎯  My solution for the JS Back-End exam created by [SoftUni](https://softuni.bg). This is a simple Multi Page Application where you can create, edit, delete shared trips or join the trips created by other users.
 
 ## 🔗 **Link to the application:**
-This application is deployed on Render 👉 **[Shared Trip](https://sharedtrip.onrender.com)**
+This application is deployed on Render and uses MongoDB Atlas database 👉 **[Shared Trip](https://sharedtrip.onrender.com)**
 
 ## ℹ️ Application Functionality:
 
