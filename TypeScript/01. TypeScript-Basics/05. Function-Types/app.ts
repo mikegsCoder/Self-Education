@@ -38,3 +38,16 @@ function mathOp(x: number, y: number, op: (a: number, b: number) => number): num
 
 console.log(mathOp(10, 20, sum));       // 30 
 console.log(mathOp(10, 20, multiply));  // 200 
+
+// ---------- type ----------
+type Operation = (a: number, b: number) => number;
+
+function mathOp1(x: number, y: number, op: Operation): number {
+  return op(x, y);
+}
+
+const sum1: Operation = function (x: number, y: number): number {
+  return x + y;
+};
+
+console.log(mathOp1(10, 20, sum1));  // 30
