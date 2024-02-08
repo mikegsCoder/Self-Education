@@ -51,3 +51,23 @@ const sum1: Operation = function (x: number, y: number): number {
 };
 
 console.log(mathOp1(10, 20, sum1));  // 30
+
+// ---------- arrow functions: ----------
+var sum2 = function (x, y) { return x + y; };
+var result = sum2(10, 20);  // 30
+
+console.log(result);
+// ----------
+var square = function (x) { return x * x; };
+var hello1 = function () { return "hello world!"; };
+
+console.log(square(4));  // 16
+console.log(hello1());   // hello world!
+// ----------
+function mathOp2(x, y, operation) {
+    var result = operation(x, y);
+    return result;
+}
+
+console.log(mathOp2(10, 20, function (x, y) { return x + y; }));  // 30 
+console.log(mathOp2(10, 20, function (x, y) { return x * y; }));  // 200
