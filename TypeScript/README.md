@@ -9,4 +9,4 @@
   - Functions
   - Function types
   - Union
-  
+  - Null and Undefined
