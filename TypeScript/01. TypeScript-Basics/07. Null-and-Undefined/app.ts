@@ -17,3 +17,7 @@ printId(userId);  // No such user!
 
 userId = 34;
 printId(userId);  // User id: 34.
+
+// ---------- non-null assertion operator ----------
+const header: HTMLElement | null = document.getElementById('header');
+header!.innerText = 'Hello TypeScript!';
