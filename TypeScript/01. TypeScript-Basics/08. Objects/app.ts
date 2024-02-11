@@ -37,3 +37,19 @@ function defaultUser(): { name: string; age: number } {
 
 let user = defaultUser();
 console.log(`name: ${user.name}  age: ${user.age}`);
+
+// ---------- operator in ----------
+let user1: { name: string; age?: number } = { name: 'Tom', age: 23 };
+let user2: { name: string; age?: number } = { name: 'Bob' };
+
+function printUser1(user: { name: string; age?: number }) {
+  if ('age' in user) {
+    console.log(`Name: ${user.name} Age: ${user.age}`);
+  }
+  else {
+    console.log(`Name: ${user.name}`);
+  }
+}
+
+printUser1(user1);
+printUser1(user2);
