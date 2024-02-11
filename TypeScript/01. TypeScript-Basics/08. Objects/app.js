@@ -12,3 +12,11 @@ console.log(person3.name); // Tom
 person3 = { name: 'Bob' };
 console.log(person3.name); // Bob
 console.log(person3.age); // undefined
+// ---------- objects in functions ----------
+function printUser(user) {
+    console.log("name: ".concat(user.name, "  age: ").concat(user.age));
+}
+var tom = { age: 36, name: 'Tom' };
+printUser(tom);
+var bob = { name: 'Bob', age: 44, isMarried: true };
+printUser(bob);

@@ -18,3 +18,14 @@ console.log(person3.name);   // Tom
 person3 = { name: 'Bob' };
 console.log(person3.name);   // Bob
 console.log(person3.age);    // undefined
+
+// ---------- objects in functions ----------
+function printUser(user: { name: string; age: number }) {
+  console.log(`name: ${user.name}  age: ${user.age}`);
+}
+
+let tom = { age: 36, name: 'Tom' };
+printUser(tom);
+
+let bob = { name: 'Bob', age: 44, isMarried: true };
+printUser(bob);
