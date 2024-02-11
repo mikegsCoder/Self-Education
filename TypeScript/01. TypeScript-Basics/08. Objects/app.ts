@@ -29,3 +29,11 @@ printUser(tom);
 
 let bob = { name: 'Bob', age: 44, isMarried: true };
 printUser(bob);
+
+// ---------- objects as return type ----------
+function defaultUser(): { name: string; age: number } {
+  return { name: 'Tom', age: 37 };
+}
+
+let user = defaultUser();
+console.log(`name: ${user.name}  age: ${user.age}`);

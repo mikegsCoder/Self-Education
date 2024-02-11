@@ -20,3 +20,9 @@ var tom = { age: 36, name: 'Tom' };
 printUser(tom);
 var bob = { name: 'Bob', age: 44, isMarried: true };
 printUser(bob);
+// ---------- objects as return type ----------
+function defaultUser() {
+    return { name: 'Tom', age: 37 };
+}
+var user = defaultUser();
+console.log("name: ".concat(user.name, "  age: ").concat(user.age));
