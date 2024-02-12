@@ -73,3 +73,11 @@ function printUser3({ name, age }: { name: string; age?: number }) {
 
 printUser3(user1);     // name: Tom  age: 23
 printUser3(user2);     // name: Bob
+
+// ---------- object decomposition with optional properties and default value ----------
+function printUser4({ name, age = 34 }: { name: string; age?: number }) {
+  console.log(`name: ${name}  age: ${age}`);
+}
+
+printUser4(user1);     // name: Tom  age: 23
+printUser4(user2);     // name: Bob  age: 34

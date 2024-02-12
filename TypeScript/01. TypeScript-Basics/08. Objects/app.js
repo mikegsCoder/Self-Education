@@ -58,3 +58,10 @@ function printUser3(_a) {
 }
 printUser3(user1); // name: Tom  age: 23
 printUser3(user2); // name: Bob
+// ---------- object decomposition with optional properties and default value ----------
+function printUser4(_a) {
+    var name = _a.name, _b = _a.age, age = _b === void 0 ? 34 : _b;
+    console.log("name: ".concat(name, "  age: ").concat(age));
+}
+printUser4(user1); // name: Tom  age: 23
+printUser4(user2); // name: Bob  age: 34
