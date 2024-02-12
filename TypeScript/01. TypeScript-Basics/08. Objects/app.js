@@ -39,3 +39,10 @@ function printUser1(user) {
 }
 printUser1(user1);
 printUser1(user2);
+// ---------- object decomposition ----------
+function printUser2(_a) {
+    var name = _a.name, age = _a.age;
+    console.log("name: ".concat(name, "  age: ").concat(age));
+}
+var user3 = { name: 'Tom', age: 36 };
+printUser2(user3);

@@ -53,3 +53,11 @@ function printUser1(user: { name: string; age?: number }) {
 
 printUser1(user1);
 printUser1(user2);
+
+// ---------- object decomposition ----------
+function printUser2({ name, age }: { name: string; age: number }) {
+  console.log(`name: ${name}  age: ${age}`);
+}
+
+let user3 = { name: 'Tom', age: 36 };
+printUser2(user3);
