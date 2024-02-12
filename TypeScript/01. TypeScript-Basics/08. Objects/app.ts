@@ -61,3 +61,15 @@ function printUser2({ name, age }: { name: string; age: number }) {
 
 let user3 = { name: 'Tom', age: 36 };
 printUser2(user3);
+
+// ---------- object decomposition and optional properties ----------
+function printUser3({ name, age }: { name: string; age?: number }) {
+  if (age !== undefined) {
+    console.log(`name: ${name}  age: ${age}`);
+  } else {
+    console.log(`name: ${name}`);
+  }
+}
+
+printUser3(user1);     // name: Tom  age: 23
+printUser3(user2);     // name: Bob

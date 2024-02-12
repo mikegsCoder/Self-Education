@@ -46,3 +46,15 @@ function printUser2(_a) {
 }
 var user3 = { name: 'Tom', age: 36 };
 printUser2(user3);
+// ---------- object decomposition and optional properties ----------
+function printUser3(_a) {
+    var name = _a.name, age = _a.age;
+    if (age !== undefined) {
+        console.log("name: ".concat(name, "  age: ").concat(age));
+    }
+    else {
+        console.log("name: ".concat(name));
+    }
+}
+printUser3(user1); // name: Tom  age: 23
+printUser3(user2); // name: Bob
