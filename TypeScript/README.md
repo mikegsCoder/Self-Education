@@ -10,3 +10,4 @@
   - Function types
   - Union
   - Null and Undefined
+  - Objects
