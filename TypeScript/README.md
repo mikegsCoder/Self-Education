@@ -11,3 +11,4 @@
   - Union
   - Null and Undefined
   - Objects
+  - Aliases
