@@ -24,3 +24,10 @@ function printPerson(user) {
 }
 printPerson(tom); // Name: Tom  Age: 36
 printPerson(bob); // Name: Bob  Age: 41
+var person = { name: 'Tom', age: 32 };
+var employe = { name: 'Bob', age: 43, company: 'Microsoft' };
+function printPerson1(user) {
+    console.log("Name: ".concat(user.name, "  Age: ").concat(user.age));
+}
+printPerson1(person);
+printPerson1(employe); // employee is also Person

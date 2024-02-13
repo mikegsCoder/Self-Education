@@ -36,3 +36,17 @@ function printPerson(user: Person) {
 
 printPerson(tom); // Name: Tom  Age: 36
 printPerson(bob); // Name: Bob  Age: 41
+
+// ---------- alias extension ----------
+// Employee extends Person
+type Employee = Person & { company: string };
+
+let person: Person = { name: 'Tom', age: 32 };
+let employe: Employee = { name: 'Bob', age: 43, company: 'Microsoft' };
+
+function printPerson1(user: Person) {
+  console.log(`Name: ${user.name}  Age: ${user.age}`);
+}
+
+printPerson1(person);
+printPerson1(employe);  // employee is also Person
