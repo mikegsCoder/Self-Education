@@ -17,3 +17,10 @@ function getId(isNumber) {
 printId(12345);
 printId('qwerty');
 console.log(getId(true));
+var tom = { name: 'Tom', age: 36 };
+var bob = { name: 'Bob', age: 41 };
+function printPerson(user) {
+    console.log("Name: ".concat(user.name, "  Age: ").concat(user.age));
+}
+printPerson(tom); // Name: Tom  Age: 36
+printPerson(bob); // Name: Bob  Age: 41

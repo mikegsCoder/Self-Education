@@ -23,3 +23,16 @@ function getId(isNumber: boolean): id {
 printId(12345);
 printId('qwerty');
 console.log(getId(true));
+
+// ---------- alias example ----------
+type Person = { name: string; age: number };
+
+let tom: Person = { name: 'Tom', age: 36 };
+let bob: Person = { name: 'Bob', age: 41 };
+
+function printPerson(user: Person) {
+  console.log(`Name: ${user.name}  Age: ${user.age}`);
+}
+
+printPerson(tom); // Name: Tom  Age: 36
+printPerson(bob); // Name: Bob  Age: 41
