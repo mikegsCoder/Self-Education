@@ -12,3 +12,5 @@
   - Null and Undefined
   - Objects
   - Aliases
+  - Type assertion
+  
