@@ -32,3 +32,9 @@ var first = people3[0], second = people3[1], third = people3[2];
 console.log(first); // Tom
 console.log(second); // Bob
 console.log(third); // Sam
+// ---------- array decomposition example ----------
+var people4 = ['Tom', 'Bob', 'Sam'];
+var one = people4[0], rest = people4.slice(1);
+console.log(one); // Tom
+console.log(rest[0]); // Bob
+console.log(rest[1]); // Sam

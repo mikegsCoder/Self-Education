@@ -41,3 +41,11 @@ const [first, second, third] = people3;
 console.log(first);     // Tom
 console.log(second);    // Bob
 console.log(third);     // Sam
+
+// ---------- array decomposition example ----------
+const people4: string[] = ['Tom', 'Bob', 'Sam'];
+
+const [one, ...rest] = people4;
+console.log(one);       // Tom
+console.log(rest[0]);   // Bob
+console.log(rest[1]);   // Sam
