@@ -33,3 +33,11 @@ const people2: readonly string[] = ['Tom', 'Bob', 'Sam'];
 
 printUsers(people2);
 console.log(usersToString(people2));
+
+// ---------- array decomposition ----------
+const people3: string[] = ['Tom', 'Bob', 'Sam'];
+
+const [first, second, third] = people3;
+console.log(first);     // Tom
+console.log(second);    // Bob
+console.log(third);     // Sam

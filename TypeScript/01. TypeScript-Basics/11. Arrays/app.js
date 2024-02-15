@@ -26,3 +26,9 @@ function usersToString(users) {
 var people2 = ['Tom', 'Bob', 'Sam'];
 printUsers(people2);
 console.log(usersToString(people2));
+// ---------- array decomposition ----------
+var people3 = ['Tom', 'Bob', 'Sam'];
+var first = people3[0], second = people3[1], third = people3[2];
+console.log(first); // Tom
+console.log(second); // Bob
+console.log(third); // Sam
