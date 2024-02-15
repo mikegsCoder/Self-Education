@@ -49,3 +49,10 @@ const [one, ...rest] = people4;
 console.log(one);       // Tom
 console.log(rest[0]);   // Bob
 console.log(rest[1]);   // Sam
+
+// ---------- array decomposition example ----------
+const people5: string[] = ['Tom', 'Bob', 'Sam', 'Kate'];
+
+const [, two, , four] = people5; // we miss first and third elements
+console.log(two);       // Bob
+console.log(four);      // Kate

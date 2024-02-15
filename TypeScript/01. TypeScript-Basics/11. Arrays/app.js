@@ -38,3 +38,8 @@ var one = people4[0], rest = people4.slice(1);
 console.log(one); // Tom
 console.log(rest[0]); // Bob
 console.log(rest[1]); // Sam
+// ---------- array decomposition example ----------
+var people5 = ['Tom', 'Bob', 'Sam', 'Kate'];
+var two = people5[1], four = people5[3]; // we miss first and third elements
+console.log(two); // Bob
+console.log(four); // Kate
