@@ -13,4 +13,5 @@
   - Objects
   - Aliases
   - Type assertion
+  - Arrays
   
