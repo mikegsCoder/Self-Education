@@ -13,3 +13,16 @@ people1[1] = 'Kate';   // Error!
 people1.push('Kate');  // Error!
 people1.pop();         // Error!
 */
+// ---------- ReadonlyArray example ----------
+function printUsers(users) {
+    for (var _i = 0, users_1 = users; _i < users_1.length; _i++) {
+        var user = users_1[_i];
+        console.log(user);
+    }
+}
+function usersToString(users) {
+    return users.join(', ');
+}
+var people2 = ['Tom', 'Bob', 'Sam'];
+printUsers(people2);
+console.log(usersToString(people2));
