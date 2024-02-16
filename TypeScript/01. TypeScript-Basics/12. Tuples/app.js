@@ -24,3 +24,6 @@ function createUser(name, age) {
 var user1 = createUser('Bob', 41);
 console.log(user1[0]); // Bob
 console.log(user1[1]); // 41
+// ---------- optional elements ----------
+var bob = ['Bob', 41, true];
+var john = ['John', 36];

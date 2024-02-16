@@ -29,3 +29,7 @@ function createUser(name: string, age: number): [string, number] {
 let user1 = createUser('Bob', 41);
 console.log(user1[0]);  // Bob
 console.log(user1[1]);  // 41
+
+// ---------- optional elements ----------
+let bob: [string, number, boolean?] = ['Bob', 41, true];
+let john: [string, number, boolean?] = ['John', 36];
