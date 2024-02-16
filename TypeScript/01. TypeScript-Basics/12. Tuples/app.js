@@ -17,3 +17,10 @@ var tom = ['Tom', 36];
 printUser(tom);
 // Tom
 // 36
+// ---------- tuples as return type ----------
+function createUser(name, age) {
+    return [name, age];
+}
+var user1 = createUser('Bob', 41);
+console.log(user1[0]); // Bob
+console.log(user1[1]); // 41

@@ -20,3 +20,12 @@ let tom: [string, number] = ['Tom', 36];
 printUser(tom);
 // Tom
 // 36
+
+// ---------- tuples as return type ----------
+function createUser(name: string, age: number): [string, number] {
+  return [name, age];
+}
+
+let user1 = createUser('Bob', 41);
+console.log(user1[0]);  // Bob
+console.log(user1[1]);  // 41
