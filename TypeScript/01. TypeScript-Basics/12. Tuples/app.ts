@@ -33,3 +33,16 @@ console.log(user1[1]);  // 41
 // ---------- optional elements ----------
 let bob: [string, number, boolean?] = ['Bob', 41, true];
 let john: [string, number, boolean?] = ['John', 36];
+
+// ---------- tuple with optional elements as function parameter ----------
+function printUser1(user: [string, number, boolean?]) {
+  if (user[2] !== undefined) {
+    console.log(`name: ${user[0]}  age: ${user[1]}  isMarried: ${user[2]}`);
+  }
+  else {
+    console.log(`name: ${user[0]}  age: ${user[1]}`);
+  }
+}
+
+printUser1(bob);
+printUser1(john);
