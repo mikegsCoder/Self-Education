@@ -84,3 +84,10 @@ const [nameOfUser, ...rest] = james;
 console.log(nameOfUser);    // James
 console.log(rest[0]);       // 36
 console.log(rest[1]);       // false
+
+// ---------- tuple destructuring example ----------
+let peter: [string, number, boolean, number] = ['Peter', 36, false, 170];
+const [, age, , height] = peter;
+
+console.log(age);           // 36
+console.log(height);        // 170

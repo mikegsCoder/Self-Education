@@ -67,3 +67,8 @@ var nameOfUser = james[0], rest = james.slice(1);
 console.log(nameOfUser); // James
 console.log(rest[0]); // 36
 console.log(rest[1]); // false
+// ---------- tuple destructuring example ----------
+var peter = ['Peter', 36, false, 170];
+var age = peter[1], height = peter[3];
+console.log(age); // 36
+console.log(height); // 170
