@@ -49,3 +49,10 @@ var math = ['Math', 5, 4, 5, 4, 4];
 var physics = ['Physics', 5, 5, 5];
 printMarks(math);
 printMarks(physics);
+// ---------- tuple example ----------
+var mathTuple = ['Math', 5, 4, 5, 4, 4];
+var physicsTuple = [5, 5, 5, 'Physics'];
+var chemistryTuple = ['Chemistry', 3, 3, 4, 5, false];
+// ---------- readonly tuple ----------
+var tomReadonly = ['Tom', 36];
+// tomReadonly[1] = 37; // Error!

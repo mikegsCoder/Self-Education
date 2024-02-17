@@ -60,3 +60,13 @@ let physics: [string, ...number[]] = ['Physics', 5, 5, 5];
 printMarks(math);
 printMarks(physics);
 
+// ---------- tuple example ----------
+let mathTuple: [string, ...number[]] = ['Math', 5, 4, 5, 4, 4];
+let physicsTuple: [...number[], string] = [5, 5, 5, 'Physics'];
+let chemistryTuple: [string, ...number[], boolean] = ['Chemistry', 3, 3, 4, 5, false];
+
+// ---------- readonly tuple ----------
+const tomReadonly: readonly [string, number] = ['Tom', 36];
+
+// tomReadonly[1] = 37; // Error!
+
