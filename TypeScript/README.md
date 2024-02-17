@@ -14,4 +14,5 @@
   - Aliases
   - Type assertion
   - Arrays
+  - Tuples
   
