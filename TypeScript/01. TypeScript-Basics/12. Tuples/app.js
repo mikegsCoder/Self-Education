@@ -56,3 +56,9 @@ var chemistryTuple = ['Chemistry', 3, 3, 4, 5, false];
 // ---------- readonly tuple ----------
 var tomReadonly = ['Tom', 36];
 // tomReadonly[1] = 37; // Error!
+// ---------- tuple decomposition ----------
+var james = ['James', 36, false];
+var username = james[0], userage = james[1], isMarried = james[2]; // decomposition
+console.log(username); // James
+console.log(userage); // 36
+console.log(isMarried); // false

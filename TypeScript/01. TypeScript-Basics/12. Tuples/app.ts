@@ -70,3 +70,10 @@ const tomReadonly: readonly [string, number] = ['Tom', 36];
 
 // tomReadonly[1] = 37; // Error!
 
+// ---------- tuple decomposition ----------
+let james: [string, number, boolean] = ['James', 36, false];
+let [username, userage, isMarried] = james;   // decomposition
+
+console.log(username);      // James
+console.log(userage);       // 36
+console.log(isMarried);     // false
