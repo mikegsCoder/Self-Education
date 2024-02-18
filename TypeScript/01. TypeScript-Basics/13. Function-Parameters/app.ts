@@ -48,3 +48,12 @@ console.log(num1);              // 4
 const numbers2 = [1, 3, 7] as const;
 let num4 = sum1(...numbers2);   // a = 1  b = 3  c = 7
 console.log(num2);              // 11
+
+// ---------- function parameters example ----------
+function printValues(name: string, age: number) {
+  console.log(name);
+  console.log(age);
+}
+
+const values = ['Tom', 36] as const;
+printValues(...values);     // name = Tom, age = 36

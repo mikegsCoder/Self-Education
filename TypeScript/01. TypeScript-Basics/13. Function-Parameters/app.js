@@ -43,3 +43,10 @@ console.log(num1); // 4
 var numbers2 = [1, 3, 7];
 var num4 = sum1.apply(void 0, numbers2); // a = 1  b = 3  c = 7
 console.log(num2); // 11
+// ---------- function parameters example ----------
+function printValues(name, age) {
+    console.log(name);
+    console.log(age);
+}
+var values = ['Tom', 36];
+printValues.apply(void 0, values); // name = Tom, age = 36
