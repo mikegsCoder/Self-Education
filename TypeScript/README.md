@@ -15,4 +15,5 @@
   - Type assertion
   - Arrays
   - Tuples
+  - Function parameters
   
