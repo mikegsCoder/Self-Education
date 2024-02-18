@@ -29,3 +29,22 @@ function sum(...args: number[]): number {
 const numbers = [1, 3, 5, 7, 9] as const;
 let num = sum(...numbers);
 console.log(num);  // 25
+
+// ---------- function parameters example ----------
+function sum1(a: number, b: number, c?: number): number {
+  let result = a + b;
+
+  if (c !== undefined) {
+    result += c;
+  }
+
+  return result;
+}
+
+const numbers1 = [1, 3] as const;
+let num3 = sum1(...numbers1);   // a = 1  b = 3
+console.log(num1);              // 4
+
+const numbers2 = [1, 3, 7] as const;
+let num4 = sum1(...numbers2);   // a = 1  b = 3  c = 7
+console.log(num2);              // 11

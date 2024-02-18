@@ -29,3 +29,17 @@ function sum() {
 var numbers = [1, 3, 5, 7, 9];
 var num = sum.apply(void 0, numbers);
 console.log(num); // 25
+// ---------- function parameters example ----------
+function sum1(a, b, c) {
+    var result = a + b;
+    if (c !== undefined) {
+        result += c;
+    }
+    return result;
+}
+var numbers1 = [1, 3];
+var num3 = sum1.apply(void 0, numbers1); // a = 1  b = 3
+console.log(num1); // 4
+var numbers2 = [1, 3, 7];
+var num4 = sum1.apply(void 0, numbers2); // a = 1  b = 3  c = 7
+console.log(num2); // 11
