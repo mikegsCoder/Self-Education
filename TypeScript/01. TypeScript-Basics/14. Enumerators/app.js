@@ -44,3 +44,16 @@ function welcome(dayTime) {
 var current2 = DayTime.Morning;
 welcome(current2); // Good morning!
 welcome(DayTime.Evening); // Good evening!
+// ---------- enumerators in functions example: ----------
+var DayTimeMessage;
+(function (DayTimeMessage) {
+    DayTimeMessage["Morning"] = "Good morning!";
+    DayTimeMessage["Evening"] = "Good evening!";
+})(DayTimeMessage || (DayTimeMessage = {}));
+;
+function welcome1(message) {
+    console.log(message);
+}
+var messsage = DayTimeMessage.Morning;
+welcome1(messsage); // Good morning!
+welcome1(DayTimeMessage.Evening); // Good evening!

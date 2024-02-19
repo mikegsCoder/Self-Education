@@ -42,3 +42,17 @@ function welcome(dayTime: DayTime) {
 let current2: DayTime = DayTime.Morning;
 welcome(current2);           // Good morning!
 welcome(DayTime.Evening);    // Good evening!
+
+// ---------- enumerators in functions example: ----------
+enum DayTimeMessage {
+  Morning = 'Good morning!',
+  Evening = 'Good evening!'
+};
+
+function welcome1(message: DayTimeMessage) {
+  console.log(message);
+}
+
+let messsage: DayTimeMessage = DayTimeMessage.Morning;
+welcome1(messsage);                // Good morning!
+welcome1(DayTimeMessage.Evening);  // Good evening!
