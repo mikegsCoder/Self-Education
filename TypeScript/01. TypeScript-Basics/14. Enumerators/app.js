@@ -15,3 +15,14 @@ console.log(current); // 3
 // ---------- enumerators example ----------
 var currentSeason = Season[2];
 console.log(currentSeason); // Summer
+// ---------- enumerators example ----------
+var Season1;
+(function (Season1) {
+    Season1["Winter"] = "It is snowing.";
+    Season1["Spring"] = "My favourite season.";
+    Season1["Summer"] = "It is time for beach.";
+    Season1["Autumn"] = "The vacation is over.";
+})(Season1 || (Season1 = {}));
+;
+var current1 = Season1.Spring;
+console.log(current1); // My favourite season.

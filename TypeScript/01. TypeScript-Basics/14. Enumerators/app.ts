@@ -11,3 +11,14 @@ console.log(current);  // 3
 // ---------- enumerators example ----------
 var currentSeason: string = Season[2];
 console.log(currentSeason);  // Summer
+
+// ---------- enumerators example ----------
+enum Season1 {
+  Winter = 'It is snowing.',
+  Spring = 'My favourite season.',
+  Summer = 'It is time for beach.',
+  Autumn = 'The vacation is over.'
+};
+
+var current1: Season1 = Season1.Spring;
+console.log(current1);  // My favourite season.
