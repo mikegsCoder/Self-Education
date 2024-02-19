@@ -16,4 +16,5 @@
   - Arrays
   - Tuples
   - Function parameters
+  - Enumerators
   
