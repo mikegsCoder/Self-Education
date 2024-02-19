@@ -22,3 +22,23 @@ enum Season1 {
 
 var current1: Season1 = Season1.Spring;
 console.log(current1);  // My favourite season.
+
+// ---------- enumerators in functions ----------
+enum DayTime {
+  Morning,
+  Evening
+};
+
+function welcome(dayTime: DayTime) {
+
+  if (dayTime === DayTime.Morning) {
+    console.log('Good morning!');
+  }
+  else {
+    console.log('Good evening!');
+  }
+}
+
+let current2: DayTime = DayTime.Morning;
+welcome(current2);           // Good morning!
+welcome(DayTime.Evening);    // Good evening!

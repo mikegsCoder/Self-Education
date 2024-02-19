@@ -26,3 +26,21 @@ var Season1;
 ;
 var current1 = Season1.Spring;
 console.log(current1); // My favourite season.
+// ---------- enumerators in functions ----------
+var DayTime;
+(function (DayTime) {
+    DayTime[DayTime["Morning"] = 0] = "Morning";
+    DayTime[DayTime["Evening"] = 1] = "Evening";
+})(DayTime || (DayTime = {}));
+;
+function welcome(dayTime) {
+    if (dayTime === DayTime.Morning) {
+        console.log('Good morning!');
+    }
+    else {
+        console.log('Good evening!');
+    }
+}
+var current2 = DayTime.Morning;
+welcome(current2); // Good morning!
+welcome(DayTime.Evening); // Good evening!
