@@ -35,3 +35,16 @@ john.name = 'John';
 john.age = 36;
 john.print(); // name: John  age: 36
 console.log(john.toString()); // John: 36
+// ---------- constructor ----------
+var User4 = /** @class */ (function () {
+    function User4(userName, userAge) {
+        this.name = userName;
+        this.age = userAge;
+    }
+    User4.prototype.print = function () {
+        console.log("name: ".concat(this.name, "  age: ").concat(this.age));
+    };
+    return User4;
+}());
+var george = new User4('George', 36);
+george.print(); // name: George  age: 36

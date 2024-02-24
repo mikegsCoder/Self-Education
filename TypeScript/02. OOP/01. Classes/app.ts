@@ -40,3 +40,21 @@ john.age = 36;
 john.print();                   // name: John  age: 36
 
 console.log(john.toString());   // John: 36
+
+// ---------- constructor ----------
+class User4 {
+  name: string;
+  age: number;
+
+  constructor(userName: string, userAge: number) {
+    this.name = userName;
+    this.age = userAge;
+  }
+
+  print() {
+    console.log(`name: ${this.name}  age: ${this.age}`);
+  }
+}
+
+let george = new User4('George', 36);
+george.print();        // name: George  age: 36
