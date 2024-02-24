@@ -48,3 +48,18 @@ var User4 = /** @class */ (function () {
 }());
 var george = new User4('George', 36);
 george.print(); // name: George  age: 36
+// ---------- readonly fields ----------
+var User5 = /** @class */ (function () {
+    function User5(userName, userAge) {
+        this.name = 'Default user';
+        this.name = userName;
+        this.age = userAge;
+    }
+    User5.prototype.print = function () {
+        console.log("name: ".concat(this.name, "  age: ").concat(this.age));
+    };
+    return User5;
+}());
+var jimmy = new User5('Jimmy', 36);
+jimmy.print(); // name: Jimmy  age: 36
+// jimmy.name = 'JIMMY'; // Error!

@@ -58,3 +58,22 @@ class User4 {
 
 let george = new User4('George', 36);
 george.print();        // name: George  age: 36
+
+// ---------- readonly fields ----------
+class User5 {
+  readonly name: string = 'Default user';
+  age: number;
+
+  constructor(userName: string, userAge: number) {
+    this.name = userName;
+    this.age = userAge;
+  }
+
+  print() {
+    console.log(`name: ${this.name}  age: ${this.age}`);
+  }
+}
+
+let jimmy = new User5('Jimmy', 36);
+jimmy.print();        // name: Jimmy  age: 36
+// jimmy.name = 'JIMMY'; // Error!
