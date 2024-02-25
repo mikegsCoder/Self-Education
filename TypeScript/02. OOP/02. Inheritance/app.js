@@ -37,3 +37,27 @@ var bob = new Employee1('Bob');
 bob.print(); // Name: Bob
 bob.company = 'Microsoft';
 bob.work(); // Bob works in company Microsoft.
+// ---------- super ----------
+var Person2 = /** @class */ (function () {
+    function Person2(userName) {
+        this.name = userName;
+    }
+    Person2.prototype.print = function () {
+        console.log("Name: ".concat(this.name));
+    };
+    return Person2;
+}());
+var Employee2 = /** @class */ (function (_super) {
+    __extends(Employee2, _super);
+    function Employee2(name, company) {
+        var _this = _super.call(this, name) || this;
+        _this.company = company;
+        return _this;
+    }
+    Employee2.prototype.work = function () {
+        console.log("".concat(this.name, " works in company ").concat(this.company, "."));
+    };
+    return Employee2;
+}(Person2));
+var tom = new Employee2('Tom', 'Microsoft');
+tom.work(); // Tom works in company Microsoft.
