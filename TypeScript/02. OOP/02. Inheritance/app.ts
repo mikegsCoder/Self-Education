@@ -85,3 +85,35 @@ let john: Employee3 = new Employee3('John', 'Microsoft');
 john.print();   
 // Name: John
 // Works in company: Microsoft
+
+// ---------- method overriding example ----------
+class Person4 {
+  name: string;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+
+  print(): void {
+    console.log(`Name: ${this.name}`);
+  }
+}
+
+class Employee4 extends Person4 {
+  company: string;
+
+  constructor(name: string, company: string) {
+    super(name);
+    this.company = company;
+  }
+
+  print(): void {
+    super.print();
+    console.log(`Works in company: ${this.company}`);
+  }
+}
+
+let jimmy: Employee4 = new Employee4('Jimmy', 'Microsoft');
+jimmy.print();  
+// Name: Jimmy
+// Works in company: Microsoft

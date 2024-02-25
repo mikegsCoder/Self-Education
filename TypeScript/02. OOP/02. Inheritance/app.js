@@ -88,3 +88,30 @@ var john = new Employee3('John', 'Microsoft');
 john.print();
 // Name: John
 // Works in company: Microsoft
+// ---------- method overriding example ----------
+var Person4 = /** @class */ (function () {
+    function Person4(name) {
+        this.name = name;
+    }
+    Person4.prototype.print = function () {
+        console.log("Name: ".concat(this.name));
+    };
+    return Person4;
+}());
+var Employee4 = /** @class */ (function (_super) {
+    __extends(Employee4, _super);
+    function Employee4(name, company) {
+        var _this = _super.call(this, name) || this;
+        _this.company = company;
+        return _this;
+    }
+    Employee4.prototype.print = function () {
+        _super.prototype.print.call(this);
+        console.log("Works in company: ".concat(this.company));
+    };
+    return Employee4;
+}(Person4));
+var jimmy = new Employee4('Jimmy', 'Microsoft');
+jimmy.print();
+// Name: Jimmy
+// Works in company: Microsoft
