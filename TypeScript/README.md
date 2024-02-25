@@ -19,4 +19,6 @@
   - Enumerators
 - OOP
   - Classes
+  - Inheritance
+  
    
