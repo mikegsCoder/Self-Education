@@ -53,4 +53,35 @@ class Employee2 extends Person2 {
 
 let tom: Employee2 = new Employee2('Tom', 'Microsoft');
 tom.work();     // Tom works in company Microsoft.
-  
+
+// ---------- method overriding ----------
+class Person3 {
+  name: string;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+
+  print(): void {
+    console.log(`Name: ${this.name}`);
+  }
+}
+
+class Employee3 extends Person3 {
+  company: string;
+
+  constructor(name: string, company: string) {
+    super(name);
+    this.company = company;
+  }
+
+  print(): void {
+    console.log(`Name: ${this.name}`);
+    console.log(`Works in company: ${this.company}`);
+  }
+}
+
+let john: Employee3 = new Employee3('John', 'Microsoft');
+john.print();   
+// Name: John
+// Works in company: Microsoft

@@ -61,3 +61,30 @@ var Employee2 = /** @class */ (function (_super) {
 }(Person2));
 var tom = new Employee2('Tom', 'Microsoft');
 tom.work(); // Tom works in company Microsoft.
+// ---------- method overriding ----------
+var Person3 = /** @class */ (function () {
+    function Person3(name) {
+        this.name = name;
+    }
+    Person3.prototype.print = function () {
+        console.log("Name: ".concat(this.name));
+    };
+    return Person3;
+}());
+var Employee3 = /** @class */ (function (_super) {
+    __extends(Employee3, _super);
+    function Employee3(name, company) {
+        var _this = _super.call(this, name) || this;
+        _this.company = company;
+        return _this;
+    }
+    Employee3.prototype.print = function () {
+        console.log("Name: ".concat(this.name));
+        console.log("Works in company: ".concat(this.company));
+    };
+    return Employee3;
+}(Person3));
+var john = new Employee3('John', 'Microsoft');
+john.print();
+// Name: John
+// Works in company: Microsoft
