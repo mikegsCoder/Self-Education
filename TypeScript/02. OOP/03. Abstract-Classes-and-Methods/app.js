@@ -67,3 +67,29 @@ var Rectangle3 = /** @class */ (function (_super) {
 }(Figure3));
 var someFigure3 = new Rectangle3(20, 30);
 someFigure3.getArea(); // area = 600
+// ---------- abstract field ----------
+var Figure4 = /** @class */ (function () {
+    function Figure4() {
+    }
+    return Figure4;
+}());
+var Rectangle4 = /** @class */ (function (_super) {
+    __extends(Rectangle4, _super);
+    //x: number;
+    //y: number;
+    function Rectangle4(x, y, width, height) {
+        var _this = _super.call(this) || this;
+        _this.x = x;
+        _this.y = y;
+        _this.width = width;
+        _this.height = height;
+        return _this;
+    }
+    Rectangle4.prototype.getArea = function () {
+        var square = this.width * this.height;
+        console.log('area =', square);
+    };
+    return Rectangle4;
+}(Figure4));
+var someFigure = new Rectangle4(10, 10, 20, 25);
+someFigure.getArea(); // area = 500
