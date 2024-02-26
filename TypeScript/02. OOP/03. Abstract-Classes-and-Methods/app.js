@@ -45,3 +45,25 @@ var Rectangle2 = /** @class */ (function (_super) {
 }(Figure2));
 var someFigure2 = new Rectangle2(20, 30);
 someFigure2.getArea(); // area = 600
+// ---------- abstract method ----------
+var Figure3 = /** @class */ (function () {
+    function Figure3() {
+    }
+    return Figure3;
+}());
+var Rectangle3 = /** @class */ (function (_super) {
+    __extends(Rectangle3, _super);
+    function Rectangle3(width, height) {
+        var _this = _super.call(this) || this;
+        _this.width = width;
+        _this.height = height;
+        return _this;
+    }
+    Rectangle3.prototype.getArea = function () {
+        var square = this.width * this.height;
+        console.log('area =', square);
+    };
+    return Rectangle3;
+}(Figure3));
+var someFigure3 = new Rectangle3(20, 30);
+someFigure3.getArea(); // area = 600
