@@ -70,3 +70,12 @@ sam.printEmployee();
 Name: Sam  Year of birth: 1993
 Company: Microsoft
 */
+
+// ---------- set access modifiers in constructor ----------
+class Person4 {
+  constructor(private name: string, private age: number) { }
+
+  printPerson(): void {
+    console.log(`Name: ${this.name}  Age: ${this.age}`);
+  }
+}

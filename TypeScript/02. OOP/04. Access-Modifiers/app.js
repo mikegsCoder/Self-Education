@@ -72,3 +72,14 @@ sam.printEmployee();
 Name: Sam  Year of birth: 1993
 Company: Microsoft
 */
+// ---------- set access modifiers in constructor ----------
+var Person4 = /** @class */ (function () {
+    function Person4(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    Person4.prototype.printPerson = function () {
+        console.log("Name: ".concat(this.name, "  Age: ").concat(this.age));
+    };
+    return Person4;
+}());
