@@ -79,3 +79,8 @@ class Person4 {
     console.log(`Name: ${this.name}  Age: ${this.age}`);
   }
 }
+
+// ---------- readonly ----------
+class Person5 {
+  constructor(private readonly name: string, private age: number) { }
+}

@@ -83,3 +83,11 @@ var Person4 = /** @class */ (function () {
     };
     return Person4;
 }());
+// ---------- readonly ----------
+var Person5 = /** @class */ (function () {
+    function Person5(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    return Person5;
+}());
