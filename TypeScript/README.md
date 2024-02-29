@@ -23,4 +23,5 @@
   - Abstract Classes and Methods
   - Access modifiers
   - Get and Set
+  - Static Fields and Methods
   
