@@ -39,3 +39,24 @@ class Person2 {
   }
 }
 
+// ---------- inheritance ----------
+class Person3 {
+  age: number;
+  name: string;
+
+  static retirementAge: number = 70;
+
+  static calculateYears(age: number): number {
+    return Person3.retirementAge - age;
+  }
+
+  constructor(name: string, age: number) {
+    this.name = name;
+    this.age = age;
+  }
+}
+
+class Employee extends Person3 { }
+
+let years3 = Employee.calculateYears(36);  // 34
+console.log(Employee.retirementAge);       // 70
