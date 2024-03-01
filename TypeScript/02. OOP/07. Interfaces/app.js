@@ -16,3 +16,10 @@ function printUser(user) {
 printUser(employee2);
 // id:  2
 // name:  Alice
+// ---------- interfaces as return type ----------
+function buildUser(userId, userName) {
+    return { id: userId, name: userName };
+}
+var newUser = buildUser(3, 'Bill');
+console.log('id: ', newUser.id); // id:  3
+console.log('name: ', newUser.name); // name:  Bill

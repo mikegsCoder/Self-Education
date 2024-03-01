@@ -26,3 +26,13 @@ function printUser(user: IUser): void {
 printUser(employee2);  
 // id:  2
 // name:  Alice
+
+// ---------- interfaces as return type ----------
+function buildUser(userId: number, userName: string): IUser {
+  return { id: userId, name: userName };
+}
+
+let newUser = buildUser(3, 'Bill');
+
+console.log('id: ', newUser.id);      // id:  3
+console.log('name: ', newUser.name);  // name:  Bill
