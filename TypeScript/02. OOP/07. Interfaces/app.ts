@@ -36,3 +36,21 @@ let newUser = buildUser(3, 'Bill');
 
 console.log('id: ', newUser.id);      // id:  3
 console.log('name: ', newUser.name);  // name:  Bill
+
+// ---------- optional properties ----------
+interface IUserNew {
+  id: number;
+  name: string;
+  age?: number;
+}
+
+let employee: IUserNew = {
+  id: 1,
+  name: 'Alice',
+  age: 23
+}
+
+let manager: IUserNew = {
+  id: 2,
+  name: 'Tom'
+}

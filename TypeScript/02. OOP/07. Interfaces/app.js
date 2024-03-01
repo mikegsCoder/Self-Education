@@ -23,3 +23,12 @@ function buildUser(userId, userName) {
 var newUser = buildUser(3, 'Bill');
 console.log('id: ', newUser.id); // id:  3
 console.log('name: ', newUser.name); // name:  Bill
+var employee = {
+    id: 1,
+    name: 'Alice',
+    age: 23
+};
+var manager = {
+    id: 2,
+    name: 'Tom'
+};
