@@ -107,3 +107,25 @@ class User implements IUser2 {
 
 let tom = new User(1, 'Tom', 35);
 console.log(tom.getFullName('Simpson')); // Tom Simpson
+
+// ---------- interface extension ----------
+interface IUser3 {
+  id: number;
+  name: string;
+}
+
+interface IUser3 {
+  age: number;
+}
+
+let employee4: IUser3 = {
+  id: 1,
+  name: 'Alice',
+  age: 31
+}
+
+function printUser4(user: IUser3): void {
+  console.log(`id: ${user.id}  name: ${user.name}  age: ${user.age}`);
+}
+
+printUser4(employee4);  // id: 1  name: Alice  age: 31

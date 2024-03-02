@@ -55,3 +55,12 @@ var User = /** @class */ (function () {
 }());
 var tom = new User(1, 'Tom', 35);
 console.log(tom.getFullName('Simpson')); // Tom Simpson
+var employee4 = {
+    id: 1,
+    name: 'Alice',
+    age: 31
+};
+function printUser4(user) {
+    console.log("id: ".concat(user.id, "  name: ").concat(user.name, "  age: ").concat(user.age));
+}
+printUser4(employee4); // id: 1  name: Alice  age: 31
