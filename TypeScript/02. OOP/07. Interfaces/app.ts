@@ -54,3 +54,13 @@ let manager: IUserNew = {
   id: 2,
   name: 'Tom'
 }
+
+// ---------- readonly properties ----------
+interface Point {
+  readonly x: number;
+  readonly y: number;
+}
+
+let p: Point = { x: 10, y: 20 };
+console.log(p);  // { x: 10, y: 20 }
+// p.x = 5;      // Error!

@@ -32,3 +32,6 @@ var manager = {
     id: 2,
     name: 'Tom'
 };
+var p = { x: 10, y: 20 };
+console.log(p); // { x: 10, y: 20 }
+// p.x = 5;      // Error!
