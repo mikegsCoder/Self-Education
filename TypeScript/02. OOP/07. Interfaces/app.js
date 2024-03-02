@@ -42,3 +42,16 @@ var employee3 = {
     }
 };
 employee3.sayWords('Hi, how are you?'); // Alice says "Hi, how are you?"
+var User = /** @class */ (function () {
+    function User(userId, userName, userAge) {
+        this.id = userId;
+        this.name = userName;
+        this.age = userAge;
+    }
+    User.prototype.getFullName = function (surname) {
+        return this.name + ' ' + surname;
+    };
+    return User;
+}());
+var tom = new User(1, 'Tom', 35);
+console.log(tom.getFullName('Simpson')); // Tom Simpson

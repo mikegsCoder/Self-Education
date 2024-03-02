@@ -81,3 +81,29 @@ let employee3: IUser1 = {
 }
 
 employee3.sayWords('Hi, how are you?'); // Alice says "Hi, how are you?"
+
+// ---------- class interfaces ----------
+interface IUser2 {
+  id: number;
+  name: string;
+  getFullName(surname: string): string;
+}
+
+class User implements IUser2 {
+  id: number;
+  name: string;
+  age: number;
+
+  constructor(userId: number, userName: string, userAge: number) {
+    this.id = userId;
+    this.name = userName;
+    this.age = userAge;
+  }
+
+  getFullName(surname: string): string {
+    return this.name + ' ' + surname;
+  }
+}
+
+let tom = new User(1, 'Tom', 35);
+console.log(tom.getFullName('Simpson')); // Tom Simpson
