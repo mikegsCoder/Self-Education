@@ -34,4 +34,11 @@ var manager = {
 };
 var p = { x: 10, y: 20 };
 console.log(p); // { x: 10, y: 20 }
-// p.x = 5;      // Error!
+var employee3 = {
+    id: 1,
+    name: 'Alice',
+    sayWords: function (words) {
+        console.log("".concat(this.name, " says \"").concat(words, "\""));
+    }
+};
+employee3.sayWords('Hi, how are you?'); // Alice says "Hi, how are you?"

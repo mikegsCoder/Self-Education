@@ -64,3 +64,20 @@ interface Point {
 let p: Point = { x: 10, y: 20 };
 console.log(p);  // { x: 10, y: 20 }
 // p.x = 5;      // Error!
+
+// ---------- interface example ----------
+interface IUser1 {
+  id: number;
+  name: string;
+  sayWords(words: string): void;
+}
+
+let employee3: IUser1 = {
+  id: 1,
+  name: 'Alice',
+  sayWords: function (words: string): void {
+    console.log(`${this.name} says "${words}"`);
+  }
+}
+
+employee3.sayWords('Hi, how are you?'); // Alice says "Hi, how are you?"
