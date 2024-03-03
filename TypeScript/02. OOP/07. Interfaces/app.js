@@ -79,3 +79,8 @@ var auto = new Car();
 auto.speed = 60;
 auto.fill(); // Fill car with fuel.
 auto.move(); // Car moves at speed 60 km/h.
+var simpleBuilder = function (name, surname) {
+    return 'Mr. ' + name + ' ' + surname;
+};
+var fullName = simpleBuilder('Bob', 'Simpson');
+console.log(fullName); // Mr. Bob Simpson
