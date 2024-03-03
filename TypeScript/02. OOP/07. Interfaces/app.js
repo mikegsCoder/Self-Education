@@ -84,3 +84,7 @@ var simpleBuilder = function (name, surname) {
 };
 var fullName = simpleBuilder('Bob', 'Simpson');
 console.log(fullName); // Mr. Bob Simpson
+var phones;
+phones = ['iPhone 7', 'HTC 10', 'HP Elite x3'];
+var myPhone = phones[0];
+console.log(myPhone); // iPhone 7

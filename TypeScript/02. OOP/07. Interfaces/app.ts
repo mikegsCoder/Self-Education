@@ -169,3 +169,14 @@ let simpleBuilder: FullNameBuilder = function (name: string, surname: string): s
 
 let fullName = simpleBuilder('Bob', 'Simpson');
 console.log(fullName);  // Mr. Bob Simpson
+
+// ---------- array interface ----------
+interface StringArray {
+  [index: number]: string;
+}
+
+let phones: StringArray;
+phones = ['iPhone 7', 'HTC 10', 'HP Elite x3'];
+
+let myPhone: string = phones[0];
+console.log(myPhone);  // iPhone 7
