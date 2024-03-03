@@ -129,3 +129,31 @@ function printUser4(user: IUser3): void {
 }
 
 printUser4(employee4);  // id: 1  name: Alice  age: 31
+
+// ---------- interface inheritance ----------
+interface IMovable {
+  speed: number;
+  move(): void;
+}
+
+interface ICar extends IMovable {
+  fill(): void;
+}
+
+class Car implements ICar {
+  speed: number;
+
+  move(): void {
+    console.log("Car moves at speed " + this.speed + " km/h.");
+  }
+
+  fill(): void {
+    console.log("Fill car with fuel.");
+  }
+}
+
+let auto = new Car();
+auto.speed = 60;
+
+auto.fill();  // Fill car with fuel.
+auto.move();  // Car moves at speed 60 km/h.

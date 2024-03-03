@@ -64,3 +64,18 @@ function printUser4(user) {
     console.log("id: ".concat(user.id, "  name: ").concat(user.name, "  age: ").concat(user.age));
 }
 printUser4(employee4); // id: 1  name: Alice  age: 31
+var Car = /** @class */ (function () {
+    function Car() {
+    }
+    Car.prototype.move = function () {
+        console.log("Car moves at speed " + this.speed + " km/h.");
+    };
+    Car.prototype.fill = function () {
+        console.log("Fill car with fuel.");
+    };
+    return Car;
+}());
+var auto = new Car();
+auto.speed = 60;
+auto.fill(); // Fill car with fuel.
+auto.move(); // Car moves at speed 60 km/h.
