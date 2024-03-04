@@ -93,3 +93,16 @@ colors['red'] = '#ff0000';
 colors['green'] = '#00ff00';
 colors['blue'] = '#0000ff';
 console.log(colors['red']); // #ff0000
+function personBuilder() {
+    var person = function (name, surname) {
+        person.fullName = name + ' ' + surname;
+    };
+    person.authenticate = function () {
+        console.log(person.fullName + ' has personal password ' + person.password);
+    };
+    return person;
+}
+var person = personBuilder();
+person('Tom', 'Simpson');
+person.password = 'qwerty';
+person.authenticate(); // Tom Simpson has personal password qwerty

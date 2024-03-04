@@ -192,3 +192,29 @@ colors['green'] = '#00ff00';
 colors['blue'] = '#0000ff';
 
 console.log(colors['red']);  // #ff0000
+
+// ---------- interface example ----------
+interface PersonInfo {
+  (name: string, surname: string): void;
+  fullName: string;
+  password: string;
+  authenticate(): void;
+}
+
+function personBuilder(): PersonInfo {
+  let person = <PersonInfo>function (name: string, surname: string): void {
+    person.fullName = name + ' ' + surname;
+  };
+
+  person.authenticate = function () {
+    console.log(person.fullName + ' has personal password ' + person.password);
+  };
+
+  return person;
+}
+
+let person = personBuilder();
+person('Tom', 'Simpson');
+person.password = 'qwerty';
+
+person.authenticate();  // Tom Simpson has personal password qwerty
