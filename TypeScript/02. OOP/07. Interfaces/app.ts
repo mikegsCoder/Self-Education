@@ -180,3 +180,15 @@ phones = ['iPhone 7', 'HTC 10', 'HP Elite x3'];
 
 let myPhone: string = phones[0];
 console.log(myPhone);  // iPhone 7
+
+// ---------- array interface example ----------
+interface Dictionary {
+  [index: string]: string;
+}
+
+var colors: Dictionary = {};
+colors['red'] = '#ff0000';
+colors['green'] = '#00ff00';
+colors['blue'] = '#0000ff';
+
+console.log(colors['red']);  // #ff0000

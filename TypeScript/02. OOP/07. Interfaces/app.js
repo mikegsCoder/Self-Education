@@ -88,3 +88,8 @@ var phones;
 phones = ['iPhone 7', 'HTC 10', 'HP Elite x3'];
 var myPhone = phones[0];
 console.log(myPhone); // iPhone 7
+var colors = {};
+colors['red'] = '#ff0000';
+colors['green'] = '#00ff00';
+colors['blue'] = '#0000ff';
+console.log(colors['red']); // #ff0000
