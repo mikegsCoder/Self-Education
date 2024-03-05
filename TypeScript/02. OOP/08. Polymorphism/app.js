@@ -39,3 +39,25 @@ var user1 = new Employee1('Tom', 'Microsoft');
 printPerson(user1); // Person Tom
 var user2 = personFactory('Bob');
 printPerson(user2); // Person Bob
+// ---------- polymorphism example ----------
+var Person2 = /** @class */ (function () {
+    function Person2(userName) {
+        this.name = userName;
+    }
+    return Person2;
+}());
+var Employee2 = /** @class */ (function (_super) {
+    __extends(Employee2, _super);
+    function Employee2(userName, company) {
+        var _this = _super.call(this, userName) || this;
+        _this.company = company;
+        return _this;
+    }
+    return Employee2;
+}(Person2));
+var user3 = new Employee2('Tom', 'Microsoft');
+// console.log(user3.company);   // Error!
+var user3Employee1 = user3; // type conversion
+console.log(user3Employee1.company); // Microsoft
+var user3Employee2 = user3; // type conversion
+console.log(user3Employee2.company); // Microsoft
