@@ -81,3 +81,12 @@ function printPerson1(user) {
 }
 var tom = new Employee3('Tom', 'Microsoft');
 printPerson1(tom); // IPerson Tom
+// ---------- instanceOf ----------
+var bob = new Employee3('Bob', 'Microsoft');
+if (bob instanceof Person3) {
+    console.log('Bob is a Person');
+}
+else {
+    console.log('Bob is not a Person');
+}
+// Bob is a Person
