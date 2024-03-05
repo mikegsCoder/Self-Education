@@ -61,3 +61,23 @@ var user3Employee1 = user3; // type conversion
 console.log(user3Employee1.company); // Microsoft
 var user3Employee2 = user3; // type conversion
 console.log(user3Employee2.company); // Microsoft
+var Person3 = /** @class */ (function () {
+    function Person3(userName) {
+        this.name = userName;
+    }
+    return Person3;
+}());
+var Employee3 = /** @class */ (function (_super) {
+    __extends(Employee3, _super);
+    function Employee3(userName, company) {
+        var _this = _super.call(this, userName) || this;
+        _this.company = company;
+        return _this;
+    }
+    return Employee3;
+}(Person3));
+function printPerson1(user) {
+    console.log("IPerson ".concat(user.name));
+}
+var tom = new Employee3('Tom', 'Microsoft');
+printPerson1(tom); // IPerson Tom

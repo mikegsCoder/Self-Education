@@ -56,3 +56,32 @@ console.log(user3Employee1.company);  // Microsoft
 
 let user3Employee2: Employee2 = user3 as Employee2; // type conversion
 console.log(user3Employee2.company);  // Microsoft
+
+// ---------- using interfaces ----------
+interface IPerson {
+  name: string;
+}
+
+class Person3 {
+  name: string;
+
+  constructor(userName: string) {
+    this.name = userName;
+  }
+}
+
+class Employee3 extends Person3 {
+  company: string;
+
+  constructor(userName: string, company: string) {
+    super(userName);
+    this.company = company;
+  }
+}
+
+function printPerson1(user: IPerson): void {
+  console.log(`IPerson ${user.name}`);
+}
+
+let tom: Person3 = new Employee3('Tom', 'Microsoft');
+printPerson1(tom);  // IPerson Tom
