@@ -27,3 +27,12 @@ console.log(tom.getId()); // 3
 // tom = new User1<string>("asd");  // Error!
 var alice = new User1('xyz');
 console.log(alice.getId()); // xyz
+var User2 = /** @class */ (function () {
+    function User2(id) {
+        this._id = id;
+    }
+    User2.prototype.getId = function () {
+        return this._id;
+    };
+    return User2;
+}());

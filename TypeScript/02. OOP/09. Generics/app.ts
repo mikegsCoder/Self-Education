@@ -36,3 +36,20 @@ console.log(tom.getId());    // 3
 
 let alice = new User1<string>('xyz');
 console.log(alice.getId());  // xyz
+
+// ---------- generic interface ----------
+interface IUser<T> {
+  getId(): T;
+}
+
+class User2<T> implements IUser<T> {
+  private _id: T;
+
+  constructor(id: T) {
+    this._id = id;
+  }
+
+  getId(): T {
+    return this._id;
+  }
+}
