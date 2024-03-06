@@ -16,3 +16,23 @@ function getString<T>(args: Array<T>): string {
 
 let result3 = getString<number>([1, 2, 34, 5]);
 console.log(result3);  // 1, 2, 34, 5
+
+// ---------- generic class ----------
+class User1<T> {
+  private _id: T;
+
+  constructor(id: T) {
+    this._id = id;
+  }
+
+  getId(): T {
+    return this._id;
+  }
+}
+
+let tom = new User1<number>(3);
+console.log(tom.getId());    // 3
+// tom = new User1<string>("asd");  // Error!
+
+let alice = new User1<string>('xyz');
+console.log(alice.getId());  // xyz
