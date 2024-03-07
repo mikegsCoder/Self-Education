@@ -70,3 +70,24 @@ compareName2(john, george); // Names are not equal.
 var jim = { id: 1, name: 'Jim' };
 var dave = { id: 2, name: 'Dave' };
 compareName2(jim, dave); // Names are not equal.
+var NameInfo = /** @class */ (function () {
+    function NameInfo() {
+    }
+    NameInfo.prototype.printName = function (obj) {
+        console.log("Name: ".concat(obj.name));
+    };
+    return NameInfo;
+}());
+var User4 = /** @class */ (function () {
+    function User4(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    return User4;
+}());
+var garry = new User4('Garry', 38);
+var nameInfo1 = new NameInfo();
+nameInfo1.printName(garry); // Name: Garry
+var peter = { id: 1, name: 'Peter' };
+var nameInfo2 = new NameInfo();
+nameInfo2.printName(peter); // Name: Peter

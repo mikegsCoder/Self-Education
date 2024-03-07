@@ -91,3 +91,27 @@ type Person = { id: number; name: string };
 let jim: Person = { id: 1, name: 'Jim' };
 let dave: Person = { id: 2, name: 'Dave' };
 compareName2<Person>(jim, dave);  // Names are not equal.
+
+// ---------- generic constraints example ----------
+interface Named {
+  name: string;
+}
+
+class NameInfo<T extends Named>{
+  printName(obj: T): void {
+    console.log(`Name: ${obj.name}`);
+  }
+}
+
+class User4 {
+  constructor(public name: string, public age: number) { }
+}
+
+let garry = new User4('Garry', 38);
+let nameInfo1 = new NameInfo<User4>();
+nameInfo1.printName(garry);  // Name: Garry
+
+type Person2 = { id: number; name: string }
+let peter: Person = { id: 1, name: 'Peter' };
+let nameInfo2 = new NameInfo<Person2>();
+nameInfo2.printName(peter);  // Name: Peter
