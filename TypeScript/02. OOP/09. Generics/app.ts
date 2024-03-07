@@ -68,3 +68,26 @@ let bob: { name: string } = { name: 'Bob' };
 let sam: { name: string } = { name: 'Sam' };
 
 compareName1<{ name: string }>(bob, sam);  // Names are not equal.
+
+// ---------- generic constraints example ----------
+function compareName2<T extends { name: string }>(obj1: T, obj2: T): void {
+  if (obj1.name === obj2.name) {
+    console.log('Names are equal.');
+  }
+  else {
+    console.log('Names are not equal.');
+  }
+}
+
+class User3 {
+  constructor(public name: string, public age: number) { }
+}
+
+let john = new User3('John', 38);
+let george = new User3('George', 24);
+compareName2<User3>(john, george);  // Names are not equal.
+
+type Person = { id: number; name: string };
+let jim: Person = { id: 1, name: 'Jim' };
+let dave: Person = { id: 2, name: 'Dave' };
+compareName2<Person>(jim, dave);  // Names are not equal.

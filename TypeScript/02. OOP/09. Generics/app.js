@@ -48,3 +48,25 @@ function compareName1(obj1, obj2) {
 var bob = { name: 'Bob' };
 var sam = { name: 'Sam' };
 compareName1(bob, sam); // Names are not equal.
+// ---------- generic constraints example ----------
+function compareName2(obj1, obj2) {
+    if (obj1.name === obj2.name) {
+        console.log('Names are equal.');
+    }
+    else {
+        console.log('Names are not equal.');
+    }
+}
+var User3 = /** @class */ (function () {
+    function User3(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+    return User3;
+}());
+var john = new User3('John', 38);
+var george = new User3('George', 24);
+compareName2(john, george); // Names are not equal.
+var jim = { id: 1, name: 'Jim' };
+var dave = { id: 2, name: 'Dave' };
+compareName2(jim, dave); // Names are not equal.
