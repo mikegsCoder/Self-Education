@@ -53,3 +53,18 @@ class User2<T> implements IUser<T> {
     return this._id;
   }
 }
+
+// ---------- generic constraints ----------
+function compareName1<T extends { name: string }>(obj1: T, obj2: T): void {
+  if (obj1.name === obj2.name) {
+    console.log('Names are equal.');
+  }
+  else {
+    console.log('Names are not equal.');
+  }
+}
+
+let bob: { name: string } = { name: 'Bob' };
+let sam: { name: string } = { name: 'Sam' };
+
+compareName1<{ name: string }>(bob, sam);  // Names are not equal.

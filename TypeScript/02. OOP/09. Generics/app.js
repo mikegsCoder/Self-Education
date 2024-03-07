@@ -36,3 +36,15 @@ var User2 = /** @class */ (function () {
     };
     return User2;
 }());
+// ---------- generic constraints ----------
+function compareName1(obj1, obj2) {
+    if (obj1.name === obj2.name) {
+        console.log('Names are equal.');
+    }
+    else {
+        console.log('Names are not equal.');
+    }
+}
+var bob = { name: 'Bob' };
+var sam = { name: 'Sam' };
+compareName1(bob, sam); // Names are not equal.
