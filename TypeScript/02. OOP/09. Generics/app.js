@@ -91,3 +91,14 @@ nameInfo1.printName(garry); // Name: Garry
 var peter = { id: 1, name: 'Peter' };
 var nameInfo2 = new NameInfo();
 nameInfo2.printName(peter); // Name: Peter
+// --------- new T ----------
+function userFactory(type) {
+    return new type();
+}
+var User5 = /** @class */ (function () {
+    function User5() {
+        console.log("User object created.");
+    }
+    return User5;
+}());
+var user = userFactory(User5); // User object created.

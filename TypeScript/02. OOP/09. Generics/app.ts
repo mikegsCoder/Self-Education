@@ -115,3 +115,16 @@ type Person2 = { id: number; name: string }
 let peter: Person = { id: 1, name: 'Peter' };
 let nameInfo2 = new NameInfo<Person2>();
 nameInfo2.printName(peter);  // Name: Peter
+
+// --------- new T ----------
+function userFactory<T>(type: { new(): T; }): T {
+  return new type();
+}
+
+class User5 {
+  constructor() {
+    console.log("User object created.");
+  }
+}
+
+let user: User5 = userFactory(User5);  // User object created.
