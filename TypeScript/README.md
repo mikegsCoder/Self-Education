@@ -27,4 +27,5 @@
   - Interfaces
   - Polymorphism
   - Generics
+  - Mixins
   
