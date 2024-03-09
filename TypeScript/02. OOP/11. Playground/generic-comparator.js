@@ -25,3 +25,16 @@ var c1 = new CompareElements1(['a', 'b', 'ab', 'abc', 'cba', 'b']);
 console.log(c1.compare('b')); // 2
 var d1 = new CompareElements1([1, 2, 3, 4, 5, 1, 1]);
 console.log(d1.compare(1)); // 3
+// ---------- solution 2 ----------
+var CompareElements2 = /** @class */ (function () {
+    function CompareElements2(arr) {
+        var _this = this;
+        this.compare = function (item) { return _this._arr.filter(function (x) { return x === item; }).length; };
+        this._arr = arr;
+    }
+    return CompareElements2;
+}());
+var c2 = new CompareElements2(['a', 'b', 'ab', 'abc', 'cba', 'b']);
+console.log(c1.compare('b')); // 2
+var d2 = new CompareElements2([1, 2, 3, 4, 5, 1, 1]);
+console.log(d1.compare(1)); // 3

@@ -31,3 +31,20 @@ console.log(c1.compare('b'));  // 2
 
 let d1 = new CompareElements1([1, 2, 3, 4, 5, 1, 1]);
 console.log(d1.compare(1));  // 3
+
+// ---------- solution 2 ----------
+class CompareElements2<T> {
+  private _arr: T[]
+
+  constructor(arr: T[]) {
+    this._arr = arr
+  }
+
+  compare = (item: T) => { return this._arr.filter(x => x === item).length; }
+}
+
+let c2 = new CompareElements2(['a', 'b', 'ab', 'abc', 'cba', 'b']);
+console.log(c1.compare('b'));  // 2
+
+let d2 = new CompareElements2([1, 2, 3, 4, 5, 1, 1]);
+console.log(d1.compare(1));  // 3
