@@ -44,3 +44,30 @@ family1.addNewMember(['Georgi', 37]);
 family1.addNewMember(['Viktor', 30]);
 
 console.log(family1.oldestMember()); // The oldest member is Todor and he is 45 years old.
+
+// ---------- solution 2 ----------
+class Family2 {
+  public family: Member[];
+
+  constructor(family: Member[] = []) {
+    this.family = family
+  }
+
+  addNewMember(value: Member) {
+    this.family.push(value);
+  }
+
+  oldestMember() {
+    const oldest: Member = this.family.reduce((a, c) => a[1] > c[1] ? a : c);
+
+    return `The oldest member is ${oldest[0]} and he is ${oldest[1]} years old.`;
+  }
+}
+
+const family2 = new Family2();
+family2.addNewMember(['Ivan', 13]);
+family2.addNewMember(['Todor', 45]);
+family2.addNewMember(['Georgi', 37]);
+family2.addNewMember(['Viktor', 30]);
+
+console.log(family2.oldestMember()); // The oldest member is Todor and he is 45 years old.

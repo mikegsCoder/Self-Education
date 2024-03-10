@@ -35,3 +35,24 @@ family1.addNewMember(['Todor', 45]);
 family1.addNewMember(['Georgi', 37]);
 family1.addNewMember(['Viktor', 30]);
 console.log(family1.oldestMember()); // The oldest member is Todor and he is 45 years old.
+// ---------- solution 2 ----------
+var Family2 = /** @class */ (function () {
+    function Family2(family) {
+        if (family === void 0) { family = []; }
+        this.family = family;
+    }
+    Family2.prototype.addNewMember = function (value) {
+        this.family.push(value);
+    };
+    Family2.prototype.oldestMember = function () {
+        var oldest = this.family.reduce(function (a, c) { return a[1] > c[1] ? a : c; });
+        return "The oldest member is ".concat(oldest[0], " and he is ").concat(oldest[1], " years old.");
+    };
+    return Family2;
+}());
+var family2 = new Family2();
+family2.addNewMember(['Ivan', 13]);
+family2.addNewMember(['Todor', 45]);
+family2.addNewMember(['Georgi', 37]);
+family2.addNewMember(['Viktor', 30]);
+console.log(family2.oldestMember()); // The oldest member is Todor and he is 45 years old.
