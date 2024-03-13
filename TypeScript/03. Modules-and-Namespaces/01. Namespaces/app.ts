@@ -34,3 +34,14 @@ Personnel2.work(tom);  // Tom is working
 
 console.log(Personnel2.defaultUser.name);  // Kate
 console.log(Personnel2.value);             // Hello
+
+// ---------- namespace in separate file ---------
+/// <reference path='personnel.ts' />
+
+let bob = new Personnel.Employee('Bob')
+console.log(bob.name);  // Bob
+
+let sam = new Personnel.Manager('Sam');
+console.log(sam.name);  // Sam
+
+// tsc --outFile app.js personnel.ts app.ts

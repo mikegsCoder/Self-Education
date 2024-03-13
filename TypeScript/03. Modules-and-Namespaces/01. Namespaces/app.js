@@ -1,3 +1,20 @@
+var Personnel;
+(function (Personnel) {
+    var Employee = /** @class */ (function () {
+        function Employee(name) {
+            this.name = name;
+        }
+        return Employee;
+    }());
+    Personnel.Employee = Employee;
+    var Manager = /** @class */ (function () {
+        function Manager(name) {
+            this.name = name;
+        }
+        return Manager;
+    }());
+    Personnel.Manager = Manager;
+})(Personnel || (Personnel = {}));
 // ---------- namespaces ----------
 var Personnel1;
 (function (Personnel1) {
@@ -32,3 +49,10 @@ var tom = new Personnel2.Employee2('Tom');
 Personnel2.work(tom); // Tom is working
 console.log(Personnel2.defaultUser.name); // Kate
 console.log(Personnel2.value); // Hello
+// ---------- namespace in separate file ---------
+/// <reference path='personnel.ts' />
+var bob = new Personnel.Employee('Bob');
+console.log(bob.name); // Bob
+var sam = new Personnel.Manager('Sam');
+console.log(sam.name); // Sam
+// tsc --outFile app.js personnel.ts app.ts
