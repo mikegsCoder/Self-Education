@@ -45,3 +45,25 @@ let sam = new Personnel.Manager('Sam');
 console.log(sam.name);  // Sam
 
 // tsc --outFile app.js personnel.ts app.ts
+
+// ---------- nested namespaces ---------
+namespace Data1 {
+  export namespace Personnel3 {
+    export class Employee3 {
+      constructor(public name: string) {
+      }
+    }
+  }
+  export namespace Clients {
+    export class VipClient {
+      constructor(public name: string) {
+      }
+    }
+  }
+}
+
+let greg = new Data1.Personnel3.Employee3('Greg')
+console.log(greg.name);  // Greg
+
+let jim = new Data1.Clients.VipClient('Jim');
+console.log(jim.name);  // Jim
