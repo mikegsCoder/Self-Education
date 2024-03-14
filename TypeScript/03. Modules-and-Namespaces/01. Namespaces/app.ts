@@ -67,3 +67,17 @@ console.log(greg.name);  // Greg
 
 let jim = new Data1.Clients.VipClient('Jim');
 console.log(jim.name);  // Jim
+
+// ---------- aliases ---------
+namespace Data2 {
+  export namespace Personnel {
+    export class Employee {
+      constructor(public name: string) {
+      }
+    }
+  }
+}
+
+import employee = Data2.Personnel.Employee;
+let terry = new employee('Terry');
+console.log(terry.name);  // Terry

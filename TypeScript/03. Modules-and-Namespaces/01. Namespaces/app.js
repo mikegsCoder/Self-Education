@@ -84,3 +84,20 @@ var greg = new Data1.Personnel3.Employee3('Greg');
 console.log(greg.name); // Greg
 var jim = new Data1.Clients.VipClient('Jim');
 console.log(jim.name); // Jim
+// ---------- aliases ---------
+var Data2;
+(function (Data2) {
+    var Personnel;
+    (function (Personnel) {
+        var Employee = /** @class */ (function () {
+            function Employee(name) {
+                this.name = name;
+            }
+            return Employee;
+        }());
+        Personnel.Employee = Employee;
+    })(Personnel = Data2.Personnel || (Data2.Personnel = {}));
+})(Data2 || (Data2 = {}));
+var employee = Data2.Personnel.Employee;
+var terry = new employee('Terry');
+console.log(terry.name); // Terry
