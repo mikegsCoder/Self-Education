@@ -31,4 +31,5 @@
 - Modules and Namespaces
   - Namespaces
   - Creating and Importing Modules
+  - Using Modules
   
