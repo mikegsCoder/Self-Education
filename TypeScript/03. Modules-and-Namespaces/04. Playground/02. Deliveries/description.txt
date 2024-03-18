@@ -1,0 +1,27 @@
+Create a namespace FoodAndBeverages, in one file, that exports an 
+interface Delivery, which supports the following declarations:
+ - newCustomer(customerName: string, visited: boolean)
+ - visitCustomer(customerName: string) - this method returns a string
+ - showCustomers() - this method returns a string
+
+In a new file create a class Courier that implements Delivery and 
+has one property of its own:
+ - protected property placesToVisit which is set through the 
+    constructor and is array of objects.
+
+Make the following three methods: 
+ - newCustomer(customerName: string, visited: boolean) - the visited 
+    by default is false. Check if the customerName is already a 
+    customer of yours, if so throw a new error: 
+    "{customerName} is already a customer of yours!". 
+    Otherwise push an object with key customerName and value – 
+    visited to the placesToVisit array and return a message: 
+    "{customerName} just became your client."
+ - visitCustomer(customerName: string) – check if the customer is 
+    client of yours, if not throw a new error: 
+    "{clientName} is not your customer". Otherwise swap the value of 
+    visited to true.
+ - showCustomers() – print all the customers in the following format:
+    "{customerName} -> visited
+    {customerName} -> visited
+    … "
