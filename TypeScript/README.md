@@ -32,4 +32,6 @@
   - Namespaces
   - Creating and Importing Modules
   - Using Modules
+- Declaration Files
+  - Using Declaration Files
   
