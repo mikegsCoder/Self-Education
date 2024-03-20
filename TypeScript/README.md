@@ -34,4 +34,5 @@
   - Using Modules
 - Declaration Files
   - Using Declaration Files
+  - Declaration Files for most popular libraries
   
