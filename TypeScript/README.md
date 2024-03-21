@@ -35,4 +35,6 @@
 - Declaration Files
   - Using Declaration Files
   - Declaration Files for most popular libraries
+- Decorators
+  - Class Decorators
   
