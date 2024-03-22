@@ -37,4 +37,5 @@
   - Declaration Files for most popular libraries
 - Decorators
   - Class Decorators
+  - Method Decorators
   
