@@ -38,4 +38,5 @@
 - Decorators
   - Class Decorators
   - Method Decorators
+  - Property and Accessor Decorators
   
