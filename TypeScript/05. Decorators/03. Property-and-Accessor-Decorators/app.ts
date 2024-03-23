@@ -37,3 +37,41 @@ tom.name = 'Tommy';
 tom.print();  // Mr./Ms.Tommy
 tom.name = 'To';
 tom.print();  // Mr./Ms.Tommy
+
+// ---------- accessor decorator ----------
+function validator(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
+  const oldSet = descriptor.set;
+
+  descriptor.set = function (value: string) {
+    if (value === 'admin') {
+      throw new Error('Invalid value!');
+    }
+
+    if (oldSet !== undefined) {
+      oldSet.call(this, value);
+    }
+  }
+}
+
+class User2 {
+  private _name: string;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+
+  public get name(): string {
+    return this._name;
+  }
+
+  @validator
+  public set name(n: string) {
+    this._name = n;
+  }
+}
+
+let bob = new User2('Bob');
+console.log(bob.name);  // Bob
+
+bob.name = 'admin';
+console.log(bob.name);  // Error: Invalid value!
