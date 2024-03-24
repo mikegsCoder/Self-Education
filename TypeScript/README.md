@@ -5,23 +5,23 @@
 - TypeScript Basics
   - Demo
   - Hello app
-  - Data types
+  - Data Types
   - Functions
-  - Function types
+  - Function Types
   - Union
   - Null and Undefined
   - Objects
   - Aliases
-  - Type assertion
+  - Type Assertion
   - Arrays
   - Tuples
-  - Function parameters
+  - Function Parameters
   - Enumerators
 - OOP
   - Classes
   - Inheritance
   - Abstract Classes and Methods
-  - Access modifiers
+  - Access Modifiers
   - Get and Set
   - Static Fields and Methods
   - Interfaces
@@ -39,4 +39,4 @@
   - Class Decorators
   - Method Decorators
   - Property and Accessor Decorators
-  
+  - Decorator Factories
