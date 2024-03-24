@@ -31,3 +31,22 @@ function regex(pattern: string) {
     }
   }
 }
+
+class Account {
+  @regex('^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$')
+  email: string;
+
+  @regex('^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$')
+  phone: string;
+
+  constructor(email: string, phone: string) {
+    this.email = email;
+    this.phone = phone;
+  }
+}
+
+let acc = new Account('bir@gmail.com', '+23451235678');
+// bir@gmail.com is valid
+// +23451235678 is valid
+
+acc.email = 'bir_iki_yedi';  // Error
