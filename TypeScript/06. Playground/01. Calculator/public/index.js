@@ -1,16 +1,12 @@
 // tsc && node .\public\index.js
-// ---------- Solution 1 ----------
 function calc(firstNum, action, secondNum) {
-    switch (action) {
-        case '+':
-            return (firstNum + secondNum).toFixed(2);
-        case '-':
-            return (firstNum - secondNum).toFixed(2);
-        case '*':
-            return (firstNum * secondNum).toFixed(2);
-        case '/':
-            return (firstNum / secondNum).toFixed(2);
-    }
+    const calc = {
+        '+': (firstNum + secondNum).toFixed(2),
+        '-': (firstNum - secondNum).toFixed(2),
+        '*': (firstNum * secondNum).toFixed(2),
+        '/': (firstNum / secondNum).toFixed(2),
+    };
+    return calc[action];
 }
 function main() {
     console.log(calc(1, '+', 3));
