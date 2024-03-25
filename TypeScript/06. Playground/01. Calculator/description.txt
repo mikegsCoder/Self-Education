@@ -1,0 +1,23 @@
+Write a function that receives 3 parameters:
+ - number 
+ - operator – text with the following options:'+', '-', '/', '*'
+ - another number
+Print the result of the calculation on the console formatted to the second decimal point.
+
+Examples:
+Input	Output
+5,
+"+",
+10	15.00
+----------------------
+25.5,
+"-",
+3	22.50
+----------------------
+9,
+"/",
+2	4.50
+----------------------
+7,
+"*",
+5	35.00
