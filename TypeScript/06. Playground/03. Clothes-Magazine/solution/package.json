@@ -1,0 +1,12 @@
+{
+	"name": "typescript-automotive-3",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+	  "dev": "tsc && node public/index"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC"
+}
