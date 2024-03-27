@@ -1,0 +1,43 @@
+Your task is to create a repository that stores clothes by creating 
+the classes described below.
+
+Cloth
+Create class Cloth with the following properties:
+ - color - string
+ - size - number
+ - type - string
+The class constructor should receive color, size and type. 
+Override the toString() method in the following format:
+"Product: {type} with size {size}, color {color}"
+
+Magazine
+Create class Magazine that has Clothes (an array that stores the 
+entity Cloth). All entities inside the repository have the same 
+properties. The Magazine class should have the following properties:
+ - type - string
+ - capacity – number
+ - clothes – Cloth[]
+The class constructor should receive type and capacity, also it 
+should initialize the clothes with a new instance of the collection. 
+Implement the following features:
+ - Method addCloth(cloth: Cloth) – adds an entity to the collection 
+   if there is room for it
+ - Method removeCloth(color: string) – removes a cloth by given 
+   color, if such exists, and returns boolean (true if it is removed, 
+   otherwise – false)
+ - Method getSmallestCloth() – returns the Cloth with the smallest 
+   Size
+ - Method getCloth(color: string) – returns the Cloth with the given 
+   color
+ - Method getClothCount() – returns the number of clothes
+ - Method report() – returns a string in the following format (print 
+   the clothes in ordered by Size):
+"{type} magazine contains:
+{Cloth1}
+{Cloth2}
+(…)"
+
+Constraints
+ - The color and size of the clothes will be always unique.
+ - You will always have clothes added before receiving methods 
+   manipulating the Magazines’ clothes.
