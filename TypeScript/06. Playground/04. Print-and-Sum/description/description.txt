@@ -1,0 +1,6 @@
+Write a program that:
+ - Receives a start number as a first parameter
+ - Receives an end number as a second parameter 
+ - Prints all the numbers from the given start to the given end (inclusively)
+ - Prints the sum of the printed numbers 
+Note: All the numbers will be integers.
