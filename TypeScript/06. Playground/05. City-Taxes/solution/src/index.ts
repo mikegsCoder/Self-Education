@@ -1,3 +1,5 @@
+//tsc && node ./public/index.js
+
 type City = {
   name: string;
   population: number;
@@ -27,3 +29,14 @@ function cityTaxes(name: string, population: number, treasury: number): City {
 
   return city;
 }
+
+console.log('First test');
+const firstCity = cityTaxes('Tortuga', 7000, 15000);
+console.log(firstCity);
+
+console.log('Second test');
+const secondCity = cityTaxes('Tortuga', 7000, 15000);
+secondCity.collectTaxes();
+console.log(secondCity.treasury);
+secondCity.applyGrowth(5);
+console.log(secondCity.population);
