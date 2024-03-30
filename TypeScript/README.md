@@ -40,3 +40,4 @@
   - Method Decorators
   - Property and Accessor Decorators
   - Decorator Factories
+- TypeScript problems and solutions
