@@ -1,0 +1,36 @@
+Your task is to create a repository that stores drinks by creating 
+the classes described below.
+
+Drink:
+You need to create a class Drink with the following properties:
+ - name – string
+ - price - number
+ - volume - number
+The class constructor should receive name, price and volume. 
+Override the toString() method in the following format:
+"Name: {name}, Price: ${price}, Volume: {volume} ml"
+
+VendingMachine
+Create a class VendingMachine that has drinks (an array that stores 
+the Drink entities). All entities inside the repository have the same 
+properties. The VendingMachine class should have the following properties:
+ - buttonCapacity - number
+ - drinks – Drink[]
+The class constructor should receive buttonCapacity, also it should 
+initialize the drinks as an empty collection.
+Implement the following features:
+ - Method addDrink(drink: Drink) – adds an entity to the collection of Drinks, if the capacity allows it.
+ - Method removeDrink(name: string) – removes a drink by the given name, if such exists, and returns true if it is removed, otherwise – false
+ - Method getLongest() – returns the Drink as string in the format of the overriden toString() method with the biggest value of volume property
+ - Method getCheapest()– returns the Drink as string in the format of the overriden toString() method with the lowest value of price property
+ - Method buyDrink(name: string) – returns a string in the format of the overriden toString() method
+ - Method getCount  - returns the number of drinks, available in the vending machine
+ - Method report() – returns a string in the following format:
+"Drinks available:
+{Drink1}
+{Drink2}
+(…)"
+
+Constraints:
+ - The names of the drinks will be always unique.
+ - You will always have drinks added before receiving methods, manipulating the drinks in the VendingMachine.
