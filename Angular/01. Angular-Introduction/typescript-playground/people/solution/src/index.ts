@@ -41,3 +41,17 @@ export class Senior extends Employee {
 		this.tasks.push(' is supervising junior workers.');
 	}
 }
+
+export class Manager extends Employee {
+	public divident: number;
+
+	constructor(name: string, age: number) {
+		super(name, age);
+		this.tasks.push(' scheduled a meeting.');
+		this.tasks.push(' is preparing a quarterly report.');
+	}
+
+	public getSalary(): number {
+		return this.salary + this.divident;
+	}
+}

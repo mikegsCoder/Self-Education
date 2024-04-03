@@ -15,7 +15,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Senior = exports.Junior = void 0;
+exports.Manager = exports.Senior = exports.Junior = void 0;
 var Employee = (function () {
     function Employee(name, age) {
         this.name = name;
@@ -58,4 +58,18 @@ var Senior = (function (_super) {
     return Senior;
 }(Employee));
 exports.Senior = Senior;
+var Manager = (function (_super) {
+    __extends(Manager, _super);
+    function Manager(name, age) {
+        var _this = _super.call(this, name, age) || this;
+        _this.tasks.push(' scheduled a meeting.');
+        _this.tasks.push(' is preparing a quarterly report.');
+        return _this;
+    }
+    Manager.prototype.getSalary = function () {
+        return this.salary + this.divident;
+    };
+    return Manager;
+}(Employee));
+exports.Manager = Manager;
 //# sourceMappingURL=index.js.map
