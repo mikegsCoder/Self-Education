@@ -1,13 +1,5 @@
-abstract class Melon {
-  public weight: number;
-  public melonSort: string;
+import { Watermelon } from './Watermelon';
+import { Firemelon } from './Firemelon';
+import { Earthmelon } from './Earthmelon';
+import { Airmelon } from './Airmelon';
 
-  constructor(weight: number, melonSort: string) {
-    this.weight = weight;
-    this.melonSort = melonSort;
-  }
-
-  public get elementIndex(){
-    return this.weight * this.melonSort.length;
-  }
-}
