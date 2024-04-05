@@ -1,0 +1,7 @@
+Create a class Box<> that can store anything.
+It should have two public methods and a getter:
+ - add(element)
+ - remove()
+ - count - getter
+Adding should add on top of its contents. 
+Remove should get the topmost element.
