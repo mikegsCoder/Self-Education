@@ -1,0 +1,5 @@
+Create a generic class which can store a key and value of any type. 
+It should have the following public methods:
+ - setKeyValue(key: T, value: U)
+ - display() – log the key and the value in the following format: 
+  'key = {key}, value = {value}'
