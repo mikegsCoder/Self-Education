@@ -1,5 +1,7 @@
 import * as _ from 'underscore';
 
+import { test } from './other';
+
 interface IMyObj {
   name: string;
   age: number;
@@ -58,3 +60,5 @@ const myObj: IMyObj2 = {
 }
 
 ivan.doSomethingElse<IMyObj2>(myObj);
+
+console.log(test);

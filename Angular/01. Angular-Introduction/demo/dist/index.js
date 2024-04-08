@@ -16,6 +16,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
 var _ = require("underscore");
+var other_1 = require("./other");
 var User = (function () {
     function User(name, age) {
         this.name = name;
@@ -53,4 +54,5 @@ var myObj = {
     data: []
 };
 ivan.doSomethingElse(myObj);
+console.log(other_1.test);
 //# sourceMappingURL=index.js.map
