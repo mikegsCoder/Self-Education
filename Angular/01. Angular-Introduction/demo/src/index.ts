@@ -33,3 +33,9 @@ class User {
     return obj;
   }
 }
+
+class Employee extends User {
+  constructor(name: string, age: number) {
+    super(name, age);
+  }
+}
