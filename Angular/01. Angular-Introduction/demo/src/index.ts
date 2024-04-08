@@ -39,3 +39,22 @@ class Employee extends User {
     super(name, age);
   }
 }
+
+const ivan = new User('Ivan', 20);
+
+console.log(ivan.name);
+
+ivan.doSomething({
+  name: 'dasd',
+  age: 20,
+  data: []
+});
+
+const myObj: IMyObj2 = {
+  name: 'asdsad',
+  age: 25,
+  test: ['as', 'df'],
+  data: []
+}
+
+ivan.doSomethingElse<IMyObj2>(myObj);

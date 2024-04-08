@@ -39,4 +39,18 @@ var Employee = (function (_super) {
     }
     return Employee;
 }(User));
+var ivan = new User('Ivan', 20);
+console.log(ivan.name);
+ivan.doSomething({
+    name: 'dasd',
+    age: 20,
+    data: []
+});
+var myObj = {
+    name: 'asdsad',
+    age: 25,
+    test: ['as', 'df'],
+    data: []
+};
+ivan.doSomethingElse(myObj);
 //# sourceMappingURL=index.js.map
