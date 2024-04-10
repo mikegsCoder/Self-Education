@@ -1,4 +1,16 @@
 <div class="welcome-message">{{welcomeMessage}}</div>
+<!-- <app-name-input></app-name-input> -->
+<app-name-input *ngIf="isVisible" (btnClick)="nameInputBtnClickHandler($event)" [inputValue]="nameInputValue"></app-name-input>
+
+<!-- <div *ngIf="isVisible && true && (4 < 5)">
+    IS VISIBLE
+</div>
+<div *ngIf="!isVisible">
+    IS NOT VISIBLE
+</div> -->
+
+<!-- <button (click)="isVisible = !isVisible">Toggle</button> -->
+<button (click)="toggleHandler()">Toggle</button>
 
 <ul>
     <li *ngFor="let user of users; let i = index;">
