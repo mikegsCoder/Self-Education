@@ -1,0 +1,10 @@
+<div class="welcome-message">{{welcomeMessage}}</div>
+
+<ul>
+    <li *ngFor="let user of users; let i = index;">
+        <span>{{i+1}}. </span>
+        <span>{{user.firstName}} </span>
+        <span>{{user.lastName}} - </span>
+        <span>{{user.age}}</span>
+    </li>
+</ul>
