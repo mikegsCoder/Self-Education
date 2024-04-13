@@ -3,4 +3,5 @@
 ### Course cirriculum :
 
 - Angular introduction
-- Angular components and data binding
+- Components and data binding
+- Workshop components
