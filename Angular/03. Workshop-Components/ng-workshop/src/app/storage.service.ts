@@ -1,3 +1,4 @@
+import { Provider, PLATFORM_ID } from '@angular/core';
 import { isPlatformBrowser, isPlatformServer } from '@angular/common';
 
 interface IStorage {
@@ -25,6 +26,12 @@ export function storageFactory(platformId: string): any {
 
   throw new Error('No implementation for this platform: ' + platformId);
 }
+
+export const storageServiceProvider: Provider = {
+  provide: StorageService,
+  useFactory: storageFactory,
+  deps: [PLATFORM_ID]
+};
 
 export class BrowserStorage {
   localStorage = localStorage;
