@@ -1,3 +1,5 @@
+import { isPlatformBrowser, isPlatformServer } from '@angular/common';
+
 interface IStorage {
   setItem<T>(key: string, item: T): T;
   getItem<T>(key: string): T;
@@ -10,6 +12,18 @@ export class StorageService implements IStorage {
   getItem<T>(key: string): T {
     return null;
   }
+}
+
+export function storageFactory(platformId: string): any {
+  if (isPlatformBrowser(platformId)) {
+    return new BrowserStorage();
+  }
+
+  if (isPlatformServer(platformId)) {
+    return new ServerStorage();
+  }
+
+  throw new Error('No implementation for this platform: ' + platformId);
 }
 
 export class BrowserStorage {
