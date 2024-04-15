@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-header',
@@ -7,12 +8,16 @@ import { Component } from '@angular/core';
 })
 export class HeaderComponent {
   get isLogged(): boolean {
-    return false;
+    return this.userService.isLogged;
   }
 
-  constructor() {}
+  constructor(public userService: UserService) {}
+  
+  loginHandler(): void {
+    this.userService.login();
+  }
 
-  loginHandler(): void {}
-
-  logoutHandler(): void {}
+  logoutHandler(): void {
+    this.userService.logout();
+  }
 }
