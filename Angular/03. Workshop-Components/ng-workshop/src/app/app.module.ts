@@ -7,11 +7,12 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { storageServiceProvider } from './storage.service';
 import { UserService } from './user.service';
+import { ThemeService } from './theme.service';
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, FooterComponent],
   imports: [BrowserModule, HttpClientModule],
-  providers: [storageServiceProvider, UserService],
+  providers: [storageServiceProvider, UserService, ThemeService],
   bootstrap: [AppComponent, HeaderComponent, FooterComponent],
 })
 export class AppModule {}
