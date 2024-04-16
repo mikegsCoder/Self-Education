@@ -5,12 +5,18 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { ThemeListItemComponent } from './theme-list-item/theme-list-item.component';
 import { storageServiceProvider } from './storage.service';
 import { UserService } from './user.service';
 import { ThemeService } from './theme.service';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, FooterComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    FooterComponent,
+    ThemeListItemComponent,
+  ],
   imports: [BrowserModule, HttpClientModule],
   providers: [storageServiceProvider, UserService, ThemeService],
   bootstrap: [AppComponent, HeaderComponent, FooterComponent],
