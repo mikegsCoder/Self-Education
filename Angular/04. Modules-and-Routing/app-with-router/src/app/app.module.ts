@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 
+import { AccessGuard } from './guards/access.guard';
 import { TestResolver } from './test.resolver';
 
 @NgModule({
@@ -18,6 +19,7 @@ import { TestResolver } from './test.resolver';
   ],
   providers: [ 
     TestResolver,
+    AccessGuard
   ],
   bootstrap: [AppComponent]
 })
