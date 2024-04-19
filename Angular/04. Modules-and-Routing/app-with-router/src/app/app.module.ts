@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
+import { SharedModule } from './shared/shared.module';
 
 import { AccessGuard } from './guards/access.guard';
 import { TestResolver } from './test.resolver';
@@ -16,6 +17,7 @@ import { TestResolver } from './test.resolver';
     BrowserModule,
     HttpClientModule,
     CoreModule,
+    SharedModule
   ],
   providers: [ 
     TestResolver,
