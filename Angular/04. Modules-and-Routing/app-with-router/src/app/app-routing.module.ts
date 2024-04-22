@@ -20,10 +20,10 @@ const routes: Routes = [
       isLogged: true,
     },
   },
-  { 
-    path: '**', 
-    component: NotFoundComponent
-  }
+  // { 
+  //   path: '**', 
+  //   component: NotFoundComponent
+  // }
 ];
 
 export const AppRoutingModule = RouterModule.forRoot(routes);
