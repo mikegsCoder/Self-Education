@@ -1,0 +1,7 @@
+<app-loader [showLoader]="!user"></app-loader>
+<div *ngIf="user">
+  <h5>{{user.username}}</h5>
+  <a *ngIf="user?.id > 1" [routerLink]="['/user/detail/', user.id - 1]">Previous User</a>
+  <a routerLink="/user/list">Back To User List</a>
+  <a *ngIf="user?.id < 10" [routerLink]="['/user/detail/', user.id + 1]">Next User</a>
+</div>
