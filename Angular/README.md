@@ -5,3 +5,4 @@
 - Angular introduction
 - Components and data binding
 - Workshop components
+- Modules and routing
