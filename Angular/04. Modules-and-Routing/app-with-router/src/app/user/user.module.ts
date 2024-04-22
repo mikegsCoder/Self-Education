@@ -9,6 +9,7 @@ import { ListComponent } from './list/list.component';
   imports: [
     CommonModule, 
     UserRoutingModule, 
-    SharedModule],
+    SharedModule
+  ],
 })
 export class UserModule {}
