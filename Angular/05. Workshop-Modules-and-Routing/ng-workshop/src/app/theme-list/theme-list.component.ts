@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { ThemeService } from '../theme.service';
-import { ITheme } from '../interfaces';
+import { ITheme } from '../shared/interfaces';
 
 @Component({
   selector: 'app-theme-list',
