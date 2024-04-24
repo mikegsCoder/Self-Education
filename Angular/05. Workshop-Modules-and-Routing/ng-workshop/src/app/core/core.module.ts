@@ -4,7 +4,9 @@ import { RouterModule } from '@angular/router';
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+
 import { storageServiceProvider } from './storage.service';
+import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
   declarations: [
@@ -16,7 +18,8 @@ import { storageServiceProvider } from './storage.service';
     RouterModule
   ],
   providers: [
-    storageServiceProvider
+    storageServiceProvider,
+    AuthGuard
   ],
   exports: [
     HeaderComponent,
