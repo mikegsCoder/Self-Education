@@ -7,6 +7,7 @@ import { HomeComponent } from './home/home.component';
 
 import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 import { ThemeListComponent } from './theme-list/theme-list.component';
 import { ThemeListItemComponent } from './theme-list-item/theme-list-item.component';
@@ -22,6 +23,7 @@ import { PostService } from './post/post.service';
   declarations: [
     AppComponent,
     HomeComponent,
+    NotFoundComponent,
     ThemeListComponent,
     ThemeListItemComponent,
   ],
