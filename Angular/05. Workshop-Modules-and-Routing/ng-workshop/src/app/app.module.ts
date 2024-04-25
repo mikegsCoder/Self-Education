@@ -10,13 +10,13 @@ import { FooterComponent } from './core/footer/footer.component';
 
 import { ThemeListComponent } from './theme-list/theme-list.component';
 import { ThemeListItemComponent } from './theme-list-item/theme-list-item.component';
-import { AsideComponent } from './shared/aside/aside.component';
 
 import { CoreModule } from './core/core.module';
+import { PostModule } from './post/post.module';
 
 import { UserService } from './user.service';
 import { ThemeService } from './theme.service';
-import { PostService } from './post.service';
+import { PostService } from './post/post.service';
 
 @NgModule({
   declarations: [
@@ -24,11 +24,11 @@ import { PostService } from './post.service';
     HomeComponent,
     ThemeListComponent,
     ThemeListItemComponent,
-    AsideComponent
   ],
   imports: [
     BrowserModule, 
     HttpClientModule,
+    PostModule.forRoot(),
     CoreModule,
   ],
   providers: [
