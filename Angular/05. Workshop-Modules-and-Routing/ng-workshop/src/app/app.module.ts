@@ -12,6 +12,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { ThemeListComponent } from './theme-list/theme-list.component';
 import { ThemeListItemComponent } from './theme-list-item/theme-list-item.component';
 
+import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { PostModule } from './post/post.module';
 
@@ -30,6 +31,7 @@ import { PostService } from './post/post.service';
   imports: [
     BrowserModule, 
     HttpClientModule,
+    AppRoutingModule,
     PostModule.forRoot(),
     CoreModule,
   ],
