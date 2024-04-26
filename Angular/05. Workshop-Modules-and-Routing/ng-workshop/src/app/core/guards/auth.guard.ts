@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Router, RouterStateSnapshot } from '@angular/router';
-import { UserService } from 'src/app/user.service';
+import { UserService } from 'src/app/user/user.service';
 
 @Injectable()
 export class AuthGuard {

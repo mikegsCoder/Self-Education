@@ -1,7 +1,7 @@
 import { Component, DoCheck } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs/operators';
-import { UserService } from '../user.service';
+import { UserService } from '../user/user.service';
 
 @Component({
   selector: 'app-home',

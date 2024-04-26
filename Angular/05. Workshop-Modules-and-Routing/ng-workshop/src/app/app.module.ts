@@ -15,8 +15,9 @@ import { ThemeListItemComponent } from './theme-list-item/theme-list-item.compon
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { PostModule } from './post/post.module';
+import { UserModule } from './user/user.module';
 
-import { UserService } from './user.service';
+// import { UserService } from './user.service';
 import { ThemeService } from './theme.service';
 import { PostService } from './post/post.service';
 
@@ -33,10 +34,11 @@ import { PostService } from './post/post.service';
     HttpClientModule,
     AppRoutingModule,
     PostModule.forRoot(),
+    UserModule,
     CoreModule,
   ],
   providers: [
-    UserService, 
+    // UserService, 
     ThemeService, 
     PostService,
   ],
