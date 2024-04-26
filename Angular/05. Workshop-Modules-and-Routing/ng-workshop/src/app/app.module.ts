@@ -17,7 +17,6 @@ import { CoreModule } from './core/core.module';
 import { PostModule } from './post/post.module';
 import { UserModule } from './user/user.module';
 
-// import { UserService } from './user.service';
 import { ThemeService } from './theme.service';
 import { PostService } from './post/post.service';
 
@@ -38,7 +37,6 @@ import { PostService } from './post/post.service';
     CoreModule,
   ],
   providers: [
-    // UserService, 
     ThemeService, 
     PostService,
   ],
