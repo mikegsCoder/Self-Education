@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { UserService } from './user.service';
 import { SharedModule } from '../shared/shared.module';
 import { LoginComponent } from './login/login.component';
+import { UserRoutingModule } from './user-routing.module';
 
 @NgModule({
   declarations: [
@@ -10,7 +11,8 @@ import { LoginComponent } from './login/login.component';
   ],
   imports: [
     CommonModule,
-    SharedModule
+    SharedModule,
+    UserRoutingModule
   ],
   providers: [
     UserService
