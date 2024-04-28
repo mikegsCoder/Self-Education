@@ -9,12 +9,10 @@ import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
-import { ThemeListComponent } from './theme-list/theme-list.component';
-import { ThemeListItemComponent } from './theme-list-item/theme-list-item.component';
-
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { PostModule } from './post/post.module';
+import { ThemeModule } from './theme/theme.module';
 import { UserModule } from './user/user.module';
 
 @NgModule({
@@ -22,14 +20,13 @@ import { UserModule } from './user/user.module';
     AppComponent,
     HomeComponent,
     NotFoundComponent,
-    ThemeListComponent,
-    ThemeListItemComponent,
   ],
   imports: [
     BrowserModule, 
     HttpClientModule,
     AppRoutingModule,
     PostModule.forRoot(),
+    ThemeModule,
     UserModule,
     CoreModule,
   ],
