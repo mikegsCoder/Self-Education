@@ -12,7 +12,5 @@ export class ThemeListItemComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void { }
 }
