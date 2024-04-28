@@ -6,10 +6,14 @@ describe('ThemeListComponent', () => {
   let component: ThemeListComponent;
   let fixture: ComponentFixture<ThemeListComponent>;
 
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ ThemeListComponent ]
+    })
+    .compileComponents();
+  });
+
   beforeEach(() => {
-    TestBed.configureTestingModule({
-      declarations: [ThemeListComponent]
-    });
     fixture = TestBed.createComponent(ThemeListComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
