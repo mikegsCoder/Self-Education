@@ -17,8 +17,6 @@ import { CoreModule } from './core/core.module';
 import { PostModule } from './post/post.module';
 import { UserModule } from './user/user.module';
 
-import { PostService } from './post/post.service';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +34,6 @@ import { PostService } from './post/post.service';
     CoreModule,
   ],
   providers: [
-    PostService,
   ],
   bootstrap: [
     AppComponent, 
@@ -44,4 +41,5 @@ import { PostService } from './post/post.service';
     FooterComponent,
   ],
 })
+
 export class AppModule {}
