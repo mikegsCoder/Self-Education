@@ -9,12 +9,14 @@ import { ThemeRouterModule } from './theme-routing.module';
 import { ThemeListComponent } from './theme-list/theme-list.component';
 import { ThemeListItemComponent } from './theme-list-item/theme-list-item.component';
 import { ThemeComponent } from './theme/theme.component';
+import { NewComponent } from './new/new.component';
 
 @NgModule({
   declarations: [
     ThemeListComponent,
     ThemeListItemComponent,
-    ThemeComponent
+    ThemeComponent,
+    NewComponent
   ],
   imports: [
     CommonModule,

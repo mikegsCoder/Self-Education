@@ -1,5 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
+
 import { ThemeComponent } from './theme/theme.component';
+import { NewComponent } from './new/new.component';
 
 const routes: Routes = [
   {
@@ -8,6 +10,13 @@ const routes: Routes = [
     component: ThemeComponent,
     data: {
       title: 'THEME'
+    }
+  },
+  {
+    path: 'theme/new',
+    component: NewComponent,
+    data: {
+      title: 'NEW THEME'
     }
   },
 ];
