@@ -10,13 +10,15 @@ import { ThemeListComponent } from './theme-list/theme-list.component';
 import { ThemeListItemComponent } from './theme-list-item/theme-list-item.component';
 import { ThemeComponent } from './theme/theme.component';
 import { NewComponent } from './new/new.component';
+import { DetailComponent } from './detail/detail.component';
 
 @NgModule({
   declarations: [
     ThemeListComponent,
     ThemeListItemComponent,
     ThemeComponent,
-    NewComponent
+    NewComponent,
+    DetailComponent
   ],
   imports: [
     CommonModule,
