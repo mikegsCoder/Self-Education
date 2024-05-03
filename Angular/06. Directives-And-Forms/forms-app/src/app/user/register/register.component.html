@@ -1,0 +1,27 @@
+<form [formGroup]="form" (ngSubmit)="registerHandler()">
+    <div class="form-group">
+        <label for="email">Email</label>
+        <input formControlName="email" type="text" name="email" id="email">
+        <div *ngIf="form.get('email').errors != null && form.get('email').touched && form.get('email').errors['required']" class="validation-error">Email is required.</div>
+        <div *ngIf="form.get('email').errors != null && form.get('email').touched && form.get('email').errors['email']" class="validation-error">Email is invalid.</div>
+    </div>
+    <div class="form-group">
+        <label for="password">Password</label>
+        <input formControlName="password" type="password" name="password" id="password">
+        <div *ngIf="form.get('password').errors != null && form.get('password').touched && form.get('password').errors['required']" class="validation-error">Password is required.</div>
+        <div *ngIf="form.get('password').errors != null && form.get('password').touched && form.get('password').errors['minlength']" class="validation-error">Password must be at least {{form.get('password').errors['minlength'].requiredLength}} characters long.</div>
+    </div>
+    <div [formGroup]="addressForm">
+        <div>
+            <label for="street">Street</label>
+            <input formControlName="street" type="text" name="street" id="street">
+        </div>
+        <div>
+            <label for="post-code">Post Code</label>
+            <input formControlName="postCode" type="text" name="post-code" id="post-code">
+        </div>
+    </div>
+    {{ form.value | json }}
+    <button [disabled]="form.invalid">Register</button>
+    <button type="button" (click)="reset()">Reset</button>
+</form>
