@@ -4,7 +4,7 @@ import { Directive, ElementRef, HostBinding, HostListener, Input, OnChanges, Ren
   selector: '[appHighlight]',
   exportAs: 'appHighlight'
 })
-export class HighlightDirective implements OnChanges{
+export class HighlightDirective implements OnChanges {
 
   @HostBinding('class.is-highlighted') get isHighlighted() {
     return this.appHighlight;
@@ -18,16 +18,18 @@ export class HighlightDirective implements OnChanges{
   @HostListener('mouseenter', ['$event']) onMouseEnter(e: any) {
     console.log(e);
     if (this.appHighlight) {
-        return;
+      return;
     }
+
     this.appHighlight = !this.appHighlight;
     this.highlight();
   }
 
   @HostListener('mouseleave') onMouseLeave() {
     if (!this.appHighlight) {
-        return;
+      return;
     }
+    
     this.appHighlight = !this.appHighlight;
     this.highlight();
   }
@@ -35,7 +37,7 @@ export class HighlightDirective implements OnChanges{
   constructor(
     private renderer: Renderer2,
     private elementRef: ElementRef
-    ) { }
+  ) { }
 
   highlight() {
     this.renderer.setStyle(

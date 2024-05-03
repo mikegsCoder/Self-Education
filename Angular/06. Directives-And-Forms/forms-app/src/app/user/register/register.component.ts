@@ -26,9 +26,7 @@ export class RegisterComponent {
     return this.form.get('address') as FormGroup;
   }
 
-  registerHandler() {
-    
-  }
+  registerHandler() { }
 
   reset() {
     this.form.reset();
