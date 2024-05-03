@@ -1,3 +1,40 @@
 <!-- <h1>{{title}}</h1> -->
 <app-navigation></app-navigation>
 <router-outlet></router-outlet>
+
+<!-- <div [ngClass]="{'my-class': hasMyClass}"></div> -->
+
+<!-- {{isHighlighted}} -->
+
+<ng-template #elseTemplate>IS NOT HIGHLIGHTED</ng-template>
+<ng-template #thenTemplate>IS HIGHLIGHTED</ng-template>
+
+<div>
+    <ng-container *ngTemplateOutlet="isHighlighted ? thenTemplate : elseTemplate"></ng-container>
+</div>
+
+<ng-template #template let-text let-index="index">
+    <div>HELLO,</div>
+    <div>{{text}}</div>
+    <div>{{index}}</div>
+</ng-template>
+
+<ng-container *ngTemplateOutlet="template; context: { $implicit: isHighlighted ? 'IS HIGHLIGHTED' : 'IS NOT HIGHLIGHTED', index: 1 }">
+</ng-container>
+
+<!-- <div *ngIf="isHighlighted; else elseTemplate;">IS HIGHLIGHTED</div> -->
+<div *ngIf="isHighlighted; else elseTemplate;">IS HIGHLIGHTED</div>
+<div *ngFor="let user of users">{{user.name}}</div>
+
+<ng-template ngFor [ngForOf]="users" let-user>
+    <div>{{user.name}}</div>
+</ng-template>
+
+<ng-template [ngIf]="isHighlighted">
+    <div>IS HIGHLIGHTED</div>
+</ng-template>
+
+<!-- <p appHighlight [isHighlighted]="isHighlighted" color="red">Some Text</p> -->
+
+<p #paragraphHighlight="appHighlight" [appHighlight]="isHighlighted" color="red">Some Text</p>
+<button (click)="toggleHighlightHandler(paragraphHighlight)">Toggle Highlight</button>
