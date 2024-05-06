@@ -1,57 +1,42 @@
-<form class="login" action="" method="post">
+<form #f="ngForm" class="login" (ngSubmit)="submitFormHandler(f.value)">
+
   <fieldset>
     <h2>Login Form</h2>
 
     <p class="field field-icon">
-      <label for="email">
-        <span><i class="fas fa-envelope"></i></span>
-      </label>
-      <input
-        #userEmail
-        class="input-error"
-        type="email"
-        name="email"
-        id="email"
-        placeholder="john.doe@gmail.com"
-        (keyup)="updateInputValue('email', userEmail.value)"
-      />
+      <label for="email"><span><i class="fas fa-envelope"></i></span></label>
+      <!-- <input #userEmail="ngModel" [class.input-error]="userEmail.touched && !!userEmail.errors" type="text" name="email" id="email" 
+        placeholder="john.doe@gmail.com" ngModel required pattern="^[a-zA-Z\.-]{6,}@\w+\.(com|bg)$"> -->
+        <input #userEmail="ngModel" [class.input-error]="userEmail.touched && !!userEmail.errors" type="text" name="email"
+        id="email" placeholder="john.doe@gmail.com" ngModel required appEmailValidator>
     </p>
 
-    <p *ngIf="showEmailError" class="error">Email is required!</p>
-    <!-- <p class="error">
+    <p *ngIf="userEmail.touched && userEmail.errors != null && userEmail.errors['required']" class="error">
+      Email is required!
+    </p>
+    <p *ngIf="userEmail.touched && userEmail.errors != null && userEmail.errors['emailValidator']" class="error">
       Email is not valid!
-    </p> -->
+    </p>
 
     <p class="field field-icon">
-      <label for="password"
-        ><span><i class="fas fa-lock"></i></span
-      ></label>
-      <input
-        #userPassword
-        type="password"
-        name="password"
-        id="password"
-        placeholder="******"
-        (keyup)="updateInputValue('password', userPassword.value)"
-      />
+      <label for="password"><span><i class="fas fa-lock"></i></span></label>
+      <input #userPassword="ngModel" [class.input-error]="userPassword.touched && !!userPassword.errors" type="password" name="password" id="password" placeholder="******" ngModel required 
+        minlength="4">
     </p>
-    <p *ngIf="showPasswordError" class="error">Password is required!</p>
-    <!--   <p class="error">
+    <p *ngIf="userPassword.touched && userPassword.errors != null && userPassword.errors['required']" class="error">
+      Password is required!
+    </p>
+    <p *ngIf="userPassword.touched && userPassword.errors != null && userPassword.errors['minlength']" class="error">
       Password must be at least 4 characters!
-    </p> -->
+    </p>
 
-    <button
-      type="button"
-      (click)="submitFormHandler()"
-      [disabled]="hasFormErrors"
-    >
-      Login
-    </button>
-    <app-loader [isLoading]="isLoading"></app-loader>
+    <button [disabled]="f.invalid">Login</button>
+    <app-loader [isLoading]="isLoading || f.invalid"></app-loader>
 
     <p class="text-center">
       Don't have an account?
       <a routerLink="/user/register">Register</a>
     </p>
+
   </fieldset>
 </form>
