@@ -1,8 +1,8 @@
 import { Component, OnDestroy } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { ActivationEnd, NavigationEnd, Router } from '@angular/router';
-import { asyncScheduler, Subscription } from 'rxjs';
-import { buffer, bufferTime, debounceTime, filter, map, observeOn, throttleTime } from 'rxjs/operators';
+import { Subscription } from 'rxjs';
+import { buffer, debounceTime, filter, map } from 'rxjs/operators';
 import { UserService } from '../../user/user.service';
 
 @Component({
