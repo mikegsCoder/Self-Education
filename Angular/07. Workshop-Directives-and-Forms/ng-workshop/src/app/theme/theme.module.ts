@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 import { ThemeService } from './theme.service';
 import { SharedModule } from '../shared/shared.module';
@@ -21,6 +22,7 @@ import { DetailComponent } from './detail/detail.component';
     DetailComponent
   ],
   imports: [
+    FormsModule,
     CommonModule,
     SharedModule,
     PostModule,
