@@ -17,4 +17,8 @@ export class ThemeService {
   loadTheme(id: string): Observable<ITheme<IPost>> {
     return this.http.get<ITheme<IPost>>(`${apiUrl}/themes/${id}`);
   }
+
+  saveTheme(data: any): Observable<ITheme<any>> {
+    return this.http.post<ITheme<any>>(`${apiUrl}/themes`, data, { withCredentials: true });
+  }
 }
