@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
+import { CoreModule } from './core/core.module';
 
 import { TestResolver } from './test.resolver';
 
@@ -12,7 +13,8 @@ import { TestResolver } from './test.resolver';
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    CoreModule,
   ],
   providers: [
     TestResolver
