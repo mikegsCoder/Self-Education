@@ -6,6 +6,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CoreModule } from './core/core.module';
 
+import { AccessGuard } from './guards/access.guard';
 import { TestResolver } from './test.resolver';
 
 @NgModule({
@@ -19,6 +20,7 @@ import { TestResolver } from './test.resolver';
     CoreModule,
   ],
   providers: [
+    AccessGuard,
     TestResolver
   ],
   bootstrap: [AppComponent]

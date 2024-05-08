@@ -1,5 +1,6 @@
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
+import { AccessGuard } from './guards/access.guard';
 import { TestResolver } from './test.resolver';
 
 const routes: Routes = [
