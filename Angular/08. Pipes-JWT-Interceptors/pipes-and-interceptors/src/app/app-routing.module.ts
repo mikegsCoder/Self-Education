@@ -19,6 +19,10 @@ const routes: Routes = [
       isLogged: true
     }
   },
+  {
+    path: 'user',
+    loadChildren: () => import('./user/user.module').then(m => m.UserModule)
+  }
 ];
 
 export const AppRoutingModule = RouterModule.forRoot(routes, { enableTracing: true });
