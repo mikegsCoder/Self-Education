@@ -37,4 +37,15 @@ export class UserService {
       },
     });
   }
+
+  loadUser(id: number): void {
+    const newState = { ...this.currentState, user: null };
+    this.state$.next(newState);
+    this.http.get<any>('/users').subscribe({
+      next: (user) => {
+        const newStateWithUser = { ...this.currentState, user };
+        this.state$.next(newStateWithUser);
+      }
+    });
+  }
 }
