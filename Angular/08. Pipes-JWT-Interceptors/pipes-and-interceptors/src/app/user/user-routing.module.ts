@@ -1,4 +1,3 @@
-// import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { ListComponent } from './list/list.component';
 import { UserListResolver } from './user-list.resolver';
