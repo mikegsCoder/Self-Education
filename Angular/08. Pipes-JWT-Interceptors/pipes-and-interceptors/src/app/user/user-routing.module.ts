@@ -2,6 +2,7 @@
 import { Routes, RouterModule } from '@angular/router';
 import { ListComponent } from './list/list.component';
 import { UserListResolver } from './user-list.resolver';
+import { DetailComponent } from './detail/detail.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,10 @@ const routes: Routes = [
     path: 'list',
     resolve: [UserListResolver],
     component: ListComponent
+  },
+  {
+    path: 'detail/:id',
+    component: DetailComponent
   }
 ];
 
