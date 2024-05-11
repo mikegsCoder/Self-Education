@@ -9,3 +9,4 @@
 - Workshop modules and routing
 - Directives and forms
 - Workshop directives and forms
+- Pipes JWT interceptors
