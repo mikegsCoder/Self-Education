@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { BehaviorSubject, Observable } from 'rxjs';
+import { map, tap } from 'rxjs/operators';
 import { IUser } from '../shared/interfaces';
 
 @Injectable()
@@ -16,5 +16,11 @@ export class AuthService {
 
   updateCurrentUser(user: IUser | null): void {
     this._currentUser.next(user);
+  }
+
+  login(data: any): Observable<any> {
+    return this.http.post(`/users/login`, data).pipe(
+      tap((user: IUser) => this._currentUser.next(user))
+    );
   }
 }
