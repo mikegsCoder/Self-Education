@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
-import { map, tap } from 'rxjs/operators';
+import { catchError, map, tap } from 'rxjs/operators';
 import { IUser } from '../shared/interfaces';
 
 @Injectable()
@@ -33,6 +33,16 @@ export class AuthService {
   logout(): Observable<any> {
     return this.http.post(`/users/logout`, {}).pipe(
       tap((user: IUser) => this._currentUser.next(null))
+    );
+  }
+
+  authenticate(): Observable<any> {
+    return this.http.get(`/users/profile`).pipe(
+      tap((user: IUser) => this._currentUser.next(user)),
+      catchError(() => {
+        this._currentUser.next(null);
+        return [null];
+      })
     );
   }
 }
