@@ -23,4 +23,10 @@ export class AuthService {
       tap((user: IUser) => this._currentUser.next(user))
     );
   }
+
+  register(data: any): Observable<any> {
+    return this.http.post(`/users/register`, data).pipe(
+      tap((user: IUser) => this._currentUser.next(user))
+    );
+  }
 }
