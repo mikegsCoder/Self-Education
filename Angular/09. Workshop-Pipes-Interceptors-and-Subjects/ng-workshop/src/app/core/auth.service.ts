@@ -29,4 +29,10 @@ export class AuthService {
       tap((user: IUser) => this._currentUser.next(user))
     );
   }
+
+  logout(): Observable<any> {
+    return this.http.post(`/users/logout`, {}).pipe(
+      tap((user: IUser) => this._currentUser.next(null))
+    );
+  }
 }
