@@ -16,11 +16,6 @@ const routes: Routes = [
     }
   },
   {
-    path: 'lazy',
-    loadChildren: () => import('./lazy/lazy.module').then(m => m.LazyModule),
-    data: { bestCase: 'it works' }
-  },
-  {
     path: '**',
     component: NotFoundComponent,
     data: {
