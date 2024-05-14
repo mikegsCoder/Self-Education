@@ -6,6 +6,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 
 import { storageServiceProvider } from './storage.service';
+import { AuthService } from './auth.service';
+import { appInterceptorProvider } from './app.interceptor';
 import { AuthGuard } from './guards/auth.guard';
 
 @NgModule({
@@ -19,7 +21,9 @@ import { AuthGuard } from './guards/auth.guard';
   ],
   providers: [
     storageServiceProvider,
-    AuthGuard
+    AuthGuard,
+    appInterceptorProvider,
+    AuthService
   ],
   exports: [
     HeaderComponent,
