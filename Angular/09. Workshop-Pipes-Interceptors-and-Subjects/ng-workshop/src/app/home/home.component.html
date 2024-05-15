@@ -4,7 +4,7 @@
     This forum is a place, where you can post your questions, comment, and
     discuss problems according to programming language you are interested in.
   </p>
-  <div class="logged" *ngIf="!isLogged">
+  <div class="logged" *ngIf="!(isLogged$ | async)">
     <ul>
       <li>
         <a routerLink="/user/login">
