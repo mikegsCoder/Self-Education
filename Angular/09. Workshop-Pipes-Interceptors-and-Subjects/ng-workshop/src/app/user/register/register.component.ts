@@ -6,7 +6,6 @@ import {
   emailValidator,
   rePasswordValidatorFactory,
 } from 'src/app/shared/validators';
-import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-register',

@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
 import { IUser } from '../shared/interfaces';
-import { catchError, tap } from 'rxjs/operators';
+import { tap } from 'rxjs/operators';
 import { AuthService } from '../core/auth.service';
-import { USE_BASE_URL } from '../shared/constants';
 
 @Injectable()
 export class UserService {
