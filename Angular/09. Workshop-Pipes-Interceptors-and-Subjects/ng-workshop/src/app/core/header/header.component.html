@@ -6,7 +6,7 @@
     <div class="mini-navbar">
       <ul>
         <li *ngIf="isLogged$ | async">
-          <a routerLink="/user/profile">John's profile</a>
+          <a routerLink="/user/profile">{{(currentUser$ | async)?.username}}'s profile</a>
         </li>
         <li *ngIf="isLogged$ | async">
           <a (click)="logoutHandler()">Logout</a>
