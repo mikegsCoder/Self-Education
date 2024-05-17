@@ -5,7 +5,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { IUser } from '../shared/interfaces';
 import { IRootState } from '../+store';
-import { login } from '../+store/actions';
+import { login, register } from '../+store/actions';
 
 @Injectable()
 export class AuthService {
@@ -32,7 +32,7 @@ export class AuthService {
 
   register(data: any): Observable<any> {
     return this.http.post(`/users/register`, data).pipe(
-      tap((user: IUser) => this._currentUser.next(user))
+      tap((user: IUser) => this.store.dispatch(register({ user })))
     );
   }
 

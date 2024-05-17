@@ -4,3 +4,4 @@ import { IUser } from '../shared/interfaces';
 const authNamespace = `[AUTH]`;
 
 export const login = createAction(`${authNamespace} Login`, props<{ user: IUser }>());
+export const register = createAction(`${authNamespace} Register`, props<{ user: IUser }>());
