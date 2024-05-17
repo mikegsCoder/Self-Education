@@ -9,6 +9,10 @@ import { HeaderComponent } from './core/header/header.component';
 import { FooterComponent } from './core/footer/footer.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
+import { StoreModule } from '@ngrx/store';
+import { reducers } from './+store';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { EffectsModule } from '@ngrx/effects';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { PostModule } from './post/post.module';
@@ -29,6 +33,8 @@ import { UserModule } from './user/user.module';
     ThemeModule,
     UserModule,
     CoreModule,
+    EffectsModule.forRoot(),
+    StoreModule.forRoot(reducers)
   ],
   providers: [
   ],
