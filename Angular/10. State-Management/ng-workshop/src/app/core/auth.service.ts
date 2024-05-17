@@ -1,18 +1,24 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Store } from '@ngrx/store';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { IUser } from '../shared/interfaces';
+import { IRootState } from '../+store';
+import { login } from '../+store/actions';
 
 @Injectable()
 export class AuthService {
 
   private _currentUser: BehaviorSubject<IUser | null> = new BehaviorSubject(undefined);
-  currentUser$ = this._currentUser.asObservable();
-  isLogged$ = this.currentUser$.pipe(map(user => !!user));
-  isReady$ = this.currentUser$.pipe(map(user => user !== undefined));
+  currentUser$ = this.store.select((state) => state.auth.currentUser);
+  isLogged$ = this.currentUser$.pipe(map(currentUser => currentUser !== null));
+  isReady$ = this.currentUser$.pipe(map(currentUser => currentUser !== undefined));
 
-  constructor(private http: HttpClient) { }
+  constructor(
+    private http: HttpClient,
+    private store: Store<IRootState>
+  ) { }
 
   updateCurrentUser(user: IUser | null): void {
     this._currentUser.next(user);
@@ -20,7 +26,7 @@ export class AuthService {
 
   login(data: any): Observable<any> {
     return this.http.post(`/users/login`, data).pipe(
-      tap((user: IUser) => this._currentUser.next(user))
+      tap((user: IUser) => this.store.dispatch(login({ user })))
     );
   }
 
