@@ -5,7 +5,7 @@ import { BehaviorSubject, Observable } from 'rxjs';
 import { catchError, map, tap } from 'rxjs/operators';
 import { IUser } from '../shared/interfaces';
 import { IRootState } from '../+store';
-import { login, register, logout } from '../+store/actions';
+import { login, authenticate, register, logout } from '../+store/actions';
 
 @Injectable()
 export class AuthService {
@@ -44,9 +44,9 @@ export class AuthService {
 
   authenticate(): Observable<any> {
     return this.http.get(`/users/profile`).pipe(
-      tap((user: IUser) => this._currentUser.next(user)),
+      tap((user: IUser) => this.store.dispatch(authenticate({ user }))),
       catchError(() => {
-        this._currentUser.next(null);
+        this.store.dispatch(authenticate({ user: null }));
         return [null];
       })
     );
