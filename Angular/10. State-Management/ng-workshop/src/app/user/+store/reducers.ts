@@ -1,7 +1,9 @@
 import { createReducer, on } from '@ngrx/store';
 import {
   userLoginSetErrorMessage,
-  userLoginSetLoading
+  userLoginSetLoading,
+  userRegisterSetLoading,
+  userRegisterSetErrorMessage
 } from './actions';
 
 export interface ILoginState {
@@ -20,6 +22,26 @@ export const loginReducer = createReducer<ILoginState>(
     return { ...state, errorMessage: action.message };
   }),
   on(userLoginSetLoading, (state, action) => {
+    return { ...state, isLoading: action.isLoading };
+  })
+);
+
+export interface IRegisterState {
+  errorMessage: string | null;
+  isLoading: boolean;
+}
+
+export const initialRegisterState: IRegisterState = {
+  errorMessage: null,
+  isLoading: false
+};
+
+export const registerReducer = createReducer<IRegisterState>(
+  initialRegisterState,
+  on(userRegisterSetErrorMessage, (state, action) => {
+    return { ...state, errorMessage: action.message };
+  }),
+  on(userRegisterSetLoading, (state, action) => {
     return { ...state, isLoading: action.isLoading };
   })
 );
