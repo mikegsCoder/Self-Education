@@ -3,7 +3,9 @@ import {
   userLoginSetErrorMessage,
   userLoginSetLoading,
   userRegisterSetLoading,
-  userRegisterSetErrorMessage
+  userRegisterSetErrorMessage,
+  userProfileSetEditMode,
+  userProfileSetErrorMessage
 } from './actions';
 
 export interface ILoginState {
@@ -44,4 +46,29 @@ export const registerReducer = createReducer<IRegisterState>(
   on(userRegisterSetLoading, (state, action) => {
     return { ...state, isLoading: action.isLoading };
   })
+);
+
+export interface IProfileState {
+  isEditMode: boolean;
+  isLoading: boolean;
+}
+
+export const initialProfileState: IProfileState = {
+  isEditMode: false,
+  isLoading: false
+};
+
+export const profileReducer = createReducer<IProfileState>(
+  initialProfileState,
+  on(userProfileSetEditMode, (state, action) => {
+    const isLoading = !action.isEdit ? false : state.isLoading;
+    return { ...state, isEditMode: action.isEdit, isLoading };
+  }),
+  on(userLoginSetLoading, (state, action) => {
+    return { ...state, isLoading: action.isLoading };
+  }),
+  on(userProfileSetErrorMessage, (state, action) => {
+    const isLoading = false;
+    return { ...state, errorMessage: action.message, isLoading };
+  }),
 );

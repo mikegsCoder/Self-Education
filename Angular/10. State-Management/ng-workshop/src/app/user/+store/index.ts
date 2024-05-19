@@ -1,10 +1,18 @@
 import { ActionReducerMap } from '@ngrx/store';
 import { IRootState } from 'src/app/+store';
-import { ILoginState, IRegisterState, loginReducer, registerReducer} from './reducers';
+import {
+  ILoginState,
+  IRegisterState,
+  IProfileState,
+  loginReducer,
+  registerReducer,
+  profileReducer,
+} from './reducers';
 
 export interface IUserState {
   readonly login: ILoginState;
   readonly register: IRegisterState;
+  readonly profile: IProfileState;
 }
 
 export interface IUserModuleState extends IRootState {
@@ -13,5 +21,6 @@ export interface IUserModuleState extends IRootState {
 
 export const reducers: ActionReducerMap<IUserState> = {
   login: loginReducer,
-  register: registerReducer
+  register: registerReducer,
+  profile: profileReducer,
 };
