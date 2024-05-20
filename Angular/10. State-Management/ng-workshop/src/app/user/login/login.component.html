@@ -30,8 +30,8 @@
       Password must be at least 4 characters!
     </p>
 
-    <button [disabled]="f.invalid">Login</button>
-    <app-loader [isLoading]="isLoading || f.invalid"></app-loader>
+    <button [disabled]="(isLoading$ | async) || f.invalid">Login</button>
+    <app-loader [isLoading]="(isLoading$ | async)"></app-loader>
 
     <p class="text-center">
       Don't have an account?
