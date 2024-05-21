@@ -11,7 +11,6 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 import { StoreModule } from '@ngrx/store';
 import { reducers } from './+store';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { EffectsModule } from '@ngrx/effects';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';

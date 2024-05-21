@@ -7,15 +7,16 @@ export interface IAuthState {
 }
 
 export const initialState: IAuthState = {
-  currentUser: undefined
+  currentUser: undefined,
 };
 
 const setCurrentUser = (
   state: IAuthState,
-  action: ReturnType<typeof login> |
-  ReturnType<typeof authenticate> |
-  ReturnType<typeof register> |
-  ReturnType<typeof updateUser>  
+  action:
+    | ReturnType<typeof login>
+    | ReturnType<typeof authenticate>
+    | ReturnType<typeof register>
+    | ReturnType<typeof updateUser>
 ) => {
   return { ...state, currentUser: action.user };
 };
