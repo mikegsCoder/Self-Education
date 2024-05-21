@@ -11,3 +11,4 @@
 - Workshop directives and forms
 - Pipes JWT interceptors
 - Workshop pipes interceptors and subjects
+- State management
