@@ -1,5 +1,5 @@
 <script>
-const possibleAnswers = [];
+const possibleAnswers = ['Yes', ' no', 'maybe', 'I don\'t know', 'Can you repeat the question?', 'You\'re not the boss of me now and you\'re not so big', 'You\'re not the boss of me now', 'You\'re not the boss of me now', 'You\'re not the boss of me now and you\'re not so big', 'Life is unfair', 'wildcard'];
 
 export default {
   data() {
