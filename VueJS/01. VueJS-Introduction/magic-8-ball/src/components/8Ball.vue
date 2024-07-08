@@ -3,7 +3,11 @@ const possibleAnswers = ['Yes', ' no', 'maybe', 'I don\'t know', 'Can you repeat
 
 export default {
   data() {
-    return {};
+    return {
+      isThinking: false,
+      hasAnswer: false,
+      answers: [],
+    };
   },
 
   methods: {
