@@ -24,6 +24,17 @@ export default {
       else {
         this.answers.push(currentAnswer);
       }
+
+      setTimeout(() => {
+        document.querySelector('img').src = 'https://static.wikia.nocookie.net/jacknjellify-recommended-characters/images/f/ff/8-Ball_IDFB_Pose.png';
+        this.hasAnswer = true;
+      }, 3000);
+
+      setTimeout(() => {
+        this.hasAnswer = false;
+        this.isThinking = false;
+        document.querySelector('img').src = 'https://static.wikia.nocookie.net/jacknjellify-recommended-characters/images/7/75/BR_1563664832241.png';
+      }, 8000);
     },
   },
 };
