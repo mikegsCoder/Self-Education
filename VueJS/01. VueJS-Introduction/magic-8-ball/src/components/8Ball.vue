@@ -30,7 +30,12 @@ export default {
       src="https://static.wikia.nocookie.net/jacknjellify-recommended-characters/images/4/40/8bal-roll.gif"
       alt="thinking"
     >
-    <div class="container">
+    <div v-if="hasAnswer" class="container">
+      <p v-for="answer in answers" :key="answer">
+        {{ answer }}
+      </p>
+    </div>
+    <div v-else class="container">
       <p>Ask your question outloud and press the button.</p>
       <p>The ball does not need access to your mic</p>
     </div>
