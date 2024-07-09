@@ -11,7 +11,20 @@ export default {
   },
 
   methods: {
-    giveWisdom() {},
+    giveWisdom() {
+      this.answers = [];
+      this.isThinking = true;
+      this.hasAnswer = false;
+      const randomIndex = Math.floor(Math.random() * possibleAnswers.length);
+      const currentAnswer = possibleAnswers[randomIndex];
+      
+      if (currentAnswer === 'wildcard') {
+        this.answers = ['Yes, no, maybe', 'I don\'t know', 'Can you repeat the question?', 'You\'re not the boss of me now and you\'re not so big', 'You\'re not the boss of me now', 'Life is unfair....'];
+      }
+      else {
+        this.answers.push(currentAnswer);
+      }
+    },
   },
 };
 </script>
@@ -40,7 +53,7 @@ export default {
       <p>The ball does not need access to your mic</p>
     </div>
 
-    <button>
+    <button @click="giveWisdom">
       Get my wisdom
     </button>
   </div>
