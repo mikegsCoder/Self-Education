@@ -5,6 +5,13 @@ export default {
       isDay: false,
       weather: '',
       showMore: false,
+      fruits: [
+        'Apples',
+        'Bananas',
+        'Oranges',
+        'Grapes',
+        'Strawberries',
+      ],
     };
   },
   methods: {
@@ -38,45 +45,53 @@ export default {
   </h1>
 </div>
 <hr>
-  <div>
-    <div v-if="weather === 'cloudy'">
-      ⛅ Couldy
-    </div>
-
-    <div v-else-if="weather === 'rainy'">
-      🌧️ Rainy
-    </div>
-
-    <div v-else-if="weather === 'stormy'">
-      🌩️ Stormy
-    </div>
-
-    <div v-else>
-      ☀️ Sunny
-    </div>
-
-    <h2>Example with function</h2>
-    <p>Today's weather is: {{ getWeather(weather) }}</p>
+<div>
+  <div v-if="weather === 'cloudy'">
+    ⛅ Couldy
   </div>
-  <div>
-    <h2>template example</h2>
-    <ul>
-      <li>Apples</li>
-      <li>Bananas</li>
-      <li>Oranges</li>
-      <li>Grapes</li>
-      <li>Strawberries</li>
 
-      <li v-show="showMore">
-        Watermelons123
-      </li>
-
-      <template v-if="showMore">
-        <li>Pineapples</li>
-        <li>Blueberries</li>
-        <li>Mangoes</li>
-        <li>Watermelons</li>
-      </template>
-    </ul>
+  <div v-else-if="weather === 'rainy'">
+    🌧️ Rainy
   </div>
+
+  <div v-else-if="weather === 'stormy'">
+    🌩️ Stormy
+  </div>
+
+  <div v-else>
+    ☀️ Sunny
+  </div>
+
+  <h2>Example with function</h2>
+  <p>Today's weather is: {{ getWeather(weather) }}</p>
+</div>
+<div>
+  <h2>template example</h2>
+  <ul>
+    <li>Apples</li>
+    <li>Bananas</li>
+    <li>Oranges</li>
+    <li>Grapes</li>
+    <li>Strawberries</li>
+
+    <li v-show="showMore">
+      Watermelons123
+    </li>
+
+    <template v-if="showMore">
+      <li>Pineapples</li>
+      <li>Blueberries</li>
+      <li>Mangoes</li>
+      <li>Watermelons</li>
+    </template>
+  </ul>
+</div>
+<div>
+  <h2>v-for examples</h2>
+  <ul>
+    <li v-for="fruit in fruits" :key="fruit">
+      {{ fruit }}
+    </li>
+  </ul>
+</div>
 </template>
