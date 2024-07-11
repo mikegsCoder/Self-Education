@@ -12,6 +12,23 @@ export default {
         'Grapes',
         'Strawberries',
       ],
+      inventory: [
+        {
+          id: 1,
+          name: 'Electronics',
+          products: [
+            { id: 1, name: 'Smartphone', price: 499.99, quantity: 2 },
+            { id: 2, name: 'Laptop', price: 999.99, quantity: 1 },
+          ],
+        },
+        {
+          id: 2,
+          name: 'Audio',
+          products: [
+            { id: 3, name: 'Headphones', price: 79.99, quantity: 3 },
+          ],
+        },
+      ],
     };
   },
   methods: {
@@ -91,6 +108,17 @@ export default {
   <ul>
     <li v-for="fruit in fruits" :key="fruit">
       {{ fruit }}
+    </li>
+  </ul>
+  <ul>
+    <li v-for="category in inventory" :key="category.id">
+      {{ category.name }}
+
+      <ul>
+        <li v-for="product in category.products" :key="`prod-${product.id}`">
+          {{ product.name }} for {{ product.price }}
+        </li>
+      </ul>
     </li>
   </ul>
 </div>
