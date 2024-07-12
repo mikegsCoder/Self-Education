@@ -30,6 +30,12 @@ export default {
           ],
         },
       ],
+      cartProducts: [
+        { id: 1, name: 'Smartphone', price: 499.99, quantity: 2 },
+        { id: 2, name: 'Laptop', price: 999.99, quantity: 1 },
+        { id: 3, name: 'Headphones', price: 79.99, quantity: 3 },
+        { id: 4, name: 'Tablet', price: 299.99, quantity: 2 },
+      ],
     };
   },
   methods: {
@@ -47,6 +53,18 @@ export default {
     },
     onClick(name) {
       console.log('I was CLICKED and my name is ', name);
+    },
+    onInput(event) {
+      // console.log('@input was triggered', event.target.value);
+      this.inputValue = event.target.value;
+    },
+    getCartTotal() {
+      console.log('Was triggered: getCartTotal');
+      let totalSum = 0;
+      this.cartProducts.forEach((prod) => {
+        totalSum += prod.price * prod.quantity;
+      });
+      return totalSum;
     },
   },
 };
@@ -140,4 +158,14 @@ export default {
   </button>
 </div>
 
+<hr>
+<div>
+  <h2>Computed example</h2>
+  <ul>
+    <li v-for="prod in cartProducts" :key="prod.name">
+      {{ prod.quantity }} x {{ prod.name }} / {{ prod.price }}
+    </li>
+  </ul>
+  <p>Total sum: <strong>{{ getCartTotal() }}$</strong></p>
+</div>
 </template>
