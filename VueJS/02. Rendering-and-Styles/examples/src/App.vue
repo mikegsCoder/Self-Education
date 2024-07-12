@@ -38,6 +38,16 @@ export default {
       ],
     };
   },
+  computed: {
+    cartTotal() {
+      console.log('Was triggered: cartTotal');
+      let totalSum = 0;
+      this.cartProducts.forEach((prod) => {
+        totalSum += prod.price * prod.quantity;
+      });
+      return totalSum;
+    },
+  },
   methods: {
     getWeather(weather) {
       switch (weather) {
@@ -65,6 +75,9 @@ export default {
         totalSum += prod.price * prod.quantity;
       });
       return totalSum;
+    },
+    onFormChange(field, event) {
+      this.registerData[field] = event.target.value;
     },
   },
 };
@@ -167,5 +180,7 @@ export default {
     </li>
   </ul>
   <p>Total sum: <strong>{{ getCartTotal() }}$</strong></p>
+  <p>COMPUTED Total sum: <strong>{{ cartTotal }}$</strong></p>
 </div>
+
 </template>
