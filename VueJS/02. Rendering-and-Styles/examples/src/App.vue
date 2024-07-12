@@ -2,6 +2,7 @@
 export default {
   data() {
     return {
+      inputValue: '',
       isDay: false,
       weather: '',
       showMore: false,
@@ -43,6 +44,9 @@ export default {
         default:
           return '☀️ Sunny';
       }
+    },
+    onClick(name) {
+      console.log('I was CLICKED and my name is ', name);
     },
   },
 };
@@ -125,4 +129,15 @@ export default {
     {{ n }}
   </div> -->
 </div>
+
+<hr>
+<div>
+  <h2>Events</h2>
+  <p>inputValue: {{ inputValue }}</p>
+  <input type="text" @input="onInput">
+  <button @click="onClick('Mihail')">
+    Click me
+  </button>
+</div>
+
 </template>
