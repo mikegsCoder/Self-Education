@@ -25,7 +25,13 @@ export default {
       this.handleTimeChange();
     },
     pauseTimer() {},
-    resetTimer() {},
+    resetTimer() {
+      this.timerIsStarted = false;
+      this.currentTime = 0;
+      this.timerValue = '00:00:25';
+      this.pauseBtnText = 'Stop';
+      this.warrningMsg = '';
+    },
   },
 };
 </script>
