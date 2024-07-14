@@ -17,7 +17,13 @@ export default {
     setTimer(event) {
       this.timerValue = event.target.value;
     },
-    startTimer() {},
+    startTimer() {
+      this.timerIsStarted = true;
+      const [h, m, s] = this.timerValue.split(':');
+      this.currentTime = Number(s) + (Number(m) * 60) + (Number(h) * 3600);
+      this.timerMax = this.currentTime;
+      this.handleTimeChange();
+    },
     pauseTimer() {},
     resetTimer() {},
   },
