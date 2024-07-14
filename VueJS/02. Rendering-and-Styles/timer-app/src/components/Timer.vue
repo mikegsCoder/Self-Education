@@ -17,6 +17,9 @@ export default {
     setTimer(event) {
       this.timerValue = event.target.value;
     },
+    startTimer() {},
+    pauseTimer() {},
+    resetTimer() {},
   },
 };
 </script>
@@ -33,6 +36,18 @@ export default {
       type="text"
       @change="setTimer"
     >
+  </div>
+
+  <div class="container">
+    <button id="startBtn" :disabled="timerIsStarted" @click="startTimer">
+      Start
+    </button>
+    <button id="pauseBth" :disabled="!timerIsStarted" @click="pauseTimer">
+      {{ pauseBtnText }}
+    </button>
+    <button id="resetBtn" :disabled="!timerIsStarted" @click="resetTimer">
+      Reset
+    </button>
   </div>
 
 </template>
