@@ -111,4 +111,16 @@ export default {
 </template>
 
 <style scoped>
+input {
+  width: 40%;
+}
+.container {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.warning {
+  color: red;
+  border: 1px solide red;
+}
 </style>
