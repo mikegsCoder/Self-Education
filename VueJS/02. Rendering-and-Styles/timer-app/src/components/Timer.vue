@@ -22,7 +22,13 @@ export default {
       return '';
     }
   },
-  watch: {},
+  watch: {
+    currentTime(value) {
+      if (this.timerMax * 0.2 >= value && this.timerIsStarted) {
+        this.warrningMsg = 'There is not much time left!';
+      }
+    }
+  },
   methods: {
     setTimer(event) {
       this.timerValue = event.target.value;
