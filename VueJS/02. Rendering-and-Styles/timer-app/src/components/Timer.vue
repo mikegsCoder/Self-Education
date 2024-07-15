@@ -11,7 +11,17 @@ export default {
       warrningMsg: '',
     };
   },
-  computed: {},
+  computed: {
+    timeRepresent() {
+      if (this.timerIsStarted) {
+        const hours = Math.floor(this.currentTime / 3600);
+        const minutes = Math.floor((this.currentTime - hours * 3600) / 60);
+        const seconds = this.currentTime % 3600 % 60;
+        return `${String(hours).padStart(2, '0')}:${String(minutes).padStart(2, '0')}:${String(seconds).padStart(2, '0')}`;
+      }
+      return '';
+    }
+  },
   watch: {},
   methods: {
     setTimer(event) {
@@ -82,6 +92,15 @@ export default {
     <button id="resetBtn" :disabled="!timerIsStarted" @click="resetTimer">
       Reset
     </button>
+  </div>
+
+  <div class="container">
+    <label for="current">Time Left</label>
+    <input
+      id="current"
+      type="text"
+      :value="timeRepresent"
+    >
   </div>
 
 </template>
