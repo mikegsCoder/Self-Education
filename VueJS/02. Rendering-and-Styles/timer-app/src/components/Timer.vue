@@ -24,7 +24,17 @@ export default {
       this.timerMax = this.currentTime;
       this.handleTimeChange();
     },
-    handleTimeChange() {},
+    handleTimeChange() {
+      const interval = setInterval(() => {
+        if (this.isPaused)
+          clearInterval(interval);
+        if (this.currentTime === 0) {
+          clearInterval(interval);
+          this.resetTimer();
+        }
+        this.currentTime -= 1;
+      }, 1000);
+    },
     pauseTimer(event) {
       this.isPaused = true;
       const text = event.target.textContent;
