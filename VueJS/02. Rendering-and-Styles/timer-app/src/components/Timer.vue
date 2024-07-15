@@ -103,6 +103,11 @@ export default {
     >
   </div>
 
+  <p v-if="warrningMsg" class="warning">
+    {{ warrningMsg }}
+  </p>
+
+  <progress :value="currentTime" :max="timerMax"></progress>
 </template>
 
 <style scoped>
