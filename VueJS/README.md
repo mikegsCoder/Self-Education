@@ -4,3 +4,4 @@
 
 - VueJS introduction
 - Rendering and styles
+- Components
