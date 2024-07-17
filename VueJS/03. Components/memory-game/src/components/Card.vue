@@ -22,7 +22,10 @@ export default {
   },
   emits: ['onClick'],
   computed: {
-    isActive() {},
+    isActive() {
+      const selected = this.activeItems.map(i => i.idx);
+      return this.guessedItems.includes(this.type) || selected.includes(this.idx);
+    },
   },
   methods: {
     onSelect() {},
