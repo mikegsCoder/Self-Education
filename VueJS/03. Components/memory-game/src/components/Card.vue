@@ -28,7 +28,10 @@ export default {
     },
   },
   methods: {
-    onSelect() {},
+    onSelect() {
+      if (!this.isActive)
+        this.$emit('onClick', this.idx, this.type);
+    },
   },
 };
 </script>
