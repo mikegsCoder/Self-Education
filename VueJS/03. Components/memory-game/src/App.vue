@@ -32,11 +32,27 @@ export default {
   },
   computed: {},
   watch: {},
-  methods: {},
+  methods: {
+    onStart() {
+      this.isStarted = true;
+      this.hasWon = false;
+      this.hasLost = false;
+      this.startGameTimer();
+    },
+    startGameTimer() {},
+  },
 };
 </script>
 
 <template>
+  <div class="container">
+    <button v-if="!isStarted" @click="onStart">
+      Start game
+    </button>
+
+    <template v-else>
+    </template>
+  </div>
 </template>
 
 <style scoped>
