@@ -1,4 +1,5 @@
 <script>
+import Card from './components/Card.vue';
 
 const defaultCards = [
   { idx: 1, type: 'Vue', img: 'https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg' },
@@ -14,7 +15,9 @@ const defaultCards = [
 let interval = null;
 
 export default {
-  components: {},
+  components: {
+    Card,
+  },
   data() {
     return {};
   },
