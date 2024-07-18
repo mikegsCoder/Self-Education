@@ -47,4 +47,8 @@ export default {
 </template>
 
 <style scoped>
+.card {
+  margin: 0;
+  text-align: center;
+}
 </style>
