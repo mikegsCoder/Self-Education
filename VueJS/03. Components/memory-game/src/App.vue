@@ -19,7 +19,16 @@ export default {
     Card,
   },
   data() {
-    return {};
+    return {
+      difficulty: null,
+      defaultTimer: 60000,
+      timer: 0,
+      selectedItem: [],
+      guessedItems: [],
+      isStarted: false,
+      hasWon: false,
+      hasLost: false,
+    };
   },
   computed: {},
   watch: {},
