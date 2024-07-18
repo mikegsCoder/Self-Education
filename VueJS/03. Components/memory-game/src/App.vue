@@ -39,7 +39,9 @@ export default {
       this.hasLost = false;
       this.startGameTimer();
     },
+    onStop() {},
     startGameTimer() {},
+    timeFormatter(seconds) {},
   },
 };
 </script>
@@ -51,6 +53,12 @@ export default {
     </button>
 
     <template v-else>
+      <span>{{ timeFormatter(timer) }}</span>
+      <progress :value="`${timer}`" :max="`${defaultTimer}`"></progress>
+
+      <button v-if="isStarted" @click="onStop">
+        Stop game
+      </button>
     </template>
   </div>
 </template>
