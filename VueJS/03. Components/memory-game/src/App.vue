@@ -39,7 +39,12 @@ export default {
       this.hasLost = false;
       this.startGameTimer();
     },
-    onStop() {},
+    onStop() {
+      this.isStarted = false;
+      clearInterval(interval);
+      this.guessedItems = [];
+      this.selectedItem = [];
+    },
     startGameTimer() {},
     timeFormatter(seconds) {},
   },
