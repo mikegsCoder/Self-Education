@@ -45,7 +45,19 @@ export default {
       this.guessedItems = [];
       this.selectedItem = [];
     },
-    startGameTimer() {},
+    startGameTimer() {
+      let seconds = 60000;
+      this.timer = seconds;
+      interval = setInterval(() => {
+        seconds -= 1000;
+        this.timer = seconds;
+        if (seconds === 0) this.handleLostGame();
+      }, 1000);
+    },
+    handleLostGame() {
+      this.hasLost = true;
+      this.onStop();
+    },
     timeFormatter(seconds) {},
   },
 };
