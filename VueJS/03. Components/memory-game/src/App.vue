@@ -89,6 +89,15 @@ export default {
       </button>
     </template>
   </div>
+  <div class="container">
+    <p v-if="hasWon" class="container">
+      ✨ Congratulations, you have won! ✨
+    </p>
+
+    <p v-if="hasLost" class="container">
+      😥 I'm sorry, you have lost! 😥
+    </p>
+  </div>
 </template>
 
 <style scoped>
