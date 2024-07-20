@@ -33,6 +33,7 @@ export default {
   computed: {},
   watch: {},
   methods: {
+    handleSelect(idx, type) {},
     onStart() {
       this.isStarted = true;
       this.hasWon = false;
@@ -97,6 +98,18 @@ export default {
     <p v-if="hasLost" class="container">
       😥 I'm sorry, you have lost! 😥
     </p>
+  </div>
+  <div class="cardGrid">
+    <Card
+      v-for="card in cards"
+      :key="card.idx"
+      :type="card.type"
+      :img="card.img"
+      :idx="card.idx"
+      :active-items="selectedItem"
+      :guessed-items="guessedItems"
+      @on-click="handleSelect"
+    />
   </div>
 </template>
 
