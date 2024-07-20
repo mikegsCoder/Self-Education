@@ -33,7 +33,15 @@ export default {
   computed: {},
   watch: {},
   methods: {
-    handleSelect(idx, type) {},
+    handleSelect(idx, type) {
+      if (!this.isStarted) return;
+
+      if (this.selectedItem.length < 2) {
+        this.selectedItem.push({ idx, type });
+      } else if (this.selectedItem.length === 2) {
+        this.selectedItem = [{ idx, type }];
+      }
+    },
     onStart() {
       this.isStarted = true;
       this.hasWon = false;
