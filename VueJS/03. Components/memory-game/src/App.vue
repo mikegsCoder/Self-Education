@@ -31,7 +31,24 @@ export default {
     };
   },
   computed: {},
-  watch: {},
+  watch: {
+    selectedItem: {
+      handler(newVal) {
+        if (newVal.length === 2 && (newVal[0].type === newVal[1].type))
+          this.guessedItems.push(newVal[0].type);
+      },
+      deep: true,
+    },
+    guessedItems: {
+      handler(newVal) {
+        if (this.cards.length / 2 === newVal.length) {
+          this.hasWon = true;
+          setTimeout(() => this.onStop(), 2000);
+        }
+      },
+      deep: true,
+    },
+  },
   methods: {
     handleSelect(idx, type) {
       if (!this.isStarted) return;
