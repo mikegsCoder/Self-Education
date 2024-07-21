@@ -165,4 +165,16 @@ export default {
 </template>
 
 <style scoped>
+.cardGrid {
+  max-width: 60em;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(50px, 1fr));
+  gap: 1rem;
+}
+.container {
+  max-width: 400px;
+  margin: 2rem auto;
+  text-align: center;
+}
 </style>
