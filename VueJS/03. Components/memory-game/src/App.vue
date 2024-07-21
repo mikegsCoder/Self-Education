@@ -14,6 +14,8 @@ const defaultCards = [
 
 let interval = null;
 
+function shuffle(initialArray){};
+
 export default {
   components: {
     Card,
@@ -30,7 +32,12 @@ export default {
       hasLost: false,
     };
   },
-  computed: {},
+  computed: {
+    cards() {
+      if (this.isStarted) return shuffle(defaultCards);
+      return defaultCards;
+    },
+  },
   watch: {
     selectedItem: {
       handler(newVal) {
