@@ -15,12 +15,27 @@ export default {
       cartProducts: [],
     };
   },
-  methods: {},
+  methods: {
+    onNavSelect(selectedView) {
+      this.view = selectedView;
+    },
+    onAddToCart(productId) {
+      this.cartProducts.push(productId);
+    },
+  },
 };
 </script>
 
 <template>
+<AppHeader :cart-products="cartProducts" @on-select="onNavSelect" />
+<main>
+  <component :is="view" :cart-products="cartProducts" @on-add-to-cart="onAddToCart" />
+</main>
+<AppFooter />
 </template>
 
 <style scoped>
+main {
+  padding: 1rem 2rem;
+}
 </style>
