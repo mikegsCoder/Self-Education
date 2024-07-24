@@ -2,12 +2,14 @@
 import AppHeader from './components/AppHeader.vue';
 import AppFooter from './components/AppFooter.vue';
 import Home from './views/Home.vue';
+import Contacts from './views/Contacts.vue';
 
 export default {
   components: {
     AppHeader,
     AppFooter,
-    Home
+    Home,
+    Contacts
   },
   data() {
     return {
