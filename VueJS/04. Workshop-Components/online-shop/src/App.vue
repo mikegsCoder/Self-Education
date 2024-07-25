@@ -3,13 +3,15 @@ import AppHeader from './components/AppHeader.vue';
 import AppFooter from './components/AppFooter.vue';
 import Home from './views/Home.vue';
 import Contacts from './views/Contacts.vue';
+import About from './views/About.vue';
 
 export default {
   components: {
     AppHeader,
     AppFooter,
     Home,
-    Contacts
+    Contacts,
+    About
   },
   data() {
     return {
