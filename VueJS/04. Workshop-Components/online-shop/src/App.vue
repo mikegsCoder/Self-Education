@@ -4,6 +4,7 @@ import AppFooter from './components/AppFooter.vue';
 import Home from './views/Home.vue';
 import Contacts from './views/Contacts.vue';
 import About from './views/About.vue';
+import Cart from './views/Cart.vue';
 
 export default {
   components: {
@@ -11,7 +12,8 @@ export default {
     AppFooter,
     Home,
     Contacts,
-    About
+    About,
+    Cart
   },
   data() {
     return {
