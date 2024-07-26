@@ -5,6 +5,7 @@ import Home from './views/Home.vue';
 import Contacts from './views/Contacts.vue';
 import About from './views/About.vue';
 import Cart from './views/Cart.vue';
+import Shop from './views/Shop/Shop.vue';
 
 export default {
   components: {
@@ -13,7 +14,8 @@ export default {
     Home,
     Contacts,
     About,
-    Cart
+    Cart,
+    Shop
   },
   data() {
     return {
