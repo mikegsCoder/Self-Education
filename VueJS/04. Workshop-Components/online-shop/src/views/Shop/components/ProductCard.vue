@@ -13,10 +13,10 @@ export default {
         rating: 0,
         stock: 0,
         brand: 'DEFAULT ITEM',
-        category: 'womens-dresses',
-        thumbnail: 'https://i.dummyjson.com/data/products/41/thumbnail.webp',
+        category: 'groceries',
+        thumbnail: 'https://cdn.dummyjson.com/products/images/groceries/Apple/thumbnail.png',
         images: [
-          'https://i.dummyjson.com/data/products/41/1.jpg',
+          'https://cdn.dummyjson.com/products/images/groceries/Apple/1.png',
         ],
       }),
     },
