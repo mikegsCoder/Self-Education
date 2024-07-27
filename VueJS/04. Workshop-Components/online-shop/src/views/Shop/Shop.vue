@@ -21,7 +21,9 @@ export default {
     },
   },
   methods: {
-    onFilterSelect(selected) {},
+    onFilterSelect(selected) {
+      this.selectedFilter = selected;
+    },
   },
 };
 </script>
