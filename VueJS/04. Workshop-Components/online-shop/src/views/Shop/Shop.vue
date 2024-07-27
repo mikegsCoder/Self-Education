@@ -13,7 +13,12 @@ export default {
     };
   },
   computed: {
-    displayProducts() {},
+    displayProducts() {
+      if (this.selectedFilter === '') {
+        return this.products;
+      }
+      return this.products.filter(product => product.category === this.selectedFilter);
+    },
   },
   methods: {
     onFilterSelect(selected) {},
