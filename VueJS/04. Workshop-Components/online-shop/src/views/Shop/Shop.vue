@@ -44,4 +44,32 @@ export default {
 </template>
 
 <style scoped>
+.products {
+  display: grid;
+  grid-template-columns: repeat(var(--product-cols, 1), 1fr);
+  gap: 1rem;
+}
+
+.products .title{
+  color: red;
+  font-size: 1.25rem;
+}
+
+@media screen and (min-width: 560px) {
+  .products {
+    --product-cols: 2;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .products {
+    --product-cols: 3;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .products {
+    --product-cols: 4;
+  }
+}
 </style>
