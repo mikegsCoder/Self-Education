@@ -4,6 +4,7 @@ export default {
     return {
       name: '',
       age: null,
+      carColor: ['Volvo'],
     };
   },
 };
@@ -19,6 +20,24 @@ export default {
   <div>
     <label for="age">Age</label>
     <input id="age" v-model="age" type="number">
+  </div>
+
+  <div>
+    <label>Car color</label>
+    <ul>
+      <li>
+        <label for="volvo">Volvo</label>
+        <input id="volvo" v-model="carColor" value="Volvo" type="checkbox">
+      </li>
+      <li>
+        <label for="bmw">BMW</label>
+        <input id="bmw" v-model="carColor" value="BMW" type="checkbox">
+      </li>
+      <li>
+        <label for="mercedes">Mercedes</label>
+        <input id="mercedes" v-model="carColor" value="Mercedes" type="checkbox">
+      </li>
+    </ul>
   </div>
 </form>
 </template>
