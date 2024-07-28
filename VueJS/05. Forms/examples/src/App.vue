@@ -5,6 +5,7 @@ export default {
       name: '',
       age: null,
       carColor: ['Volvo'],
+      seats: 'Leather',
     };
   },
 };
@@ -36,6 +37,20 @@ export default {
       <li>
         <label for="mercedes">Mercedes</label>
         <input id="mercedes" v-model="carColor" value="Mercedes" type="checkbox">
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <label for="">Choose seats</label>
+    <ul>
+      <li>
+        <label for="leather">Leather seats</label>
+        <input id="leather" v-model="seats" type="radio" value="Leather">
+      </li>
+      <li>
+        <label for="normal">Normal seats</label>
+        <input id="normal" v-model="seats" type="radio" value="Normal">
       </li>
     </ul>
   </div>
