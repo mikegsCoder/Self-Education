@@ -6,6 +6,7 @@ export default {
       age: null,
       carColor: ['Volvo'],
       seats: 'Leather',
+      rims: null,
     };
   },
 };
@@ -53,6 +54,24 @@ export default {
         <input id="normal" v-model="seats" type="radio" value="Normal">
       </li>
     </ul>
+  </div>
+
+  <div>
+    <label for="rims">Rims size</label>
+    <select id="rims" v-model="rims">
+      <option disabled>
+        Select
+      </option>
+      <option :value="16">
+        16
+      </option>
+      <option :value="17">
+        17
+      </option>
+      <option :value="{ size: 18 }">
+        18
+      </option>
+    </select>
   </div>
 </form>
 </template>
