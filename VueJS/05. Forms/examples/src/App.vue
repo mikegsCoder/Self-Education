@@ -7,6 +7,7 @@ export default {
       carColor: ['Volvo'],
       seats: 'Leather',
       rims: null,
+      terms: '',
     };
   },
 };
@@ -72,6 +73,11 @@ export default {
         18
       </option>
     </select>
+  </div>
+
+  <div>
+    <label for="terms">Accept our terms and conditions</label>
+    <input id="terms" v-model="terms" type="checkbox" true-value="yes" false-value="no">
   </div>
 </form>
 </template>
