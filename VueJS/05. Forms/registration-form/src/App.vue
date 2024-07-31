@@ -11,6 +11,7 @@ export default {
       data: {
         fName: '',
         lName: '',
+        email: '',
       },
       formData: null,
     };
@@ -56,6 +57,16 @@ export default {
         <div class="error-msg">
           {{ error.$message }}
         </div>
+      </div>
+    </div>
+  </div>
+  <!-- email -->
+  <div>
+    <label for="email">Email</label>
+    <input id="email" v-model="v$.data.email.$model" type="email">
+    <div v-for="error of v$.data.email.$errors" :key="error.$uid" class="input-errors">
+      <div class="error-msg">
+        {{ error.$message }}
       </div>
     </div>
   </div>
