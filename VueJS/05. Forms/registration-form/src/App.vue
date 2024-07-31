@@ -10,6 +10,7 @@ export default {
     return {
       data: {
         fName: '',
+        lName: '',
       },
       formData: null,
     };
@@ -41,6 +42,16 @@ export default {
       <label for="fname">First name</label>
       <input id="fname" v-model="v$.data.fName.$model" type="text">
       <div v-for="error of v$.data.fName.$errors" :key="error.$uid" class="input-errors">
+        <div class="error-msg">
+          {{ error.$message }}
+        </div>
+      </div>
+    </div>
+    <!-- lastName -->
+    <div>
+      <label for="lname">Last name</label>
+      <input id="lname" v-model="v$.data.lName.$model" type="text">
+      <div v-for="error of v$.data.lName.$errors" :key="error.$uid" class="input-errors">
         <div class="error-msg">
           {{ error.$message }}
         </div>
