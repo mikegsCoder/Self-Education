@@ -30,6 +30,10 @@ export default {
       data: {
         fName: { required: helpers.withMessage('First name is required.', required) },
         lName: { required: helpers.withMessage('Last name is required.', required) },
+        email: {
+          required: helpers.withMessage('Email is required.', required),
+          email: helpers.withMessage('Invalid email provided.', email)
+        },
       },
     };
   },
