@@ -28,6 +28,7 @@ export default {
     return {
       data: {
         fName: { required: helpers.withMessage('First name is required.', required) },
+        lName: { required: helpers.withMessage('Last name is required.', required) },
       },
     };
   },
