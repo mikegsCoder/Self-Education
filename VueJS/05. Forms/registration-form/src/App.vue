@@ -12,6 +12,7 @@ export default {
         fName: '',
         lName: '',
         email: '',
+        age: 0,
       },
       formData: null,
     };
@@ -34,6 +35,7 @@ export default {
           required: helpers.withMessage('Email is required.', required),
           email: helpers.withMessage('Invalid email provided.', email)
         },
+        age: { betweenValue: helpers.withMessage('Age must be between 1 and 100.', between(1, 100)) },
       },
     };
   },
