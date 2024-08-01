@@ -13,6 +13,7 @@ export default {
         lName: '',
         email: '',
         age: 0,
+        skills: [],
       },
       formData: null,
     };
@@ -36,6 +37,7 @@ export default {
           email: helpers.withMessage('Invalid email provided.', email)
         },
         age: { betweenValue: helpers.withMessage('Age must be between 1 and 100.', between(1, 100)) },
+        skills: { validateSkills: helpers.withMessage('Skills are required.', validateSkills) },
       },
     };
   },
@@ -81,6 +83,30 @@ export default {
     <label for="age">Age</label>
     <input id="age" v-model="v$.data.age.$model" type="number">
     <div v-for="error of v$.data.age.$errors" :key="error.$uid" class="input-errors">
+      <div class="error-msg">
+        {{ error.$message }}
+      </div>
+    </div>
+  </div>
+  <!-- skills -->
+  <div>
+    <p>Skillset</p>
+    <label>
+      <input v-model="data.skills" type="checkbox" value="webDevelopment">
+      Web Development
+    </label>
+    <label>
+      <input v-model="data.skills" type="checkbox" value="graphicDesign">
+      Graphic Design
+    </label>
+    <label>
+      <input v-model="data.skills" type="checkbox" value="projectManagement">
+      Project Management</label>
+    <label>
+      <input v-model="data.skills" type="checkbox" value="communication">
+      Communication
+    </label>
+    <div v-for="error of v$.data.skills.$errors" :key="error.$uid" class="input-errors">
       <div class="error-msg">
         {{ error.$message }}
       </div>
