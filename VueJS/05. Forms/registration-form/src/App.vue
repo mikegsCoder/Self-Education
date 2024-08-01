@@ -74,6 +74,16 @@ export default {
       </div>
     </div>
   </div>
+  <!-- age -->
+  <div>
+    <label for="age">Age</label>
+    <input id="age" v-model="v$.data.age.$model" type="number">
+    <div v-for="error of v$.data.age.$errors" :key="error.$uid" class="input-errors">
+      <div class="error-msg">
+        {{ error.$message }}
+      </div>
+    </div>
+  </div>
 
   <button>Submit</button>
 </form>
