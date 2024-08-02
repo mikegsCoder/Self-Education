@@ -14,6 +14,7 @@ export default {
         email: '',
         age: 0,
         skills: [],
+        gender: '',
       },
       formData: null,
     };
@@ -107,6 +108,24 @@ export default {
       Communication
     </label>
     <div v-for="error of v$.data.skills.$errors" :key="error.$uid" class="input-errors">
+      <div class="error-msg">
+        {{ error.$message }}
+      </div>
+    </div>
+  </div>
+  <!-- gender -->
+  <div>
+    <p>Gender</p>
+    <label>
+      <input v-model="data.gender" type="radio" value="male">
+      Male
+    </label>
+    <label>
+      <input v-model="data.gender" type="radio" value="female"> Female
+    </label>
+    <label>
+      <input v-model="data.gender" type="radio" value="other"> Other</label>
+    <div v-for="error of v$.data.gender.$errors" :key="error.$uid" class="input-errors">
       <div class="error-msg">
         {{ error.$message }}
       </div>
