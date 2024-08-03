@@ -2,6 +2,9 @@
 import { useVuelidate } from '@vuelidate/core';
 import { email, required, between, helpers } from '@vuelidate/validators';
 
+// custom validator for skills:
+const validateSkills = (value) => value.length > 0;
+
 export default {
   setup() {
     return { v$: useVuelidate() };
@@ -47,96 +50,96 @@ export default {
 </script>
 
 <template>
-<form class="form" action="" @submit.prevent="onSubmit">
-  <div class="two-cols">
-    <!-- firstName -->
+  <form class="form" action="" @submit.prevent="onSubmit">
+    <div class="two-cols">
+      <!-- firstName -->
+      <div>
+        <label for="fname">First name</label>
+        <input id="fname" v-model="v$.data.fName.$model" type="text">
+        <div v-for="error of v$.data.fName.$errors" :key="error.$uid" class="input-errors">
+          <div class="error-msg">
+            {{ error.$message }}
+          </div>
+        </div>
+      </div>
+      <!-- lastName -->
+      <div>
+        <label for="lname">Last name</label>
+        <input id="lname" v-model="v$.data.lName.$model" type="text">
+        <div v-for="error of v$.data.lName.$errors" :key="error.$uid" class="input-errors">
+          <div class="error-msg">
+            {{ error.$message }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- email -->
     <div>
-      <label for="fname">First name</label>
-      <input id="fname" v-model="v$.data.fName.$model" type="text">
-      <div v-for="error of v$.data.fName.$errors" :key="error.$uid" class="input-errors">
+      <label for="email">Email</label>
+      <input id="email" v-model="v$.data.email.$model" type="email">
+      <div v-for="error of v$.data.email.$errors" :key="error.$uid" class="input-errors">
         <div class="error-msg">
           {{ error.$message }}
         </div>
       </div>
     </div>
-    <!-- lastName -->
+    <!-- age -->
     <div>
-      <label for="lname">Last name</label>
-      <input id="lname" v-model="v$.data.lName.$model" type="text">
-      <div v-for="error of v$.data.lName.$errors" :key="error.$uid" class="input-errors">
+      <label for="age">Age</label>
+      <input id="age" v-model="v$.data.age.$model" type="number">
+      <div v-for="error of v$.data.age.$errors" :key="error.$uid" class="input-errors">
         <div class="error-msg">
           {{ error.$message }}
         </div>
       </div>
     </div>
-  </div>
-  <!-- email -->
-  <div>
-    <label for="email">Email</label>
-    <input id="email" v-model="v$.data.email.$model" type="email">
-    <div v-for="error of v$.data.email.$errors" :key="error.$uid" class="input-errors">
-      <div class="error-msg">
-        {{ error.$message }}
+    <!-- skills -->
+    <div>
+      <p>Skillset</p>
+      <label>
+        <input v-model="data.skills" type="checkbox" value="webDevelopment">
+        Web Development
+      </label>
+      <label>
+        <input v-model="data.skills" type="checkbox" value="graphicDesign">
+        Graphic Design
+      </label>
+      <label>
+        <input v-model="data.skills" type="checkbox" value="projectManagement">
+        Project Management</label>
+      <label>
+        <input v-model="data.skills" type="checkbox" value="communication">
+        Communication
+      </label>
+      <div v-for="error of v$.data.skills.$errors" :key="error.$uid" class="input-errors">
+        <div class="error-msg">
+          {{ error.$message }}
+        </div>
       </div>
     </div>
-  </div>
-  <!-- age -->
-  <div>
-    <label for="age">Age</label>
-    <input id="age" v-model="v$.data.age.$model" type="number">
-    <div v-for="error of v$.data.age.$errors" :key="error.$uid" class="input-errors">
-      <div class="error-msg">
-        {{ error.$message }}
+    <!-- gender -->
+    <div>
+      <p>Gender</p>
+      <label>
+        <input v-model="data.gender" type="radio" value="male">
+        Male
+      </label>
+      <label>
+        <input v-model="data.gender" type="radio" value="female"> Female
+      </label>
+      <label>
+        <input v-model="data.gender" type="radio" value="other"> Other</label>
+      <div v-for="error of v$.data.gender.$errors" :key="error.$uid" class="input-errors">
+        <div class="error-msg">
+          {{ error.$message }}
+        </div>
       </div>
     </div>
-  </div>
-  <!-- skills -->
-  <div>
-    <p>Skillset</p>
-    <label>
-      <input v-model="data.skills" type="checkbox" value="webDevelopment">
-      Web Development
-    </label>
-    <label>
-      <input v-model="data.skills" type="checkbox" value="graphicDesign">
-      Graphic Design
-    </label>
-    <label>
-      <input v-model="data.skills" type="checkbox" value="projectManagement">
-      Project Management</label>
-    <label>
-      <input v-model="data.skills" type="checkbox" value="communication">
-      Communication
-    </label>
-    <div v-for="error of v$.data.skills.$errors" :key="error.$uid" class="input-errors">
-      <div class="error-msg">
-        {{ error.$message }}
-      </div>
-    </div>
-  </div>
-  <!-- gender -->
-  <div>
-    <p>Gender</p>
-    <label>
-      <input v-model="data.gender" type="radio" value="male">
-      Male
-    </label>
-    <label>
-      <input v-model="data.gender" type="radio" value="female"> Female
-    </label>
-    <label>
-      <input v-model="data.gender" type="radio" value="other"> Other</label>
-    <div v-for="error of v$.data.gender.$errors" :key="error.$uid" class="input-errors">
-      <div class="error-msg">
-        {{ error.$message }}
-      </div>
-    </div>
-  </div>
 
-  <button>Submit</button>
-</form>
+    <button>Submit</button>
+  </form>
 
-<pre v-if="formData">
+  <pre v-if="formData">
     <code>{{ formData }}</code>
   </pre>
 </template>
