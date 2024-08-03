@@ -175,4 +175,14 @@ export default {
   </pre>
 </template>
 
-<style></style>
+<style>
+.form {
+  max-width: 520px;
+  margin: 3rem auto;
+}
+
+.error-msg {
+  color: red;
+  font-weight: 500;
+}
+</style>
