@@ -18,6 +18,7 @@ export default {
         age: 0,
         skills: [],
         gender: '',
+        country: '',
       },
       formData: null,
     };
@@ -43,6 +44,7 @@ export default {
         age: { betweenValue: helpers.withMessage('Age must be between 1 and 100.', between(1, 100)) },
         skills: { validateSkills: helpers.withMessage('Skills are required.', validateSkills) },
         gender: { required: helpers.withMessage('Gender is required.', required) },
+        country: { required: helpers.withMessage('Please select your country.', required) }
       },
     };
   },
