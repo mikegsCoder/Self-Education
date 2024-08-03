@@ -135,6 +135,35 @@ export default {
         </div>
       </div>
     </div>
+    <!-- country -->
+    <div>
+      <label for="country">Country</label>
+      <select id="country" v-model="data.country">
+        <option disabled value="">
+          Select
+        </option>
+        <option value="bulgaria">
+          Bulgaria
+        </option>
+        <option value="canada">
+          Canada
+        </option>
+        <option value="uk">
+          United Kingdom
+        </option>
+        <option value="australia">
+          Australia
+        </option>
+        <option value="germany">
+          Germany
+        </option>
+      </select>
+      <div v-for="error of v$.data.country.$errors" :key="error.$uid" class="input-errors">
+        <div class="error-msg">
+          {{ error.$message }}
+        </div>
+      </div>
+    </div>
 
     <button>Submit</button>
   </form>
