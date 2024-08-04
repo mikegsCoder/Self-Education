@@ -48,4 +48,13 @@ export default {
 </template>
 
 <style scoped>
+.hasError> :deep(input),
+.hasError> :deep(select),
+.hasError> :deep(textarea) {
+  border-color: red;
+}
+
+.hasError .errorMsg {
+  color: red;
+}
 </style>
