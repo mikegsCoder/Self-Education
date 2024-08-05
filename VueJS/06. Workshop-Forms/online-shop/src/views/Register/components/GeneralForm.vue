@@ -1,6 +1,6 @@
 <script>
 import { useVuelidate } from '@vuelidate/core';
-import { helpers, required } from '@vuelidate/validators';
+import { alphaNum, helpers, maxLength, minLength, required } from '@vuelidate/validators';
 
 import FormItem from './FormItem.vue';
 
@@ -30,6 +30,7 @@ export default {
       required: true,
       default: () => ({
         name: '',
+        pass: '',
       }),
     },
   },
@@ -49,6 +50,12 @@ export default {
           required: helpers.withMessage('Name is required.', required),
           hasTwoNames: helpers.withMessage('Should contain two names separated by a space.', hasTwoNames),
           namesAreCapitalized: helpers.withMessage('Both names should start with a capital letter.', namesAreCapitalized),
+        },
+        pass: {
+          required: helpers.withMessage('Password is required.', required),
+          alphaNum: helpers.withMessage('Password must contain only letters and digits.', alphaNum),
+          minLength: helpers.withMessage('Password should be atleast 3 characters long.', minLength(3)),
+          maxLength: helpers.withMessage('Password should be atmost 16 characters long.', maxLength(16)),
         },
       },
     };
@@ -79,6 +86,15 @@ export default {
         label="Name"
         required
       />
+
+      <FormItem
+        :v$="v$"
+        field="pass"
+        label="Password"
+        required
+      >
+        <input id="pass" v-model="formData.pass" type="password">
+      </FormItem>
 
       <button type="submit" class="fullRow">
         Submit
