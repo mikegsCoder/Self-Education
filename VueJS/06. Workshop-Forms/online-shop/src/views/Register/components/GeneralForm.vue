@@ -1,6 +1,6 @@
 <script>
 import { useVuelidate } from '@vuelidate/core';
-import { alphaNum, helpers, maxLength, minLength, required } from '@vuelidate/validators';
+import { alphaNum, helpers, maxLength, minLength, required, sameAs } from '@vuelidate/validators';
 
 import FormItem from './FormItem.vue';
 
@@ -31,6 +31,7 @@ export default {
       default: () => ({
         name: '',
         pass: '',
+        confirmPass: '',
       }),
     },
   },
@@ -57,6 +58,7 @@ export default {
           minLength: helpers.withMessage('Password should be atleast 3 characters long.', minLength(3)),
           maxLength: helpers.withMessage('Password should be atmost 16 characters long.', maxLength(16)),
         },
+        confirmPass: { required, sameAs: helpers.withMessage('Passwords don\'t match.', sameAs(this.formData.pass)) },
       },
     };
   },
@@ -94,6 +96,15 @@ export default {
         required
       >
         <input id="pass" v-model="formData.pass" type="password">
+      </FormItem>
+
+      <FormItem
+        :v$="v$"
+        field="confirmPass"
+        label="Confirm password"
+        required
+      >
+        <input id="confirmPass" v-model="formData.confirmPass" type="password">
       </FormItem>
 
       <button type="submit" class="fullRow">
