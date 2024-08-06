@@ -1,6 +1,6 @@
 <script>
 import { useVuelidate } from '@vuelidate/core';
-import { alphaNum, helpers, email, maxLength, minLength, required, sameAs } from '@vuelidate/validators';
+import { alphaNum, email, helpers, maxLength, minLength, numeric, required, sameAs } from '@vuelidate/validators';
 
 import FormItem from './FormItem.vue';
 
@@ -33,6 +33,7 @@ export default {
         pass: '',
         confirmPass: '',
         email: '',
+        phone: 0,
       }),
     },
   },
@@ -63,6 +64,11 @@ export default {
         email: { 
             required: helpers.withMessage('Email is required.', required), 
             email: helpers.withMessage('Invalid email provided.', email)
+        },
+        phone: {
+          required: helpers.withMessage('Phone is required.', required),
+          numeric: helpers.withMessage('Phone should contain only numbers.', numeric),
+          maxLength: helpers.withMessage('Phone should be atmost 16 characters long.', maxLength(9)),
         },
       },
     };
@@ -119,6 +125,15 @@ export default {
         label="Email"
         required
       />
+
+      <FormItem
+        :v$="v$"
+        field="phone"
+        label="Phone number"
+        required
+      >
+        <input id="phone" v-model="formData.phone" type="number">
+      </FormItem>
 
       <button type="submit" class="fullRow">
         Submit
