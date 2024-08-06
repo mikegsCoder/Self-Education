@@ -34,6 +34,7 @@ export default {
         confirmPass: '',
         email: '',
         phone: 0,
+        gender: '',
       }),
     },
   },
@@ -69,6 +70,9 @@ export default {
           required: helpers.withMessage('Phone is required.', required),
           numeric: helpers.withMessage('Phone should contain only numbers.', numeric),
           maxLength: helpers.withMessage('Phone should be atmost 16 characters long.', maxLength(9)),
+        },
+        gender: {
+          required: helpers.withMessage('Gender is required.', required),
         },
       },
     };
@@ -133,6 +137,28 @@ export default {
         required
       >
         <input id="phone" v-model="formData.phone" type="number">
+      </FormItem>
+
+      <FormItem
+        :v$="v$"
+        field="gender"
+        label="Gender"
+        required
+      >
+        <select id="gender" v-model="formData.gender">
+          <option disabled value="">
+            Select
+          </option>
+          <option value="Male">
+            Male
+          </option>
+          <option value="Female">
+            Female
+          </option>
+          <option value="Other">
+            Other
+          </option>
+        </select>
       </FormItem>
 
       <button type="submit" class="fullRow">
