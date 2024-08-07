@@ -182,4 +182,13 @@ export default {
 </template>
 
 <style scoped>
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+form .fullRow{
+  grid-column: 1 / 3;
+}
 </style>
