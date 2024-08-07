@@ -35,6 +35,7 @@ export default {
         email: '',
         phone: 0,
         gender: '',
+        dateOfBirth: '',
       }),
     },
   },
@@ -73,6 +74,9 @@ export default {
         },
         gender: {
           required: helpers.withMessage('Gender is required.', required),
+        },
+        dateOfBirth: {
+          required: helpers.withMessage('Date of birth is required.', required),
         },
       },
     };
@@ -159,6 +163,15 @@ export default {
             Other
           </option>
         </select>
+      </FormItem>
+
+      <FormItem
+        :v$="v$"
+        field="dateOfBirth"
+        label="Date of birth"
+        required
+      >
+        <input id="date" v-model="formData.dateOfBirth" type="date">
       </FormItem>
 
       <button type="submit" class="fullRow">
