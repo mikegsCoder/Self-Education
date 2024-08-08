@@ -12,6 +12,7 @@ export default {
 			required: true,
 			default: () => ({
 				address1: '',
+				address2: '',
 			}),
 		},
 	},
@@ -58,6 +59,13 @@ export default {
         field="address1" 
         label="Address Line 1" 
         required 
+      />
+
+			<FormItem 
+        v-model="formData.address2" 
+        field="address2" 
+        class="fullRow" 
+        label="Address Line 2" 
       />
 
 			<button type="button" class="secondary" @click="$emit('onBack')">
