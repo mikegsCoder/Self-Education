@@ -13,6 +13,7 @@ export default {
 			default: () => ({
 				address1: '',
 				address2: '',
+				city: '',
 			}),
 		},
 	},
@@ -31,6 +32,9 @@ export default {
 				address1: {
 					required: helpers.withMessage('Address Line 1 is required.', required),
 					minLength: helpers.withMessage('Address Line 1 is required.', minLength(5)),
+				},
+				city: {
+					required: helpers.withMessage('City is required.', required),
 				},
 			},
 		};
@@ -66,6 +70,14 @@ export default {
         field="address2" 
         class="fullRow" 
         label="Address Line 2" 
+      />
+
+			<FormItem 
+        v-model="formData.city" 
+        :v$="v$" 
+        field="city" 
+        label="City" 
+        required 
       />
 
 			<button type="button" class="secondary" @click="$emit('onBack')">
