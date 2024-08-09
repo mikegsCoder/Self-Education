@@ -14,6 +14,7 @@ export default {
 				address1: '',
 				address2: '',
 				city: '',
+				zipCode: null,
 			}),
 		},
 	},
@@ -35,6 +36,10 @@ export default {
 				},
 				city: {
 					required: helpers.withMessage('City is required.', required),
+				},
+				zipCode: {
+					required: helpers.withMessage('ZIP Code is required.', required),
+					numeric: helpers.withMessage('ZIP Code should contain only numbers.', numeric),
 				},
 			},
 		};
@@ -77,6 +82,14 @@ export default {
         :v$="v$" 
         field="city" 
         label="City" 
+        required 
+      />
+
+			<FormItem 
+        v-model="formData.zipCode" 
+        :v$="v$" 
+        field="zipCode" 
+        label="ZIP Code" 
         required 
       />
 
