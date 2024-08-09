@@ -16,6 +16,7 @@ export default {
 				city: '',
 				zipCode: null,
 				country: '',
+				payment: '',
 			}),
 		},
 	},
@@ -44,6 +45,9 @@ export default {
 				},
         country: {
 					required: helpers.withMessage('Country is required.', required),
+				},
+				payment: {
+					required: helpers.withMessage('Payment is required.', required),
 				},
 			},
 		};
@@ -104,6 +108,23 @@ export default {
         label="Country" 
         required 
       />
+
+      <FormItem :v$="v$" field="payment" label="Payment" required>
+				<div class="payment">
+					<label>
+						Credit Card
+						<input v-model="formData.payment" type="radio" value="creditCard">
+					</label>
+					<label>
+						PayPal
+						<input v-model="formData.payment" type="radio" value="payPal">
+					</label>
+					<label>
+						Bank Transfer
+						<input v-model="formData.payment" type="radio" value="bankTransfer">
+					</label>
+				</div>
+			</FormItem>
 
 			<button type="button" class="secondary" @click="$emit('onBack')">
 				Go back
