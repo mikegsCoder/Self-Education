@@ -15,6 +15,7 @@ export default {
 				address2: '',
 				city: '',
 				zipCode: null,
+				country: '',
 			}),
 		},
 	},
@@ -32,7 +33,7 @@ export default {
 			formData: {
 				address1: {
 					required: helpers.withMessage('Address Line 1 is required.', required),
-					minLength: helpers.withMessage('Address Line 1 is required.', minLength(5)),
+					minLength: helpers.withMessage('Address Line 1 should be at least 5 characters long.', minLength(5)),
 				},
 				city: {
 					required: helpers.withMessage('City is required.', required),
@@ -40,6 +41,9 @@ export default {
 				zipCode: {
 					required: helpers.withMessage('ZIP Code is required.', required),
 					numeric: helpers.withMessage('ZIP Code should contain only numbers.', numeric),
+				},
+        country: {
+					required: helpers.withMessage('Country is required.', required),
 				},
 			},
 		};
@@ -90,6 +94,14 @@ export default {
         :v$="v$" 
         field="zipCode" 
         label="ZIP Code" 
+        required 
+      />
+
+			<FormItem 
+        v-model="formData.country" 
+        :v$="v$" 
+        field="country" 
+        label="Country" 
         required 
       />
 
