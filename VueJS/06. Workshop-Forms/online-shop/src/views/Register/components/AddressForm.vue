@@ -110,28 +110,54 @@ export default {
         required 
       />
 
-      <FormItem :v$="v$" field="payment" label="Payment" required>
+      <FormItem 
+        :v$="v$" 
+        field="payment" 
+        label="Payment" 
+        required
+      >
 				<div class="payment">
 					<label>
 						Credit Card
-						<input v-model="formData.payment" type="radio" value="creditCard">
+						<input 
+              v-model="formData.payment" 
+              type="radio" 
+              value="creditCard"
+            >
 					</label>
 					<label>
 						PayPal
-						<input v-model="formData.payment" type="radio" value="payPal">
+						<input 
+              v-model="formData.payment" 
+              type="radio" 
+              value="payPal"
+            >
 					</label>
 					<label>
 						Bank Transfer
-						<input v-model="formData.payment" type="radio" value="bankTransfer">
+						<input 
+              v-model="formData.payment" 
+              type="radio" 
+              value="bankTransfer"
+            >
 					</label>
 				</div>
 			</FormItem>
 
-			<FormItem :v$="v$" field="note" label="Note" class="fullRow">
+			<FormItem 
+        :v$="v$" 
+        field="note" 
+        label="Note" 
+        class="fullRow"
+      >
 				<textarea v-model="formData.note" rows="4"></textarea>
 			</FormItem>
 
-			<button type="button" class="secondary" @click="$emit('onBack')">
+			<button 
+        type="button" 
+        class="secondary" 
+        @click="$emit('onBack')"
+      >
 				Go back
 			</button>
 			<button type="submit">
