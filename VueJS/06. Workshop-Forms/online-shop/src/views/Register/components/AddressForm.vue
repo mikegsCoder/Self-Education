@@ -142,4 +142,24 @@ export default {
 </template>
 
 <style scoped>
+form {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 1rem;
+}
+
+form .fullRow {
+	grid-column: 1 / 3;
+}
+
+form .payment {
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem;
+	margin-bottom: 0.8rem;
+}
+
+.errorMsg {
+	color: red;
+}
 </style>
