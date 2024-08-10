@@ -17,6 +17,7 @@ export default {
 				zipCode: null,
 				country: '',
 				payment: '',
+				note: ''
 			}),
 		},
 	},
@@ -124,6 +125,10 @@ export default {
 						<input v-model="formData.payment" type="radio" value="bankTransfer">
 					</label>
 				</div>
+			</FormItem>
+
+			<FormItem :v$="v$" field="note" label="Note" class="fullRow">
+				<textarea v-model="formData.note" rows="4"></textarea>
 			</FormItem>
 
 			<button type="button" class="secondary" @click="$emit('onBack')">
