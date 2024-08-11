@@ -14,3 +14,16 @@ export async function getAllProducts() {
     return [];
   }
 }
+
+export async function getProduct(id) {
+  const url = `${BASE_URL}/products/${id}`;
+  try {
+    const response = await axios.get(url);
+    console.log('res', response);
+    return response.data;
+  }
+  catch (error) {
+    console.error('Oops', error);
+    return [];
+  }
+}
