@@ -5,6 +5,9 @@ export default {
       pages: [{
         url: '/',
         text: 'Home',
+      }, {
+        url: '/products',
+        text: 'Products',
       }],
     };
   },
