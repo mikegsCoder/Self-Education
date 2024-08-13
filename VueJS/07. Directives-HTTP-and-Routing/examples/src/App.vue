@@ -8,6 +8,9 @@ export default {
       }, {
         url: '/products',
         text: 'Products',
+      }, {
+        url: '/directives',
+        text: 'Directives',
       }],
     };
   },
