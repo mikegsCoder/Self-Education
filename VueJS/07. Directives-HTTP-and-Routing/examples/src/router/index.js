@@ -7,6 +7,7 @@ import Directives from '../views/Directives.vue';
 import NotFound from '../views/NotFound.vue';
 
 import ProfileContainer from '../views/Profile/ProfileContainer.vue';
+import MyProfile from '../views/Profile/MyProfile.vue';
 
 const routes = [
   {
@@ -29,7 +30,12 @@ const routes = [
   {
     path: '/profile',
     component: ProfileContainer,
-    children: [],
+    children: [
+      {
+        path: 'my-profile',
+        component: MyProfile,
+      },
+    ],
   },
   { path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ];
