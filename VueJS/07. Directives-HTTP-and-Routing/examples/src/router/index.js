@@ -8,6 +8,7 @@ import NotFound from '../views/NotFound.vue';
 
 import ProfileContainer from '../views/Profile/ProfileContainer.vue';
 import MyProfile from '../views/Profile/MyProfile.vue';
+import ChangePass from '../views/Profile/ChangePass.vue';
 
 const routes = [
   {
@@ -34,6 +35,10 @@ const routes = [
       {
         path: 'my-profile',
         component: MyProfile,
+      },
+      {
+        path: 'change-pass',
+        component: ChangePass,
       },
     ],
   },
