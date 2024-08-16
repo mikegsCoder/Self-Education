@@ -17,7 +17,7 @@ export default {
         },
         {
           url: '/profile',
-          text: 'profile',
+          text: 'Profile',
         }
       ],
     };
