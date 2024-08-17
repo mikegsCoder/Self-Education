@@ -11,6 +11,10 @@ export default {
           url: 'change-pass',
           text: 'Change Password',
         },
+        {
+          url: 'close-profile',
+          text: 'Close Profile',
+        },
       ],
     };
   },
