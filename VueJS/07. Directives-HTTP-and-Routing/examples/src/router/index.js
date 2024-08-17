@@ -9,6 +9,7 @@ import NotFound from '../views/NotFound.vue';
 import ProfileContainer from '../views/Profile/ProfileContainer.vue';
 import MyProfile from '../views/Profile/MyProfile.vue';
 import ChangePass from '../views/Profile/ChangePass.vue';
+import CloseProfile from '../views/Profile/CloseProfile.vue';
 
 const routes = [
   {
@@ -39,6 +40,10 @@ const routes = [
       {
         path: 'change-pass',
         component: ChangePass,
+      },
+      {
+        path: 'close-profile',
+        component: CloseProfile,
       },
     ],
   },
