@@ -21,7 +21,7 @@ export default {
   },
   data() {
     return {
-      view: 'Register',
+      view: 'Shop',
       cartProducts: [],
     };
   },
