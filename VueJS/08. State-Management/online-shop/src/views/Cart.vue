@@ -1,59 +1,121 @@
 <script>
-import { mapState } from 'pinia';
-import { useCartStore } from '../../../store/cartStore';
+import { mapActions, mapState } from 'pinia';
+
+// import { products } from '../constants/products';
+import useExampleStore from '../store/exampleStore';
+import { useCartStore } from '../store/cartStore';
+import { getProduct } from '../dataProviders/products';
+import Loader from '../components/Loader.vue';
 
 export default {
-  props: {
-    product: {
-      type: Object,
-      required: true,
-      default: () => ({
-        id: -1,
-        title: 'DEFAULT ITEM',
-        description: 'DEFAULT ITEM',
-        price: 0,
-        discountPercentage: 0,
-        rating: 0,
-        stock: 0,
-        brand: 'DEFAULT ITEM',
-        category: 'groceries',
-        thumbnail: 'https://cdn.dummyjson.com/products/images/groceries/Tissue%20Paper%20Box/1.png',
-        images: [
-          'https://cdn.dummyjson.com/products/images/groceries/Tissue%20Paper%20Box/thumbnail.png',
-        ],
-      }),
-    },
+  setup() {
+    const cartStore = useExampleStore();
+    return { cartStore };
   },
-  emits: ['onAddToCart'],
+  data() {
+    return {
+      productsInfo: [],
+      isLoading: true,
+    };
+  },
   computed: {
-    ...mapState(useCartStore, ['getProduct']),
-    isDisabled() {
-      const current = this.getProduct(this.product.id);
-      if (!current)
-        return false;
-
-      return current.quantity >= this.product.stock;
-    },
+    ...mapState(useExampleStore, ['name', 'products', 'uppercaseName', 'nameAndRole']),
+    ...mapState(useCartStore, ['products']),
   },
+  async created() {
+    const promises = [];
+    this.products.forEach((product) => {
+      promises.push(getProduct(product.id));
+    });
+    this.productsInfo = await Promise.all(promises);
+    this.isLoading = false;
+  },
+  mounted() {
+    console.log(this.name);
+    console.log(this.products);
+  },
+  methods: {
+    getProductTitle(id) {
+      const prod = this.productsInfo.find(product => product.id === id);
+      return prod.title;
+    },
+    getThumbnail(id) {
+      const prod = this.productsInfo.find(product => product.id === id);
+      return prod.thumbnail;
+    },
+    testIt() {
+      this.cartStore.name = 'Sidov';
+    },
+    resetIt() {
+      this.cartStore.$reset();
+    },
+    ...mapActions(useExampleStore, ['callMyAction']),
+    ...mapActions(useCartStore, ['changeQuantity']),
+  },
+  components: { Loader },
 };
 </script>
 
 <template>
-  <article>
-    <img :src="product.thumbnail" alt="img">
-    <slot name="title">
-      <h2>{{ product.title }}</h2>
-    </slot>
-    <p>
-      {{ product.description }}
-    </p>
-    <p><b>Price</b>: {{ product.price }}$</p>
-    <footer>
-      <button class="secondary outline" :disabled="isDisabled" @click="$emit('onAddToCart', product.id)">
-        Add to cart 🛒
-      </button>
-    </footer>
-  </article>
+  <div>
+    <h2>Cart</h2>
+    <h3>My name is: {{ uppercaseName }}</h3>
+    <h4>{{ nameAndRole }}</h4>
+    <button @click="testIt">
+      Test me: {{ name }}
+    </button>
+    <button @click="resetIt">
+      Reset
+    </button>
+    <button @click="callMyAction('foo', 'bar')">
+      Call an action
+    </button>
+
+    <Loader v-if="isLoading" />
+    <table v-else>
+      <thead>
+        <tr>
+          <th>Thumbnail</th>
+          <th>Product name</th>
+          <th>Quantity</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="product in products" :key="product.id">
+          <th>
+            <div class="imgWrapper">
+              <img :src="getThumbnail(product.id)" alt="thumbnail" class="img">
+            </div>
+          </th>
+          <th>{{ getProductTitle(product.id) }}</th>
+          <th>
+            <input
+              type="number"
+              :value="product.quantity"
+              min="0"
+              @input="changeQuantity(product.id, $event)"
+            >
+          </th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+table{
+  max-width: 720px;
+  margin: 0 auto;
+}
+.imgWrapper{
+width: 4rem;
+height: 4rem;
+border-radius: 100%;
+overflow: hidden;
+}
+.img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+</style>
