@@ -1,19 +1,18 @@
 <script>
-import { categories } from '../../../constants/categories';
+// import { categories } from '../../../constants/categories';
 
 export default {
   props: {
+    categories: {
+      type: Array,
+      default: () => [],
+    },
     activeItem: {
       type: String,
       required: true,
     },
   },
   emits: ['onSelect'],
-  data() {
-    return {
-      categories,
-    };
-  },
   methods: {
     onSelect(selected) {
       const val = this.activeItem === selected ? '' : selected;
@@ -24,22 +23,32 @@ export default {
 </script>
 
 <template>
-<div>
-  <ul role="list" class="categories">
-    <li v-for="cat in categories" :key="cat.value">
-      <button :class="[activeItem === cat.value ? 'primary' : 'secondary outline']" @click="onSelect(cat.value)">
-        {{ cat.name }}
-      </button>
-    </li>
-  </ul>
-</div>
+  <div>
+    <ul role="list" class="categories">
+      <li v-for="category in categories" :key="category">
+        <button class="btn" :class="[activeItem === category ? 'primary' : 'secondary outline']" @click="onSelect(category)">
+          {{ category.toUpperCase() }}
+        </button>
+      </li>
+    </ul>
+  </div>
 </template>
 
-<style scoped>
+<style  scoped>
 .categories {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 1rem;
+}
+
+.categories li{
+  margin: 0;
+}
+
+.categories .btn{
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  margin: 0;
 }
 </style>
