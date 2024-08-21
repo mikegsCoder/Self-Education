@@ -1,33 +1,59 @@
 <script>
-import { products } from '../constants/products';
+import { mapState } from 'pinia';
+import { useCartStore } from '../../../store/cartStore';
 
 export default {
   props: {
-    cartProducts: {
-      type: Array,
+    product: {
+      type: Object,
       required: true,
-      default: () => [],
+      default: () => ({
+        id: -1,
+        title: 'DEFAULT ITEM',
+        description: 'DEFAULT ITEM',
+        price: 0,
+        discountPercentage: 0,
+        rating: 0,
+        stock: 0,
+        brand: 'DEFAULT ITEM',
+        category: 'groceries',
+        thumbnail: 'https://cdn.dummyjson.com/products/images/groceries/Tissue%20Paper%20Box/1.png',
+        images: [
+          'https://cdn.dummyjson.com/products/images/groceries/Tissue%20Paper%20Box/thumbnail.png',
+        ],
+      }),
     },
   },
-  methods: {
-    getProduct(id) {
-      const prod = products.find(product => product.id === id);
+  emits: ['onAddToCart'],
+  computed: {
+    ...mapState(useCartStore, ['getProduct']),
+    isDisabled() {
+      const current = this.getProduct(this.product.id);
+      if (!current)
+        return false;
 
-      return prod.title;
+      return current.quantity >= this.product.stock;
     },
   },
 };
 </script>
 
 <template>
-<div>
-  <h2>Cart</h2>
-  <ul>
-    <li v-for="productId in cartProducts" :key="productId">
-      {{ productId }} | {{ getProduct(productId) }}
-    </li>
-  </ul>
-</div>
+  <article>
+    <img :src="product.thumbnail" alt="img">
+    <slot name="title">
+      <h2>{{ product.title }}</h2>
+    </slot>
+    <p>
+      {{ product.description }}
+    </p>
+    <p><b>Price</b>: {{ product.price }}$</p>
+    <footer>
+      <button class="secondary outline" :disabled="isDisabled" @click="$emit('onAddToCart', product.id)">
+        Add to cart 🛒
+      </button>
+    </footer>
+  </article>
 </template>
 
-<style lang="scss" scoped></style>
+<style scoped></style>
