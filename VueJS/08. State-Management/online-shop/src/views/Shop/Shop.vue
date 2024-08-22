@@ -3,7 +3,6 @@ import { mapActions } from 'pinia';
 import { getAllProducts } from '../../dataProviders/products';
 import { getAllCategories } from '../../dataProviders/categories';
 
-// import { products } from '../../constants/products';
 import { useCartStore } from '../../store/cartStore';
 import Loader from '../../components/Loader.vue';
 import Filters from './components/Filters.vue';
@@ -74,10 +73,6 @@ export default {
   color: red;
   font-size: 1.25rem;
 }
-
-/* .products :deep(h2) {
-  font-size: 16px;
-} */
 
 @media screen and (min-width: 560px) {
   .products {
