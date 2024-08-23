@@ -1,6 +1,4 @@
 <script>
-// import { categories } from '../../../constants/categories';
-
 export default {
   props: {
     categories: {

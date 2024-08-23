@@ -1,7 +1,6 @@
 <script>
 import { mapActions, mapState } from 'pinia';
 
-// import { products } from '../constants/products';
 import useExampleStore from '../store/exampleStore';
 import { useCartStore } from '../store/cartStore';
 import { getProduct } from '../dataProviders/products';
