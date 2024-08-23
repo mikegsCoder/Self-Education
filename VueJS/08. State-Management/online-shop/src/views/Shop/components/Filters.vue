@@ -27,7 +27,7 @@ export default {
     <ul role="list" class="categories">
       <li v-for="category in categories" :key="category">
         <button class="btn" :class="[activeItem === category ? 'primary' : 'secondary outline']" @click="onSelect(category)">
-          {{ category.toUpperCase() }}
+          {{ category.name.toUpperCase() }}
         </button>
       </li>
     </ul>
