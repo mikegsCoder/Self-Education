@@ -10,4 +10,4 @@
 - Workshop forms
 - Directives HTTP and routing
 - State management
-- 
+- Workshop routing and state management
