@@ -19,5 +19,18 @@ export const useCartStore = defineStore('cart', {
         productInCart.quantity += 1;
       }
     },
+    changeQuantity(productId, event) {
+      const qty = Number(event.target.value) ?? 0;
+      const productInCart = this.products.find(prod => prod.id === productId);
+      if (!productInCart)
+        return;
+
+      if (qty > 0) {
+        productInCart.quantity = qty;
+      }
+      else {
+        this.products = this.products.filter(prod => prod.id !== productId);
+      }
+    },
   },
 });
