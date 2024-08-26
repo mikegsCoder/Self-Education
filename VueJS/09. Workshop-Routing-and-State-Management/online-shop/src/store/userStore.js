@@ -17,5 +17,8 @@ export const useUserStore = defineStore('user', {
     addFavouriteProduct(id) {
       this.favouritesIds.push(id);
     },
+    removeFavouriteProduct(id) {
+      this.favouritesIds = this.favouritesIds.filter(favourite => favourite !== id);
+    },
   },
 });
