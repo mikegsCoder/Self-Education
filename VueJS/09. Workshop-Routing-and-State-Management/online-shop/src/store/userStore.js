@@ -14,5 +14,8 @@ export const useUserStore = defineStore('user', {
       this.isAuthenticated = true;
       sessionStorage.setItem('user-profile', JSON.stringify(profileData));
     },
+    addFavouriteProduct(id) {
+      this.favouritesIds.push(id);
+    },
   },
 });
