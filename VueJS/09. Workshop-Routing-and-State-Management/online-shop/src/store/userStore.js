@@ -27,5 +27,10 @@ export const useUserStore = defineStore('user', {
       this.profile = JSON.parse(persisted);
       this.isAuthenticated = true;
     },
+    logout() {
+      this.isAuthenticated = false;
+      this.profile = null;
+      sessionStorage.removeItem('user-profile');
+    },
   },
 });
