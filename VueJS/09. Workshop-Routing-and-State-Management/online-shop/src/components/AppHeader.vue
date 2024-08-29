@@ -1,17 +1,19 @@
 <script>
+import { mapActions, mapState } from 'pinia';
+import { RouterLink } from 'vue-router';
+import { useCartStore } from '../store/cartStore';
+import { useUserStore } from '../store/userStore';
+
 export default {
-  props: {
-    cartProducts: {
-      type: Array,
-      required: true,
-      default: () => [],
-    },
+  components: {
+    RouterLink,
   },
-  emits: ['onSelect'],
+  computed: {
+    ...mapState(useCartStore, ['products']),
+    ...mapState(useUserStore, ['isAuthenticated', 'profile']),
+  },
   methods: {
-    onSelect(view) {
-      this.$emit('onSelect', view);
-    },
+    ...mapActions(useUserStore, ['logout']),
   },
 };
 </script>
@@ -30,24 +32,77 @@ export default {
       </li>
     </ul>
     <ul>
-      <li><a href="#" @click.prevent="onSelect('Home')">Home</a></li>
-      <li><a href="#" @click.prevent="onSelect('Shop')">Shop</a></li>
-      <li><a href="#" @click.prevent="onSelect('About')">About</a></li>
-      <li><a href="#" @click.prevent="onSelect('Contacts')">Contacts</a></li>
-      <li><a href="#" role="button" @click.prevent="onSelect('Cart')">
-          Cart <span v-if="cartProducts.length">({{ cartProducts.length }})</span></a>
-      </li>
-    </ul>
+        <li>
+          <RouterLink to="/">
+            Home
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/shop">
+            Shop
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/about">
+            About
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/contacts">
+            Contacts
+          </RouterLink>
+        </li>
+        <li v-if="isAuthenticated">
+          <RouterLink to="/profile" class="profileLink">
+            Profile <img :src="profile.image" alt="">
+          </RouterLink>
+        </li>
+        <li v-if="isAuthenticated">
+          <RouterLink to="/favourites">
+            My favourites
+          </RouterLink>
+        </li>
+        <li v-if="isAuthenticated">
+          <RouterLink to="/" @click="logout">
+            Logout
+          </RouterLink>
+        </li>
+        <li v-else>
+          <RouterLink to="/login">
+            Login
+          </RouterLink>
+        </li>
+        <li>
+          <RouterLink to="/cart" role="button">
+            Cart <span v-if="products.length">({{
+              products.length }})</span>
+          </RouterLink>
+        </li>
+      </ul>
   </nav>
 </header>
 </template>
 
-<style scoped>
+<style  scoped>
 nav {
-  padding: 0.25rem 3rem;
+  padding: 0.25rem 1rem;
 }
 
 nav img {
-  height: 2.5rem;
+  height: 2rem;
+}
+
+.profileLink{
+  display: flex;
+  gap: 0.25rem;
+  align-items: center;
+}
+.profileLink img{
+  width: 2rem;
+  height: auto;
+  border-radius: 100%;
+  overflow: hidden;
+  border: 1px solid var(--primary);
+  margin: 0 auto;
 }
 </style>
