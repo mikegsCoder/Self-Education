@@ -16,3 +16,13 @@ export async function getAllProducts() {
   }
 }
 
+export async function getProduct(id) {
+  try {
+    const res = await axios.get(`https://dummyjson.com/products/${id}`);
+    return res.data;
+  }
+  catch (e) {
+    console.error('Oops', e);
+    return null;
+  }
+}
