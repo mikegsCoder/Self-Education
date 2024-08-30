@@ -6,7 +6,7 @@ export async function loginUser(userData) {
     return res.data;
   }
   catch (e) {
-    console.log('oops', e);
+    console.log('Oops', e);
     return null;
   }
 }
