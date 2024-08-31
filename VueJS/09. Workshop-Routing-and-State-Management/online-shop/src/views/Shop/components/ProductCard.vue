@@ -1,4 +1,8 @@
 <script>
+import { mapActions, mapState } from 'pinia';
+import { useCartStore } from '../../../store/cartStore';
+import { useUserStore } from '../../../store/userStore';
+
 export default {
   props: {
     product: {
@@ -22,11 +26,37 @@ export default {
     },
   },
   emits: ['onAddToCart'],
+  computed: {
+    ...mapState(useCartStore, ['getProduct']),
+    ...mapState(useUserStore, ['favouritesIds', 'isAuthenticated']),
+    isDisabled() {
+      const current = this.getProduct(this.product.id);
+      if (!current)
+        return false;
+
+      return current.quantity >= this.product.stock;
+    },
+    isInFavourites() {
+      return this.favouritesIds.includes(this.product.id);
+    },
+  },
+  methods: {
+    ...mapActions(useUserStore, ['addFavouriteProduct', 'removeFavouriteProduct']),
+    onFavouriteClick() {
+      if (this.isInFavourites) {
+        this.removeFavouriteProduct(this.product.id);
+      }
+      else {
+        this.addFavouriteProduct(this.product.id);
+      }
+    },
+  },
 };
 </script>
 
 <template>
 <article>
+  <span v-if="isInFavourites" class="icon">❤️</span>
   <img :src="product.thumbnail" alt="img">
   <slot name="title">
     <h2>{{ product.title }}</h2>
@@ -36,11 +66,24 @@ export default {
   </p>
   <p><b>Price</b>: {{ product.price }}$</p>
   <footer>
-    <button class="secondary outline" @click="$emit('onAddToCart', product.id)">
+    <button class="secondary outline" :disabled="isDisabled" @click="$emit('onAddToCart', product.id)">
       Add to cart 🛒
+    </button>
+    <button v-if="isAuthenticated" class="secondary outline" :disabled="isDisabled" @click="onFavouriteClick">
+      {{ isInFavourites ? 'Remove from favourites' : 'Add to favourites' }}
     </button>
   </footer>
 </article>
 </template>
 
-<style scoped></style>
+<style scoped>
+article {
+  position: relative;
+}
+
+.icon {
+  position: absolute;
+  top: 0.25rem;
+  right: 0.25rem;
+}
+</style>
