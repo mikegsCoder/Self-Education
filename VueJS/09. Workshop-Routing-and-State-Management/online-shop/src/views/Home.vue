@@ -26,7 +26,11 @@ export default {};
       Learn more about Fashion Emporium and our commitment to providing quality fashion choices. Discover our
       story, mission, and dedication to customer satisfaction.
     </p>
-    <p><a href="about.html">Read More</a></p>
+    <p>
+      <RouterLink to="/about">
+        Read More
+      </RouterLink>
+    </p>
   </section>
 
   <section id="contact">

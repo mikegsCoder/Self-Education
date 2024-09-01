@@ -7,6 +7,7 @@ import About from '../views/About.vue';
 import Contacts from '../views/Contacts.vue';
 import Cart from '../views/Cart.vue';
 import Register from '../views/Register/Register.vue';
+import Favourites from '../views/Favourites.vue';
 import NotFound from '../views/NotFound.vue';
 
 const routes = [
@@ -16,6 +17,7 @@ const routes = [
   { path: '/contacts', component: Contacts },
   { path: '/cart', component: Cart },
   { path: '/register', component: Register, beforeEnter: isGuest },
+  { path: '/favourites', component: Favourites, beforeEnter: isUser },
 	{ path: '/:pathMatch(.*)*', name: 'NotFound', component: NotFound },
 ];
 
