@@ -23,8 +23,8 @@ export default {
         this.setProfile(userData);
         this.$router.push('/profile');
       }
-      // username: 'kminchelle',
-      // password: '0lelplR',
+      // username: 'emilys',
+      // password: 'emilyspass',
       this.isLoading = false;
     },
   },
