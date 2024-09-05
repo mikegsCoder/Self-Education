@@ -14,6 +14,10 @@ function handleChange(event) {
   userData.name = event.target.value;
 }
 
+function addBook() {
+  userData.books.push('New book');
+}
+
 const numberOfBooks = computed(() => {
   return userData.books.length;
 });
@@ -34,6 +38,10 @@ function onMyCustomBtn() {
         {{ book }}
       </li>
     </ul>
+    
+    <button @click="addBook">
+      Add new book
+    </button>
 
     <AppButton :text="username" type="secondary" @on-click="onMyCustomBtn" />
   </div>
