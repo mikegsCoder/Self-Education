@@ -18,6 +18,14 @@ function addBook() {
   userData.books.push('New book');
 }
 
+function resetUser() {
+  userData = {
+    name: '',
+    location: '',
+    books: [],
+  };
+}
+
 const numberOfBooks = computed(() => {
   return userData.books.length;
 });
@@ -38,9 +46,13 @@ function onMyCustomBtn() {
         {{ book }}
       </li>
     </ul>
-    
+
     <button @click="addBook">
       Add new book
+    </button>
+
+    <button @click="resetUser">
+      Reset user
     </button>
 
     <AppButton :text="username" type="secondary" @on-click="onMyCustomBtn" />
@@ -48,5 +60,4 @@ function onMyCustomBtn() {
 </template>
 
 <style lang="scss" scoped>
-
 </style>
