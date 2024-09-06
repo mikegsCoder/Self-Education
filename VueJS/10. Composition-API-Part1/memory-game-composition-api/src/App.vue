@@ -1,5 +1,6 @@
 <script setup>
 import { reactive, ref } from 'vue';
+import defaultCards from './mockData/cardsArray';
 
 let interval = null;
 
@@ -19,6 +20,8 @@ function onStart() {
   game.hasLost = false;
   startGameTimer();
 }
+
+function startGameTimer() {}
 </script>
 
 <template>
