@@ -26,7 +26,10 @@ const isActive = computed(() => {
   return props.guessedItems.includes(props.card.type) || selected.includes(props.card.idx);
 });
 
-function onSelect() {}
+function onSelect() {
+  if (!isActive.value)
+    emit('onClick', props.card.idx, props.card.type);
+}
 </script>
 
 <template>
