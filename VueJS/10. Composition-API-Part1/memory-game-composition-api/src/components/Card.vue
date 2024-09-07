@@ -1,4 +1,6 @@
 <script setup>
+import { computed } from 'vue';
+
 const props = defineProps({
   card: {
     type: Object,
@@ -19,7 +21,10 @@ const props = defineProps({
 
 const emit = defineEmits(['onClick']);
 
-const isActive = false;
+const isActive = computed(() => {
+  const selected = props.activeItems.map(i => i.idx);
+  return props.guessedItems.includes(props.card.type) || selected.includes(props.card.idx);
+});
 
 function onSelect() {}
 </script>
