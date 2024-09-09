@@ -21,6 +21,13 @@ function onStart() {
   startGameTimer();
 }
 
+function onStop() {
+  game.isStarted = false;
+  clearInterval(interval);
+  guessedItems.value = [];
+  selectedItem.value = [];
+}
+
 function startGameTimer() {}
 </script>
 
