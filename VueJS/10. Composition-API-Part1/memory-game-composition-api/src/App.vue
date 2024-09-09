@@ -1,5 +1,8 @@
 <script setup>
-import { reactive, ref } from 'vue';
+import { computed, reactive, ref } from 'vue';
+import { timeFormatter } from './helpers/formatTime';
+import { shuffle } from './helpers/cardsShuffle';
+import Card from './components/Card.vue';
 import defaultCards from './mockData/cardsArray';
 
 let interval = null;
@@ -43,6 +46,12 @@ function handleLostGame() {
   game.hasLost = true;
   onStop();
 }
+
+const cards = computed(() => {
+  if (game.isStarted)
+    return shuffle(defaultCards);
+  return defaultCards;
+});
 </script>
 
 <template>
