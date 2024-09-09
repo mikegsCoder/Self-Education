@@ -28,7 +28,21 @@ function onStop() {
   selectedItem.value = [];
 }
 
-function startGameTimer() {}
+function startGameTimer() {
+  let seconds = 60000;
+  timer.value = seconds;
+  interval = setInterval(() => {
+    seconds -= 1000;
+    timer.value = seconds;
+    if (seconds === 0)
+      handleLostGame();
+  }, 1000);
+}
+
+function handleLostGame() {
+  game.hasLost = true;
+  onStop();
+}
 </script>
 
 <template>
