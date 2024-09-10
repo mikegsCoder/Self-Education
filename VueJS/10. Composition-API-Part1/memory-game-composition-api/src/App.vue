@@ -69,6 +69,16 @@ const cards = computed(() => {
       </button>
     </template>
   </div>
+
+  <div class="container">
+    <p v-if="game.hasWon" class="container">
+      ✨ OH YES, you have won! ✨
+    </p>
+
+    <p v-if="game.hasLost" class="container">
+      😥 OO NO, you have lost! 😥
+    </p>
+  </div>
 </template>
 
 <style scoped>
