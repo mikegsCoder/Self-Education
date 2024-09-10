@@ -52,6 +52,16 @@ const cards = computed(() => {
     return shuffle(defaultCards);
   return defaultCards;
 });
+
+function handleSelect(idx, type) {
+  if (!game.isStarted)
+    return;
+  if (selectedItem.value.length < 2)
+    selectedItem.value.push({ idx, type });
+
+  else if (selectedItem.value.length === 2)
+    selectedItem.value = [{ idx, type }];
+}
 </script>
 
 <template>
