@@ -61,6 +61,12 @@ const cards = computed(() => {
     </button>
 
     <template v-else>
+      <span>{{ timeFormatter(timer) }}</span>
+      <progress :value="`${timer}`" :max="`${defaultTimer}`" />
+
+      <button v-if="game.isStarted" @click="onStop">
+        Stop game
+      </button>
     </template>
   </div>
 </template>
