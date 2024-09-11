@@ -89,6 +89,17 @@ function handleSelect(idx, type) {
       😥 OO NO, you have lost! 😥
     </p>
   </div>
+
+  <div class="myGrid">
+    <Card
+      v-for="card in cards"
+      :key="card.idx"
+      :card="card"
+      :active-items="selectedItem"
+      :guessed-items="guessedItems"
+      @on-click="handleSelect"
+    />
+  </div>
 </template>
 
 <style scoped>
