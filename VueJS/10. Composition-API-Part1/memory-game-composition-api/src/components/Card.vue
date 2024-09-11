@@ -44,7 +44,7 @@ function onSelect() {
 
 <style scoped>
 .card {
-    margin: 0;
-    text-align: center;
+  margin: 0;
+  text-align: center;
 }
 </style>

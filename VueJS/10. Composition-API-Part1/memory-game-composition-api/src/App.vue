@@ -103,14 +103,8 @@ watch(guessedItems, (newVal) => {
   </div>
 
   <div class="myGrid">
-    <Card
-      v-for="card in cards"
-      :key="card.idx"
-      :card="card"
-      :active-items="selectedItem"
-      :guessed-items="guessedItems"
-      @on-click="handleSelect"
-    />
+    <Card v-for="card in cards" :key="card.idx" :card="card" :active-items="selectedItem" :guessed-items="guessedItems"
+      @on-click="handleSelect" />
   </div>
 </template>
 
