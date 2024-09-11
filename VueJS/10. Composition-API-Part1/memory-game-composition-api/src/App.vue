@@ -67,6 +67,13 @@ watch(selectedItem, (newVal) => {
   if (newVal.length === 2 && (newVal[0].type === newVal[1].type))
     guessedItems.value.push(newVal[0].type);
 }, { deep: true });
+
+watch(guessedItems, (newVal) => {
+  if (cards.value.length / 2 === newVal.length) {
+    game.hasWon = true;
+    setTimeout(() => onStop(), 2000);
+  }
+}, { deep: true });
 </script>
 
 <template>
