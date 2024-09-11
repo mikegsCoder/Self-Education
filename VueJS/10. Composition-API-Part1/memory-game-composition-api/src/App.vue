@@ -1,5 +1,5 @@
 <script setup>
-import { computed, reactive, ref } from 'vue';
+import { computed, reactive, ref, watch } from 'vue';
 import { timeFormatter } from './helpers/formatTime';
 import { shuffle } from './helpers/cardsShuffle';
 import Card from './components/Card.vue';
@@ -62,6 +62,11 @@ function handleSelect(idx, type) {
   else if (selectedItem.value.length === 2)
     selectedItem.value = [{ idx, type }];
 }
+
+watch(selectedItem, (newVal) => {
+  if (newVal.length === 2 && (newVal[0].type === newVal[1].type))
+    guessedItems.value.push(newVal[0].type);
+}, { deep: true });
 </script>
 
 <template>
