@@ -12,3 +12,4 @@
 - State management
 - Workshop routing and state management
 - Composition API Part1
+- Composition API Part2
