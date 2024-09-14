@@ -2,6 +2,7 @@
 import ComponentsTabs from './components/ComponentsTabs.vue';
 import HelloWorld from './components/HelloWorld.vue';
 import ListTodos from './components/ListTodos.vue';
+import ListUsers from './components/ListUsers.vue';
 </script>
 
 <template>
@@ -15,6 +16,8 @@ import ListTodos from './components/ListTodos.vue';
   </Suspense>
   
   <HelloWorld />
+
+  <ListUsers />
 </template>
 
 <style></style>
