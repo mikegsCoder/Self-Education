@@ -1,7 +1,9 @@
 <script setup>
 import { getAllTodos } from '../dataProviders/todos';
+import { ref } from 'vue';
 
 const data = await getAllTodos();
+const hasError = ref(false);
 </script>
 
 <template>
