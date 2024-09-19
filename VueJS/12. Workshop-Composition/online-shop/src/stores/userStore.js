@@ -12,10 +12,15 @@ export const useUserStore = defineStore('user', () => {
     sessionStorage.setItem('user-profile', JSON.stringify(profileData));
   }
 
+  function addFavouriteProduct(id) {
+    favouritesIDs.value.push(id);
+  }
+
   return {
     isAuthenticated,
     profile,
     favouritesIDs,
     setProfile,
+    addFavouriteProduct,
   };
 });
