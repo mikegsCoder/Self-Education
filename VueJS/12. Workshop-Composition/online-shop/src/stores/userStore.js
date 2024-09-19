@@ -16,11 +16,16 @@ export const useUserStore = defineStore('user', () => {
     favouritesIDs.value.push(id);
   }
 
+  function removeFavouriteProduct(id) {
+    favouritesIDs.value = favouritesIDs.value.filter(favourite => favourite !== id);
+  }
+
   return {
     isAuthenticated,
     profile,
     favouritesIDs,
     setProfile,
     addFavouriteProduct,
+    removeFavouriteProduct,
   };
 });
