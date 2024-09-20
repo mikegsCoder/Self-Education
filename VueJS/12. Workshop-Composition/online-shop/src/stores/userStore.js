@@ -28,6 +28,12 @@ export const useUserStore = defineStore('user', () => {
     isAuthenticated.value = true;
   }
 
+  function userStoreLogout() {
+    isAuthenticated.value = false;
+    profile.value = null;
+    sessionStorage.removeItem('user-profile');
+  }
+
   return {
     isAuthenticated,
     profile,
@@ -36,5 +42,6 @@ export const useUserStore = defineStore('user', () => {
     addFavouriteProduct,
     removeFavouriteProduct,
     getPersistedProfile,
+    userStoreLogout
   };
 });
