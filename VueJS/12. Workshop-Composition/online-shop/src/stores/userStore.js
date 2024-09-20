@@ -20,6 +20,14 @@ export const useUserStore = defineStore('user', () => {
     favouritesIDs.value = favouritesIDs.value.filter(favourite => favourite !== id);
   }
 
+  function getPersistedProfile() {
+    const persisted = sessionStorage.getItem('user-profile');
+    if (!persisted)
+      return;
+    profile.value = JSON.parse(persisted);
+    isAuthenticated.value = true;
+  }
+
   return {
     isAuthenticated,
     profile,
@@ -27,5 +35,6 @@ export const useUserStore = defineStore('user', () => {
     setProfile,
     addFavouriteProduct,
     removeFavouriteProduct,
+    getPersistedProfile,
   };
 });
