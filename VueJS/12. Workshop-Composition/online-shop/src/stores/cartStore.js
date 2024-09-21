@@ -16,9 +16,24 @@ export const useCartStore = defineStore('cart', () => {
     }
   };
   
+  function changeQuantity(productId, event) {
+    const qty = Number(event.target.value) ?? 0;
+    const productInCart = products.value.find(prod => prod.id === productId);
+    if (!productInCart)
+      return;
+
+    if (qty > 0) {
+      productInCart.quantity = qty;
+    }
+    else {
+      products.value = products.value.filter(prod => prod.id !== productId);
+    }
+  };
+
   return {
     products,
     getProduct,
-    addToCart
+    addToCart,
+    changeQuantity
   };
 });
