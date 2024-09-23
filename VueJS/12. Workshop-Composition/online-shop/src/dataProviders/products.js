@@ -16,4 +16,18 @@ async function getAllProducts() {
   }
 }
 
-export { getAllProducts };
+async function getProductById(id) {
+  try {
+    const res = await axiosInstance.get(`products/${id}`);
+    return res.data;
+  }
+  catch (error) {
+    console.error(error);
+    return null;
+  }
+}
+
+export { 
+  getAllProducts,
+  getProductById
+};
