@@ -10,6 +10,11 @@ const items = ref([
     icon: 'pi pi-home',
     route: '/',
   },
+  {
+    label: 'About',
+    icon: 'pi pi-info-circle',
+    route: 'about',
+  },
 ]);
 </script>
 
