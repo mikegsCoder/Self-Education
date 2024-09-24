@@ -2,6 +2,7 @@
 import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
 import Menubar from 'primevue/menubar';
+import { useUserStore } from '../stores/userStore';
 
 const userStore = useUserStore();
 const items = ref([
