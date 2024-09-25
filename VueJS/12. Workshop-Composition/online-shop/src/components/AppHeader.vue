@@ -16,6 +16,11 @@ const items = ref([
     icon: 'pi pi-info-circle',
     route: 'about',
   },
+  {
+    label: 'Contacts',
+    icon: 'pi pi-phone',
+    route: '/contacts',
+  },
 ]);
 </script>
 
