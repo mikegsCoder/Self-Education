@@ -25,7 +25,7 @@ function onSelect(selected) {
   <ul class="categories">
     <li v-for="category in props.categories" :key="category">
       <Button :severity="activeItem === category ? 'primary' : 'secondary'" :outlined="activeItem !== category"
-        @click="onSelect(category)">
+        @click="onSelect(category.name.toLowerCase())">
         {{ category.name.toUpperCase() }}
       </Button>
     </li>
