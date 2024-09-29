@@ -26,6 +26,12 @@ const items = ref([
     icon: 'pi pi-phone',
     route: '/contacts',
   },
+  {
+    label: 'Register',
+    icon: 'pi pi-plus-circle',
+    route: '/register',
+    visible: () => !userStore.isAuthenticated,
+  },
 ]);
 </script>
 
