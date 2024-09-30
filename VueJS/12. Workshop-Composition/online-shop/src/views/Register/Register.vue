@@ -34,11 +34,18 @@ const data = reactive({
   },
 });
 
-async function onGeneralFormSubmit(generalData) {}
+async function onGeneralFormSubmit(generalData) {
+  activeForm.value = 'address';
+  data.general = { ...generalData };
+};
 
-async function onSubmit(addressData) {};
+async function onSubmit(addressData) {
+  data.address = { ...addressData };
+};
 
-function onBack() {};
+function onBack() {
+  activeForm.value = 'general';
+};
 </script>
 
 <template>
