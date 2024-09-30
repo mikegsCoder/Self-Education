@@ -32,6 +32,12 @@ const items = ref([
     route: '/register',
     visible: () => !userStore.isAuthenticated,
   },
+  {
+    label: 'Login',
+    icon: 'pi pi-sign-in',
+    route: '/login',
+    visible: () => !userStore.isAuthenticated,
+  },
 ]);
 </script>
 
