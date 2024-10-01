@@ -19,7 +19,15 @@ const user = reactive({
   password: '',
 });
 
-async function onSubmit() {}
+async function onSubmit() {
+  isLoading.value = true;
+  const userData = await loginUser(user);
+  if (userData) {
+    userStore.setProfile(userData);
+    router.push('/profile');
+  }
+  isLoading.value = false;
+}
 </script>
 
 <template>
