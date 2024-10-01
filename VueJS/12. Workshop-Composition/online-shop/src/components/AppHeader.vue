@@ -27,6 +27,11 @@ const items = ref([
     route: '/contacts',
   },
   {
+    label: 'Cart',
+    icon: 'pi pi-shopping-cart',
+    route: '/cart',
+  },
+  {
     label: 'Register',
     icon: 'pi pi-plus-circle',
     route: '/register',
