@@ -43,6 +43,13 @@ const items = ref([
     route: '/login',
     visible: () => !userStore.isAuthenticated,
   },
+  {
+    label: 'Logout',
+    icon: 'pi pi-sign-out',
+    route: '/',
+    command: userStore.userStoreLogout,
+    visible: () => userStore.isAuthenticated,
+  },
 ]);
 </script>
 
