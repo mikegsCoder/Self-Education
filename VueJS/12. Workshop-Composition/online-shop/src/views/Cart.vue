@@ -17,7 +17,17 @@ const totalSum = computed(() => {
   return sum;
 });
 
-onMounted();
+onMounted(async () => {
+  const promises = [];
+  products.value.forEach((product) => {
+    promises.push(getProductById(product.id));
+  });
+  const allProducts = await Promise.all(promises);
+  allProducts.forEach((product) => {
+    productsInfo[product.id] = product;
+  });
+  isLoading.value = false;
+});
 </script>
 
 <template>
