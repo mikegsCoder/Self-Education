@@ -44,6 +44,12 @@ const items = ref([
     visible: () => !userStore.isAuthenticated,
   },
   {
+    label: 'Profile',
+    icon: 'pi pi-user',
+    route: '/profile',
+    visible: () => userStore.isAuthenticated,
+  },
+  {
     label: 'Logout',
     icon: 'pi pi-sign-out',
     route: '/',
