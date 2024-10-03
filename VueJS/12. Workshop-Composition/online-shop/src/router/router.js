@@ -7,6 +7,12 @@ const Cart = () => import('../views/Cart.vue');
 const Contacts = () => import('../views/Contacts.vue');
 const Register = () => import('../views/Register/Register.vue');
 const Login = () => import('../views/Login.vue');
+const Profile = () => import('../views/Profile.vue');
+
+function validateUser() {
+  const userStore = useUserStore();
+  return userStore.isAuthenticated ? userStore.isAuthenticated : { path: '/login' };
+};
 
 const routes = [
   { path: '/', component: Home },
@@ -19,6 +25,7 @@ const routes = [
     const userStore = useUserStore();
     return userStore.isAuthenticated ? { path: '/profile' } : true;
   } },
+  { path: '/profile', component: Profile, beforeEnter: validateUser },
 ];
 
 const router = createRouter({
