@@ -30,4 +30,20 @@ const profile = computed(() => useUserStore().profile);
 </template>
 
 <style scoped>
+.p-card{
+    max-width: 720px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.p-card img{
+  border-radius: 100%;
+  overflow: hidden;
+  border: 3px solid var(--primary-color);
+  margin: 0 auto;
+}
+
+.p-card :deep(.p-card-content) {
+  word-break: break-all;
+}
 </style>
