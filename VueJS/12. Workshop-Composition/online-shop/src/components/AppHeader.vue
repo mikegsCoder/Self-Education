@@ -50,6 +50,12 @@ const items = ref([
     visible: () => userStore.isAuthenticated,
   },
   {
+    label: 'My favourites',
+    icon: 'pi pi-star',
+    route: '/favourites',
+    visible: () => userStore.isAuthenticated,
+  },
+  {
     label: 'Logout',
     icon: 'pi pi-sign-out',
     route: '/',
