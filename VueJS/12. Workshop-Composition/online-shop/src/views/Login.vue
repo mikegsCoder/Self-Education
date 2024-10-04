@@ -34,8 +34,8 @@ async function onSubmit() {
   <div class="wrapper">
     <Message :closable="false" severity="success">
       <h1>Login</h1>
-      <h3>Username: kminchelle </h3>
-      <h3>password: 0lelplR</h3>
+      <h3>Username: emilys </h3>
+      <h3>password: emilyspass</h3>
     </Message>
     <Card>
       <template #content>
