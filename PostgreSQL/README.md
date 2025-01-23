@@ -6,3 +6,4 @@
 - Basic CRUD
 - Built in functions
 - Data aggregation
+- Table relations
