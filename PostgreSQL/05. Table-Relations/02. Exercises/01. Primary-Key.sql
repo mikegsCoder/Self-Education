@@ -10,6 +10,6 @@ VALUES
 	('Toothpaste'),
 	('Candy');
 	
-/* define priary key */
+/* define primary key */
 ALTER TABLE products
 ADD COLUMN "id" SERIAL PRIMARY KEY;
