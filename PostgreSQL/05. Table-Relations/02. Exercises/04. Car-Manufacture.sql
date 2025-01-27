@@ -22,3 +22,25 @@ CREATE TABLE IF NOT EXISTS production_years (
 		FOREIGN KEY (manufacturer_id) 
 		REFERENCES manufacturers("id")
 );
+
+/* insert data */
+INSERT INTO manufacturers (name) 
+VALUES
+	('BMW'),
+	('Tesla'),
+	('Lada');
+	
+INSERT INTO models (model_name, manufacturer_id) 
+VALUES
+	('X1', 1),
+	('i6', 1),
+	('Model S', 2),	
+	('Model X', 2),	
+	('Model 3', 2),	
+	('Nova', 3);
+	
+INSERT INTO production_years (established_on, manufacturer_id) 
+VALUES
+	('1915-03-01', 1),
+	('2004-01-01', 2),
+	('1967-05-01', 3);
