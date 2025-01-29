@@ -23,3 +23,20 @@ VALUES
 	('Python OOP'),
 	('PostgreSQL');
 	
+/* study halls table */
+CREATE TABLE IF NOT EXISTS study_halls (
+  "id" SERIAL PRIMARY KEY,
+  study_hall_name VARCHAR(50),
+	exam_id INT,
+	CONSTRAINT fk_students_halls_exams
+		FOREIGN KEY(exam_id)
+		REFERENCES exams("id")
+);
+
+INSERT INTO study_halls (study_hall_name, exam_id) 
+VALUES
+	('Open Source Hall', 102),
+	('Inspiration Hall', 101),
+	('Creative Hall', 103),
+	('Masterclass Hall', 103),
+	('Information Security Hall', 103);
