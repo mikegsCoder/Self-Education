@@ -7,3 +7,4 @@
 - Built in functions
 - Data aggregation
 - Table relations
+- Subqueries and JOINs
