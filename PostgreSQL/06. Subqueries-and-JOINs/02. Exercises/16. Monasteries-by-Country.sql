@@ -51,3 +51,12 @@ WHERE
 		  ) AS rivers_count
 	  WHERE rivers_count.countries_rivers > 3
 	);
+
+SELECT
+  m.monastery_name AS "Monastery",
+  c.country_name AS "Country"
+FROM monasteries AS m
+JOIN countries c
+	USING(country_code)
+WHERE NOT c.three_rivers
+ORDER BY "Monastery";
