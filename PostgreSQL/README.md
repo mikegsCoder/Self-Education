@@ -8,3 +8,4 @@
 - Data aggregation
 - Table relations
 - Subqueries and JOINs
+- Database programmability
