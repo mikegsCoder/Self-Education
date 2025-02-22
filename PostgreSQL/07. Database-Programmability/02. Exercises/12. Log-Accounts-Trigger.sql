@@ -23,3 +23,11 @@ BEGIN
   RETURN NEW;
 END;
 $$;
+
+CREATE OR REPLACE TRIGGER tr_account_balance_change
+  AFTER UPDATE ON accounts
+  FOR EACH ROW
+  WHEN (
+	  OLD.balance IS DISTINCT FROM NEW.balance
+  )
+  EXECUTE FUNCTION trigger_fn_insert_new_entry_into_logs();
