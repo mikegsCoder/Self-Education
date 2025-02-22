@@ -31,3 +31,9 @@ CREATE OR REPLACE TRIGGER tr_account_balance_change
 	  OLD.balance IS DISTINCT FROM NEW.balance
   )
   EXECUTE FUNCTION trigger_fn_insert_new_entry_into_logs();
+
+UPDATE accounts
+SET balance = 150.00
+WHERE "id" = 1;
+
+SELECT * FROM logs;
