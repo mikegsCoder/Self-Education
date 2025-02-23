@@ -32,3 +32,9 @@ CREATE OR REPLACE TRIGGER tr_send_email_on_balance_change
 	AFTER UPDATE ON logs
 	FOR EACH ROW
 	EXECUTE FUNCTION trigger_fn_send_email_on_balance_change();
+
+UPDATE logs
+SET new_sum = new_sum + 100
+WHERE account_id = 1;
+
+SELECT * FROM notification_emails;
