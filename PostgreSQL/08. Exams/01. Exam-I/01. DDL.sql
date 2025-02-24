@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS owners (
+  "id" SERIAL PRIMARY KEY,
+  "name" VARCHAR(50) NOT NULL,
+  phone_number VARCHAR(15) NOT NULL,
+  address VARCHAR(50)
+);
