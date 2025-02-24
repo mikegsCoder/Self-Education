@@ -9,3 +9,4 @@
 - Table relations
 - Subqueries and JOINs
 - Database programmability
+- Exams
