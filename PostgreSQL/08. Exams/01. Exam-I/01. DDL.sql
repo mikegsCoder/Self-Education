@@ -4,3 +4,8 @@ CREATE TABLE IF NOT EXISTS owners (
   phone_number VARCHAR(15) NOT NULL,
   address VARCHAR(50)
 );
+
+CREATE TABLE IF NOT EXISTS animal_types (
+  "id" SERIAL PRIMARY KEY,
+  animal_type VARCHAR(30) NOT NULL
+);
