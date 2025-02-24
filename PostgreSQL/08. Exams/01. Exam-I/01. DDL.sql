@@ -9,3 +9,13 @@ CREATE TABLE IF NOT EXISTS animal_types (
   "id" SERIAL PRIMARY KEY,
   animal_type VARCHAR(30) NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS cages (
+  "id" SERIAL PRIMARY KEY,
+  animal_type_id INT NOT NULL,
+  CONSTRAINT fk_cages_animal_type_id
+	FOREIGN KEY (animal_type_id) 
+	REFERENCES animal_types("id")
+	ON DELETE CASCADE
+	ON UPDATE CASCADE
+);
