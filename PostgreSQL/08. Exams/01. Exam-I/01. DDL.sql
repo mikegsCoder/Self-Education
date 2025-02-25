@@ -19,3 +19,21 @@ CREATE TABLE IF NOT EXISTS cages (
 	ON DELETE CASCADE
 	ON UPDATE CASCADE
 );
+
+CREATE TABLE IF NOT EXISTS animals (
+  "id" SERIAL PRIMARY KEY,
+  "name" VARCHAR(30) NOT NULL,
+  birthdate DATE NOT NULL,
+  owner_id INT,
+  animal_type_id INT NOT NULL,
+  CONSTRAINT fk_animals_owner_id
+	FOREIGN KEY (owner_id) 
+	REFERENCES owners("id")
+	ON DELETE CASCADE
+	ON UPDATE CASCADE,
+  CONSTRAINT fk_cages_animal_type_id
+	FOREIGN KEY (animal_type_id) 
+	REFERENCES animal_types("id")
+	ON DELETE CASCADE
+	ON UPDATE CASCADE
+);
