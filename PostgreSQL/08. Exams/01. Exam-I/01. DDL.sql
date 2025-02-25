@@ -61,3 +61,18 @@ CREATE TABLE IF NOT EXISTS volunteers (
 	ON DELETE CASCADE
 	ON UPDATE CASCADE
 );
+
+CREATE TABLE IF NOT EXISTS animals_cages (
+  cage_id INT NOT NULL,
+  animal_id INT NOT NULL,
+  CONSTRAINT fk_animals_cages_cage_id
+	FOREIGN KEY (cage_id) 
+	REFERENCES cages("id")
+	ON DELETE CASCADE
+	ON UPDATE CASCADE,
+  CONSTRAINT fk_animals_cages_animal_id
+	FOREIGN KEY (animal_id) 
+	REFERENCES animals("id")
+	ON DELETE CASCADE
+	ON UPDATE CASCADE
+);
