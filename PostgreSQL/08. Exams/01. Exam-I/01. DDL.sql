@@ -37,3 +37,8 @@ CREATE TABLE IF NOT EXISTS animals (
 	ON DELETE CASCADE
 	ON UPDATE CASCADE
 );
+
+CREATE TABLE IF NOT EXISTS volunteers_departments (
+  "id" SERIAL PRIMARY KEY,
+  department_name VARCHAR(30) NOT NULL
+);
