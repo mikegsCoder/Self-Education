@@ -13,3 +13,12 @@ CREATE TABLE IF NOT EXISTS clients (
   full_name VARCHAR(50) NOT NULL,
   phone_number VARCHAR(20) NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS drivers (
+  "id" SERIAL PRIMARY KEY,
+  first_name VARCHAR(30) NOT NULL,
+  last_name VARCHAR(30) NOT NULL,
+  age INT NOT NULL,
+  rating NUMERIC(3, 2) DEFAULT 5.5,
+  CONSTRAINT drivers_age_check CHECK (age > 0)
+);
