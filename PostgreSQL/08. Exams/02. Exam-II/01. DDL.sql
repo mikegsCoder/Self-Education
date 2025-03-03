@@ -7,3 +7,9 @@ CREATE TABLE IF NOT EXISTS categories (
   "id" SERIAL PRIMARY KEY,
   "name" VARCHAR(10) NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS clients (
+  "id" SERIAL PRIMARY KEY,
+  full_name VARCHAR(50) NOT NULL,
+  phone_number VARCHAR(20) NOT NULL
+);
