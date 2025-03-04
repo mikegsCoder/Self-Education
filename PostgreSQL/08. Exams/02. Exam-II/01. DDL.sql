@@ -65,3 +65,17 @@ CREATE TABLE IF NOT EXISTS courses (
 	ON UPDATE CASCADE
 );
 
+CREATE TABLE IF NOT EXISTS cars_drivers (
+  car_id INT NOT NULL,
+  driver_id INT NOT NULL,
+  CONSTRAINT fk_cars_drivers_car_id
+	FOREIGN KEY (car_id) 
+	REFERENCES cars("id")
+	ON DELETE CASCADE
+	ON UPDATE CASCADE,
+  CONSTRAINT fk_cars_drivers_driver_id
+	FOREIGN KEY (driver_id) 
+	REFERENCES drivers("id")
+	ON DELETE CASCADE
+	ON UPDATE CASCADE
+);
