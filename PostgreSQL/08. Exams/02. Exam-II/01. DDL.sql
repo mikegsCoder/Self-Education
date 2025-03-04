@@ -22,3 +22,21 @@ CREATE TABLE IF NOT EXISTS drivers (
   rating NUMERIC(3, 2) DEFAULT 5.5,
   CONSTRAINT drivers_age_check CHECK (age > 0)
 );
+
+CREATE TABLE IF NOT EXISTS cars (
+  "id" SERIAL PRIMARY KEY,
+  make VARCHAR(20) NOT NULL,
+  model VARCHAR(20),
+  "year" INT DEFAULT 0 NOT NULL,
+  mileage INT DEFAULT 0,
+  "condition" CHAR(1) NOT NULL,
+  category_id INT NOT NULL,
+  CONSTRAINT cars_year_check CHECK ("year" > 0),
+  CONSTRAINT cars_mileage_check CHECK (mileage > 0),
+  CONSTRAINT fk_cars_category_id
+	FOREIGN KEY (category_id) 
+	REFERENCES categories("id")
+	ON DELETE CASCADE
+	ON UPDATE CASCADE
+);
+
