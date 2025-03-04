@@ -40,3 +40,28 @@ CREATE TABLE IF NOT EXISTS cars (
 	ON UPDATE CASCADE
 );
 
+CREATE TABLE IF NOT EXISTS courses (
+  "id" SERIAL PRIMARY KEY,
+  from_address_id INT NOT NULL,
+  "start" TIMESTAMP NOT NULL,
+  bill NUMERIC(10, 2) DEFAULT 10,
+  car_id INT NOT NULL,
+  client_id INT NOT NULL,
+  CONSTRAINT courses_bill_check CHECK (bill > 0),
+  CONSTRAINT fk_courses_from_address_id
+	FOREIGN KEY (from_address_id) 
+	REFERENCES addresses("id")
+	ON DELETE CASCADE
+	ON UPDATE CASCADE,
+  CONSTRAINT fk_courses_car_id
+	FOREIGN KEY (car_id) 
+	REFERENCES cars("id")
+	ON DELETE CASCADE
+	ON UPDATE CASCADE,
+  CONSTRAINT fk_courses_client_id
+	FOREIGN KEY (client_id) 
+	REFERENCES clients("id")
+	ON DELETE CASCADE
+	ON UPDATE CASCADE
+);
+
