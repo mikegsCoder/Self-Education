@@ -53,7 +53,7 @@ BEGIN
 END;
 $$;
 
-CALL usp_courses_by_address_2('700 Monterey Avenue');
-CALL usp_courses_by_address_2('66 Thompson Drive');
+CALL usp_courses_by_address('700 Monterey Avenue');
+CALL usp_courses_by_address('66 Thompson Drive');
 
 SELECT * FROM search_results;
