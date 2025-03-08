@@ -52,3 +52,8 @@ BEGIN
 	cl.full_name;
 END;
 $$;
+
+CALL usp_courses_by_address_2('700 Monterey Avenue');
+CALL usp_courses_by_address_2('66 Thompson Drive');
+
+SELECT * FROM search_results;
