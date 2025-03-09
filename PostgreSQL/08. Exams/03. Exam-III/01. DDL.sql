@@ -26,3 +26,11 @@ CREATE TABLE IF NOT EXISTS publishers (
 	ON DELETE CASCADE
 	ON UPDATE CASCADE
 );
+
+CREATE TABLE IF NOT EXISTS players_ranges (
+  "id" SERIAL PRIMARY KEY,
+  min_players INT NOT NULL,
+  max_players INT NOT NULL, 
+  CONSTRAINT players_ranges_min_players_check CHECK (min_players > 0),
+  CONSTRAINT players_ranges_max_players_check CHECK (max_players > 0)
+);
