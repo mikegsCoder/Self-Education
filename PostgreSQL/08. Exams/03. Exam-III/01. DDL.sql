@@ -41,3 +41,29 @@ CREATE TABLE IF NOT EXISTS creators (
   last_name VARCHAR(30) NOT NULL,
   email VARCHAR(30) NOT NULL
 );
+
+CREATE TABLE IF NOT EXISTS board_games (
+  "id" SERIAL PRIMARY KEY,
+  "name" VARCHAR(30) NOT NULL,
+  release_year INT NOT NULL,
+  rating NUMERIC(3, 2) NOT NULL,
+  category_id INT NOT NULL,
+  publisher_id INT NOT NULL,
+  players_range_id INT NOT NULL,
+  CONSTRAINT board_games_release_year_check CHECK (release_year > 0),
+  CONSTRAINT fk_board_games_category_id
+	FOREIGN KEY (category_id) 
+	REFERENCES categories("id")
+	ON DELETE CASCADE
+	ON UPDATE CASCADE,
+  CONSTRAINT fk_board_games_publisher_id
+	FOREIGN KEY (publisher_id) 
+	REFERENCES publishers("id")
+	ON DELETE CASCADE
+	ON UPDATE CASCADE,
+  CONSTRAINT fk_board_games_players_range_id
+	FOREIGN KEY (players_range_id) 
+	REFERENCES players_ranges("id")
+	ON DELETE CASCADE
+	ON UPDATE CASCADE
+);
