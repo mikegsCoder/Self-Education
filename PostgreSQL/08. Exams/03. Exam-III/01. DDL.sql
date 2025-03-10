@@ -34,3 +34,10 @@ CREATE TABLE IF NOT EXISTS players_ranges (
   CONSTRAINT players_ranges_min_players_check CHECK (min_players > 0),
   CONSTRAINT players_ranges_max_players_check CHECK (max_players > 0)
 );
+
+CREATE TABLE IF NOT EXISTS creators (
+  "id" SERIAL PRIMARY KEY,
+  first_name VARCHAR(30) NOT NULL,
+  last_name VARCHAR(30) NOT NULL,
+  email VARCHAR(30) NOT NULL
+);
