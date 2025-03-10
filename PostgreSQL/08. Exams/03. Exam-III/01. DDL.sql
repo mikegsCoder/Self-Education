@@ -67,3 +67,18 @@ CREATE TABLE IF NOT EXISTS board_games (
 	ON DELETE CASCADE
 	ON UPDATE CASCADE
 );
+
+CREATE TABLE IF NOT EXISTS creators_board_games (
+  creator_id INT NOT NULL,
+  board_game_id INT NOT NULL,
+  CONSTRAINT fk_creators_board_games_creator_id
+	FOREIGN KEY (creator_id) 
+	REFERENCES creators("id")
+	ON DELETE CASCADE
+	ON UPDATE CASCADE,
+  CONSTRAINT fk_creators_board_games_board_game_id
+	FOREIGN KEY (board_game_id) 
+	REFERENCES board_games("id")
+	ON DELETE CASCADE
+	ON UPDATE CASCADE
+);
