@@ -10,3 +10,10 @@ WHERE publisher_id IN (
   )
 );
 
+DELETE FROM publishers
+WHERE address_id IN (
+  SELECT id
+  FROM addresses
+  WHERE town LIKE 'L%'
+);
+
