@@ -17,3 +17,7 @@ WHERE address_id IN (
   WHERE town LIKE 'L%'
 );
 
+-- Delete records from addresses table
+DELETE FROM addresses
+WHERE town LIKE 'L%'
+RETURNING *;
