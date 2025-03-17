@@ -49,3 +49,7 @@ BEGIN
 	  release_year DESC;
 END;
 $$;
+
+CALL usp_search_by_category('Wargames');
+
+SELECT * FROM search_results;
