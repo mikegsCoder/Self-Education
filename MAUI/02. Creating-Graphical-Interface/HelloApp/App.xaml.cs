@@ -13,7 +13,8 @@ namespace HelloApp
         {
             //return new Window(new AppShell());
 
-            return new Window(new StartPage());
+            //return new Window(new StartPage());
+            return new Window(new StartPage1());
         }
     }
 }
