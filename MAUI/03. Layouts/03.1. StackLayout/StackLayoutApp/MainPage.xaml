@@ -4,10 +4,17 @@
              x:Class="StackLayoutApp.MainPage">
 
     <!--StackLayout example:-->
-    <StackLayout Spacing="5" Orientation="Horizontal">
+    <!--<StackLayout Spacing="5" Orientation="Horizontal">
         <Label Text="First label" TextColor="Red" />
         <Label Text="Second label" TextColor="Blue" />
         <Label Text="Third label" TextColor="Green" />
-    </StackLayout>
+    </StackLayout>-->
+
+    <!--VerticalStackLayout example:-->
+    <VerticalStackLayout Spacing="5">
+        <Label Text="First label" TextColor="Red"  />
+        <Label Text="Second label" TextColor="Blue" />
+        <Label Text="Third label" TextColor="Green" />
+    </VerticalStackLayout>
 
 </ContentPage>
