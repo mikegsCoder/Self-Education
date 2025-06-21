@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StackLayoutApp.MainPage">
+
+    <!--StackLayout example:-->
+    <StackLayout Spacing="5" Orientation="Horizontal">
+        <Label Text="First label" TextColor="Red" />
+        <Label Text="Second label" TextColor="Blue" />
+        <Label Text="Third label" TextColor="Green" />
+    </StackLayout>
+
+</ContentPage>
