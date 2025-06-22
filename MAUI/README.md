@@ -4,3 +4,7 @@
 
 - Introduction to MAUI
 - Creating graphical interface
+- Layouts
+  - StackLayout
+  
+
