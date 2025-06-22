@@ -29,12 +29,22 @@ namespace StackLayoutApp
         public StackLayoutStartPage()
         {
             //StackLayout example:
-            StackLayout stackLayout = new StackLayout()
+            //StackLayout stackLayout = new StackLayout()
+            //{
+            //    Children = { label1, label2, label3 }
+            //};
+
+            //stackLayout.Orientation = StackOrientation.Horizontal;
+
+            // VerticalStackLayout example:
+            VerticalStackLayout stackLayout = new VerticalStackLayout()
             {
                 Children = { label1, label2, label3 }
             };
 
-            stackLayout.Orientation = StackOrientation.Horizontal;
+            stackLayout.Spacing = 5;
+
+            Content = stackLayout;
         }
     }
 }
