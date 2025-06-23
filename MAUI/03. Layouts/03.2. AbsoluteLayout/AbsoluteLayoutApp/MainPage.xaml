@@ -4,7 +4,7 @@
              x:Class="AbsoluteLayoutApp.MainPage">
 
     <!--AbsoluteLayout example:-->
-    <AbsoluteLayout Margin="20">
+    <!--<AbsoluteLayout Margin="20">
         <BoxView Color="LightPink"
                  AbsoluteLayout.LayoutBounds="30, 70, 390, 100" />
 
@@ -15,6 +15,16 @@
         <Label Text=".NET MAUI Absolute Layout"
                 FontSize="20"
                 AbsoluteLayout.LayoutBounds="50, 100, AutoSize, AutoSize" />
+    </AbsoluteLayout>-->
+
+    <!--example with AbsoluteLayout.LayoutFlags:-->
+    <AbsoluteLayout>
+        <BoxView Color="Red" AbsoluteLayout.LayoutBounds=".1, .2, 50, 80"
+    AbsoluteLayout.LayoutFlags="PositionProportional" />
+        <BoxView Color="Green" AbsoluteLayout.LayoutBounds="1, .2, 50, 80"
+    AbsoluteLayout.LayoutFlags="PositionProportional" />
+        <BoxView Color="Blue" AbsoluteLayout.LayoutBounds=".4, .8, .2, .2"
+    AbsoluteLayout.LayoutFlags="All" />
     </AbsoluteLayout>
 
 </ContentPage>
