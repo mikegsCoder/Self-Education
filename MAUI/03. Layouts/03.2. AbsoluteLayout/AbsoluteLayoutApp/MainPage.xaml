@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AbsoluteLayoutApp.MainPage">
+
+    <!--AbsoluteLayout example:-->
+    <AbsoluteLayout Margin="20">
+        <BoxView Color="LightPink"
+                 AbsoluteLayout.LayoutBounds="30, 70, 390, 100" />
+
+        <Label Text=".NET MAUI Absolute Layout"
+               FontSize="20"
+               AbsoluteLayout.LayoutBounds="50, 100" />
+
+        <Label Text=".NET MAUI Absolute Layout"
+                FontSize="20"
+                AbsoluteLayout.LayoutBounds="50, 100, AutoSize, AutoSize" />
+    </AbsoluteLayout>
+
+</ContentPage>
