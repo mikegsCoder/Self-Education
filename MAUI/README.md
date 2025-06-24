@@ -1,4 +1,4 @@
-## .NET Multi-platform App UI
+## .NET Multi-platform Application UI
 
 ### Course cirriculum :
 
@@ -6,5 +6,6 @@
 - Creating graphical interface
 - Layouts
   - StackLayout
+  - AbsoluteLayout
   
 
