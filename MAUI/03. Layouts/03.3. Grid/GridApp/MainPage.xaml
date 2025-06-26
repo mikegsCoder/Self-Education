@@ -73,7 +73,7 @@
     </Grid>-->
 
     <!--Grid example with spacing:-->
-    <Grid ColumnSpacing="5" RowSpacing="8">
+    <!--<Grid ColumnSpacing="5" RowSpacing="8">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="2*" />
@@ -93,6 +93,24 @@
 
         <BoxView Color="Olive" Grid.Column="2" Grid.Row="0" />
         <BoxView Color="Pink" Grid.Column="2" Grid.Row="1" />
+    </Grid>-->
+
+    <!--Grid example with span:-->
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+
+        <BoxView Color="LightBlue" Grid.Column="0" Grid.Row="0" />
+        <BoxView Color="Teal" Grid.Column="1" Grid.Row="0" />
+
+        <BoxView Color="LightPink" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="2" />
     </Grid>
 
 </ContentPage>
