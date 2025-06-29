@@ -12,7 +12,8 @@
             //return new Window(new MainPage());
 
             //return new Window(new GridStartPage1());
-            return new Window(new GridStartPage2());
+            //return new Window(new GridStartPage2());
+            return new Window(new GridStartPage3());
         }
     }
 }
