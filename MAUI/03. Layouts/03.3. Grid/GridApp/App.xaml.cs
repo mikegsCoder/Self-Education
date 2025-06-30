@@ -13,7 +13,8 @@
 
             //return new Window(new GridStartPage1());
             //return new Window(new GridStartPage2());
-            return new Window(new GridStartPage3());
+            //return new Window(new GridStartPage3());
+            return new Window(new GridStartPage4());
         }
     }
 }
