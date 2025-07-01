@@ -4,8 +4,14 @@
              x:Class="SizeAndPositioningApp.MainPage">
 
     <!--size example:-->
-    <Grid>
+    <!--<Grid>
         <Button Text="Click" WidthRequest="100" HeightRequest="50" />
-    </Grid>
+    </Grid>-->
+
+    <!--margin and padding example:-->
+    <StackLayout Padding="60">
+        <BoxView Color="Blue" Margin="50" HeightRequest="100" />
+        <BoxView Color="Red"  Margin="50" HeightRequest="100" />
+    </StackLayout>
 
 </ContentPage>
