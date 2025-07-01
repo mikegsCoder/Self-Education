@@ -15,10 +15,13 @@
     </StackLayout>-->
 
     <!--more margin and padding examples:-->
-    <StackLayout Padding="0,20,0,0">
+    <!--<StackLayout Padding="0,20,0,0">
         <BoxView Color="Green" Margin="20" />
         <BoxView Color="Blue" Margin="10, 15" />
         <BoxView Color="Red" Margin="0, 20, 15, 5" />
-    </StackLayout>
+    </StackLayout>-->
 
+    <!--horizontal and vertical alignment example:-->
+    <Label Text="Hello from MAUI!" VerticalOptions="Center" HorizontalOptions="Center" />
+    
 </ContentPage>
