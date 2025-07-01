@@ -9,9 +9,16 @@
     </Grid>-->
 
     <!--margin and padding example:-->
-    <StackLayout Padding="60">
+    <!--<StackLayout Padding="60">
         <BoxView Color="Blue" Margin="50" HeightRequest="100" />
         <BoxView Color="Red"  Margin="50" HeightRequest="100" />
+    </StackLayout>-->
+
+    <!--more margin and padding examples:-->
+    <StackLayout Padding="0,20,0,0">
+        <BoxView Color="Green" Margin="20" />
+        <BoxView Color="Blue" Margin="10, 15" />
+        <BoxView Color="Red" Margin="0, 20, 15, 5" />
     </StackLayout>
 
 </ContentPage>
