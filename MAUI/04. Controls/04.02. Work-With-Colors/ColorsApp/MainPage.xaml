@@ -4,10 +4,15 @@
              x:Class="ColorsApp.MainPage">
 
     <!--work with colors example:-->
-    <Label Text="Hello from MAUI!"
+    <!--<Label Text="Hello from MAUI!"
            VerticalOptions="Center" 
            HorizontalOptions="Center"
            BackgroundColor="LightBlue" 
-           TextColor="DarkBlue" />
-    
+           TextColor="DarkBlue" />-->
+
+    <!--work with colors another example:-->
+    <Label Text="Hello from MAUI!" 
+        BackgroundColor="#B2DFDB" 
+        TextColor="#aa004D40" />
+
 </ContentPage>
