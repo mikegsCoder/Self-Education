@@ -7,6 +7,12 @@
     <!--<Label Text=".NET MAUI in Arial" FontFamily="Arial" />-->
 
     <!--FontSize example:-->
-    <Label Text=".NET MAUI" FontSize="26" />
+    <!--<Label Text=".NET MAUI" FontSize="26" />-->
 
+    <!--FontAttributes example:-->
+    <StackLayout>
+        <Label Text="Bold" FontAttributes="Bold" />
+        <Label Text="Bold and Italics" FontAttributes="Bold, Italic" />
+    </StackLayout>
+    
 </ContentPage>
