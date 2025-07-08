@@ -4,6 +4,9 @@
              x:Class="TextStylingApp.MainPage">
 
     <!--text styling example:-->
-    <Label Text=".NET MAUI in Arial" FontFamily="Arial" />
+    <!--<Label Text=".NET MAUI in Arial" FontFamily="Arial" />-->
+
+    <!--FontSize example:-->
+    <Label Text=".NET MAUI" FontSize="26" />
 
 </ContentPage>
