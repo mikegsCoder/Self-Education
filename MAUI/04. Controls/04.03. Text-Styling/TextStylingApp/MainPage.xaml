@@ -10,9 +10,14 @@
     <!--<Label Text=".NET MAUI" FontSize="26" />-->
 
     <!--FontAttributes example:-->
-    <StackLayout>
+    <!--<StackLayout>
         <Label Text="Bold" FontAttributes="Bold" />
         <Label Text="Bold and Italics" FontAttributes="Bold, Italic" />
-    </StackLayout>
+    </StackLayout>-->
+
+    <!--text alignment example:-->
+    <Label Text="Hello from MAUI!" 
+       VerticalTextAlignment="Center" 
+       HorizontalTextAlignment="Center" />
     
 </ContentPage>
