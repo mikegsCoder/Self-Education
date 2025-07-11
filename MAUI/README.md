@@ -11,4 +11,4 @@
 - Controls
   - Size and positioning
   - Work with colors
-  
+  - Text styling
