@@ -12,7 +12,7 @@
     </Grid>-->
 
     <!--FormattedString example:-->
-    <Grid>
+    <!--<Grid>
         <Label HorizontalOptions="Center" VerticalOptions="Center">
             <Label.FormattedText>
                 <FormattedString>
@@ -21,6 +21,20 @@
                     <Span Text="MAUI!" FontAttributes="Bold" />
                 </FormattedString>
             </Label.FormattedText>
+        </Label>
+    </Grid>-->
+
+    <!--Multi line text example:-->
+    <Grid>
+        <Label HorizontalOptions="Center" VerticalOptions="Center" FontSize="22">
+            <Label.Text>
+                <x:String>
+                    First line,
+Second line,
+Third line,
+Fourth line.
+                </x:String>
+            </Label.Text>
         </Label>
     </Grid>
 
