@@ -4,11 +4,24 @@
              x:Class="LabelApp.MainPage">
 
     <!--Label example:--> 
-    <Grid>
+    <!--<Grid>
         <Label FontSize="22" Text = "Hello from MAUI!"
             TextDecorations = "Underline" CharacterSpacing = "2"
             FontAttributes = "Bold" FontFamily = "Helvetica"
             HorizontalOptions="Center" VerticalOptions="Center"/>
+    </Grid>-->
+
+    <!--FormattedString example:-->
+    <Grid>
+        <Label HorizontalOptions="Center" VerticalOptions="Center">
+            <Label.FormattedText>
+                <FormattedString>
+                    <Span Text="Hello " FontSize="22" />
+                    <Span Text="from " BackgroundColor="LightPink" TextColor="DarkRed" />
+                    <Span Text="MAUI!" FontAttributes="Bold" />
+                </FormattedString>
+            </Label.FormattedText>
+        </Label>
     </Grid>
 
 </ContentPage>
