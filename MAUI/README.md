@@ -13,4 +13,5 @@
   - Work with colors
   - Text styling
   - Buttons
+  - Labels
   
