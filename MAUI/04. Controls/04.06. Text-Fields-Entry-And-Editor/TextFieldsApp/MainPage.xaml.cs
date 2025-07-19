@@ -9,13 +9,13 @@ namespace TextFieldsApp
             InitializeComponent();
         }
 
-        //void nameEntry_TextChanged(object sender, TextChangedEventArgs e)
-        //{
-        //    nameLabel.Text = nameEntry.Text;
+        void nameEntry_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            nameLabel.Text = nameEntry.Text;
 
-        //    string oldText = e.OldTextValue;
-        //    string newText = e.NewTextValue;
-        //}
+            string oldText = e.OldTextValue;
+            string newText = e.NewTextValue;
+        }
     }
 
 }

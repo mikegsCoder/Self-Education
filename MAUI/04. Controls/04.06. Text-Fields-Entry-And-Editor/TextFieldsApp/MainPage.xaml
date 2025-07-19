@@ -4,11 +4,17 @@
              x:Class="TextFieldsApp.MainPage">
 
     <!--Entry example:-->
-    <StackLayout>
+    <!--<StackLayout>
         <Entry Placeholder = "Enter your email" 
                 FontFamily="Helvetica"
                 FontSize="22" MaxLength ="20"
                 Keyboard="Email"/>
+    </StackLayout>-->
+
+    <!--TextChanged example:-->
+    <StackLayout>
+        <Entry x:Name="nameEntry" FontSize="22" TextChanged="nameEntry_TextChanged" />
+        <Label x:Name="nameLabel" FontSize="22" />
     </StackLayout>
-   
+
 </ContentPage>
