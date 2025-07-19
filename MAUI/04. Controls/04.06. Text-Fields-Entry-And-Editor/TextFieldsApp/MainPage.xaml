@@ -12,9 +12,13 @@
     </StackLayout>-->
 
     <!--TextChanged example:-->
-    <StackLayout>
+    <!--<StackLayout>
         <Entry x:Name="nameEntry" FontSize="22" TextChanged="nameEntry_TextChanged" />
         <Label x:Name="nameLabel" FontSize="22" />
-    </StackLayout>
+    </StackLayout>-->
 
+    <!--Editor example:-->
+    <StackLayout>
+        <Editor FontSize="16" HeightRequest="200" />
+    </StackLayout>
 </ContentPage>
