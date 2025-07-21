@@ -13,5 +13,6 @@
   - Work with colors
   - Text styling
   - Buttons
-  - Labels
+  - Label
+  - Text fields Entry and Editor
   
