@@ -4,13 +4,21 @@
              x:Class="BoxViewApp.MainPage">
 
     <!--BoxView example:-->
-    <Grid>
+    <!--<Grid>
         <BoxView Color="LightBlue" 
                 WidthRequest="150" 
                 HeightRequest="150" 
                 CornerRadius="8"
                 HorizontalOptions="Center" 
                 VerticalOptions="Center" />
-    </Grid>
+    </Grid>-->
+
+    <!--BoxView example:-->
+    <StackLayout Padding="20">
+        <Label Text=".NET MAUI" FontSize="22" HorizontalOptions="Center"  />
+        <BoxView Color="Gray"  HeightRequest="2" HorizontalOptions="Fill" Margin="1" />
+        <BoxView Color="Gray"  HeightRequest="2" HorizontalOptions="Fill" Margin="1" />
+        <Label Text="Multiplatform Application User Interface" FontSize="18" HorizontalOptions="Center"  />
+    </StackLayout>
 
 </ContentPage>
