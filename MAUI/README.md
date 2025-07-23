@@ -15,4 +15,5 @@
   - Buttons
   - Label
   - Text fields Entry and Editor
+  - BoxView
   
