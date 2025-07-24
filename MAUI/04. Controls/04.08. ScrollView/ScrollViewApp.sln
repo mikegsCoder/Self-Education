@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35818.85 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ScrollViewApp", "ScrollViewApp\ScrollViewApp.csproj", "{FC5F9E23-16D8-474B-8310-6016FD4BCBBB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC5F9E23-16D8-474B-8310-6016FD4BCBBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC5F9E23-16D8-474B-8310-6016FD4BCBBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC5F9E23-16D8-474B-8310-6016FD4BCBBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC5F9E23-16D8-474B-8310-6016FD4BCBBB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {737BA92B-CD59-4CDE-AD34-02D7FC66B4C3}
+	EndGlobalSection
+EndGlobal
