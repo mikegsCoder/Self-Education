@@ -10,11 +10,18 @@
     <!--<Image Source="https://images.rawpixel.com/image_png_social_landscape/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvdXB3azYxNzMxNjE4LXdpa2ltZWRpYS1pbWFnZS1qb2I2MjNfMi1sMXBxYmwxMy5wbmc.png" />-->
 
     <!--Image from uri with CacheValidity 2 days example:-->
-    <Image>
+    <!--<Image>
         <Image.Source>
             <UriImageSource Uri="https://images.rawpixel.com/image_png_social_landscape/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvdXB3azYxNzMxNjE4LXdpa2ltZWRpYS1pbWFnZS1qb2I2MjNfMi1sMXBxYmwxMy5wbmc.png"
                             CacheValidity="2:00:00.0" />
         </Image.Source>
-    </Image>
-    
+    </Image>-->
+
+    <!--Image Aspect example:-->
+    <Grid RowDefinitions="*, *" ColumnDefinitions="*, *">
+        <Image Source="forest.jpg" Aspect="AspectFit" />
+        <Image Source="forest.jpg" Aspect="AspectFill" Grid.Column="1" Grid.Row="0" />
+        <Image Source="forest.jpg" Aspect="Fill" Grid.Column="0" Grid.Row="1" />
+        <Image Source="forest.jpg" Aspect="Center"  Grid.Column="1" Grid.Row="1" />
+    </Grid>
 </ContentPage>
