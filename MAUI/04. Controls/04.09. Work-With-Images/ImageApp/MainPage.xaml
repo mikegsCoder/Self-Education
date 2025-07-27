@@ -4,6 +4,9 @@
              x:Class="ImageApp.MainPage">
 
     <!--Image from file example:-->
-    <Image Source="forest.jpg" />
+    <!--<Image Source="forest.jpg" />-->
+
+    <!--Image from uri example:-->
+    <Image Source="https://images.rawpixel.com/image_png_social_landscape/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvdXB3azYxNzMxNjE4LXdpa2ltZWRpYS1pbWFnZS1qb2I2MjNfMi1sMXBxYmwxMy5wbmc.png" />
 
 </ContentPage>
