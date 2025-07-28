@@ -12,10 +12,13 @@ namespace ImageApp
         public StartPage1()
         {
             // example 1:
-            Image image = new Image
-            {
-                Source = ImageSource.FromFile("forest.jpg")
-            };
+            //Image image = new Image
+            //{
+            //    Source = ImageSource.FromFile("forest.jpg")
+            //};
+
+            // example 2:
+            Image image = new Image { Source = "forest.jpg" };
 
             Content = image;
         }
