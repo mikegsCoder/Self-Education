@@ -17,4 +17,5 @@
   - Text fields Entry and Editor
   - BoxView
   - ScrollView
+  - Wirk with images
   
