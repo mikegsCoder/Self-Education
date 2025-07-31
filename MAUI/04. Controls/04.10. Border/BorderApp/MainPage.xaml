@@ -11,12 +11,26 @@
     </Grid>-->
 
     <!--Border RoundRectangle example:-->
-    <Grid Padding="20">
+    <!--<Grid Padding="20">
         <Border Stroke="Gray" BackgroundColor="#e1e1e1">
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="20" />
             </Border.StrokeShape>
             <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Hello form MAUI!" />
+        </Border>
+    </Grid>-->
+
+    <!--Border RoundRectangle example:-->
+    <Grid Padding="20">
+        <Border Stroke="Gray" HeightRequest="200" WidthRequest="200">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="190" />
+            </Border.StrokeShape>
+
+            <Image Source="forest.jpg" 
+                Aspect="AspectFill"
+                HeightRequest="200" 
+                WidthRequest="200"  />
         </Border>
     </Grid>
 
