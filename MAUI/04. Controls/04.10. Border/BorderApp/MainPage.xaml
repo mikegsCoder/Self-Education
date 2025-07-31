@@ -4,9 +4,19 @@
              x:Class="BorderApp.MainPage">
 
     <!--Border example:-->
-    <Grid Padding="20">
+    <!--<Grid Padding="20">
         <Border Stroke="Gray" BackgroundColor="#e1e1e1">
             <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Hello from MAUI!" />
+        </Border>
+    </Grid>-->
+
+    <!--Border RoundRectangle example:-->
+    <Grid Padding="20">
+        <Border Stroke="Gray" BackgroundColor="#e1e1e1">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="20" />
+            </Border.StrokeShape>
+            <Label HorizontalTextAlignment="Center" VerticalTextAlignment="Center" Text="Hello form MAUI!" />
         </Border>
     </Grid>
 
