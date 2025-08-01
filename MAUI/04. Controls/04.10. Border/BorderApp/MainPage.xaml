@@ -21,7 +21,7 @@
     </Grid>-->
 
     <!--Border RoundRectangle example:-->
-    <Grid Padding="20">
+    <!--<Grid Padding="20">
         <Border Stroke="Gray" HeightRequest="200" WidthRequest="200">
             <Border.StrokeShape>
                 <RoundRectangle CornerRadius="190" />
@@ -31,6 +31,20 @@
                 Aspect="AspectFill"
                 HeightRequest="200" 
                 WidthRequest="200"  />
+        </Border>
+    </Grid>-->
+
+    <!--Border example:-->
+    <Grid Padding="20">
+        <Border Stroke="Gray" BackgroundColor="#e1e1e1">
+            <Border.StrokeShape>
+                <RoundRectangle CornerRadius="20" />
+            </Border.StrokeShape>
+            <StackLayout>
+                <Label HorizontalTextAlignment="Center" FontSize="24" Text=".NET MAUI" />
+                <BoxView HeightRequest="2" Color="DarkGray" Margin="10" />
+                <Label FontSize="18" Text=".NET MAUI - technology for creating cross-platform applications." />
+            </StackLayout>
         </Border>
     </Grid>
 
