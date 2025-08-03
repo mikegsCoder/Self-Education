@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DateAndTimePickerApp.MainPage">
+
+    <!--DatePicker example:-->
+    <StackLayout Padding="20">
+        <Label x:Name="label" Text="Choose date"/>
+        <DatePicker Format="d" DateSelected="DateSelected">
+            <DatePicker.MinimumDate>8/3/2025</DatePicker.MinimumDate>
+            <DatePicker.MaximumDate>10/10/2025</DatePicker.MaximumDate>
+        </DatePicker>
+    </StackLayout>
+
+</ContentPage>

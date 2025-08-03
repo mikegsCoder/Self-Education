@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateAndTimePickerApp", "DateAndTimePickerApp\DateAndTimePickerApp.csproj", "{9CC7CBCE-15BE-47DE-B0C2-39A38984DA71}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9CC7CBCE-15BE-47DE-B0C2-39A38984DA71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9CC7CBCE-15BE-47DE-B0C2-39A38984DA71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9CC7CBCE-15BE-47DE-B0C2-39A38984DA71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9CC7CBCE-15BE-47DE-B0C2-39A38984DA71}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C2281517-ACB4-43CD-AFCE-5063A491FE56}
+	EndGlobalSection
+EndGlobal
