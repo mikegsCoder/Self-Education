@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StepperAndSliderApp.MainPage">
+
+    <!--Stepper example:-->
+    <StackLayout Orientation="Horizontal">
+        <Stepper Minimum ="0" 
+                 Maximum="10" 
+                 Increment ="0.1" 
+                 VerticalOptions = "Start"
+                 ValueChanged="OnStepperValueChanged" />
+        <Label x:Name="header"  FontSize="18" Margin="5" />
+    </StackLayout>
+
+</ContentPage>
