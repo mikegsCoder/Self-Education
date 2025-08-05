@@ -11,5 +11,10 @@
         {
             header.Text = $"Your choice is: {e.NewValue:F1}";
         }
+
+        private void OnSliderValueChanged(object sender, ValueChangedEventArgs e)
+        {
+            header.Text = $"Your choice is: {e.NewValue:F1}";
+        }
     }
 }

@@ -4,13 +4,20 @@
              x:Class="StepperAndSliderApp.MainPage">
 
     <!--Stepper example:-->
-    <StackLayout Orientation="Horizontal">
+    <!--<StackLayout Orientation="Horizontal">
         <Stepper Minimum ="0" 
                  Maximum="10" 
                  Increment ="0.1" 
                  VerticalOptions = "Start"
                  ValueChanged="OnStepperValueChanged" />
         <Label x:Name="header"  FontSize="18" Margin="5" />
-    </StackLayout>
+    </StackLayout>-->
 
+    <!--Slider example:-->
+    <StackLayout Padding="20">
+        <Label x:Name="header"  FontSize="18" Margin="5" />
+        <Slider Minimum ="0" Maximum="50" Value="30" ValueChanged="OnSliderValueChanged"
+       MinimumTrackColor="DeepPink" MaximumTrackColor="LightPink" ThumbColor="DeepPink" />
+    </StackLayout>
+    
 </ContentPage>
