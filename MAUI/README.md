@@ -20,4 +20,5 @@
   - Wirk with images
   - Border
   - DatePicker and TimePicker
+  - Stepper and Slider
   
