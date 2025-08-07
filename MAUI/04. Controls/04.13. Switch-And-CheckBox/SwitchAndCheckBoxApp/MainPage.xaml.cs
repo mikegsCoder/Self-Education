@@ -7,9 +7,14 @@
             InitializeComponent();
         }
 
-        private void switcher_Toggled(object sender, ToggledEventArgs e)
+        //private void Switcher_Toggled(object sender, ToggledEventArgs e)
+        //{
+        //    label.Text = $"Value: {e.Value}";
+        //}
+
+        private void CheckBox_CheckedChanged(object sender, CheckedChangedEventArgs e)
         {
-            label.Text = $"Value: {e.Value}";
+            statusLabel.Text = $"Status: {(e.Value ? "On" : "Off")}";
         }
     }
 }

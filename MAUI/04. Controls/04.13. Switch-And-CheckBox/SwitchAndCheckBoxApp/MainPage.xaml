@@ -4,9 +4,19 @@
              x:Class="SwitchAndCheckBoxApp.MainPage">
 
     <!--Switch example:-->
-    <StackLayout Padding="8">
-        <Switch x:Name="switcher" IsToggled="True" Toggled="switcher_Toggled" />
+    <!--<StackLayout Padding="8">
+        <Switch x:Name="switcher" IsToggled="True" Toggled="Switcher_Toggled" />
         <Label x:Name="label" FontSize="16" />
+    </StackLayout>-->
+
+    <!--CheckBox example:-->
+    <StackLayout Padding="8">
+        <Label x:Name="statusLabel" FontSize="18" Text="Status: Off" />
+
+        <StackLayout Padding="8" Orientation="Horizontal">
+            <CheckBox x:Name="statusCheckBox" CheckedChanged="CheckBox_CheckedChanged" />
+            <Label FontSize="16"  Text="On/Off" />
+        </StackLayout>
     </StackLayout>
 
 </ContentPage>
