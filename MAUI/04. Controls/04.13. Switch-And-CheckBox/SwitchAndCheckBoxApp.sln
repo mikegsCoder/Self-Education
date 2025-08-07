@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SwitchAndCheckBoxApp", "SwitchAndCheckBoxApp\SwitchAndCheckBoxApp.csproj", "{93FCB0E3-B2DD-4FDD-86C3-312B8293F4CA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{93FCB0E3-B2DD-4FDD-86C3-312B8293F4CA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93FCB0E3-B2DD-4FDD-86C3-312B8293F4CA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93FCB0E3-B2DD-4FDD-86C3-312B8293F4CA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93FCB0E3-B2DD-4FDD-86C3-312B8293F4CA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {05095B08-1FAB-42EE-8BB9-8847EF25E331}
+	EndGlobalSection
+EndGlobal
