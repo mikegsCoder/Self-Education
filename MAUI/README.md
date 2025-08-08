@@ -21,4 +21,5 @@
   - Border
   - DatePicker and TimePicker
   - Stepper and Slider
+  - Switch and CheckBox
   
