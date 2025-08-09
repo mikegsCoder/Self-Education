@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RadioButtonApp.MainPage">
+
+    <!--RadioButton example:-->
+    <StackLayout RadioButtonGroup.GroupName="technologies">
+        <Label x:Name="header" Text="Choose a technology:" />
+        <RadioButton GroupName="languages" Content="C#" Value="C#" IsChecked="True" />
+        <RadioButton GroupName="languages" Content="JavaScript" Value="JS" />
+        <RadioButton GroupName="languages" Content="TypeScript" Value="TS" />
+    </StackLayout>
+
+</ContentPage>
