@@ -12,11 +12,31 @@
     </StackLayout>-->
 
     <!--RadioButton example:-->
-    <StackLayout RadioButtonGroup.GroupName="technologies">
+    <!--<StackLayout RadioButtonGroup.GroupName="technologies">
        <Label x:Name="header" Text="Choose a technology:" />
        <RadioButton Content="C#" Value="C#" CheckedChanged="OnLanguageCheckedChanged" />
        <RadioButton Content="JavaScript" Value="JavaScript"  CheckedChanged="OnLanguageCheckedChanged" />
        <RadioButton Content="TypeScript" Value="TypeScript"  CheckedChanged="OnLanguageCheckedChanged" />
-   </StackLayout>
+   </StackLayout>-->
+
+    <!--RadioButton example:-->
+    <StackLayout RadioButtonGroup.GroupName="technologies">
+        <Label x:Name="header" Text="Choose a technology:" />
+        <RadioButton Value="C#" CheckedChanged="OnLanguageCheckedChanged">
+            <RadioButton.Content>
+                <Image Source="csharp.png" WidthRequest="25" HeightRequest="25" />
+            </RadioButton.Content>
+        </RadioButton>
+        <RadioButton Value="JavaScript" CheckedChanged="OnLanguageCheckedChanged">
+            <RadioButton.Content>
+                <Image Source="js.png" WidthRequest="25" HeightRequest="25"  />
+            </RadioButton.Content>
+        </RadioButton>
+        <RadioButton Value="TypeScript" CheckedChanged="OnLanguageCheckedChanged">
+            <RadioButton.Content>
+                <Image Source="ts.png" WidthRequest="25" HeightRequest="25"  />
+            </RadioButton.Content>
+        </RadioButton>
+    </StackLayout>
 
 </ContentPage>
