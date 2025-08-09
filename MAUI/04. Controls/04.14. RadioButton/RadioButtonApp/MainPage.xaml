@@ -4,11 +4,19 @@
              x:Class="RadioButtonApp.MainPage">
 
     <!--RadioButton example:-->
-    <StackLayout RadioButtonGroup.GroupName="technologies">
+    <!--<StackLayout RadioButtonGroup.GroupName="technologies">
         <Label x:Name="header" Text="Choose a technology:" />
         <RadioButton GroupName="languages" Content="C#" Value="C#" IsChecked="True" />
         <RadioButton GroupName="languages" Content="JavaScript" Value="JS" />
         <RadioButton GroupName="languages" Content="TypeScript" Value="TS" />
-    </StackLayout>
+    </StackLayout>-->
+
+    <!--RadioButton example:-->
+    <StackLayout RadioButtonGroup.GroupName="technologies">
+       <Label x:Name="header" Text="Choose a technology:" />
+       <RadioButton Content="C#" Value="C#" CheckedChanged="OnLanguageCheckedChanged" />
+       <RadioButton Content="JavaScript" Value="JavaScript"  CheckedChanged="OnLanguageCheckedChanged" />
+       <RadioButton Content="TypeScript" Value="TypeScript"  CheckedChanged="OnLanguageCheckedChanged" />
+   </StackLayout>
 
 </ContentPage>
