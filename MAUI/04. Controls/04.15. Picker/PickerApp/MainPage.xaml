@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PickerApp.MainPage">
+
+    <!--Picker example:-->
+    <StackLayout Padding="8">
+        <Label x:Name="header" Text="Choose a technology:" FontSize="18" />
+        <Picker x:Name="languagePicker" 
+                Title = "Programming technology"
+                WidthRequest="250"
+                HorizontalOptions="Start"
+                SelectedIndexChanged="PickerSelectedIndexChanged">
+            <Picker.Items>
+                <x:String>C#</x:String>
+                <x:String>JavaScript</x:String>
+                <x:String>TypeScript</x:String>
+            </Picker.Items>
+        </Picker>
+    </StackLayout>
+
+</ContentPage>
