@@ -23,4 +23,5 @@
   - Stepper and Slider
   - Switch and CheckBox
   - RadioButton
+  - Picker
   
