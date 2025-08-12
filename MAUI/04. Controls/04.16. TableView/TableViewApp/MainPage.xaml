@@ -22,7 +22,7 @@
     </StackLayout>-->
 
     <!--EntryCell and SwitchCell examle:-->
-    <StackLayout Padding="8">
+    <!--<StackLayout Padding="8">
         <Label x:Name="loginLbl" FontSize="18" />
         <Label x:Name="saveLbl" FontSize="18" />
         <TableView>
@@ -31,6 +31,30 @@
                     <TableSection Title="Personal data">
                         <EntryCell x:Name="loginEntry" Label="Login" Keyboard="Default" Placeholder="Enter login" Completed="OnTextCompleted" />
                         <SwitchCell x:Name="saveSwitch" Text="Save" OnChanged="OnStatusChanged" />
+                    </TableSection>
+                </TableRoot>
+            </TableView.Root>
+        </TableView>
+    </StackLayout>-->
+
+    <!--Using images:-->
+    <StackLayout Padding="8">
+        <TableView>
+            <TableView.Root>
+                <TableRoot>
+                    <TableSection Title="Programming languages">
+                        <ImageCell 
+                           Text="C#" 
+                           Detail="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tristique id enim quis posuere. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas." 
+                           ImageSource="csharp.png" />
+                        <ImageCell 
+                           Text="Javascript" 
+                           Detail="Pellentesque condimentum in mauris vel tristique. Vivamus tincidunt justo justo, eu tincidunt purus accumsan vel. Nulla gravida maximus sagittis." 
+                           ImageSource="js.png" />
+                        <ImageCell 
+                           Text="TypeScript" 
+                           Detail="Suspendisse posuere cursus lacus eu tempus. Phasellus tincidunt ipsum vel vestibulum pellentesque. Ut quis odio at augue mattis porttitor eget ac orci." 
+                           ImageSource="ts.png" />
                     </TableSection>
                 </TableRoot>
             </TableView.Root>
