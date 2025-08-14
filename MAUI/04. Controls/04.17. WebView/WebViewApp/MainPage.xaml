@@ -7,7 +7,7 @@
     <!--<WebView Source="https://mikegscoder.github.io/" />-->
 
     <!--WebView load local HTML example:-->
-    <WebView>
+    <!--<WebView>
         <WebView.Source>
             <HtmlWebViewSource>
                 <HtmlWebViewSource.Html>
@@ -18,6 +18,9 @@
                 </HtmlWebViewSource.Html>
             </HtmlWebViewSource>
         </WebView.Source>
-    </WebView>
+    </WebView>-->
+
+    <!--WebView load local HTML file example:-->
+    <WebView Source="index.html" />
 
 </ContentPage>
