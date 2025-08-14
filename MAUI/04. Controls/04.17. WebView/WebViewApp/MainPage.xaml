@@ -4,6 +4,20 @@
              x:Class="WebViewApp.MainPage">
 
     <!--WebView example:-->
-    <WebView Source="https://mikegscoder.github.io/" />
+    <!--<WebView Source="https://mikegscoder.github.io/" />-->
+
+    <!--WebView load local HTML example:-->
+    <WebView>
+        <WebView.Source>
+            <HtmlWebViewSource>
+                <HtmlWebViewSource.Html>
+                    <![CDATA[
+                    <h1>Hello World!</h1>
+                    <p>Hello .NET MAUI!</p>
+                    ]]>
+                </HtmlWebViewSource.Html>
+            </HtmlWebViewSource>
+        </WebView.Source>
+    </WebView>
 
 </ContentPage>
