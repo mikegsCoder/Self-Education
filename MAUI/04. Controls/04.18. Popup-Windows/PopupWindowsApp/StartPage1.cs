@@ -23,9 +23,16 @@ namespace PopupWindowsApp
             Content = alertButton;
         }
 
+        //private async void AlertButton_Clicked(object sender, EventArgs e)
+        //{
+        //    await DisplayAlert("Information", "New message arrived", "ОK");
+        //}
+
         private async void AlertButton_Clicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Information", "New message arrived", "ОK");
+            bool result = await DisplayAlert("Confirmation", "Are you sure you want to delete this element?", "Yes", "No");
+
+            await DisplayAlert("Information", "Your choice is: " + (result ? "Delete" : "Cancel"), "OK");
         }
     }
 }
