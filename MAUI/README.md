@@ -27,4 +27,5 @@
   - TableView
   - WebView
   - Popup windows
+  - ProgressBar and ActivityIndicator
   
