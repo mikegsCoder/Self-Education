@@ -16,5 +16,10 @@
         {
             throw new NotImplementedException();
         }
+
+        private void ClearBtn_Click(object sender, EventArgs e)
+        {
+            textBox.Text = "";
+        }
     }
 }

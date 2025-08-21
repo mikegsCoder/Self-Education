@@ -30,6 +30,11 @@
                    BorderColor="Brown" BorderWidth="2"
                    Clicked="WriteBtn_Click"/>
 
+                <Button x:Name="clearBtn" Text="Clear Text" 
+                  HeightRequest="25" WidthRequest="130" Margin="0,10,0,10" 
+                  BorderColor="Brown" BorderWidth="2"
+                  Background="ForestGreen" 
+                  Clicked="ClearBtn_Click"/>
             </StackLayout>
 
         </Grid>
