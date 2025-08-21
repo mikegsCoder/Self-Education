@@ -10,6 +10,23 @@
             HeightRequest="200" 
             Margin="25,10,25,10">
         </Editor>
+
+        <Grid Margin="0,10,0,0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <StackLayout Grid.Column="0">
+                <Button x:Name="readBtn" Text="Read Text" 
+                  HeightRequest="25" WidthRequest="120" Margin="0,10,0,10" 
+                  Background="SkyBlue" 
+                  BorderColor="Brown" BorderWidth="2"
+                  Clicked="ReadBtn_Click"/>
+
+            </StackLayout>
+
+        </Grid>
     </StackLayout>
 
 </ContentPage>
