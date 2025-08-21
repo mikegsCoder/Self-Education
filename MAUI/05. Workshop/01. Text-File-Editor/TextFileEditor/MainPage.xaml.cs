@@ -11,5 +11,10 @@
         {
             throw new NotImplementedException();
         }
+
+        private async void WriteBtn_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
