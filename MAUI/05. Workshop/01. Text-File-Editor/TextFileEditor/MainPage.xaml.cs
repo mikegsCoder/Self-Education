@@ -26,5 +26,10 @@
         {
             throw new NotImplementedException();
         }
+
+        private async void UnzipBtn_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
