@@ -1,10 +1,16 @@
-﻿namespace TextFileEditor
+﻿using TextFileEditor.Services;
+
+namespace TextFileEditor
 {
     public partial class MainPage : ContentPage
     {
+        private readonly FileService fileService;
+
         public MainPage()
         {
             InitializeComponent();
+
+            fileService = new FileService();
         }
 
         private async void ReadBtn_Click(object sender, EventArgs e)
