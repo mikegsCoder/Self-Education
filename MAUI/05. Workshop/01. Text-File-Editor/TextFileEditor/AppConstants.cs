@@ -9,5 +9,8 @@
 
         // File missing messages:
         public const string TxtFileMissingMsg = "Text file does not exist. Get it from the Zip file.";
+
+        // Success messages:
+        public const string ReadTextSuccessMsg = "Your text file successfully read.";
     }
 }
