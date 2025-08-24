@@ -11,7 +11,12 @@ namespace TextFileEditor.Services
     {
         public string ReadAllText()
         {
-            throw new NotImplementedException();
+            if (!File.Exists(AppConstants.TxtFileName))
+            {
+                throw new Exception(AppConstants.TxtFileMissingMsg);
+            }
+
+            return File.ReadAllText(AppConstants.TxtFileName);
         }
 
         public void SaveAllText(string text)
