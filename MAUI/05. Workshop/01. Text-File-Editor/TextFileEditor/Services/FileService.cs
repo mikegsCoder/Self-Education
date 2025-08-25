@@ -21,7 +21,12 @@ namespace TextFileEditor.Services
 
         public void SaveAllText(string text)
         {
-            throw new NotImplementedException();
+            if (!File.Exists(AppConstants.TxtFileName))
+            {
+                throw new Exception(AppConstants.TxtFileMissingMsg);
+            }
+
+            File.WriteAllText(AppConstants.TxtFileName, text);
         }
 
         public void AddToZip()
