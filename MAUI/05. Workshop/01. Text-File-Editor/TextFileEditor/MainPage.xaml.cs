@@ -36,7 +36,25 @@ namespace TextFileEditor
 
         private async void WriteBtn_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            string text = textBox.Text;
+
+            if (String.IsNullOrWhiteSpace(text))
+            {
+                await DisplayAlert("Error", AppConstants.EmptyTextMsg, "ОK");
+
+                return;
+            }
+
+            try
+            {
+                fileService.SaveAllText(text);
+
+                await DisplayAlert("Success", AppConstants.WriteTextSuccessMsg, "ОK");
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", ex.Message, "ОK");
+            }
         }
 
         private void ClearBtn_Click(object sender, EventArgs e)

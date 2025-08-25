@@ -10,7 +10,11 @@
         // File missing messages:
         public const string TxtFileMissingMsg = "Text file does not exist. Get it from the Zip file.";
 
+        // Empty text message:
+        public const string EmptyTextMsg = "Your text is empty. Please write something.";
+
         // Success messages:
         public const string ReadTextSuccessMsg = "Your text file successfully read.";
+        public const string WriteTextSuccessMsg = "Your text successfully saved.";
     }
 }
