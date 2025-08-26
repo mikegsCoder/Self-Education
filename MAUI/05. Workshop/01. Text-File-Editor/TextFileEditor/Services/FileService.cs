@@ -31,10 +31,20 @@ namespace TextFileEditor.Services
 
         public void AddToZip()
         {
-            throw new NotImplementedException();
+            if (!File.Exists(AppConstants.TxtFileName))
+            {
+                throw new Exception(AppConstants.TxtFileMissingMsg);
+            }
+
+            AddFilesToZip(AppConstants.ZipFileName, new string[] { AppConstants.TxtFileName });
         }
 
         public void ExtractFromZip()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void AddFilesToZip(string zipFileName, string[] strings)
         {
             throw new NotImplementedException();
         }
