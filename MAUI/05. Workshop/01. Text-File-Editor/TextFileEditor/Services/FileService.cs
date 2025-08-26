@@ -44,9 +44,29 @@ namespace TextFileEditor.Services
             throw new NotImplementedException();
         }
 
-        private void AddFilesToZip(string zipFileName, string[] strings)
+        private void AddFilesToZip(string zipFile, string[] files)
         {
-            throw new NotImplementedException();
+            if (files == null || files.Length == 0)
+            {
+                return;
+            }
+
+            using (var zipArchive = ZipFile.Open(zipFile, ZipArchiveMode.Update))
+            {
+                foreach (var file in files)
+                {
+                    var fileInfo = new FileInfo(file);
+
+                    var existing = zipArchive.Entries.FirstOrDefault(e => e.Name == fileInfo.Name);
+
+                    if (existing != null)
+                    {
+                        existing.Delete();
+                    }
+
+                    zipArchive.CreateEntryFromFile(fileInfo.FullName, fileInfo.Name);
+                }
+            }
         }
     }
 }
