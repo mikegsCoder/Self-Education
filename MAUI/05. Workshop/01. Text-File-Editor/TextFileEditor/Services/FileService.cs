@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Intents;
+using System;
 using System.Collections.Generic;
 using System.IO.Compression;
 using System.Linq;
@@ -49,9 +50,14 @@ namespace TextFileEditor.Services
             ExtractFileFromZip(AppConstants.ZipFileName, AppConstants.FilePath);
         }
 
-        private void ExtractFileFromZip(string zipFileName, string filePath)
+        private void ExtractFileFromZip(string zipFile, string filePath)
         {
-            throw new NotImplementedException();
+            if (File.Exists(AppConstants.TxtFileName))
+            {
+                File.Delete(AppConstants.TxtFileName);
+            }
+
+            ZipFile.ExtractToDirectory(zipFile, filePath);
         }
 
         private void AddFilesToZip(string zipFile, string[] files)
