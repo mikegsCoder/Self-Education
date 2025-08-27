@@ -41,6 +41,16 @@ namespace TextFileEditor.Services
 
         public void ExtractFromZip()
         {
+            if (!File.Exists(AppConstants.ZipFileName))
+            {
+                throw new Exception(AppConstants.ZipFileMissingMsg);
+            }
+
+            ExtractFileFromZip(AppConstants.ZipFileName, AppConstants.FilePath);
+        }
+
+        private void ExtractFileFromZip(string zipFileName, string filePath)
+        {
             throw new NotImplementedException();
         }
 

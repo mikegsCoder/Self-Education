@@ -9,6 +9,7 @@
 
         // File missing messages:
         public const string TxtFileMissingMsg = "Text file does not exist. Get it from the Zip file.";
+        public const string ZipFileMissingMsg = "Zip archive does not exist. Create it from the Text file.";
 
         // Empty text message:
         public const string EmptyTextMsg = "Your text is empty. Please write something.";
