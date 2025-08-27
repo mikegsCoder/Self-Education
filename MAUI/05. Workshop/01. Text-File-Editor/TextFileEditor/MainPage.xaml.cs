@@ -78,7 +78,16 @@ namespace TextFileEditor
 
         private async void UnzipBtn_Click(object sender, EventArgs e)
         {
-            throw new NotImplementedException();
+            try
+            {
+                fileService.ExtractFromZip();
+
+                await DisplayAlert("Success", AppConstants.UnzippedSuccessMsg, "ОK");
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", ex.Message, "ОK");
+            }
         }
     }
 }

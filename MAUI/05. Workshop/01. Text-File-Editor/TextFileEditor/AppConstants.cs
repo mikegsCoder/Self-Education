@@ -18,5 +18,6 @@
         public const string ReadTextSuccessMsg = "Your text file successfully read.";
         public const string WriteTextSuccessMsg = "Your text successfully saved.";
         public const string AddToZipSuccessMsg = "Your text file successfully added to zip.";
+        public const string UnzippedSuccessMsg = "Your text file successfully unzipped.";
     }
 }
