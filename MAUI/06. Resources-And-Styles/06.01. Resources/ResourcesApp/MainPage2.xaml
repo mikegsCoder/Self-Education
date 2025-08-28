@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ResourcesApp.MainPage2">
+
+    <!--StackLayout resources example:-->
+    <StackLayout Padding="10">
+        <StackLayout.Resources>
+            <ResourceDictionary>
+                <Color x:Key="textColor">#004D40</Color>
+                <Color x:Key="backColor">#80CBC4</Color>
+                <x:Double x:Key="margin">10</x:Double>
+            </ResourceDictionary>
+        </StackLayout.Resources>
+
+        <Button Text="iOS" TextColor="{StaticResource Key=textColor}"
+            BackgroundColor="{StaticResource Key=backColor}" 
+            Margin="{StaticResource Key=margin}" />
+
+        <Button Text="Android" TextColor="{StaticResource Key=textColor}"
+            BackgroundColor="{StaticResource Key=backColor}" 
+            Margin="{StaticResource Key=margin}" />
+    </StackLayout>
+
+</ContentPage>
