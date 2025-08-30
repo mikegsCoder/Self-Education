@@ -29,3 +29,6 @@
   - Popup windows
   - ProgressBar and ActivityIndicator
 - Workshop
+- Resources and styles
+  - Resources
+  
