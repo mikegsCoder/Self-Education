@@ -15,7 +15,7 @@
     </ContentPage.Resources>-->
 
     <!--Styles example:-->
-    <ContentPage.Resources>
+    <!--<ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="buttonStyle" TargetType="Button">
                 <Setter Property="TextColor">
@@ -29,6 +29,18 @@
                         </Color>
                     </Setter.Value>
                 </Setter>
+                <Setter Property="BackgroundColor" Value="#80CBC4" />
+                <Setter Property="Margin" Value="10" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>-->
+
+    <!--Styles example:-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Color x:Key="greenColor">#004D40</Color>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="TextColor" Value="{StaticResource Key=greenColor}" />
                 <Setter Property="BackgroundColor" Value="#80CBC4" />
                 <Setter Property="Margin" Value="10" />
             </Style>
