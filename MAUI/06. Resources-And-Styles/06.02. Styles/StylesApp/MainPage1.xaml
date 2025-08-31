@@ -4,10 +4,31 @@
              x:Class="StylesApp.MainPage1">
 
     <!--Styles example:-->
-    <ContentPage.Resources>
+    <!--<ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="buttonStyle" TargetType="Button">
                 <Setter Property="TextColor" Value="#004D40" />
+                <Setter Property="BackgroundColor" Value="#80CBC4" />
+                <Setter Property="Margin" Value="10" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>-->
+
+    <!--Styles example:-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="buttonStyle" TargetType="Button">
+                <Setter Property="TextColor">
+                    <Setter.Value>
+                        <Color>
+                            <x:Arguments>
+                                <x:Int32>0</x:Int32>
+                                <x:Int32>75</x:Int32>
+                                <x:Int32>25</x:Int32>
+                            </x:Arguments>
+                        </Color>
+                    </Setter.Value>
+                </Setter>
                 <Setter Property="BackgroundColor" Value="#80CBC4" />
                 <Setter Property="Margin" Value="10" />
             </Style>
