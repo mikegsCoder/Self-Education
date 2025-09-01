@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StylesApp.MainPage2">
+
+    <!--TargetType example:-->
+    <ContentPage.Resources>
+        <Style TargetType="Button">
+            <Setter Property="TextColor" Value="#004D40" />
+            <Setter Property="BackgroundColor" Value="#80CBC4" />
+            <Setter Property="Margin" Value="10" />
+        </Style>
+    </ContentPage.Resources>
+
+    <StackLayout Padding="20">
+        <Button Text="iOS" />
+        <Button Text="Android" />
+    </StackLayout>
+
+</ContentPage>
