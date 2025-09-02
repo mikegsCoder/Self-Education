@@ -31,4 +31,5 @@
 - Workshop
 - Resources and styles
   - Resources
+  - Styles
   
