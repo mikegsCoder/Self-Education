@@ -32,4 +32,5 @@
 - Resources and styles
   - Resources
   - Styles
+  - External resources
   
