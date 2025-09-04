@@ -1,0 +1,28 @@
+﻿^contentpage {
+    background-color: #fefefe;
+}
+
+stacklayout {
+    padding: 20;
+}
+
+stacklayout label {
+    font-family: Verdana;
+    margin: 5;
+}
+
+#header {
+    font-size: 24;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.english {
+    font-weight: bold;
+    font-size: 14;
+    color: darkblue;
+}
+
+.bulgarian {
+    font-size: 12;
+}

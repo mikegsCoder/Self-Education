@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CssStylingApp.MainPage">
+
+    <!--CSS styling example:-->
+    <ContentPage.Resources>
+        <StyleSheet Source="/styles/mystyles.css" />
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Label x:Name="header" StyleId="header" Text="Words"/>
+        <Label Text="apple" StyleClass="english" />
+        <Label Text="ябълка" StyleClass="bulgarian" />
+        <Label Text="house" StyleClass="english" />
+        <Label Text="къща" StyleClass="bulgarian" />
+        <Label Text="bread" StyleClass="english" />
+        <Label Text="хляб" StyleClass="bulgarian" />
+    </StackLayout>
+
+</ContentPage>
