@@ -4,8 +4,24 @@
              x:Class="CssStylingApp.MainPage">
 
     <!--CSS styling example:-->
-    <ContentPage.Resources>
+    <!--<ContentPage.Resources>
         <StyleSheet Source="/styles/mystyles.css" />
+    </ContentPage.Resources>-->
+
+    <!--CSS styling example:-->
+    <ContentPage.Resources>
+        <StyleSheet>
+            <![CDATA[
+            ^contentpage {
+                background-color: lightcyan;
+            }
+ 
+            stacklayout {
+                margin: 15;
+                padding: 10;
+            }
+            ]]>
+        </StyleSheet>
     </ContentPage.Resources>
 
     <StackLayout>
