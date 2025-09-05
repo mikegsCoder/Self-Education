@@ -33,4 +33,5 @@
   - Resources
   - Styles
   - External resources
+  - Styling with CSS
   
