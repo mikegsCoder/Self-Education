@@ -10,8 +10,14 @@ namespace CssStylingApp
             InitializeComponent();
 
             //CSS styling example:
-            this.Resources.Add(StyleSheet.FromResource
-                    ("styles/mystyles.css", IntrospectionExtensions.GetTypeInfo(typeof(MainPage)).Assembly));
+            //this.Resources.Add(StyleSheet.FromResource
+            //        ("styles/mystyles.css", IntrospectionExtensions.GetTypeInfo(typeof(MainPage)).Assembly));
+
+            //CSS styling example:
+            using (var reader = new System.IO.StringReader("^contentpage { background-color: lightgray; }"))
+            {
+                this.Resources.Add(StyleSheet.FromReader(reader));
+            }
         }
     }
 }
