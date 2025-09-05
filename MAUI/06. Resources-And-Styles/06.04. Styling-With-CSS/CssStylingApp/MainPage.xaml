@@ -9,7 +9,7 @@
     </ContentPage.Resources>-->
 
     <!--CSS styling example:-->
-    <ContentPage.Resources>
+    <!--<ContentPage.Resources>
         <StyleSheet>
             <![CDATA[
             ^contentpage {
@@ -22,7 +22,7 @@
             }
             ]]>
         </StyleSheet>
-    </ContentPage.Resources>
+    </ContentPage.Resources>-->
 
     <StackLayout>
         <Label x:Name="header" StyleId="header" Text="Words"/>

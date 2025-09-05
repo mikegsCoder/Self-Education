@@ -8,6 +8,10 @@ namespace CssStylingApp
         public MainPage()
         {
             InitializeComponent();
+
+            //CSS styling example:
+            this.Resources.Add(StyleSheet.FromResource
+                    ("styles/mystyles.css", IntrospectionExtensions.GetTypeInfo(typeof(MainPage)).Assembly));
         }
     }
 }
