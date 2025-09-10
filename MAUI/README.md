@@ -35,4 +35,6 @@
   - External resources
   - Styling with CSS
   - Visual State Manager
+- Binding
+  - BindingContext and BindingObject
   
