@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BindingApp"
+             x:Class="BindingApp.MainPage">
+
+    <!--Bindable property example:-->
+    <StackLayout Padding="20">
+        <local:TagLabel x:Name="tagLabel"
+           BindingContext="{x:Reference entryBox}"
+           Text="{Binding Text}"
+           Tag="{Binding Text}" />
+
+        <Entry x:Name="entryBox" />
+
+        <Label x:Name="simpleLabel"
+           BindingContext="{x:Reference tagLabel}"
+           Text="{Binding Tag}" />
+    </StackLayout>
+
+</ContentPage>
