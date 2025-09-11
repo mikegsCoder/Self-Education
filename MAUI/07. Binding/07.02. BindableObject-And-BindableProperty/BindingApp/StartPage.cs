@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace BindingApp
+﻿namespace BindingApp
 {
     public class StartPage : ContentPage
     {
@@ -18,7 +12,6 @@ namespace BindingApp
             tagLabel.BindingContext = entry;
             // set binding:
             tagLabel.SetBinding(TagLabel.TagProperty, "Text");
-            tagLabel.SetBinding(TagLabel.TextProperty, "Text");
 
             Label simpleLabel = new Label();
 
