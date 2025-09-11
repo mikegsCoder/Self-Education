@@ -37,4 +37,5 @@
   - Visual State Manager
 - Binding
   - BindingContext and BindingObject
+  - BindableObject and BindableProperty
   
