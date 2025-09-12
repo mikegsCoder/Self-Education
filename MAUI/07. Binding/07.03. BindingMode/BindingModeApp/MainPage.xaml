@@ -12,10 +12,17 @@
     </StackLayout>-->
 
     <!--object Binding TwoWay binding example-->
-    <StackLayout Padding="10">
+    <!--<StackLayout Padding="10">
         <Entry x:Name="entry1" Margin="10"/>
         <Entry x:Name="entry2" Margin="10"
            Text="{Binding Source={x:Reference Name=entry1}, Path=Text, Mode=TwoWay}"/>
+    </StackLayout>-->
+
+    <!--object Binding OneWay binding example-->
+    <StackLayout Padding="10">
+        <Entry x:Name="entry1" Margin="10"/>
+        <Entry x:Name="entry2" Margin="10"
+           Text="{Binding Source={x:Reference Name=entry1}, Path=Text, Mode=OneWay}"/>
     </StackLayout>
 
 </ContentPage>
