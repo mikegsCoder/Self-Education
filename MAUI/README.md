@@ -38,4 +38,5 @@
 - Binding
   - BindingContext and BindingObject
   - BindableObject and BindableProperty
+  - Binding mode
   
