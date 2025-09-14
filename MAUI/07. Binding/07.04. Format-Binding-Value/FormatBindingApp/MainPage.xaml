@@ -4,9 +4,15 @@
              x:Class="FormatBindingApp.MainPage">
 
     <!--Binding format example:-->
-    <StackLayout Padding="20">
+    <!--<StackLayout Padding="20">
         <Entry x:Name="entry" />
         <Label BindingContext="{x:Reference entry}" Text="{Binding Path=Text, StringFormat='Message: {0}'}"/>
+    </StackLayout>-->
+
+    <!--Binding object StringFormat example:-->
+    <StackLayout Padding="20">
+        <Entry x:Name="entry" />
+        <Label Text="{Binding Source={x:Reference Name=entry}, Path=Text, StringFormat='Message: {0}'}"/>
     </StackLayout>
 
 </ContentPage>
