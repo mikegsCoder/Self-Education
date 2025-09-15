@@ -39,4 +39,5 @@
   - BindingContext and BindingObject
   - BindableObject and BindableProperty
   - Binding mode
+  - Format binding value
   
