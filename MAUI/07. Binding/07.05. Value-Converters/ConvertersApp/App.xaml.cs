@@ -10,7 +10,9 @@
         protected override Window CreateWindow(IActivationState? activationState)
         {
             //return new Window(new MainPage1());
-            return new Window(new MainPage2());
+            //return new Window(new MainPage2());
+
+            return new Window(new StartPage1());
         }
     }
 }
