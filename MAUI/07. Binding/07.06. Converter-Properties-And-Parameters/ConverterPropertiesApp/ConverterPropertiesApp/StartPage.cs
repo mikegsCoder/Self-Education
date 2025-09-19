@@ -1,0 +1,31 @@
+﻿using ConverterPropertiesApp.Converters;
+
+namespace ConverterPropertiesApp
+{
+    public class StartPage : ContentPage
+    {
+        //Converter properties example:
+        public StartPage()
+        {
+            Label label = new Label();
+            Entry entry = new Entry();
+
+            Binding binding = new Binding
+            {
+                Source = entry,
+                Path = "Text",
+                Converter = new StringToStatusConverter() { ApprovedStatus = "Access approved", DeniedStatus = "Access denied" }
+            };
+
+            label.SetBinding(Label.TextProperty, binding);
+
+            StackLayout stackLayout = new StackLayout()
+            {
+                Children = { entry, label },
+                Padding = 20
+            };
+
+            Content = stackLayout;
+        }
+    }
+}
