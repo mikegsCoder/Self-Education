@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ConverterPropertiesApp.Converters"
+             x:Class="ConverterPropertiesApp.MainPage1">
+
+    <!--Converter properties example:-->
+    <StackLayout Padding="20">
+        <Entry x:Name="entry" />
+        <Label>
+            <Label.Text>
+                <Binding Source="{x:Reference entry}" Path="Text">
+                    <Binding.Converter>
+                        <local:StringToStatusConverter ApprovedStatus="Access approved" DeniedStatus="Access denied" />
+                    </Binding.Converter>
+                </Binding>
+            </Label.Text>
+        </Label>
+    </StackLayout>
+
+</ContentPage>
