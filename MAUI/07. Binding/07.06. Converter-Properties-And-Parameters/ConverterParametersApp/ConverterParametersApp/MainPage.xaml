@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ConverterParametersApp.Converters"
+             x:Class="ConverterParametersApp.MainPage">
+
+    <!--Converter parameters example:-->
+    <StackLayout Padding="20">
+        <Entry x:Name="entry" />
+        <Label>
+            <Label.Text>
+                <Binding Source="{x:Reference entry}" Path="Text" ConverterParameter="euro">
+                    <Binding.Converter >
+                        <local:StringToCurrencyConverter />
+                    </Binding.Converter>
+                </Binding>
+            </Label.Text>
+        </Label>
+        <Label>
+            <Label.Text>
+                <Binding Source="{x:Reference entry}" Path="Text" ConverterParameter="dollar">
+                    <Binding.Converter >
+                        <local:StringToCurrencyConverter />
+                    </Binding.Converter>
+                </Binding>
+            </Label.Text>
+        </Label>
+    </StackLayout>
+
+</ContentPage>
