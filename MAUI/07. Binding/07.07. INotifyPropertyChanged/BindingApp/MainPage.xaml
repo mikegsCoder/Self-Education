@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:BindingApp"
+             x:Class="BindingApp.MainPage">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:Person x:Key="person" Name="Tom" Age="38" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Padding="20" BindingContext="{StaticResource person}">
+        <Label Text="Name" />
+        <Label Text="{Binding Path=Name}" FontAttributes="Bold" />
+        <Label Text="Age" />
+        <Label Text="{Binding Path=Age}" FontAttributes="Bold"  />
+        <Button Text="+" WidthRequest="60" HorizontalOptions="Start" Clicked="UpdateAge" />
+    </StackLayout>
+
+</ContentPage>
