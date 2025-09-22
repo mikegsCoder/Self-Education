@@ -42,4 +42,5 @@
   - Format binding value
   - Value converters
   - Converter properties and parameters
+  - INotifyPropertyChanged
   
