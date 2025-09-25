@@ -5,6 +5,33 @@
              BackgroundColor="Black"
              Title="Calculator App" HeightRequest="1000" WidthRequest="380">
 
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="CalculatorButtonStyle" TargetType="Button">
+                <Setter Property="WidthRequest" Value="75" />
+                <Setter Property="HeightRequest" Value="45" />
+                <Setter Property="BackgroundColor" Value="#333333" />
+                <Setter Property="TextColor" Value="White" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="FontSize" Value="24" />
+                <Setter Property="Margin" Value="5" />
+                <Setter Property="Padding" Value="0" />
+                <Setter Property="BorderColor" Value="LightGray" />
+                <Setter Property="BorderWidth" Value="2" />
+                <Setter Property="Button.Shadow">
+                    <Setter.Value>
+                        <Shadow Brush="LightGrey" Opacity="0.7" Offset="3,3" Radius="5"/>
+                    </Setter.Value>
+                </Setter>
+                <Style.Triggers>
+                    <Trigger TargetType="Button" Property="IsPressed" Value="True">
+                        <Setter Property="Opacity" Value="0.6"/>
+                    </Trigger>
+                </Style.Triggers>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
     <StackLayout>
         <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand" HeightRequest="300">
             <!--Calculator Header-->
