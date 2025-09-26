@@ -73,7 +73,20 @@
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
 
- 
+                <!-- Number Buttons -->
+                <Button Style="{StaticResource CalculatorButtonStyle}" Text="7" Grid.Column="0" Grid.Row="3" Clicked="Button_Click"/>
+                <Button Style="{StaticResource CalculatorButtonStyle}" Text="8" Grid.Column="1" Grid.Row="3" Clicked="Button_Click"/>
+                <Button Style="{StaticResource CalculatorButtonStyle}" Text="9" Grid.Column="2" Grid.Row="3" Clicked="Button_Click"/>
+                <Button Style="{StaticResource CalculatorButtonStyle}" Text="4" Grid.Column="0" Grid.Row="4" Clicked="Button_Click"/>
+                <Button Style="{StaticResource CalculatorButtonStyle}" Text="5" Grid.Column="1" Grid.Row="4" Clicked="Button_Click"/>
+                <Button Style="{StaticResource CalculatorButtonStyle}" Text="6" Grid.Column="2" Grid.Row="4" Clicked="Button_Click"/>
+                <Button Style="{StaticResource CalculatorButtonStyle}" Text="1" Grid.Column="0" Grid.Row="5" Clicked="Button_Click"/>
+                <Button Style="{StaticResource CalculatorButtonStyle}" Text="2" Grid.Column="1" Grid.Row="5" Clicked="Button_Click"/>
+                <Button Style="{StaticResource CalculatorButtonStyle}" Text="3" Grid.Column="2" Grid.Row="5" Clicked="Button_Click"/>
+                <Button Style="{StaticResource CalculatorButtonStyle}" Text="0" Grid.Column="1" Grid.Row="6" Clicked="Button_Click"/>
+                <Button Style="{StaticResource CalculatorButtonStyle}" Text="." Grid.Column="2" Grid.Row="6" Clicked="Button_Click"/>
+                <Button Style="{StaticResource CalculatorButtonStyle}" Text="=" Grid.Column="3" Grid.Row="6" BackgroundColor="Blue" Clicked="Button_Click"/>
+
             </Grid>
         </Border>
     </StackLayout>

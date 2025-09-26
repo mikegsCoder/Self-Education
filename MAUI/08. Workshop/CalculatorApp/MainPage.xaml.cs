@@ -9,5 +9,9 @@ namespace CalculatorApp
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, EventArgs e)
+        { }
+
     }
 }
