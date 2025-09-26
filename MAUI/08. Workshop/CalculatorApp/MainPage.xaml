@@ -87,6 +87,12 @@
                 <Button Style="{StaticResource CalculatorButtonStyle}" Text="." Grid.Column="2" Grid.Row="6" Clicked="Button_Click"/>
                 <Button Style="{StaticResource CalculatorButtonStyle}" Text="=" Grid.Column="3" Grid.Row="6" BackgroundColor="Blue" Clicked="Button_Click"/>
 
+                <!-- Operation Buttons -->
+                <Button Style="{StaticResource CalculatorButtonStyle}" Text="÷" Grid.Column="3" Grid.Row="2" BackgroundColor="DarkOrange" Clicked="Button_Click"/>
+                <Button Style="{StaticResource CalculatorButtonStyle}" Text="×" Grid.Column="3" Grid.Row="3" BackgroundColor="DarkOrange" Clicked="Button_Click"/>
+                <Button Style="{StaticResource CalculatorButtonStyle}" Text="−" Grid.Column="3" Grid.Row="4" BackgroundColor="DarkOrange" Clicked="Button_Click"/>
+                <Button Style="{StaticResource CalculatorButtonStyle}" Text="+" Grid.Column="3" Grid.Row="5" BackgroundColor="DarkOrange" Clicked="Button_Click"/>
+
             </Grid>
         </Border>
     </StackLayout>
