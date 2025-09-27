@@ -93,6 +93,16 @@
                 <Button Style="{StaticResource CalculatorButtonStyle}" Text="−" Grid.Column="3" Grid.Row="4" BackgroundColor="DarkOrange" Clicked="Button_Click"/>
                 <Button Style="{StaticResource CalculatorButtonStyle}" Text="+" Grid.Column="3" Grid.Row="5" BackgroundColor="DarkOrange" Clicked="Button_Click"/>
 
+                <!-- Other Functions -->
+                <Button Style="{StaticResource CalculatorButtonStyle}" Text="x²" Grid.Column="0" Grid.Row="0" BackgroundColor="DarkOrange" HeightRequest="45" Clicked="Button_Click"/>
+                <Button Style="{StaticResource CalculatorButtonStyle}" Text="√" Grid.Column="1" Grid.Row="0" BackgroundColor="DarkOrange" HeightRequest="45" Clicked="Button_Click"/>
+                <Button Style="{StaticResource CalculatorButtonStyle}" Text="xʸ" Grid.Column="2" Grid.Row="1" BackgroundColor="DarkOrange" HeightRequest="45" Clicked="Button_Click"/>
+                <Button Style="{StaticResource CalculatorButtonStyle}" Text="ʸ√x" Grid.Column="0" Grid.Row="1" BackgroundColor="DarkOrange" HeightRequest="45" Clicked="Button_Click"/>
+                <Button Style="{StaticResource CalculatorButtonStyle}" Text="cos" Grid.Column="1" Grid.Row="2" BackgroundColor="DarkOrange" HeightRequest="45" Clicked="Button_Click"/>
+                <Button Style="{StaticResource CalculatorButtonStyle}" Text="sin" Grid.Column="0" Grid.Row="2" BackgroundColor="DarkOrange" HeightRequest="45" Clicked="Button_Click"/>
+                <Button Style="{StaticResource CalculatorButtonStyle}" Text="tan" Grid.Column="2" Grid.Row="2" BackgroundColor="DarkOrange" HeightRequest="45" Clicked="Button_Click"/>
+                <Button Style="{StaticResource CalculatorButtonStyle}" Text="ln" Grid.Column="3" Grid.Row="1" BackgroundColor="DarkOrange" HeightRequest="45" Clicked="Button_Click"/>
+
             </Grid>
         </Border>
     </StackLayout>
