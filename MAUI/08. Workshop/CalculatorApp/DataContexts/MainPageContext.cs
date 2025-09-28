@@ -11,6 +11,7 @@ namespace CalculatorApp.DataContexts
     public class MainPageContext : INotifyPropertyChanged
     {
         private string displayText = "";
+        private string tempDisplay = "";
 
         public string DisplayText
         {
@@ -19,6 +20,16 @@ namespace CalculatorApp.DataContexts
             {
                 displayText = value == "-" ? "" : value;
                 NotifyPropertyChanged(nameof(DisplayText));
+            }
+        }
+
+        public string TempDisplay
+        {
+            get { return tempDisplay; }
+            set
+            {
+                tempDisplay = value;
+                NotifyPropertyChanged(nameof(TempDisplay));
             }
         }
 
