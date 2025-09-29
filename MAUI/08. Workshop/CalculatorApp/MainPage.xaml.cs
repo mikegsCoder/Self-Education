@@ -20,6 +20,7 @@ namespace CalculatorApp
             _context = context;
 
             InitializeComponent();
+            SetBindings();
 
             calculations = new HashSet<string>() { "=", "1/x", "ln", "x²", "√", "cos", "sin", "tan" };
             operations = new HashSet<string>() { "÷", "×", "−", "+", "xʸ", "ʸ√x" };
@@ -28,5 +29,12 @@ namespace CalculatorApp
         private void Button_Click(object sender, EventArgs e)
         { }
 
+        private void SetBindings()
+        {
+            BindingContext = _context;
+
+            tempDisplayLabel.SetBinding(Label.TextProperty, "TempDisplay");
+            displayTextLabel.SetBinding(Label.TextProperty, "DisplayText");
+        }
     }
 }
