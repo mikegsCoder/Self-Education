@@ -27,7 +27,33 @@ namespace CalculatorApp
         }
 
         private void Button_Click(object sender, EventArgs e)
-        { }
+        {
+            Button button = (Button)sender;
+            string text = button.Text;
+
+            if (calculations.Contains(text))
+            {
+                CalculateResult(text);
+            }
+            else if (operations.Contains(text))
+            {
+                SetOperation(text);
+            }
+            else
+            {
+                // to implement
+            }
+        }
+
+        private void SetOperation(string text)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void CalculateResult(string text)
+        {
+            throw new NotImplementedException();
+        }
 
         private void SetBindings()
         {
