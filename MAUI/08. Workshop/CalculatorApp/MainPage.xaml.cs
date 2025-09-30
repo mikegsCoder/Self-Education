@@ -61,6 +61,16 @@ namespace CalculatorApp
 
         private void AppendToDisplay(string text)
         {
+            if (text == "." && (CheckContextDisplayText() && _context.DisplayText.Contains(".") || !CheckContextDisplayText()))
+            {
+                return;
+            }
+
+            _context.DisplayText += text;
+        }
+
+        private bool CheckContextDisplayText()
+        {
             throw new NotImplementedException();
         }
 
