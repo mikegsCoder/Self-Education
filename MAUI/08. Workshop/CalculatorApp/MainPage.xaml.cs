@@ -71,7 +71,7 @@ namespace CalculatorApp
 
         private bool CheckContextDisplayText()
         {
-            throw new NotImplementedException();
+            return _context.DisplayText.Length > 0;
         }
 
         private void ClearDisplay()
