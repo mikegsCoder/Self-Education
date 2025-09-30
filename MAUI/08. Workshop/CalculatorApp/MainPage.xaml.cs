@@ -41,8 +41,42 @@ namespace CalculatorApp
             }
             else
             {
-                // to implement
+                switch (text)
+                {
+                    case "+/-":
+                        ChangeSign();
+                        break;
+                    case "del":
+                        Backspace();
+                        break;
+                    case "C":
+                        ClearDisplay();
+                        break;
+                    default:
+                        AppendToDisplay(text);
+                        break;
+                }
             }
+        }
+
+        private void AppendToDisplay(string text)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void ClearDisplay()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void Backspace()
+        {
+            throw new NotImplementedException();
+        }
+
+        private void ChangeSign()
+        {
+            throw new NotImplementedException();
         }
 
         private void SetOperation(string text)
