@@ -76,7 +76,11 @@ namespace CalculatorApp
 
         private void ClearDisplay()
         {
-            throw new NotImplementedException();
+            _context.DisplayText = "";
+            _context.TempDisplay = "";
+            number1 = 0;
+            number2 = 0;
+            operation = "";
         }
 
         private void Backspace()
