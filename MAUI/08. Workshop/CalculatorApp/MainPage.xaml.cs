@@ -81,7 +81,12 @@ namespace CalculatorApp
 
         private void Backspace()
         {
-            throw new NotImplementedException();
+            if (!CheckContextDisplayText())
+            {
+                return;
+            }
+
+            _context.DisplayText = _context.DisplayText.Substring(0, _context.DisplayText.Length - 1);
         }
 
         private void ChangeSign()
