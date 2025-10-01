@@ -86,7 +86,14 @@ namespace CalculatorApp
 
         private void ChangeSign()
         {
-            throw new NotImplementedException();
+            if (!CheckContextDisplayText())
+            {
+                return;
+            }
+
+            _context.DisplayText = _context.DisplayText.First().ToString() == "-"
+                ? _context.DisplayText.Substring(1)
+                : "-" + _context.DisplayText;
         }
 
         private void SetOperation(string text)
