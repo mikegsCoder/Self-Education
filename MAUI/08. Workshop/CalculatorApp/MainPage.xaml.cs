@@ -127,9 +127,45 @@ namespace CalculatorApp
             _context.DisplayText = "";
         }
 
-        private void CalculateResult(string text)
+        private void CalculateResult(string op)
         {
-            throw new NotImplementedException();
+            if ((String.IsNullOrEmpty(operation) && op == "=") || !CheckContextDisplayText())
+            {
+                return;
+            }
+
+            double result = 0;
+
+            if (op == "=" && double.TryParse(_context.DisplayText, out number2))
+            {
+                switch (operation)
+                {
+                    case "÷":
+                        result = number1 / number2;
+                        break;
+                    case "×":
+                        result = number1 * number2;
+                        break;
+                    case "−":
+                        result = number1 - number2;
+                        break;
+                    case "+":
+                        result = number1 + number2;
+                        break;
+                    case "xʸ":
+                        result = Math.Pow(number1, number2);
+                        break;
+                    case "ʸ√x":
+                        result = Math.Pow(number2, 1 / number1);
+                        break;
+                }
+            }
+
+            _context.DisplayText = result.ToString();
+            _context.TempDisplay = "";
+
+            number1 = result;
+            operation = "";
         }
 
         private void SetBindings()
