@@ -105,9 +105,26 @@ namespace CalculatorApp
                 : "-" + _context.DisplayText;
         }
 
-        private void SetOperation(string text)
+        private void SetOperation(string op)
         {
-            throw new NotImplementedException();
+            if (!double.TryParse(_context.DisplayText, out number1) && _context.TempDisplay.Length == 0)
+            {
+                return;
+            }
+
+            operation = op;
+
+            if (_context.TempDisplay.Length > 0 && _context.TempDisplay[_context.TempDisplay.Length - 1].ToString() == " ")
+            {
+                _context.TempDisplay = _context.TempDisplay.Substring(0, _context.TempDisplay.Length - 2) + op + " ";
+                double.TryParse(_context.TempDisplay.Substring(0, _context.TempDisplay.Length - 3), out number1);
+            }
+            else
+            {
+                _context.TempDisplay = _context.DisplayText + " " + op + " ";
+            }
+
+            _context.DisplayText = "";
         }
 
         private void CalculateResult(string text)
