@@ -1,6 +1,4 @@
 ﻿using CalculatorApp.DataContexts;
-using Microsoft.Maui.Controls;
-using System;
 
 namespace CalculatorApp
 {
