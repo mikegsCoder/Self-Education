@@ -160,6 +160,33 @@ namespace CalculatorApp
                         break;
                 }
             }
+            else if (double.TryParse(_context.DisplayText, out number1))
+            {
+                switch (op)
+                {
+                    case "1/x":
+                        result = 1 / number1;
+                        break;
+                    case "ln":
+                        result = Math.Log(number1);
+                        break;
+                    case "x²":
+                        result = Math.Pow(number1, 2);
+                        break;
+                    case "√":
+                        result = Math.Sqrt(number1);
+                        break;
+                    case "cos":
+                        result = Math.Cos(number1 * Math.PI / 180);
+                        break;
+                    case "sin":
+                        result = Math.Sin(number1 * Math.PI / 180);
+                        break;
+                    case "tan":
+                        result = Math.Tan(number1 * Math.PI / 180);
+                        break;
+                }
+            }
 
             _context.DisplayText = result.ToString();
             _context.TempDisplay = "";
