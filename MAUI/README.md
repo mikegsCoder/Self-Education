@@ -44,4 +44,4 @@
   - Converter properties and parameters
   - INotifyPropertyChanged
   - Relative binding
-  
+- Workshop
