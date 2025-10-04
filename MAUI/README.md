@@ -45,3 +45,4 @@
   - INotifyPropertyChanged
   - Relative binding
 - Workshop
+- Triggers
