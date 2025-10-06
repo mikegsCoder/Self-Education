@@ -46,3 +46,4 @@
   - Relative binding
 - Workshop
 - Triggers
+  - Property triggers
