@@ -47,3 +47,5 @@
 - Workshop
 - Triggers
   - Property triggers
+  - Event triggers
+  
