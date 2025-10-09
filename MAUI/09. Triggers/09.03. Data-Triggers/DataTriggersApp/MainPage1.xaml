@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DataTriggersApp.MainPage1">
+
+    <!--DataTrigger example:-->
+    <StackLayout Padding="20">
+        <Entry TextColor="Green">
+            <Entry.Triggers>
+                <DataTrigger TargetType="Entry"
+                     Binding="{Binding Source={RelativeSource Self}, Path=Text}"
+                     Value="admin">
+                    <Setter Property="TextColor" Value="Red" />
+                </DataTrigger>
+            </Entry.Triggers>
+        </Entry>
+    </StackLayout>
+
+</ContentPage>
