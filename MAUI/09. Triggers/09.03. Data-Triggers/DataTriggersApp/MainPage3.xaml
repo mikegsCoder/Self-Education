@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local ="clr-namespace:DataTriggersApp"
+             x:Class="DataTriggersApp.MainPage3">
+
+    <!--DataTrigger example:-->
+    <ContentPage.Resources>
+        <local:Person x:Key="person" Name="Tom" />
+    </ContentPage.Resources>
+
+    <StackLayout Padding="10">
+        <Entry Text="{Binding Source={x:StaticResource person}, Path=Name}" Margin="10" />
+        
+        <Label Text="Hello" TextColor="#01579B" Margin="10">
+            <Label.Triggers>
+                <DataTrigger TargetType="Label"
+                     Binding="{Binding Source={StaticResource person}, Path=Name}"
+                     Value="admin">
+                    <Setter Property="Text" Value="Hello admin!"/>
+                    <Setter Property="TextColor" Value="Red"/>
+                </DataTrigger>
+            </Label.Triggers>
+        </Label>
+    </StackLayout>
+
+</ContentPage>
