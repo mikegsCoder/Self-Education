@@ -49,4 +49,5 @@
   - Property triggers
   - Event triggers
   - Data triggers
+  - Multi triggers
   
