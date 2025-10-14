@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListViewApp.MainPage2">
+
+    <!--ListView example:-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array x:Key="people" Type="{x:Type x:String}">
+                <x:String>Tomas</x:String>
+                <x:String>Bob</x:String>
+                <x:String>Sam</x:String>
+                <x:String>Alice</x:String>
+            </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout>
+        <Label Text="User list:"/>
+        <ListView ItemsSource="{StaticResource people}" />
+    </StackLayout>
+
+</ContentPage>
