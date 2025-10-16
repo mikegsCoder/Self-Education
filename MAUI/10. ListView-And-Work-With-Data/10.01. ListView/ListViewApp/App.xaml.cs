@@ -13,7 +13,8 @@
             //return new Window(new MainPage2());
             //return new Window(new MainPage3());
             //return new Window(new MainPage4());
-            return new Window(new MainPage5());
+            //return new Window(new MainPage5());
+            return new Window(new MainPage6());
         }
     }
 }

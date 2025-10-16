@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ListViewApp.MainPage6">
+
+    <!--Binding to SelectedItem example:-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array x:Key="users" Type="{x:Type x:String}">
+                <x:String>Tom</x:String>
+                <x:String>Bob</x:String>
+                <x:String>Sam</x:String>
+                <x:String>Alice</x:String>
+            </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Padding="7">
+        <Label Text="{Binding Source={Reference usersList}, Path=SelectedItem}" />
+        <ListView x:Name="usersList" ItemsSource="{StaticResource users}" />
+    </StackLayout>
+
+</ContentPage>
