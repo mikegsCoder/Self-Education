@@ -16,7 +16,8 @@
             //return new Window(new MainPage5());
             //return new Window(new MainPage6());
 
-            return new Window(new StartPage1());
+            //return new Window(new StartPage1());
+            return new Window(new StartPage2());
         }
     }
 }
