@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DataTemplateApp"
+             x:Class="DataTemplateApp.MainPage">
+
+    <!--DataTemplate example:-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array x:Key="users" Type="{x:Type local:User}">
+                <local:User Name="Tom" Age="38" />
+                <local:User Name="Bob" Age="42" />
+                <local:User Name="Sam" Age="28" />
+                <local:User Name="Alice" Age="33" />
+            </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Padding="7">
+        <Label Text="User list:" FontSize="18" />
+        <Label Text="{Binding Source={Reference usersListView}, Path=SelectedItem.Name, StringFormat='Selected: {0}'}"
+               FontSize="18"/>
+        <ListView x:Name="usersListView" ItemsSource="{StaticResource users}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout>
+                                <Label Text="{Binding Name}" FontSize="16" />
+                                <Label Text="{Binding Age}" FontSize="14" />
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
