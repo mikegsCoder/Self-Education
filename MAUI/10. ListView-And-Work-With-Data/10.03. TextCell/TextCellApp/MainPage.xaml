@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:TextCellApp"
+             x:Class="TextCellApp.MainPage">
+
+    <!--TextCell example:-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array x:Key="users" Type="{x:Type local:User}">
+                <local:User Name="Tom" Age="38" />
+                <local:User Name="Bob" Age="40" />
+                <local:User Name="Sam" Age="28" />
+                <local:User Name="Alice" Age="35" />
+            </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Padding="7">
+        <Label Text="User list:" FontSize="18" TextColor="#004D40"/>
+        <ListView x:Name="usersListView" ItemsSource="{StaticResource users}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell
+                        Text="{Binding Name}"
+                        Detail="{Binding Age, StringFormat='{0} years old'}"
+                        TextColor="#004D40"
+                        DetailColor="#26A69A"
+                        />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
