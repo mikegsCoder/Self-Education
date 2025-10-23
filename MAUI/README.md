@@ -53,4 +53,5 @@
 - ListView and work with data
   - ListView
   - DataTemplate
+  - TextCell
   
