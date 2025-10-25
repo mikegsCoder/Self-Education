@@ -54,4 +54,5 @@
   - ListView
   - DataTemplate
   - TextCell
+  - ImageCell and ViewCell
   
