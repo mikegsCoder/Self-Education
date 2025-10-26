@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35919.96 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomCellApp", "CustomCellApp\CustomCellApp.csproj", "{45096F5B-1499-4647-AD69-93E61D369A1E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{45096F5B-1499-4647-AD69-93E61D369A1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45096F5B-1499-4647-AD69-93E61D369A1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45096F5B-1499-4647-AD69-93E61D369A1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45096F5B-1499-4647-AD69-93E61D369A1E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F1358F73-40FF-4EF0-8C8A-6A3E19E947D1}
+	EndGlobalSection
+EndGlobal

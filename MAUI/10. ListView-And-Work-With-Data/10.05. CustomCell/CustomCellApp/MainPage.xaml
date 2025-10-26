@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CustomCellApp"
+             x:Class="CustomCellApp.MainPage">
+
+    <!--CustomCell example:-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array x:Key="langs" Type="{x:Type local:Language}">
+                <local:Language Name="C#" ImagePath="csharp.png" Description="C# description ..." />
+                <local:Language Name="JavaScript" ImagePath="js.png" Description="JS description ..." />
+                <local:Language Name="TypeScript" ImagePath="ts.png" Description="TS description ..." />
+            </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Padding="7">
+        <Label Text="Programming languages:" FontSize="18" />
+        <ListView ItemsSource="{StaticResource langs}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <local:CustomCell
+                        ImagePath="{Binding ImagePath}"
+                        ImageWidth="40"
+                        ImageHeight="40"
+                        Title="{Binding Name}"
+                        Detail="{Binding Description}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
