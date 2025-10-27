@@ -55,4 +55,5 @@
   - DataTemplate
   - TextCell
   - ImageCell and ViewCell
+  - CustomCell
   
