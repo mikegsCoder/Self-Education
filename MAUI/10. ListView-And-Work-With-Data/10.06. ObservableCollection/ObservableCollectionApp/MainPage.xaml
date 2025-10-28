@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ObservableCollectionApp.MainPage">
+
+    <!--ObservableCollection example:-->
+    <StackLayout Padding="7">
+        <StackLayout Orientation="Vertical">
+            <Entry x:Name="nameEntry" Margin="5" Placeholder = "Enter name" />
+            <Entry x:Name="ageEntry" Margin="5" Placeholder = "Enter age" />
+            <Button Clicked="SaveButton_Clicked" Text="Save" WidthRequest="100" HorizontalOptions="Start" />
+        </StackLayout>
+
+        <ListView ItemsSource="{Binding Users}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <StackLayout>
+                                <Label Text="{Binding Name}" FontAttributes="Bold" />
+                                <Label Text="{Binding Age}" />
+                            </StackLayout>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
