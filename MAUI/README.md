@@ -56,4 +56,5 @@
   - TextCell
   - ImageCell and ViewCell
   - CustomCell
+  - ObservableCollection
   
