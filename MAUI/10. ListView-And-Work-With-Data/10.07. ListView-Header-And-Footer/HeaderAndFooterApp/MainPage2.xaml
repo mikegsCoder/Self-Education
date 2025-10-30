@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HeaderAndFooterApp.MainPage2">
+
+    <!--Header and Footer example:-->
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <x:Array x:Key="users" Type="{x:Type x:String}">
+                <x:String>Tom</x:String>
+                <x:String>Bob</x:String>
+                <x:String>Sam</x:String>
+                <x:String>Alice</x:String>
+            </x:Array>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <StackLayout Padding="7">
+        <ListView ItemsSource="{StaticResource users}" RowHeight="25">
+            <ListView.Header>
+                <Label Text= "User list:" FontSize="18" />
+            </ListView.Header>
+            <ListView.Footer>
+                <HorizontalStackLayout>
+                    <Label FontSize="12" Text=".NET MAUI" Margin="10" />
+                    <Label FontSize="12" Text="April 2025" Margin="10" />
+                </HorizontalStackLayout>
+            </ListView.Footer>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
