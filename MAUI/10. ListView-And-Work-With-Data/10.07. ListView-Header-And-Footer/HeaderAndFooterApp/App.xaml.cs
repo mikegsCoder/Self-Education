@@ -12,7 +12,8 @@
             //return new Window(new MainPage1());
             //return new Window(new MainPage2());
 
-            return new Window(new StartPage1());
+            //return new Window(new StartPage1());
+            return new Window(new StartPage2());
         }
     }
 }
