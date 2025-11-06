@@ -20,6 +20,16 @@
                 HorizontalOptions="Center">
             </Label>
 
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Button x:Name="startBtn" Margin="10"
+                    Background="SkyBlue" Text="Start" FontSize="30" 
+                    WidthRequest="120" HeightRequest="50"
+                    BorderColor="Brown" BorderWidth="2"
+                    Clicked="startbtn_Click">
+                </Button>
+
+            </HorizontalStackLayout>
+
         </StackLayout>
 
         <ListView Grid.Column="1" x:Name="elapsedTimesList" 

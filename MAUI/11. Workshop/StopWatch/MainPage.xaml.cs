@@ -6,5 +6,9 @@
         {
             InitializeComponent();
         }
+
+        private void startbtn_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
