@@ -28,6 +28,12 @@
                     Clicked="startbtn_Click">
                 </Button>
 
+                <Button x:Name="stopBtn" Margin="10"
+                    Background="SkyBlue" Text="Stop" FontSize="30" 
+                    WidthRequest="120" HeightRequest="50"
+                    BorderColor="Brown" BorderWidth="2"
+                    Clicked="stopbtn_Click">
+                </Button>
             </HorizontalStackLayout>
 
         </StackLayout>

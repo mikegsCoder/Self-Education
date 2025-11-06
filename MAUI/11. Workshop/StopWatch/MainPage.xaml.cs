@@ -10,5 +10,9 @@
         private void startbtn_Click(object sender, EventArgs e)
         {
         }
+
+        private void stopbtn_Click(object sender, EventArgs e)
+        {
+        }
     }
 }
