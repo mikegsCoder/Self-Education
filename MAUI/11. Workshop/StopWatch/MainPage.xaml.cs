@@ -14,5 +14,9 @@
         private void stopbtn_Click(object sender, EventArgs e)
         {
         }
+
+        private void resetbtn_Click(object sender, EventArgs e)
+        {
+        }
     }
 }

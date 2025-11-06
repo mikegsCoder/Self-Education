@@ -34,6 +34,13 @@
                     BorderColor="Brown" BorderWidth="2"
                     Clicked="stopbtn_Click">
                 </Button>
+
+                <Button x:Name="resetBtn" Margin="10"
+                    Background="SkyBlue" Text="Reset" FontSize="30" 
+                    WidthRequest="120" HeightRequest="50"
+                    BorderColor="Brown" BorderWidth="2"
+                    Clicked="resetbtn_Click">
+                </Button>
             </HorizontalStackLayout>
 
         </StackLayout>
