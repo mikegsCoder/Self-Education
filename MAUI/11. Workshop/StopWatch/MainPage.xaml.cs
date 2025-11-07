@@ -22,6 +22,7 @@ namespace StopWatch
             clockTxtLbl.Text = "00:00:00";
             elapsedTimesList.ItemsSource = elapsedTimes;
 
+            dt.Tick += new EventHandler(dt_Tick);
             dt.Interval = new TimeSpan(0, 0, 0, 0, 1); // milliseconds
         }
 
@@ -34,6 +35,10 @@ namespace StopWatch
         }
 
         private void resetbtn_Click(object sender, EventArgs e)
+        {
+        }
+
+        void dt_Tick(object sender, EventArgs e)
         {
         }
     }
