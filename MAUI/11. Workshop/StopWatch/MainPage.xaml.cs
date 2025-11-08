@@ -40,6 +40,15 @@ namespace StopWatch
 
         void dt_Tick(object sender, EventArgs e)
         {
+            if (sw.IsRunning)
+            {
+                TimeSpan ts = sw.Elapsed;
+
+                currentTime = String.Format("{0:00}:{1:00}:{2:00}",
+                    ts.Minutes, ts.Seconds, ts.Milliseconds / 10);
+
+                clockTxtLbl.Text = currentTime;
+            }
         }
     }
 }
