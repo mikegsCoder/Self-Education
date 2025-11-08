@@ -36,6 +36,9 @@ namespace StopWatch
 
         private void resetbtn_Click(object sender, EventArgs e)
         {
+            sw.Reset();
+
+            clockTxtLbl.Text = "00:00:00";
         }
 
         void dt_Tick(object sender, EventArgs e)
