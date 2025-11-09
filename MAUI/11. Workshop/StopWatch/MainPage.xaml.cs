@@ -35,6 +35,12 @@ namespace StopWatch
 
         private void stopbtn_Click(object sender, EventArgs e)
         {
+            if (sw.IsRunning)
+            {
+                sw.Stop();
+            }
+
+            elapsedTimes.Add(currentTime);
         }
 
         private void resetbtn_Click(object sender, EventArgs e)
