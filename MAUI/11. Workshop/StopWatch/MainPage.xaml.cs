@@ -28,6 +28,9 @@ namespace StopWatch
 
         private void startbtn_Click(object sender, EventArgs e)
         {
+            sw.Start();
+
+            dt.Start();
         }
 
         private void stopbtn_Click(object sender, EventArgs e)
