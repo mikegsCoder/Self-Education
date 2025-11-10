@@ -60,3 +60,6 @@
   - ListView Header and Footer
   - Grouping
 - Workshop
+- MVVM
+  - MVVM pattern
+  
