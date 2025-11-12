@@ -63,4 +63,5 @@
 - MVVM
   - MVVM pattern
   - ICommand
+  - CommandParameter
   
