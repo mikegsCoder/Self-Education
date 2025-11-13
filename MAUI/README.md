@@ -64,4 +64,5 @@
   - MVVM pattern
   - ICommand
   - CommandParameter
+  - CanExecute
   
