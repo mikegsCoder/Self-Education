@@ -65,4 +65,5 @@
   - ICommand
   - CommandParameter
   - CanExecute
+  - ViewModel separation of concerns
   
