@@ -66,4 +66,6 @@
   - CommandParameter
   - CanExecute
   - ViewModel separation of concerns
+- CarouselView
+  - CarouselView introduction
   
