@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CarouselViewApp"
+             x:Class="CarouselViewApp.MainPage2">
+
+    <!--CurrentItemChanged example:-->
+    <VerticalStackLayout Padding="5">
+        <Label x:Name="header" FontSize="18"/>
+
+        <CarouselView x:Name="carouselView" CurrentItemChanged="carouselView_CurrentItemChanged">
+            <CarouselView.ItemsSource>
+                <x:Array Type="{x:Type local:Product}">
+                    <local:Product Name="Huawei" ImagePath="huawei.jpg" Description="Huawei phone description ..." />
+                    <local:Product Name="iPhone" ImagePath="iphone.jpg" Description="iPhone phone description ...0" />
+                    <local:Product Name="Xiaomi" ImagePath="xiaomi.jpg" Description="Xiaomi phone description ..." />
+                </x:Array>
+            </CarouselView.ItemsSource>
+
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+                    <Border>
+                        <VerticalStackLayout>
+                            <Label Text="{Binding Name}" FontAttributes="Bold" FontSize="18" HorizontalTextAlignment="Center"/>
+                            <Image WidthRequest="150" HeightRequest="150" Source="{Binding ImagePath}" />
+                            <Label Text="{Binding Description}" HorizontalTextAlignment="Center" />
+                        </VerticalStackLayout>
+                    </Border>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+    </VerticalStackLayout>
+
+</ContentPage>
