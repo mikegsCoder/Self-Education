@@ -68,4 +68,5 @@
   - ViewModel separation of concerns
 - CarouselView
   - CarouselView introduction
+  - CarouselView item selection handling
   
