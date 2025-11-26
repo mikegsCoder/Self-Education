@@ -11,7 +11,8 @@
         {
             //return new Window(new MainPage1());
             //return new Window(new MainPage2());
-            return new Window(new MainPage3());
+            //return new Window(new MainPage3());
+            return new Window(new MainPage4());
         }
     }
 }

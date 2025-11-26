@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CollectionViewApp"
+             x:Class="CollectionViewApp.MainPage4">
+
+    <!--CollectionView Header and Footer example:-->
+    <CollectionView>
+        <CollectionView.ItemsSource>
+            <x:Array Type="{x:Type local:Person}">
+                <local:Person Name="Tom" Company="Microsoft" />
+                <local:Person Name="Bob" Company="Google" />
+                <local:Person Name="Sam" Company="JetBrains" />
+                <local:Person Name="Alice" Company="Microsoft" />
+                <local:Person Name="Kate" Company="Google" />
+            </x:Array>
+        </CollectionView.ItemsSource>
+
+        <CollectionView.Header>
+            <Label Text= "User list:" FontSize="18" FontAttributes="Bold" />
+        </CollectionView.Header>
+        
+        <CollectionView.Footer>
+            <Label Text= "November 2025" FontSize="14" FontAttributes="Italic" />
+        </CollectionView.Footer>
+        
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout Padding="8">
+                    <Label Text="{Binding Name}" FontSize="18" TextColor="#006064" />
+                    <Label Text="{Binding Company}" />
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+
+</ContentPage>
