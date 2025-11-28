@@ -69,4 +69,6 @@
 - CarouselView
   - CarouselView introduction
   - CarouselView item selection handling
+- CollectionView
+  - CollectionView introduction
   
