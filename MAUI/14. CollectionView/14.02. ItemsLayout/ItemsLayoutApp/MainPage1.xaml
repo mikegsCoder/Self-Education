@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ItemsLayoutApp"
+             x:Class="ItemsLayoutApp.MainPage1">
+
+    <!--ItemsLayout example:-->
+    <CollectionView ItemsLayout="VerticalList">
+        <CollectionView.ItemsSource>
+            <x:Array Type="{x:Type local:Person}">
+                <local:Person Name="Tom" Age="38" Company="Microsoft"/>
+                <local:Person Name="Sam" Age="25" Company="Google"/>
+                <local:Person Name="Bob" Age="42" Company="JetBrains"/>
+                <local:Person Name="Alice" Age="33" Company="Microsoft"/>
+                <local:Person Name="Kate" Age="29" Company="Google"/>
+                <local:Person Name="Amelia" Age="35" Company="JetBrains" />
+            </x:Array>
+        </CollectionView.ItemsSource>
+
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <StackLayout Margin="10">
+                    <Label Text="{Binding Name}" FontSize = "20"  TextColor = "#006064" Margin="10" />
+                    <Label Text="{Binding Age, StringFormat='Age: {0}'}" />
+                    <Label Text="{Binding Company}" />
+                </StackLayout>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
+
+</ContentPage>
