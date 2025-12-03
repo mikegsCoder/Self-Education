@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ItemSelectionApp"
+             x:Class="ItemSelectionApp.MainPage1">
+
+    <!--SelectedItem example:-->
+    <StackLayout>
+        <Label FontSize="18" Margin="5"
+            Text="{Binding Source={x:Reference collectionView}, Path=SelectedItem.Name, StringFormat='Selected: {0}'}" />
+        
+        <CollectionView x:Name="collectionView" SelectionMode="Single">
+            <CollectionView.ItemsSource>
+                <x:Array Type="{x:Type local:Person}">
+                    <local:Person Name="Tom" Company="Microsoft"/>
+                    <local:Person Name="Sam" Company="Google"/>
+                    <local:Person Name="Bob" Company="JetBrains"/>
+                    <local:Person Name="Alice" Company="Microsoft"/>
+                    <local:Person Name="Kate" Company="Google"/>
+                    <local:Person Name="Amelia" Company="JetBrains" />
+                </x:Array>
+            </CollectionView.ItemsSource>
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Margin="8">
+                        <Label Text="{Binding Name}" FontSize = "20"  TextColor = "#006064"  />
+                        <Label Text="{Binding Company}" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+
+</ContentPage>
