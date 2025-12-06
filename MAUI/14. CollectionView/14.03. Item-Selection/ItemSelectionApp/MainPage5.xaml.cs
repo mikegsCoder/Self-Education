@@ -1,0 +1,14 @@
+﻿using System.Windows.Input;
+
+namespace ItemSelectionApp
+{
+    public partial class MainPage5 : ContentPage
+    {
+        public MainPage5()
+        {
+            InitializeComponent();
+
+            BindingContext = new ViewModel();
+        }
+    }
+}

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:ItemSelectionApp"
+             x:Class="ItemSelectionApp.MainPage5">
+
+    <!--Binging example:-->
+    <StackLayout>
+        <Label Text="{Binding SelectedPerson.Name, StringFormat='Selected: {0}'}" Margin="8" FontSize="20" />
+        
+        <CollectionView SelectionMode="Single" ItemsSource="{Binding People}" SelectedItem="{Binding SelectedPerson}" >
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="8">
+                        <Label Text="{Binding Name}" FontSize = "20"  TextColor = "#006064"  />
+                        <Label Text="{Binding Company}" />
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </StackLayout>
+
+</ContentPage>
