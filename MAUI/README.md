@@ -72,4 +72,5 @@
 - CollectionView
   - CollectionView introduction
   - ItemsLayout
+  - Item selection
   
