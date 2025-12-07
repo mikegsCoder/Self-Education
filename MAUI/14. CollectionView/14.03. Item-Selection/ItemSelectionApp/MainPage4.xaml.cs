@@ -5,6 +5,7 @@ namespace ItemSelectionApp
     public partial class MainPage4 : ContentPage
     {
         public ICommand SelectCommand { get; set; }
+
         public MainPage4()
         {
             InitializeComponent();

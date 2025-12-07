@@ -1,6 +1,4 @@
-﻿using System.Windows.Input;
-
-namespace ItemSelectionApp
+﻿namespace ItemSelectionApp
 {
     public partial class MainPage5 : ContentPage
     {
