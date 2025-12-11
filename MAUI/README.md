@@ -76,4 +76,5 @@
   - Grouping
 - Navigation
   - NavigationPage
+  - Navigation stack
   
