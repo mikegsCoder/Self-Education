@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:DataTransferApp"
+             x:Class="DataTransferApp.MainPage"
+             Title="User list">
+
+    <StackLayout>
+        <Button Text="Add" Clicked="AddButton_Click" />
+        
+        <ListView x:Name="peopleList" ItemsSource="{Binding}" ItemSelected="OnListViewItemSelected">
+            <ListView.Header>
+                <Grid BackgroundColor="#ddd">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Name" FontSize="16" Grid.Column="0" />
+                    <Label Text="Age" FontSize="16" Grid.Column="1" />
+                </Grid>
+            </ListView.Header>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ViewCell.View>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Label Text="{Binding Name}" FontSize="16" Grid.Column="0" />
+                                <Label Text="{Binding Age}" FontSize="15" Grid.Column="1" />
+                            </Grid>
+                        </ViewCell.View>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>
