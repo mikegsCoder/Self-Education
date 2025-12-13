@@ -9,5 +9,8 @@ namespace TicTacToe
         {
             InitializeComponent();
         }
+
+        private void Restart_Click(object sender, EventArgs e)
+        { }
     }
 }

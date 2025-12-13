@@ -10,7 +10,18 @@
         <toolkit:DockLayout>
             <StackLayout toolkit:DockLayout.DockPosition="Bottom" 
                          Background="#FF8C80B4">
-                
+                <Button Clicked="Restart_Click"
+                    Text="Restart"
+                    FontSize="20"
+                    HeightRequest="50"
+                    WidthRequest="150"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    TextColor="Black"
+                    Background="#FFF0F0F0"
+                    BorderColor="Black"
+                    BorderWidth="2"
+                    Margin="5"/>
             </StackLayout>
         </toolkit:DockLayout>
     </Grid>
