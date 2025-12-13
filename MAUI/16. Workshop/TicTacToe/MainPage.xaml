@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+             xmlns:local="clr-namespace:TicTacToe"
+             x:Class="TicTacToe.MainPage"
+             Title="Tic-Tac-Toe" Height="400" Width="400">
+
+    <Grid>
+        <toolkit:DockLayout>
+            <StackLayout toolkit:DockLayout.DockPosition="Bottom" 
+                         Background="#FF8C80B4">
+                
+            </StackLayout>
+        </toolkit:DockLayout>
+    </Grid>
+
+</ContentPage>
