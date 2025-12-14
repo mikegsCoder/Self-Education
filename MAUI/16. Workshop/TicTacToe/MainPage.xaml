@@ -23,6 +23,33 @@
                     BorderWidth="2"
                     Margin="5"/>
             </StackLayout>
+
+            <Border Stroke="White" StrokeThickness="5">
+                <Grid x:Name="MyGrid">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                        <RowDefinition Height="1*" />
+                    </Grid.RowDefinitions>
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                        <ColumnDefinition Width="1*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.Resources>
+                        <Style TargetType="Button">
+                            <Setter Property="BorderWidth" Value="2"/>
+                            <Setter Property="BorderColor" Value="#FF423277" />
+                            <Setter Property="BackgroundColor" Value="#FFDDDDDD" />
+                            <Setter Property="FontSize" Value="30"/>
+                        </Style>
+
+                    </Grid.Resources>
+
+                </Grid>
+            </Border>
         </toolkit:DockLayout>
     </Grid>
 
