@@ -45,9 +45,45 @@
                             <Setter Property="BackgroundColor" Value="#FFDDDDDD" />
                             <Setter Property="FontSize" Value="30"/>
                         </Style>
-
                     </Grid.Resources>
 
+                    <Button x:Name="Top_Left"
+                        Clicked="Button_Click"
+                        Grid.Row="0"
+                        Grid.Column="0"/>
+                    <Button x:Name="Top_Middle"
+                        Grid.Row="0"
+                        Grid.Column="1"
+                        Clicked="Button_Click"/>
+                    <Button x:Name="Top_Right"
+                        Grid.Row="0"
+                        Grid.Column="2"
+                        Clicked="Button_Click"/>
+                    <Button x:Name="Center_Left"
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        Clicked="Button_Click"/>
+                    <Button x:Name="Center_Middle"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Clicked="Button_Click"/>
+                    <Button x:Name="Center_Right"
+                        Grid.Row="1"
+                        Grid.Column="2"
+                        Clicked="Button_Click"/>
+                    <Button x:Name="Bottom_Left"
+                        Grid.Row="2"
+                        Grid.Column="0"
+                        Clicked="Button_Click" />
+                    <Button x:Name="Bottom_Middle"
+                        Grid.Row="2"
+                        Grid.Column="1"
+                        Clicked="Button_Click" />
+                    <Button x:Name="Bottom_Right"
+                        Grid.Row="2"
+                        Grid.Column="2"
+                        Clicked="Button_Click"/>
+                    
                 </Grid>
             </Border>
         </toolkit:DockLayout>

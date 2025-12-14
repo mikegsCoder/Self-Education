@@ -10,6 +10,9 @@ namespace TicTacToe
             InitializeComponent();
         }
 
+        public void Button_Click(object sender, EventArgs e)
+        { }
+
         private void Restart_Click(object sender, EventArgs e)
         { }
     }
