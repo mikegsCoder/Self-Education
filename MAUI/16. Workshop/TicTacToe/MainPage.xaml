@@ -83,6 +83,16 @@
                         Grid.Row="2"
                         Grid.Column="2"
                         Clicked="Button_Click"/>
+
+                    <Label x:Name="GameWonLbl"
+                        Grid.Row="1"
+                        Grid.ColumnSpan="3"
+                        Background="#FF8C80B4"
+                        TextColor="WhiteSmoke"
+                        Text="Game Won"
+                        FontSize="30"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"/>
                     
                 </Grid>
             </Border>
