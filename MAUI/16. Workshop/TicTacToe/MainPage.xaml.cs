@@ -5,9 +5,14 @@ namespace TicTacToe
 {
     public partial class MainPage : ContentPage
     {
+        public GameBoard MyGameBoard;
+
         public MainPage()
         {
             InitializeComponent();
+
+            MyGameBoard = new GameBoard();
+            BindingContext = MyGameBoard;
         }
 
         public void Button_Click(object sender, EventArgs e)
