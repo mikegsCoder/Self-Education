@@ -21,6 +21,19 @@ namespace TicTacToe
         { }
 
         private void Restart_Click(object sender, EventArgs e)
-        { }
+        {
+            //Restarts Game
+            for (int i = 0; i < MyGrid.Count - 1; i++)
+            {
+                var child = MyGrid[i] as Button;
+
+                child.Text = null;
+                child.IsEnabled = true;
+                child.Background = Color.FromArgb("#FFDDDDDD");
+            }
+
+            MyGameBoard = new GameBoard();
+            BindingContext = MyGameBoard;
+        }
     }
 }
