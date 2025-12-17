@@ -30,6 +30,12 @@ namespace TicTacToe
             };
         }
 
+        public bool HasWon
+        {
+            get { return hasWon; }
+            set { hasWon = value; NotifyPropertyChanged("HasWon"); }
+        }
+
         public void NotifyPropertyChanged(string info)
         {
             if (PropertyChanged != null)
