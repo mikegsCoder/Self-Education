@@ -13,6 +13,8 @@ namespace TicTacToe
 
             MyGameBoard = new GameBoard();
             BindingContext = MyGameBoard;
+
+            GameWonLbl.SetBinding(Label.IsVisibleProperty, "HasWon");
         }
 
         public void Button_Click(object sender, EventArgs e)
