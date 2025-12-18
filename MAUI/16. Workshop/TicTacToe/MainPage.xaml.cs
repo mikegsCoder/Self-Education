@@ -18,7 +18,28 @@ namespace TicTacToe
         }
 
         public void Button_Click(object sender, EventArgs e)
-        { }
+        {
+            if (MyGameBoard.HasWon)
+            {
+                return;
+            }
+
+            var clickedButton = sender as Button;
+
+            if (MyGameBoard.currentPlayer == CurrentPlayer.X)
+            {
+                clickedButton!.TextColor = Color.FromArgb("#811717");
+            }
+            else
+            {
+                clickedButton!.TextColor = Color.FromArgb("#126712");
+            }
+
+            clickedButton.Background = Colors.WhiteSmoke;
+            clickedButton.Text = MyGameBoard.currentPlayer.ToString();
+
+            MyGameBoard.UpdateBoard(clickedButton.StyleId);
+        }
 
         private void Restart_Click(object sender, EventArgs e)
         {

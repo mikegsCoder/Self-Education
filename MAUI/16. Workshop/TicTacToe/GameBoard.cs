@@ -36,6 +36,11 @@ namespace TicTacToe
             set { hasWon = value; NotifyPropertyChanged("HasWon"); }
         }
 
+        internal void UpdateBoard(string styleId)
+        {
+            throw new NotImplementedException();
+        }
+
         public void NotifyPropertyChanged(string info)
         {
             if (PropertyChanged != null)
