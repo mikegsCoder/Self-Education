@@ -51,6 +51,29 @@ namespace TicTacToe
 
         private bool CheckIfWon(string buttonName)
         {
+            // Earliest turn a player can win
+            if (turn < 5)
+            {
+                return false;
+            }
+
+            return (WonInRow(buttonName)
+                    || WonInColumn(buttonName)
+                    || WonInDiagonal(buttonName));
+        }
+
+        private bool WonInDiagonal(string buttonName)
+        {
+            throw new NotImplementedException();
+        }
+
+        private bool WonInColumn(string buttonName)
+        {
+            throw new NotImplementedException();
+        }
+
+        private bool WonInRow(string buttonName)
+        {
             throw new NotImplementedException();
         }
 
