@@ -36,7 +36,20 @@ namespace TicTacToe
             set { hasWon = value; NotifyPropertyChanged("HasWon"); }
         }
 
-        internal void UpdateBoard(string styleId)
+        internal void UpdateBoard(string buttonName)
+        {
+            board[buttonName] = (int)currentPlayer;
+
+            HasWon = CheckIfWon(buttonName);
+
+            turn++;
+
+            currentPlayer = currentPlayer == CurrentPlayer.X
+                ? CurrentPlayer.O
+                : CurrentPlayer.X;
+        }
+
+        private bool CheckIfWon(string buttonName)
         {
             throw new NotImplementedException();
         }
