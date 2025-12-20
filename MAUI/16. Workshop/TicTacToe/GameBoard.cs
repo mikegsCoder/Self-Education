@@ -67,9 +67,14 @@ namespace TicTacToe
             throw new NotImplementedException();
         }
 
-        private bool WonInColumn(string buttonName)
+        //Checks to see if player has jsut won thorugh having three pieces in the tile's column
+        private bool WonInColumn(string name)
         {
-            throw new NotImplementedException();
+            string col = name.Substring(name.IndexOf('_') + 1);
+
+            var elements = board.Where(x => x.Key.EndsWith(col));
+
+            return elements.All(x => x.Value == (int)currentPlayer);
         }
 
         //Checks to see if a player has just won through having three pieces in the tile's row
