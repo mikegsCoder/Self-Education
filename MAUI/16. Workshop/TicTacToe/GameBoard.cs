@@ -72,9 +72,14 @@ namespace TicTacToe
             throw new NotImplementedException();
         }
 
-        private bool WonInRow(string buttonName)
+        //Checks to see if a player has just won through having three pieces in the tile's row
+        private bool WonInRow(string name)
         {
-            throw new NotImplementedException();
+            string row = name.Substring(0, name.IndexOf('_') - 1);
+
+            var elements = board.Where(x => x.Key.StartsWith(row));
+
+            return elements.All(x => x.Value == (int)currentPlayer);
         }
 
         public void NotifyPropertyChanged(string info)
