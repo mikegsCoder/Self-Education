@@ -1,7 +1,4 @@
-﻿using Microsoft.Maui.Controls;
-using System.Xml;
-
-namespace TicTacToe
+﻿namespace TicTacToe
 {
     public partial class MainPage : ContentPage
     {
@@ -43,12 +40,12 @@ namespace TicTacToe
 
         private void Restart_Click(object sender, EventArgs e)
         {
-            //Restarts Game
+            // Restarts Game
             for (int i = 0; i < MyGrid.Count - 1; i++)
             {
                 var child = MyGrid[i] as Button;
 
-                child.Text = null;
+                child!.Text = null;
                 child.IsEnabled = true;
                 child.Background = Color.FromArgb("#FFDDDDDD");
             }
