@@ -62,12 +62,27 @@ namespace TicTacToe
                     || WonInDiagonal(buttonName));
         }
 
-        private bool WonInDiagonal(string buttonName)
+        // Checks to see if player has just won by having three pieces diagonally
+        private bool WonInDiagonal(string name)
         {
-            throw new NotImplementedException();
+            if (name == "Top_Left" || name == "Center_Middle" || name == "Bottom_Right")
+            {
+                return (board["Center_Middle"] == (int)currentPlayer
+                    && board["Bottom_Right"] == (int)currentPlayer
+                    && board["Top_Left"] == (int)currentPlayer);
+            }
+
+            if (name == "Top_Right" || name == "Center_Middle" || name == "Bottom_Left")
+            {
+                return (board["Center_Middle"] == (int)currentPlayer
+                    && board["Bottom_Left"] == (int)currentPlayer
+                    && board["Top_Right"] == (int)currentPlayer);
+            }
+
+            return false;
         }
 
-        //Checks to see if player has jsut won thorugh having three pieces in the tile's column
+        // Checks to see if player has jsut won thorugh having three pieces in the tile's column
         private bool WonInColumn(string name)
         {
             string col = name.Substring(name.IndexOf('_') + 1);
@@ -77,7 +92,7 @@ namespace TicTacToe
             return elements.All(x => x.Value == (int)currentPlayer);
         }
 
-        //Checks to see if a player has just won through having three pieces in the tile's row
+        // Checks to see if a player has just won through having three pieces in the tile's row
         private bool WonInRow(string name)
         {
             string row = name.Substring(0, name.IndexOf('_') - 1);
