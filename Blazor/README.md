@@ -3,3 +3,5 @@
 ### Course cirriculum :
 
 - Blazor introduction
+  - HelloBlazorApp
+  
