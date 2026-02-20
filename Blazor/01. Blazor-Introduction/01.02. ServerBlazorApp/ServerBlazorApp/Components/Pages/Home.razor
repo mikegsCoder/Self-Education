@@ -1,0 +1,23 @@
+﻿@page "/"
+@using static Microsoft.AspNetCore.Components.Web.RenderMode
+@rendermode InteractiveServer
+
+<PageTitle>Home</PageTitle>
+
+<h1>Hello, world!</h1>
+
+@* Should add InteractiveServerComponents in Program.cs *@
+
+<button @onclick="IncrementCount">Click</button>
+
+<p>Count: @count</p>
+
+@code {
+    int count = 0;
+
+    void IncrementCount()
+    {
+        count++;
+        Console.WriteLine($"count: {count}");
+    }
+}
