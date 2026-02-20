@@ -4,4 +4,6 @@
 
 - Blazor introduction
   - HelloBlazorApp
+  - ServerBlazorApp
+  
   
