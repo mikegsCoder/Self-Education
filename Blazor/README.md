@@ -5,5 +5,5 @@
 - Blazor introduction
   - HelloBlazorApp
   - ServerBlazorApp
-  
+  - WebAssembly and auto rendering
   
