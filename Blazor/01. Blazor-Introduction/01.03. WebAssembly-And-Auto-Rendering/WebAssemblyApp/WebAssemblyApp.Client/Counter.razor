@@ -1,0 +1,17 @@
+﻿@page "/counter"
+@* @rendermode InteractiveWebAssembly   // Set interactivity mode to WebAssembly *@
+@rendermode InteractiveAuto    // Set interactivity mode to Auto
+
+<h1>Counter</h1>
+
+<button @onclick="IncrementCount">Click</button>
+<p>Count: @count</p>
+
+@code {
+    int count = 0;
+
+    void IncrementCount()
+    {
+        count++;
+    }
+}
