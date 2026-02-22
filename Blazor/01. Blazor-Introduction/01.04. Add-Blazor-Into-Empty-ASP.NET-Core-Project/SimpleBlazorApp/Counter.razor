@@ -1,0 +1,21 @@
+﻿@page "/app"
+@rendermode InteractiveServer
+
+<p>Count: @currentCount</p>
+
+<button @onclick="IncrementCount">+</button>
+<button @onclick="DecrementCount">-</button>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+
+    private void DecrementCount()
+    {
+        if (currentCount > 0) currentCount--;
+    }
+}
