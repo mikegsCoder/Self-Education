@@ -7,4 +7,5 @@
   - ServerBlazorApp
   - WebAssembly and auto rendering
   - Add Blazor into empty ASP.NET Core project
+  - Blazor WebAssembly first app
   
