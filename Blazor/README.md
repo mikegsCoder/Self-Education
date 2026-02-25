@@ -10,4 +10,6 @@
   - Blazor WebAssembly first app
 - Components
   - Set base component
+  - Set components
+  
   
