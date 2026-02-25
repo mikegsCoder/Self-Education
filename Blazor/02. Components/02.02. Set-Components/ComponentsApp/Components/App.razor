@@ -1,0 +1,39 @@
+﻿@page "/"
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ComponentsApp</title>
+
+    @* Add styles: *@
+    @* <link href="/css/styles.css" rel="stylesheet" type="text/css"> *@
+    <link href="ComponentsApp.styles.css" rel="stylesheet" type="text/css">
+    
+    <base href="/" />
+</head>
+
+<body>
+    <h1>@Message @name</h1>
+    <h2>@DisplayTime()</h2>
+
+    <div>@htmlString</div>
+    <div>@((MarkupString)htmlString)</div>
+
+    <h3>Forest</h3>
+    <img alt="Forest" src="/images/forest.jpg" />
+</body>
+</html>
+
+@code {
+    string name = "Mike";
+
+    string DisplayTime()
+    {
+        return $"Current time: {DateTime.Now.ToString("HH:mm:ss")}";
+    }
+
+    string Message { get; } = "Hello";
+
+    string htmlString = "<h1>This is HTML string</h1>";
+}
