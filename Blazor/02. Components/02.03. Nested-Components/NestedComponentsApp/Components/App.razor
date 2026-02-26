@@ -14,7 +14,9 @@
 <body>
     <h1>@header</h1>
 
-    <Home />
+    <Home Title="Home Page" />
+    <Home Title="@someTitle" />
+    @* <Home /> *@
  
 </body>
 
@@ -22,4 +24,6 @@
 
 @code {
     string header = "Blazor App";
+    string someTitle = "Main Page";
+
 }
