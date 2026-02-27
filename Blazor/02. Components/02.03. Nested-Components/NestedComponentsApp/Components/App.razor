@@ -17,6 +17,8 @@
     <Home Title="Home Page" />
     <Home Title="@someTitle" />
     @* <Home /> *@
+
+    <Users Count="@users.Count" UsersList="@users"></Users>
  
 </body>
 
@@ -26,4 +28,5 @@
     string header = "Blazor App";
     string someTitle = "Main Page";
 
+    List<string> users = new List<string> { "Tom", "Bob", "Sam", "Mike" };
 }
