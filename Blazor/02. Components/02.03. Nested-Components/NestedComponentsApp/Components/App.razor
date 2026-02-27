@@ -19,6 +19,9 @@
     @* <Home /> *@
 
     <Users Count="@users.Count" UsersList="@users"></Users>
+
+    @* <User Name="Tom" Age="38" IsMarried="false" /> *@
+    <User Data="@data" />
  
 </body>
 
@@ -29,4 +32,6 @@
     string someTitle = "Main Page";
 
     List<string> users = new List<string> { "Tom", "Bob", "Sam", "Mike" };
+
+    Tuple<string, int, bool> data = new("Tom", 38, false);
 }
