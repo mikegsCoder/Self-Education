@@ -1,25 +1,10 @@
-﻿@* <ul>
-    <li>Name: @Name</li>
-    <li>Age: @Age</li>
-    <li>IsMarried: @IsMarried</li>
-</ul> *@
-
-<ul>
+﻿<ul>
     <li>Name: @Data?.Item1</li>
     <li>Age: @Data?.Item2</li>
     <li>IsMarried: @Data?.Item3</li>
 </ul>
 
 @code {
-    // [Parameter]
-    // public string Name { get; set; } = "";
-
-    // [Parameter]
-    // public int Age { get; set; }
-
-    // [Parameter]
-    // public bool IsMarried { get; set; }
-
     [Parameter]
     public Tuple<string, int, bool>? Data { get; set; }
 }
