@@ -1,0 +1,31 @@
+﻿@page "/"
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="/" />
+    <link rel="stylesheet" href="app.css" />
+    <link rel="stylesheet" href="AttributesApp.styles.css" />
+</head>
+
+<body>
+    <Home Title="User data" InputAttributes="Attributes" />
+
+    <script src="_framework/blazor.web.js"></script>
+</body>
+
+</html>
+
+@code {
+
+    public Dictionary<string, object> Attributes { get; set; } =
+        new Dictionary<string, object>()
+        {
+            { "name", "Tom" },
+            { "age", 30 },
+            { "isMarried", false },
+        };
+}

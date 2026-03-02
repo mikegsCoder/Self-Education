@@ -1,0 +1,18 @@
+﻿<div>@Title</div>
+
+<input id="userAge" @attributes="InputAttributes" hidden="true" />
+
+<p><strong>User data:</strong></p>
+<ul>
+    <li>Name: @InputAttributes?["name"]</li>
+    <li>Age: @InputAttributes?["age"]</li>
+    <li>Is married: @InputAttributes?["isMarried"]</li>
+</ul>
+
+@code {
+    [Parameter]
+    public string Title { get; set; } = "";
+
+    [Parameter(CaptureUnmatchedValues = true)]
+    public Dictionary<string, object>? InputAttributes { get; set; }
+}
