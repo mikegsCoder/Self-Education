@@ -12,4 +12,5 @@
   - Set base component
   - Set components
   - Nested components
+  - Passing attributes
   
