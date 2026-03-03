@@ -1,0 +1,25 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@rendermode RenderMode.InteractiveServer
+
+<h1>Blazor Counter</h1>
+
+<button @onclick="IncrementCount">+</button>
+<span>@currentCount</span>
+<button @onclick="DecrementCount">-</button>
+
+@code {
+    int currentCount;
+
+    async Task IncrementCount(MouseEventArgs e)
+    {
+        await Task.Delay(500);
+        if (e.CtrlKey == true) currentCount = currentCount + 10;
+        else currentCount++;
+    }
+
+    async Task DecrementCount()
+    {
+        await Task.Delay(500);
+        if (currentCount > 0) currentCount--;
+    }
+}
