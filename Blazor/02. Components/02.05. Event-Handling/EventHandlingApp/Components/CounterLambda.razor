@@ -1,0 +1,12 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@rendermode RenderMode.InteractiveServer
+
+<h1>Blazor Counter Lambda</h1>
+
+<button @onclick="@(e => currentCount++)">+</button>
+<span>@currentCount</span>
+<button @onclick="@(e => currentCount--)">-</button>
+
+@code {
+    int currentCount;
+}
