@@ -13,4 +13,5 @@
   - Set components
   - Nested components
   - Passing attributes
+  - Event handling
   
