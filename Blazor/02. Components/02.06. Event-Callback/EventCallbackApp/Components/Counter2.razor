@@ -1,0 +1,15 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@rendermode RenderMode.InteractiveServer
+
+<div>
+    <button @onclick="OnIncreaseCallback">+</button>
+    <button @onclick="OnDecreaseCallback">-</button>
+</div>
+
+@code {
+    [Parameter]
+    public EventCallback OnIncreaseCallback { get; set; }
+
+    [Parameter]
+    public EventCallback OnDecreaseCallback { get; set; }
+}

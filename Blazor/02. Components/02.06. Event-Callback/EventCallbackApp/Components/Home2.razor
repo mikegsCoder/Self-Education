@@ -1,0 +1,12 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@rendermode RenderMode.InteractiveServer
+ 
+<h2>Count: @count</h2>
+<Counter2 OnIncreaseCallback="Increase" OnDecreaseCallback="Decrease" />
+
+@code {
+    int count;
+
+    void Increase() => count++;
+    void Decrease() => count--;
+}
