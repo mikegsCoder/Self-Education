@@ -1,0 +1,8 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+
+<div style="width:100px;height:100px;background-color:#ccc;" @onclick="OnClickCallback"></div>
+
+@code {
+    [Parameter]
+    public EventCallback<MouseEventArgs> OnClickCallback { get; set; }
+}

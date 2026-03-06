@@ -1,0 +1,16 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@rendermode RenderMode.InteractiveServer
+ 
+<h1>Blazor Counter</h1>
+<div>@coords</div>
+<Clicker OnClickCallback="@GetCoords" />
+ 
+@code {
+ 
+    string coords = "";
+ 
+    void GetCoords(MouseEventArgs e)
+    {
+        coords = $"Coords X = {e.ClientX}  Y= {e.ClientY}";
+    }
+}
