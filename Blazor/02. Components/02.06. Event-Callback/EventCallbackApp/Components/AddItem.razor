@@ -1,0 +1,21 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@rendermode RenderMode.InteractiveServer
+
+<div>
+    <input type="text" @bind-value="@item" />
+    @* <button @onclick="@(async () => await OnClickCallback.InvokeAsync(item))">Add</button> *@
+    <button @onclick="@OnClick">Add Item</button>
+</div>
+
+@code {
+
+    string item = "";
+
+    [Parameter]
+    public EventCallback<string> OnClickCallback { get; set; }
+
+    async Task OnClick()
+    {
+        await OnClickCallback.InvokeAsync(item);
+    }
+}

@@ -1,0 +1,23 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@rendermode RenderMode.InteractiveServer
+ 
+<h2>Items</h2>
+ 
+<AddItem OnClickCallback="@AddNewUser" />
+
+<ul>
+    @foreach (var item in items)
+    {
+        <li>@item</li>
+    }
+</ul>
+
+@code {
+ 
+    List<string> items = [];
+ 
+    void AddNewUser(string user)
+    {
+        items.Add(user);
+    }
+}
