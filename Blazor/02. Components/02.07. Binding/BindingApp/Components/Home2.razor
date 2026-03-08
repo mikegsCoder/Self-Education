@@ -1,0 +1,11 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@rendermode RenderMode.InteractiveServer
+
+<div>
+    <input @bind-value="@item" />
+    <p>Value: @item</p>
+</div>
+
+@code {
+    string item = "hello";
+}
