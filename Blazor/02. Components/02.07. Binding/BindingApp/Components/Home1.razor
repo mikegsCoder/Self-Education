@@ -1,0 +1,11 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@rendermode RenderMode.InteractiveServer
+
+<div>
+    <input value="@item" @onchange="@((ChangeEventArgs e) => item = e.Value.ToString())" />
+    <p>Value: @item</p>
+</div>
+
+@code {
+    string item = "hello";
+}
