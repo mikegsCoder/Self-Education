@@ -15,4 +15,5 @@
   - Passing attributes
   - Event handling
   - Event callback
+  - Binding
   
