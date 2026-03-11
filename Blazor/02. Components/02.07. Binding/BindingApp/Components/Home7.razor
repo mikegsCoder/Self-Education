@@ -1,0 +1,28 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@rendermode RenderMode.InteractiveServer
+
+<input @bind="searchText" @bind:after="PerformSearch" />
+<ul>
+    @foreach (var item in found)
+    {
+        <li>@item</li>
+    }
+</ul>
+
+@code {
+    // database: 
+    List<string> items = new List<string> { "Tom", "Tomas", "Sam", "David", "Allice"};
+
+    // found data:
+    List<string> found = new List<string>();
+
+    // search key:
+    string searchText = "";
+
+    async Task PerformSearch()
+    {
+        await Task.Delay(400);
+        found = items.Where(item => 
+            item.ToLower().Contains(searchText.ToLower())).ToList();
+    }
+}
