@@ -1,0 +1,14 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@rendermode RenderMode.InteractiveServer
+
+<input type="number" @bind:get="age" @bind:set="SetAge" />
+<h2>Age: @age</h2>
+
+@code {
+    int age = 18;
+
+    void SetAge(int value)
+    {
+        if (value > 0 && value < 110) age = value;
+    }
+}
