@@ -1,0 +1,10 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@rendermode RenderMode.InteractiveServer
+
+<Main1 Title="@title" />
+
+<input @bind="@title" />
+
+@code {
+    string title = "Hello";
+}
