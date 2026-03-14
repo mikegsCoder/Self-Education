@@ -16,4 +16,6 @@
   - Event handling
   - Event callback
   - Binding
+  - Two way binding
+  
   
