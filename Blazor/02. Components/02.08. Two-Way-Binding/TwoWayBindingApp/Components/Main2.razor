@@ -1,0 +1,25 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@rendermode RenderMode.InteractiveServer
+
+
+<input @onchange="ChangeValue" value="@search" />
+
+@code {
+    string? search = "";
+
+    [Parameter]
+    public string? Search
+    {
+        get { return search; }
+        set { search = value; }
+    }
+
+    [Parameter]
+    public EventCallback<string> SearchChanged { get; set; }
+
+    async Task ChangeValue(ChangeEventArgs e)
+    {
+        search = e?.Value?.ToString();
+        await SearchChanged.InvokeAsync(search);
+    }
+}
