@@ -1,0 +1,8 @@
+﻿<h2>Date: @DateTime?.ToShortDateString()</h2>
+<Time1 />
+
+@code {
+
+    [CascadingParameter]
+    DateTime? DateTime { get; set; }
+}
