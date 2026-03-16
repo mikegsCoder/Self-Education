@@ -1,0 +1,10 @@
+﻿<h3 style="color:@Color">Time: @DateTime?.ToLongTimeString()</h3>
+
+@code {
+
+    [CascadingParameter(Name = "Now")]
+    DateTime? DateTime { get; set; }
+
+    [CascadingParameter(Name = "Color")]
+    string? Color { get; set; }
+}
