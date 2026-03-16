@@ -1,0 +1,12 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+
+<CascadingValue Value="@now" Name="Now">
+    <CascadingValue Value="@color" Name="Color">
+        <Main2 />
+    </CascadingValue>
+</CascadingValue>
+
+@code {
+    DateTime now = DateTime.Now;
+    string color = "navy";
+}
