@@ -17,5 +17,6 @@
   - Event callback
   - Binding
   - Two way binding
+  - Cascading value
   
   
