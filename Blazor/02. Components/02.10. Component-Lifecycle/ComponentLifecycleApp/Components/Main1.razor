@@ -1,0 +1,30 @@
+﻿<h5>@message</h5>
+
+<p>Password: @Password</p>
+
+<p>Password Length: @Password?.Length</p>
+
+@code {
+    string message = "Not set"; // default value
+    
+    [Parameter]
+    public string? Password { get; set; }
+    
+    public override Task SetParametersAsync(ParameterView parameters)
+    {
+        // if parameters contains Password:
+        if (parameters.TryGetValue<string>(nameof(Password), out var value))
+        {
+            if (value is null || value?.Length < 6)
+            {
+                message = "Password is invalid";
+            }
+            else
+            {
+                message = "Password is strong";
+            }
+        }
+
+        return base.SetParametersAsync(parameters);
+    }
+}

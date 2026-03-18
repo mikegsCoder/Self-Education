@@ -1,0 +1,10 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@rendermode RenderMode.InteractiveServer
+
+<input type="password" @bind="pass" />
+
+<Main1 Password="@pass" />
+
+@code {
+    string pass = "";
+}
