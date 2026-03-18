@@ -1,0 +1,10 @@
+﻿<h2>@message</h2>
+
+@code {
+    string message = string.Empty;
+
+    protected override void OnInitialized()
+    {
+        message = $"Main component initialized at {DateTime.Now.ToLongTimeString()}";
+    }
+}
