@@ -1,0 +1,10 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@rendermode RenderMode.InteractiveServer
+ 
+<p><input @bind="@phone" /></p>
+
+<Main3 Phone="@phone" />
+ 
+@code {
+    string phone = string.Empty; 
+}
