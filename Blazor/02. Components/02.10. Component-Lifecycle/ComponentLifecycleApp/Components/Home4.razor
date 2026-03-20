@@ -1,0 +1,26 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@rendermode RenderMode.InteractiveServer
+
+<h2>@message</h2>
+
+<input @bind="@message" />
+
+<ul>
+    @foreach (var renderTime in renderTimes)
+    {
+        <li>@renderTime</li>
+    }
+</ul>
+
+@code {
+    string message = string.Empty;
+    List<string> renderTimes = [];
+
+    protected override void OnAfterRender(bool isFirstRender)
+    {
+        if (isFirstRender)
+            renderTimes.Add($"First render time: {DateTime.Now.ToLongTimeString()}");
+        else
+            renderTimes.Add($"Rerender time: {DateTime.Now.ToLongTimeString()}");
+    }
+}
