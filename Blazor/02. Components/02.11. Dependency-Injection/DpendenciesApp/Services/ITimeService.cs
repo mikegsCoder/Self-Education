@@ -1,4 +1,4 @@
-﻿namespace DpendenciesApp
+﻿namespace DpendenciesApp.Services
 {
     public interface ITimeService
     {

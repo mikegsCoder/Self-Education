@@ -1,11 +1,15 @@
 using DpendenciesApp;
 using DpendenciesApp.Components;
+using DpendenciesApp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+// Add Services:
+builder.Services.AddTransient<ITimeService, TimeService>();
 
 // Show all default services:
 Console.WriteLine("Blazor default services:");
