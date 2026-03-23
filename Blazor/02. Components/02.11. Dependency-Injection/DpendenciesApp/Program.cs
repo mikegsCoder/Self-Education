@@ -10,6 +10,7 @@ builder.Services.AddRazorComponents()
 
 // Add Services:
 builder.Services.AddTransient<ITimeService, TimeService>();
+builder.Services.AddTransient<TimeFormatService>();
 
 // Show all default services:
 Console.WriteLine("Blazor default services:");
