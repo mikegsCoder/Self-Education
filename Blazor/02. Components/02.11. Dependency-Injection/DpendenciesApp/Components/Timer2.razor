@@ -1,0 +1,8 @@
+﻿@using DpendenciesApp.Services
+
+<h2>Time: @Timer.GetTime()</h2>
+
+@code {
+    [Inject]
+    public required ITimeService Timer { get; set; }
+}
