@@ -19,4 +19,5 @@
   - Two way binding
   - Cascading value
   - Component lifecycle
+  - Dependency injection
   
