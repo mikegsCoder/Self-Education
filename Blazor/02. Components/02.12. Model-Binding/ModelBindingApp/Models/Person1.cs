@@ -1,4 +1,4 @@
-﻿namespace Models.ModelBindingApp
+﻿namespace ModelBindingApp.Models
 {
     public class Person1
     {

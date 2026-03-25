@@ -1,0 +1,32 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@using ModelBindingApp.Models
+@rendermode RenderMode.InteractiveServer
+
+<h2>Person1 example</h2>
+
+<div>
+    <p>
+        Name:<br />
+        <input @bind-value="person.Name" />
+    </p>
+    <p>
+        Age:<br />
+        <input type="number" @bind-value="person.Age" />
+    </p>
+
+    <button @onclick="Submit">Submit</button>
+</div>
+
+<div>
+    <p>Name: @person.Name</p>
+    <p>Age: @person.Age</p>
+</div>
+
+@code {
+    Person1 person = new();
+
+    void Submit()
+    {
+        Console.WriteLine($"Person name: {person.Name} - person age: {person.Age}");
+    }
+}
