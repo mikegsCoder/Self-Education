@@ -20,4 +20,5 @@
   - Cascading value
   - Component lifecycle
   - Dependency injection
+  - Model binding
   
