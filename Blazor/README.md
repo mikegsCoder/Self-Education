@@ -21,4 +21,5 @@
   - Component lifecycle
   - Dependency injection
   - Model binding
+  - Head and HeadOutlet
   
