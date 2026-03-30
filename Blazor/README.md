@@ -23,3 +23,6 @@
   - Model binding
   - Head and HeadOutlet
   - Imports
+- Routing
+  - Routing basics
+  
