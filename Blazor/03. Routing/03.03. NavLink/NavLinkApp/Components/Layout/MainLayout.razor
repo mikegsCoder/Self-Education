@@ -1,0 +1,20 @@
+﻿@inherits LayoutComponentBase
+@using Microsoft.AspNetCore.Components.Routing  @*for NavLink*@
+<style>
+    a {
+        color: #F44336;
+    }
+    /* a.active */
+    .activeNavLink {
+        color: #B71C1C;
+        font-weight: 700;
+    }
+</style>
+<div>
+    <div>
+        <NavLink ActiveClass="activeNavLink" Match="NavLinkMatch.All" href="/">Home</NavLink> |
+    </div>
+    <div>
+        @Body
+    </div>
+</div>
