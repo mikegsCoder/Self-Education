@@ -1,0 +1,20 @@
+﻿@page "/user3/{name}/{age:int?}"
+
+<h2>Hello @Name</h2>
+
+@if (Age != null)
+{
+    <h3>Your age: @Age</h3>
+}
+else
+{
+    <h3>How old are you?</h3>
+}
+
+@code {
+    [Parameter]
+    public string? Name { get; set; }
+
+    [Parameter]
+    public int? Age { get; set; }
+}
