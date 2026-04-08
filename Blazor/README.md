@@ -27,4 +27,5 @@
   - Routing basics
   - Layout
   - NavLink
+  - Routing parameters
   
