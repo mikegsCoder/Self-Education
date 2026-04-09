@@ -1,0 +1,19 @@
+﻿@using Microsoft.AspNetCore.Components.Routing
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QueryParametersApp</title>
+    <meta charset="utf-8" />
+    <base href="/" />
+</head>
+<body>
+    <Router AppAssembly="@typeof(Program).Assembly">
+        <Found Context="routeData">
+            <RouteView RouteData="routeData" />
+        </Found>
+    </Router>
+
+    <script src="_framework/blazor.web.js"></script>
+</body>
+</html>
