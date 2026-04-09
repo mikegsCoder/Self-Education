@@ -1,0 +1,31 @@
+﻿@page "/user1"
+
+@* https://localhost:7257/user1?name=Ivan&age=34 *@
+
+@if(Name != null)
+{
+    <h2>Hello @Name</h2>
+}
+else
+{
+    <h2>Hello User</h2>
+}
+
+@if (Age != null)
+{
+    <h3>Your age: @Age</h3>
+}
+else
+{
+    <h3>How old are you?</h3>
+}
+
+@code {
+    [Parameter]
+    [SupplyParameterFromQuery]
+    public string? Name { get; set; }
+
+    [Parameter]
+    [SupplyParameterFromQuery]
+    public int? Age { get; set; }
+}
