@@ -1,0 +1,18 @@
+﻿@page "/user2"
+
+@* https://localhost:7257/user2?user-name=Ivan *@
+
+@if(Name != null)
+{
+    <h2>Hello @Name</h2>
+}
+else
+{
+    <h2>Hello User</h2>
+}
+
+@code {
+    [Parameter]
+    [SupplyParameterFromQuery(Name = "user-name")]
+    public string? Name { get; set; }
+}
