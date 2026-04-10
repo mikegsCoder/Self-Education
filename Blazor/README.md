@@ -28,4 +28,5 @@
   - Layout
   - NavLink
   - Routing parameters
+  - Query parameters
   
