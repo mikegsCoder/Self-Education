@@ -1,0 +1,7 @@
+﻿@page "/about"
+@inject NavigationManager Navigation
+
+<h2>About Page</h2>
+
+<h3>Absolute: @Navigation.Uri</h3>
+<h3>Relative: @Navigation.ToBaseRelativePath(Navigation.Uri)</h3>
