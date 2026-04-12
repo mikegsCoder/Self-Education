@@ -1,0 +1,17 @@
+﻿@page "/"
+@using Microsoft.AspNetCore.Components.Web
+@rendermode RenderMode.InteractiveServer
+@inject NavigationManager Navigation
+
+<h2>Home Page</h2>
+
+<h3>@Navigation.Uri</h3>
+
+<button @onclick="GoToAbout">To About Page</button>
+
+@code {
+    private void GoToAbout()
+    {
+        Navigation.NavigateTo("about");
+    }
+}
