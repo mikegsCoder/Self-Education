@@ -29,4 +29,4 @@
   - NavLink
   - Routing parameters
   - Query parameters
-  
+  - NavigationManager
