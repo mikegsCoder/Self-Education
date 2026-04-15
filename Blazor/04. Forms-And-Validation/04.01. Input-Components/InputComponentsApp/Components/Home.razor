@@ -1,0 +1,65 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components.Forms
+@rendermode RenderMode.InteractiveServer
+
+<h2>Student</h2>
+
+<div>
+    <p>
+        Name:<br />
+        <InputText @bind-Value="student.Name" />
+    </p>
+    <p>
+        Age:<br />
+        <InputNumber @bind-Value="student.Age" />
+    </p>
+    <p>
+        Enrollment Date:<br />
+        <InputDate @bind-Value="student.EnrollmentDate" />
+    </p>
+    <p>
+        Has Work:<br />
+        <InputCheckbox @bind-Value="student.HasWork" />
+    </p>
+    <p>
+        <InputRadioGroup @bind-Value="student.Subject">
+            Subject: <br />
+            @foreach (var subject in subjects)
+            {
+                <InputRadio Value="@subject" />
+                @subject
+                <br />
+            }
+        </InputRadioGroup>
+    </p>
+
+    <p>
+        Courses:<br />
+        <InputSelect @bind-Value="student.Courses" multiple>
+            @foreach (var course in courses)
+            {
+                <option value="@course">@course</option>
+            }
+        </InputSelect>
+    </p>
+</div>
+
+<hr />
+
+@* Results *@
+<div>
+    <p>Name @student.Name</p>
+    <p>Age: @student.Age</p>
+    <p>Day: @student.EnrollmentDate.ToShortDateString()</p>
+    <p>Working: @student.HasWork</p>
+    <p>Subject: @student.Subject</p>
+    <p>Courses: @string.Join(", ", student.Courses)</p>
+</div>
+
+@code {
+    Student student = new Student();
+
+    List<string> subjects = ["Math", "Programming"];
+
+    List<string> courses = ["C#", "JavaScript", "TypeScript", "HTML", "CSS"];
+}
