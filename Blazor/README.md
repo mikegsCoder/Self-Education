@@ -33,4 +33,5 @@
 - Forms and validation
   - Input components
   - EditForm component
+  - DataAnnotationsValidator
   
