@@ -1,0 +1,58 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@using Microsoft.AspNetCore.Components.Forms
+@rendermode RenderMode.InteractiveServer
+@implements IDisposable
+
+<EditForm EditContext="editContext" OnSubmit="Submit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <p>
+        Name:<br />
+        <InputText id="name" @bind-Value="person.Name" />
+    </p>
+    <p>
+        Age:<br />
+        <InputNumber id="age" @bind-Value="person.Age" />
+    </p>
+
+    <button type="submit">Submit</button>
+</EditForm>
+
+<h3>@message</h3>
+
+@code {
+    string message = "";
+    Person person = new();
+    EditContext? editContext;
+    ValidationMessageStore? messageStore;   // message store
+
+    protected override void OnInitialized()
+    {
+        editContext = new(person);
+        messageStore = new(editContext);
+        editContext.OnValidationStateChanged += HandleValidationRequested;
+    }
+
+    void HandleValidationRequested(object? sender, ValidationStateChangedEventArgs args)
+    {
+        messageStore?.Clear();  // clear message store
+                                
+        if (person.Name == "admin") // if name == admin, add error message
+            messageStore?.Add(() => person.Name!, "Invalid name provided!");
+    }
+
+    public void Dispose()
+    {
+        if (editContext != null)
+            editContext.OnValidationStateChanged -= HandleValidationRequested;
+    }
+
+    void Submit()
+    {
+        if (editContext != null && editContext.Validate())
+            message = $"Name: {person.Name}; Age: {person.Age}.";
+        else
+            message = "Invalid data provided!";
+    }
+}
