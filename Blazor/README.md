@@ -35,4 +35,5 @@
   - EditForm component
   - DataAnnotationsValidator
   - ValidationSummary and ValidationMessage
+  - EditContext validation
   
