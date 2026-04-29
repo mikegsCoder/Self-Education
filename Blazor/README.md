@@ -36,4 +36,4 @@
   - DataAnnotationsValidator
   - ValidationSummary and ValidationMessage
   - EditContext validation
-  
+  - Custom validation
