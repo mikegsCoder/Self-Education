@@ -1,0 +1,20 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+
+@rendermode RenderMode.InteractiveServer
+@inject IHttpClientFactory ClientFactory
+
+<h2>@time</h2>
+
+<button @onclick="Submit">Click</button>
+
+@code {
+    string? time;
+    string url = @"https://localhost:7285/time";
+
+    async Task Submit()
+    {
+        HttpClient httpClient = ClientFactory.CreateClient();
+        var response = await httpClient.GetAsync(url);
+        time = await response.Content.ReadAsStringAsync();
+    }
+}
