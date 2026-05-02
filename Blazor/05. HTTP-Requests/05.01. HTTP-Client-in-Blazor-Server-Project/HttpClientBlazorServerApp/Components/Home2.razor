@@ -1,0 +1,48 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@using System.Net.Http.Json
+
+@rendermode RenderMode.InteractiveServer
+@inject IHttpClientFactory ClientFactory
+
+<div style="color: red;">@message</div>
+
+<div>
+    <p>
+        Name:<br />
+        <input @bind-value="person.Name" />
+    </p>
+    <p>
+        Age:<br />
+        <input type="number" @bind-value="person.Age" />
+    </p>
+
+    <button @onclick="Submit">Click</button>
+</div>
+
+@code {
+    string? message;
+    string url = @"https://localhost:7285/user";
+    Person person = new();
+
+    async Task Submit()
+    {
+        message = string.Empty;
+        HttpClient httpClient = ClientFactory.CreateClient();
+
+        // sending POST request:
+        var response = await httpClient.PostAsJsonAsync(url, person);
+
+        if (response.IsSuccessStatusCode)
+        {
+            var newPerson = await response.Content.ReadFromJsonAsync<Person>();
+            
+            if (newPerson != null) message = $"New Person object with id: {newPerson.Id} is created.";
+        }
+        else
+        {
+            var error = await response.Content.ReadFromJsonAsync<Error>();
+            
+            if (error != null) message = error.Details;
+        }
+    }
+ }
