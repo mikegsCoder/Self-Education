@@ -37,3 +37,6 @@
   - ValidationSummary and ValidationMessage
   - EditContext validation
   - Custom validation
+- HTTP requests
+  - HTTP client in Blazor server project
+  
