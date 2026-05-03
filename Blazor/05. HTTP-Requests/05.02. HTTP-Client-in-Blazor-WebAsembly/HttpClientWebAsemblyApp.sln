@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36915.13 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpClientWebAsemblyApp", "HttpClientWebAsemblyApp\HttpClientWebAsemblyApp\HttpClientWebAsemblyApp.csproj", "{344A8764-78D6-4547-9EED-2DEA58FA289E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HttpClientWebAsemblyApp.Client", "HttpClientWebAsemblyApp\HttpClientWebAsemblyApp.Client\HttpClientWebAsemblyApp.Client.csproj", "{756A85DE-CDA7-4B12-BD67-1D112BF4C90E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{344A8764-78D6-4547-9EED-2DEA58FA289E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{344A8764-78D6-4547-9EED-2DEA58FA289E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{344A8764-78D6-4547-9EED-2DEA58FA289E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{344A8764-78D6-4547-9EED-2DEA58FA289E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{756A85DE-CDA7-4B12-BD67-1D112BF4C90E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{756A85DE-CDA7-4B12-BD67-1D112BF4C90E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{756A85DE-CDA7-4B12-BD67-1D112BF4C90E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{756A85DE-CDA7-4B12-BD67-1D112BF4C90E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {24E6C710-A6F2-4671-AE8F-13884ACCB8AF}
+	EndGlobalSection
+EndGlobal
