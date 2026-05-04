@@ -1,0 +1,20 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@using System.Net.Http.Json
+
+@rendermode RenderMode.InteractiveWebAssembly
+@inject HttpClient httpClient
+
+<h2>Time: @time</h2>
+
+<button @onclick="Submit">Click</button>
+
+@code {
+    string? time;
+
+    async Task Submit()
+    {
+        var response = await httpClient.GetAsync("/time");
+
+        time = await response.Content.ReadAsStringAsync();
+    }
+}
