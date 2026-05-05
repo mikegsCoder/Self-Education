@@ -1,4 +1,4 @@
-﻿namespace HttpClientWebAsemblyApp
+﻿namespace HttpClientWebAsemblyApp.Client
 {
     public class Person
     {
