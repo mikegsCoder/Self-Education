@@ -39,4 +39,5 @@
   - Custom validation
 - HTTP requests
   - HTTP client in Blazor server project
+  - HTTP client in Blazor WebAsembly
   
