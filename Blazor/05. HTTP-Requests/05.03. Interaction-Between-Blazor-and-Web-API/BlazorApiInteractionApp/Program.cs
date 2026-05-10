@@ -34,6 +34,20 @@ app.MapGet("/api/users/{id}", (string id) =>
     return Results.Json(user);
 });
 
+// delete user by id:
+app.MapDelete("/api/users/{id}", (string id) =>
+{
+    // get user by id:
+    Person? user = users.FirstOrDefault(u => u.Id == id);
+
+    // if no such user send Error status code and message:
+    if (user == null) return Results.NotFound("User not found!");
+
+    // if user found delete it:
+    users.Remove(user);
+    return Results.Json(user);
+});
+
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
