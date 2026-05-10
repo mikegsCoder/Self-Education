@@ -22,6 +22,18 @@ app.UseAntiforgery();
 // get all users:
 app.MapGet("/api/users", () => users);
 
+// get user by id:
+app.MapGet("/api/users/{id}", (string id) =>
+{
+    Person? user = users.FirstOrDefault(u => u.Id == id);
+
+    // if no such user send Error status code and message:
+    if (user == null) return Results.NotFound("User not found!");
+
+    // if user found send it:
+    return Results.Json(user);
+});
+
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
