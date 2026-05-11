@@ -48,6 +48,17 @@ app.MapDelete("/api/users/{id}", (string id) =>
     return Results.Json(user);
 });
 
+// create user:
+app.MapPost("/api/users", (Person user) =>
+{
+    // set new user id:
+    user.Id = Guid.NewGuid().ToString();
+
+    // add user into list:
+    users.Add(user);
+    return user;
+});
+
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
