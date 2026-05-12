@@ -59,6 +59,21 @@ app.MapPost("/api/users", (Person user) =>
     return user;
 });
 
+// update user:
+app.MapPut("/api/users", (Person userData) =>
+{
+    // get user by id:
+    var user = users.FirstOrDefault(u => u.Id == userData.Id);
+
+    // if no such user send Error status code and message:
+    if (user == null) return Results.NotFound("User not found!");
+
+    // if user found edit data and send back to client:
+    user.Age = userData.Age;
+    user.Name = userData.Name;
+    return Results.Json(user);
+});
+
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
