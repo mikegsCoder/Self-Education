@@ -1,0 +1,87 @@
+﻿@using Microsoft.AspNetCore.Components.Forms
+@using Microsoft.AspNetCore.Components.Web
+@using System.Net.Http.Json
+
+@rendermode RenderMode.InteractiveServer
+@inject IHttpClientFactory ClientFactory
+
+
+<h2>User list</h2>
+<div>
+    <p>
+        Name:<br />
+        <input @bind-value="person.Name" />
+    </p>
+    <p>
+        Age:<br />
+        <input type="number" @bind-value="person.Age" />
+    </p>
+    <p>
+        <button @onclick="Submit">Save</button>
+    </p>
+</div>
+
+<table>
+    <thead><tr><th>Name</th><th>Age</th><th></th></tr></thead>
+    <tbody>
+        @foreach (var person in people)
+        {
+            <tr>
+                <td>@person.Name</td>
+                <td>@person.Age</td>
+                <td>
+                    <button @onclick="() => Edit(person)">Edit</button>
+                    <button @onclick="@(async () => await Delete(person.Id))">Delete</button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+
+    List<Person> people = [];
+    Person person = new();
+    HttpClient httpClient = null!;
+
+    protected override async Task OnInitializedAsync()
+    {
+        httpClient = ClientFactory.CreateClient();
+        httpClient.BaseAddress = new Uri("https://localhost:7239/api/users");
+        await LoadData();
+    }
+
+    async Task LoadData()
+    {
+        people = await httpClient.GetFromJsonAsync<List<Person>>(httpClient.BaseAddress) ?? people;
+    }
+
+    // set editing object:
+    void Edit(Person p)
+    {
+        person.Id = p.Id;
+        person.Name = p.Name;
+        person.Age = p.Age;
+    }
+
+    async Task Submit()
+    {
+        // if id not set:
+        if (string.IsNullOrWhiteSpace(person.Id))
+            await httpClient.PostAsJsonAsync(httpClient.BaseAddress, person);
+        else
+            await httpClient.PutAsJsonAsync(httpClient.BaseAddress, person);
+        
+        person.Id = "";
+        person.Name = "";
+        person.Age = 0;
+        await LoadData();
+    }
+
+    // delete object:
+    async Task Delete(string id)
+    {
+        await httpClient.DeleteAsync($"{httpClient.BaseAddress}/{id}");
+        await LoadData();
+    }
+}
