@@ -41,3 +41,4 @@
   - HTTP client in Blazor server project
   - HTTP client in Blazor WebAsembly
   - Interaction between Blazor and Web API
+- Configuration
