@@ -1,0 +1,9 @@
+﻿@using Microsoft.Extensions.Configuration
+@inject IConfiguration Configuration
+
+<h2>@Configuration["message"]</h2>
+<h3>Phone: @Configuration["contacts:phone"]</h3>
+<h3>eMail: @Configuration["contacts:email"]</h3>
+
+<p>Country: @Configuration["contacts:address:country"]</p>
+<p>City: @Configuration["contacts:address:city"]</p>
